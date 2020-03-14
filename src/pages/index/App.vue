@@ -14,7 +14,7 @@
 			<h1 v-html="content.title.split('\n').join('<br>')"></h1>
 			<h2 v-html="content.desc.split('\n').join('<br>')"></h2>
 			<a
-				button
+				button wide
 				:href="content.link"
 				:style="
 					`--color: ${content.color}; --color-hover: ${contentcolorhover()}`
@@ -206,12 +206,6 @@ h2 {
 	text-align: right;
 	line-height: 5.5vh;
   color: $color-major;
-}
-
-#text > a {
-	margin: 4vh 0 0 0;
-	width: 16vh;
-	padding: 1vh 0;
 }
 
 #backtext-splatter {

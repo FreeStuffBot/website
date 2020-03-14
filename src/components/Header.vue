@@ -38,8 +38,8 @@ export default class Header extends Vue {
 			name: "Club",
 			url: "club",
 			elements: [
-				{ name: "Tude Club", url: "./club" },
-				{ name: "Arcade", url: "./arcade" },
+				{ name: "Tude Club", url: "/club" },
+				{ name: "Arcade", url: "/arcade" },
 				{ name: "Events", url: "https://events.tude.ga/" },
 				{ name: "Discord", url: "https://discord.gg/mJnQXet" }
 			]
@@ -49,19 +49,19 @@ export default class Header extends Vue {
 			url: "products",
 			elements: [
 				{ name: "Linjo", url: "https://play.google.com/store/apps/details?id=de.tude.lines" },
-				{ name: "Free Stuff", url: "./freestuff" },
-				{ name: "All Products", url: "./products" }
+				{ name: "Free Stuff", url: "/freestuff" },
+				{ name: "All Products", url: "/products" }
 			]
 		},
 		{
 			name: "More",
 			url: "more",
 			elements: [
-				{ name: "About", url: "./about" },
+				{ name: "About", url: "/about" },
 				{ name: "Developers", url: "https://developers.tude.ga/" },
 				{ name: "Contact", url: "mailto:tudeteam@gmail.com" },
-				{ name: "Legal", url: "./legal" },
-				{ name: "Even More", url: "./more" }
+				{ name: "Legal", url: "/legal" },
+				{ name: "Even More", url: "/more" }
 			]
 		}
   ];
@@ -97,7 +97,7 @@ header {
   top: 0;
   left: 0;
 	z-index: 110;
-	width: 100vw;
+	width: 100%;
 	border: 0;
 	font-family: $color-header;
 	font-size: 18px;

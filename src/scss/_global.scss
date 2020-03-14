@@ -36,4 +36,10 @@ button, a[button] {
   &:hover {
     box-shadow: inset 16vh 0 0 0 var(--color-hover);
   }
+
+  &[wide] {
+    margin: 4vh 0 0 0;
+    width: 16vh;
+    padding: 1vh 0;
+  }
 }
