@@ -1,0 +1,39 @@
+
+* {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* */
+
+button, a[button] {
+  --color: $theme-a;
+  --color-hover: $theme-a-hover;
+
+  padding: 1vh 3vh;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  font-family: $font-major;
+  font-size: 17pt;
+  text-align: center;
+  margin: 0;
+  border-radius: 3pt;
+  background: var(--color);
+  color: $backpage;
+  cursor: pointer;
+  transition: .2s all ease-out;
+
+  &:hover {
+    box-shadow: inset 16vh 0 0 0 var(--color-hover);
+  }
+}

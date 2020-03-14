@@ -3,15 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Tude - We play games - we make games">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="theme-color" content="#4dc47b" id="metacolor" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Tude" />
+    <meta name="twitter:description" content="We play games - we make games" />
+    <meta name="twitter:site" content="@tudeteam" />
+
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tude.ga/">
+    <meta property="og:title" content="Tude">
+    <meta property="og:description" content="Tude">
+    <meta property="og:image" content="./assets/favicon.png">
+    <meta property="og:site_name" content="Tude">
+    <meta property="og:locale" content="de-DE">
   </head>
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
   </body>
 </html>
