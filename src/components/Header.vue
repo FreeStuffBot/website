@@ -36,7 +36,7 @@ export default class Header extends Vue {
 	public data = [
 		{
 			name: "Club",
-			url: "club",
+			url: "/club",
 			elements: [
 				{ name: "Tude Club", url: "/club" },
 				{ name: "Arcade", url: "/arcade" },
@@ -46,7 +46,7 @@ export default class Header extends Vue {
 		},
 		{
 			name: "Products",
-			url: "products",
+			url: "/products",
 			elements: [
 				{ name: "Linjo", url: "https://play.google.com/store/apps/details?id=de.tude.lines" },
 				{ name: "Free Stuff", url: "/freestuff" },
@@ -55,7 +55,7 @@ export default class Header extends Vue {
 		},
 		{
 			name: "More",
-			url: "more",
+			url: "/more",
 			elements: [
 				{ name: "About", url: "/about" },
 				{ name: "Developers", url: "https://developers.tude.ga/" },

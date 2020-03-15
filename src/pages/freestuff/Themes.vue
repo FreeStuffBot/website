@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="app" freestuff-app>
 		<div id="content">
 			<h1>Themes</h1>
 			<div id="mid">
@@ -80,8 +80,8 @@ export default class App extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
-
+<style lang="scss">
+div[freestuff-app] {
 #content {
 	position: relative;
 	width: 90%;
@@ -141,32 +141,34 @@ export default class App extends Vue {
 	transform: translate(-10px, -10px);
 	flex-wrap: wrap;
 	margin-bottom: 30px;
-}
+	
+	button {
+		padding: 20px 0;
+		margin: 10px;
+		width: 117px;
+		color: var(--theme);
+		font-family: var(--font);
+		font-weight: var(--font-weight-bold);
+		font-size: 36px;
+		border-radius: 0.5vh;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		background: var(--bright);
+		box-shadow: 0 2px 10px #00000066;
+		transition: 0.2s ease all;
 
-button {
-	padding: 20px 0;
-	margin: 10px;
-	width: 117px;
-	color: var(--theme);
-	font-family: var(--font);
-	font-weight: var(--font-weight-bold);
-	font-size: 36px;
-	border-radius: 0.5vh;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	background: var(--bright);
-	box-shadow: 0 2px 10px #00000066;
-	transition: 0.2s ease all;
-}
-button:hover {
-	background: var(--brighter);
-	transform: translateY(-2px);
-	box-shadow: 0 4px 14px #00000055;
-}
-button[active] {
-	background: var(--theme);
-	color: var(--bright);
+		&:hover {
+			background: var(--brighter);
+			transform: translateY(-2px);
+			box-shadow: 0 4px 14px #00000055;
+		}
+
+		&[active] {
+			background: var(--theme);
+			color: var(--bright);
+		}
+	}
 }
 
 #tutorial {
@@ -176,5 +178,5 @@ button[active] {
 	padding: 40px 20px 20px 20px;
 	position: relative;
 }
-
+}
 </style>

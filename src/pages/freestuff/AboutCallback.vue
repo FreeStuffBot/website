@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="app" freestuff-app>
 		<div id="content">
 			<div id="infobox">
 				<h1 v-if="!isCallback">Free Stuff <div class="bottag">BOT</div></h1>
@@ -102,8 +102,8 @@ export default class App extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
-
+<style lang="scss">
+div[freestuff-app] {
 .bottag {
 	display: inline-block;
 	color: var(--text);
@@ -116,5 +116,5 @@ export default class App extends Vue {
 	background: #6574D4;
 	margin-left: 10px;
 }
-
+}
 </style>

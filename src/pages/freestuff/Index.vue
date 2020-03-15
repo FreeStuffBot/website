@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="app" freestuff-app>
 		<div id="content">
 			<div id="infobox" index>
 				<h1>The internet is full<br />of free games</h1>
@@ -11,7 +11,7 @@
 						class="button"
 						>Invite</a
 					>
-					<a id="about-button" href="./freestuff/about" class="button min"
+					<a id="about-button" href="/freestuff/about" class="button min"
 						>About</a
 					>
 					<img
@@ -83,8 +83,8 @@ import Base from "@/pages/freestuff/Base.vue";
 export default class App extends Vue {}
 </script>
 
-<style scoped lang="scss">
-
+<style lang="scss">
+div[freestuff-app] {
 #decoarrow1 {
 	position: absolute;
 	width: 80px;
@@ -242,6 +242,6 @@ export default class App extends Vue {}
 	left: 5px;
 	top: 50%;
 	transform: translateY(-1.5px) rotate(-10deg);
+}	
 }
-
 </style>

@@ -112,8 +112,9 @@ export default class App extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
-:root {
+<style lang="scss">
+div[freestuff-app] {
+&, * {
 	--background: #1f2023;
 	--bright: #37393e;
     --brighter: #3e4046;
@@ -135,26 +136,11 @@ export default class App extends Vue {
 	--font-weight-bold: 800;
 }
 
-* {
+#content *, .deco {
 	transform: var(--trans);
 }
 
-button > * {
-	pointer-events: none;
-}
-
-html, body { overflow: hidden; }
-html, body, #app {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	padding: 0;
-	margin: 0;
-}
-
-#app {
+& {
 	background-color: var(--background);
 	display: flex;
 	justify-content: center;
@@ -355,5 +341,6 @@ footer {
 #decoitem5 {
 	top: 17%;
 	right: 7%;
+}
 }
 </style>
