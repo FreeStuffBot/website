@@ -22,7 +22,7 @@ import Header from "@/components/Header.vue";
 export default class App extends Vue {}
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 #app > * {
 	user-select: none;
 }

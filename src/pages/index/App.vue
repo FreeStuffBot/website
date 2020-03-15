@@ -133,13 +133,15 @@ export default class App extends Vue {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 button > * {
 	pointer-events: none;
 }
 
 html, body, #app {
 	overflow: hidden;
+
+	background: $backpage;
 
   & > * { user-select: none; }
 }
