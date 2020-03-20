@@ -1,24 +1,8 @@
-# tude-ga
+Visit [tude.ga](https://tude.ga/) for a rendered version
 
-## Project setup
-```
-npm install
-```
+Created with VueCli 4.2.3
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Run localy using `npm run serve`
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Deploy using `npm run build`
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
