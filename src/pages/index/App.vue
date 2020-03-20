@@ -1,6 +1,6 @@
 <template>
 	<div id="app" :contentstate="contentstate">
-    <Header/>
+    <Header pagename="Tude" />
 
 		<div style="opacity: 0; pointer-events: none; position: absolute;">
 			<img
@@ -16,11 +16,8 @@
 			<a
 				button wide
 				:href="content.link"
-				:style="
-					`--color: ${content.color}; --color-hover: ${contentcolorhover()}`
-				"
-				>More</a
-			>
+				:style="`--color: ${content.color}; --color-hover: ${contentcolorhover()}`"
+			>More</a>
 			<img
 				id="backtext-splatter"
 				src="@/assets/img/index/backtext_splatter.svg"

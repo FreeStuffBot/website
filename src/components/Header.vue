@@ -16,7 +16,21 @@
         <button class="headerLogin">Login</button>
       </div>
     </div>
-    <div class="header mobileHeader"><a href="https://tude.ga/">Tude</a></div>
+    <div class="header mobileHeader">
+			<div class="headerInner">
+        <div class="headerLogo"><a href="https://tude.ga/"><img :src="getMobileLogo()"></a></div>
+				<div class="headerNav">
+					<HeaderCategory
+            :name="pagename"
+            :elements="data.map(c => c.elements).flat()"
+            :url="null"
+            :theme="theme"
+          ></HeaderCategory>
+				</div>
+        <!-- <div class="headerLogo"><a href="https://tude.ga/">LOGIN BUTTON HERE<img :src="getMobileLogo()"></a></div> -->
+			</div>
+			<!-- <a href="https://tude.ga/">Tude</a> -->
+		</div>
   </header>
 </template>
 
@@ -30,6 +44,7 @@ import HeaderCategory from "@/components/HeaderCategory.vue";
 	}
 })
 export default class Header extends Vue {
+	@Prop() private pagename!: string;
 	@Prop() private theme!: "light" | "dark";
 	@Prop() private monochrome!: boolean;
 
@@ -39,29 +54,29 @@ export default class Header extends Vue {
 			url: "/club",
 			elements: [
 				{ name: "Tude Club", url: "/club" },
-				{ name: "Arcade", url: "/arcade" },
+				// { name: "Arcade", url: "/arcade" },
 				{ name: "Events", url: "https://events.tude.ga/" },
 				{ name: "Discord", url: "https://discord.gg/mJnQXet" }
 			]
 		},
 		{
 			name: "Products",
-			url: "/products",
+			// url: "/products",
 			elements: [
 				{ name: "Linjo", url: "https://play.google.com/store/apps/details?id=de.tude.lines" },
 				{ name: "Free Stuff", url: "/freestuff" },
-				{ name: "All Products", url: "/products" }
+				// { name: "All Products", url: "/products" }
 			]
 		},
 		{
 			name: "More",
-			url: "/more",
+			// url: "/more",
 			elements: [
 				{ name: "About", url: "/about" },
 				{ name: "Developers", url: "https://developers.tude.ga/" },
 				{ name: "Contact", url: "mailto:tudeteam@gmail.com" },
 				{ name: "Legal", url: "/legal" },
-				{ name: "Even More", url: "/more" }
+				// { name: "Even More", url: "/more" }
 			]
 		}
   ];
@@ -70,6 +85,13 @@ export default class Header extends Vue {
     switch(this.theme) {
       case 'light': return '/assets/img/logo_white.svg';
       default: return '/assets/img/logo_black.svg';
+    }
+  }
+  
+  getMobileLogo() {
+    switch(this.theme) {
+      case 'light': return '/assets/img/mini_logo_white.svg';
+      default: return '/assets/img/mini_logo_black.svg';
     }
   }
 }
@@ -117,18 +139,15 @@ header {
 
 .desktopHeader {
 	visibility: visible;
+	@media (max-width: 848px) { visibility: hidden; }
 }
-@media (max-width: 848px) {
-	.desktopHeader {
-		visibility: hidden;
-	}
-}
+
 .mobileHeader {
 	visibility: hidden;
-}
-@media (max-width: 848px) {
-	.mobileHeader {
-		visibility: visible;
+	@media (max-width: 848px) { visibility: visible; }
+
+	.headerNav {
+
 	}
 }
 

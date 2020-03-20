@@ -26,6 +26,7 @@
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2",
     "typescript": "~3.7.5",
+    "vue-cli-plugin-markdown": "~0.1.2",
     "vue-template-compiler": "^2.6.11"
   }
 }

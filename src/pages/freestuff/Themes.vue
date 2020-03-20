@@ -178,5 +178,24 @@ div[freestuff-app] {
 	padding: 40px 20px 20px 20px;
 	position: relative;
 }
+
+/*
+ *
+ */
+
+@media (max-width: 1200px) {
+
+#buttons {
+	justify-content: center;
+	width: 100%;
+
+	button {
+		font-size: 26px;
+		width: 80px;
+		padding: 15px;
+	}
+}
+
+}
 }
 </style>

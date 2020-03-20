@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<Header :monochrome="true"/>
+		<Header pagename="page not found" :monochrome="true"/>
 
 		<div id="text">
 			<h1>404</h1>

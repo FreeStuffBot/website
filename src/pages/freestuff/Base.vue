@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Header theme="light" />
+		<Header pagename="FreeStuff Bot" theme="light" />
 
 		<img
 			class="deco"
@@ -341,6 +341,160 @@ footer {
 #decoitem5 {
 	top: 17%;
 	right: 7%;
+}
+
+/*
+ *
+ */
+
+@media (max-width: 1200px) {
+	
+	* {
+		transform: unset !important;
+	}
+
+	#infobox {
+		width: 100%;
+	}
+
+	h1 {
+		font-size: 30px;
+		line-height: 30px;
+		text-align: center;
+	}
+
+	h2 {
+		font-size: 16px;
+		line-height: 16px;
+		text-align: center;
+	}
+
+	#decoarrow1 {
+		position: absolute;
+		width: 80px;
+		left: 50%;
+		top: 12px;
+		transform: translateX(-250px);
+	}
+
+	#decoarrow2 {
+		position: absolute;
+		width: 60px;
+		left: 42%;
+		top: 65px;
+	}
+
+	#gameslist {
+		top: 80vh !important;
+		transform: scale(0.7);
+		width: 100%;
+		right: 50%;
+  }
+  
+  #pricetagcont {
+		right: unset;
+    left: 2vw;
+  }
+
+	#imggame1 {
+		right: unset;
+    left: 2vw;
+    width: 70vw !important;
+	}
+
+	#imggame2 {
+    right: 8% !important;
+    width: 70vw !important;
+	}
+
+	#imggame3 {
+    right: 0 !important;
+    width: 70vw !important;
+	}
+
+	#imgdiscord {
+    right: 0 !important;
+    margin: auto;
+		width: 90vw !important;
+		top: 300px;
+		margin-bottom: 75px;
+	}
+
+	#discordimgdetail {
+		position: absolute;
+		width: 100% !important;
+		top: 620px;
+		right: 0 !important;
+		text-align: center;
+		font-size: 14px;
+		opacity: 0.3;
+	}
+
+  .button {
+    font-size: 20px;
+	}
+	
+  #imgdiscord {
+    right: 0vw !important;
+    width: 90vw !important;
+    top: 300px !important;
+    margin-bottom: 50px;
+  }
+
+  #decoline1,
+  #decoline2,
+  #decoblob2 {
+    display: none;
+  }
+
+  #mid {
+    flex-direction: column;
+  }
+
+  #imgbox {
+    width: 100% !important;
+    min-height: 330px;
+    margin-bottom: 30px !important;
+    margin-top: 30px !important;
+  }
+  
+  #buttonsbox {
+    width: 100% !important;
+  }
+
+  #buttons {
+    width: calc(100% + 5px);
+    display: flex;
+    justify-content: center;
+    transform: translate(0px, 0px);
+    flex-wrap: wrap;
+		margin-bottom: 30px;
+
+		a {
+			margin-top: 10px;
+			font-size: 18px;
+		}
+  }
+
+  footer {
+    display: none;
+  }
+
+  .box {
+    width: 90% !important;
+  }
+
+  #tutorial {
+    margin-bottom: 30px;
+  }
+	
+	.deco {
+		opacity: .2;
+	}
+
+	#buttons > .deco {
+		opacity: 1;
+	}
 }
 }
 </style>

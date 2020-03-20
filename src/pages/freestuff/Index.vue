@@ -186,10 +186,12 @@ div[freestuff-app] {
 }
 
 #imgdiscord {
-	width: 400px !important;
 	top: 210px;
 	right: 260px;
 	box-shadow: 0 0 15px #00000088;
+}
+@media (min-width: 1199px) {
+#imgdiscord { width: 400px !important; }
 }
 
 #discordimgdetail {
