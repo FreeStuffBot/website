@@ -107,12 +107,11 @@ div[freestuff-app] {
 .bottag {
 	display: inline-block;
 	color: var(--text);
-	font-family: var(--font);
-	font-weight: 400;
+	font-family: $font-regular;
 	font-size: 30px;
 	padding: 3px 20px;
 	border-radius: 1vh;
-	transform: translateY(-7px);
+	transform: translateY(-5pt) !important;
 	background: #6574D4;
 	margin-left: 10px;
 }

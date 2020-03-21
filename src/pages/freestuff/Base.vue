@@ -117,7 +117,7 @@ div[freestuff-app] {
 &, * {
 	--background: #1f2023;
 	--bright: #37393e;
-    --brighter: #3e4046;
+	--brighter: #3e4046;
 	--dark: #181a1c;
 
 	--darkest: #0c0d0e;
@@ -130,10 +130,6 @@ div[freestuff-app] {
 	--theme-b: #c5dcd4;
 
 	--error: #f16248;
-
-	--font: "Montserrat", "Roboto", sans-serif;
-	--font-weight-normal: 500;
-	--font-weight-bold: 800;
 }
 
 #content *, .deco {
@@ -168,8 +164,7 @@ div[freestuff-app] {
 
 h1 {
 	color: var(--text);
-	font-family: var(--font);
-	font-weight: var(--font-weight-bold);
+	font-family: $font-header;
 	font-size: 50px;
 	line-height: 45px;
 	margin-bottom: 20px;
@@ -177,8 +172,7 @@ h1 {
 
 h2 {
 	color: var(--sub);
-	font-family: var(--font);
-	font-weight: var(--font-weight-normal);
+	font-family: $font-regular;
 	font-size: 26px;
 	line-height: 26px;
 	margin-bottom: 60px;
@@ -194,8 +188,7 @@ h3 {
 	font-size: 20px;
 	padding: 4px 7px;
 	color: var(--text);
-	font-family: var(--font);
-	font-weight: var(--font-weight-bold);
+	font-family: $font-header;
 	box-shadow: 0 1px 2px #00000099;
 }
 
@@ -203,8 +196,7 @@ h4 {
 	font-size: 16px;
 	margin: 20px 0 5px 0;
 	color: var(--text);
-	font-family: var(--font);
-	font-weight: var(--font-weight-bold);
+	font-family: $font-header;
 }
 
 .box {
@@ -228,8 +220,7 @@ h4 {
 	display: block;
 	font-size: 12pt;
 	color: var(--text);
-	font-family: var(--font);
-	font-weight: var(--font-weight-normal);
+	font-family: $font-regular;
 }
 
 code {
@@ -253,8 +244,7 @@ footer {
 	font-size: 11pt;
 	text-align: center;
 	color: var(--text);
-	font-family: var(--font);
-	font-weight: var(--font-weight-normal);
+	font-family: $font-regular;
 }
 
 .info {
@@ -264,8 +254,7 @@ footer {
 	padding: 10px 0 10px 15px;
 	border-radius: 0 .3vh .3vh 0;
 	color: var(--text);
-	font-family: var(--font);
-	font-weight: var(--font-weight-normal);
+	font-family: $font-regular;
 }
 
 .divider {

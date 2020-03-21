@@ -122,8 +122,7 @@ div[freestuff-app] {
 	position: absolute;
 	bottom: 20px;
 	color: var(--sub);
-	font-family: var(--font);
-	font-weight: var(--font-weight-normal);
+		font-family: $font-regular;
 	font-size: 14px;
 }
 
@@ -147,8 +146,7 @@ div[freestuff-app] {
 		margin: 10px;
 		width: 117px;
 		color: var(--theme);
-		font-family: var(--font);
-		font-weight: var(--font-weight-bold);
+		font-family: $font-major;
 		font-size: 36px;
 		border-radius: 0.5vh;
 		border: none;

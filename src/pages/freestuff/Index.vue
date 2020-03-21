@@ -118,8 +118,7 @@ div[freestuff-app] {
 	background-image: url("/assets/img/freestuff/button-img.png");
 	background-position: 0 50%;
 	background-size: cover;
-	font-family: var(--font);
-	font-weight: var(--font-weight-normal);
+	font-family: $font-regular;
 	font-size: 24px;
 	user-select: none;
 	color: var(--text);
@@ -202,6 +201,8 @@ div[freestuff-app] {
 	text-align: center;
 	font-size: 14px;
 	opacity: 0.3;
+	font-family: $font-regular;
+	color: var(--sub);
 }
 
 #imgdecoblob {
@@ -222,17 +223,17 @@ div[freestuff-app] {
 	margin: 15px;
 	padding: 10px;
 	font-size: 16px;
-	font-family: var(--font);
 }
 
 #pricetag > .price {
 	color: var(--text);
+	font-family: $font-regular;
 }
 
 #pricetag > .free {
 	margin-left: 10px;
 	color: #ffc200;
-	font-weight: var(--font-weight-bold);
+	font-family: $font-header;
 }
 
 #pricetag > .strike {

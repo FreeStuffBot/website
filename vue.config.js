@@ -28,31 +28,43 @@ module.exports = {
       entry: 'src/pages/freestuff/index.ts',
       template: 'public/index.html',
       filename: 'freestuff/index.html',
-      title: 'Free Stuff - Tude'
+      title: 'Free Stuff - Tude',
+      faviconname: 'favicon.freestuff.png'
     },
     'freestuff/about': {
       entry: 'src/pages/freestuff/aboutCallback.ts',
       template: 'public/index.html',
       filename: 'freestuff/about/index.html',
-      title: 'About Free Stuff - Tude'
+      title: 'About Free Stuff - Tude',
+      faviconname: 'favicon.freestuff.png'
     },
     'freestuff/callback': {
       entry: 'src/pages/freestuff/aboutCallback.ts',
       template: 'public/index.html',
       filename: 'freestuff/callback/index.html',
-      title: 'Thank you for using the Free Stuff Bot! - Tude'
+      title: 'Thank you for using the Free Stuff Bot! - Tude',
+      faviconname: 'favicon.freestuff.png'
     },
     'freestuff/testgame': {
       entry: 'src/pages/freestuff/testgame.ts',
       template: 'public/index.html',
       filename: 'freestuff/testgame/index.html',
-      title: 'Example Game - Tude'
+      title: 'Example Game - Tude',
+      faviconname: 'favicon.freestuff.png'
     },
     'freestuff/themes': {
       entry: 'src/pages/freestuff/themes.ts',
       template: 'public/index.html',
       filename: 'freestuff/themes/index.html',
-      title: 'Free Stuff Themes - Tude'
+      title: 'Free Stuff Themes - Tude',
+      faviconname: 'favicon.freestuff.png'
+    },
+    'freestuff/notfound': {
+      entry: 'src/pages/freestuff/notfound.ts',
+      template: 'public/index.html',
+      filename: 'freestuff/notfound/index.html',
+      title: 'Game Not Found - Tude',
+      faviconname: 'favicon.freestuff.png'
     },
     'legal': {
       entry: 'src/pages/legal/index.ts',
@@ -89,6 +101,18 @@ module.exports = {
       template: 'public/index.html',
       filename: 'legal/terms/tudeapi/index.html',
       title: 'Legal - Tude'
+    },
+    'about': {
+      entry: 'src/pages/about/main.ts',
+      template: 'public/index.html',
+      filename: 'about/index.html',
+      title: 'About Tude'
+    },
+    'club': {
+      entry: 'src/pages/club/main.ts',
+      template: 'public/index.html',
+      filename: 'club/index.html',
+      title: 'Tude Club'
     },
     // subpage: 'src/pages/index/main.ts'
   }
