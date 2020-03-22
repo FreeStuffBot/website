@@ -13,7 +13,7 @@
             :theme="theme"
           ></HeaderCategory>
         </ul>
-        <button class="headerLogin">Login</button>
+        <!-- <button class="headerLogin">Login</button> -->
       </div>
     </div>
     <div class="header mobileHeader">
