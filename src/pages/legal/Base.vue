@@ -7,7 +7,7 @@
 			</h1>
 		</div>
 
-		<div id="content" v-html="content"></div>
+		<div id="content" class="legal-app" v-html="content"></div>
 	</div>
 </template>
 
@@ -99,7 +99,7 @@ h1 {
 </style>
 
 <style lang="scss">
-#content {
+#content.legal-app {
 	* {
 		color: $color-regular;
 		font-family: $font-regular;
