@@ -15,13 +15,28 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import Base from "@/pages/freestuff/Base.vue";
+import Confetti from "@/lib/confetti.ts";
 
 @Component({
 	components: {
 		Base
 	}
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+	created() {		
+		const conf = new Confetti({
+			maxCount: 30,
+			speed: 1,
+			frameInterval: 15,
+			alpha: 1,
+			gradient: false
+		});
+		conf.startConfetti();
+		// setTimeout(() => {
+		// 	conf.stopConfetti();
+		// }, 1500);
+	}
+}
 </script>
 
 <style lang="scss">
