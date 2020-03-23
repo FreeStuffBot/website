@@ -29,42 +29,54 @@ module.exports = {
       template: 'public/index.html',
       filename: 'freestuff/index.html',
       title: 'Free Stuff - Tude',
-      faviconname: 'favicon.freestuff.png'
+      faviconname: 'favicon.freestuff.png',
+      pagename: 'FreeStuff • Tude',
+      pagedesc: 'An easy way to get informed about all the free games out there'
     },
     'freestuff/about': {
       entry: 'src/pages/freestuff/aboutCallback.ts',
       template: 'public/index.html',
       filename: 'freestuff/about/index.html',
       title: 'About Free Stuff - Tude',
-      faviconname: 'favicon.freestuff.png'
+      faviconname: 'favicon.freestuff.png',
+      pagename: 'FreeStuff • Tude',
+      pagedesc: 'An easy way to get informed about all the free games out there'
     },
     'freestuff/callback': {
       entry: 'src/pages/freestuff/aboutCallback.ts',
       template: 'public/index.html',
       filename: 'freestuff/callback/index.html',
       title: 'Thank you for using the Free Stuff Bot! - Tude',
-      faviconname: 'favicon.freestuff.png'
+      faviconname: 'favicon.freestuff.png',
+      pagename: 'FreeStuff • Tude',
+      pagedesc: 'An easy way to get informed about all the free games out there'
     },
     'freestuff/testgame': {
       entry: 'src/pages/freestuff/testgame.ts',
       template: 'public/index.html',
       filename: 'freestuff/testgame/index.html',
       title: 'Example Game - Tude',
-      faviconname: 'favicon.freestuff.png'
+      faviconname: 'favicon.freestuff.png',
+      pagename: 'FreeStuff • Tude',
+      pagedesc: 'An easy way to get informed about all the free games out there'
     },
     'freestuff/themes': {
       entry: 'src/pages/freestuff/themes.ts',
       template: 'public/index.html',
       filename: 'freestuff/themes/index.html',
       title: 'Free Stuff Themes - Tude',
-      faviconname: 'favicon.freestuff.png'
+      faviconname: 'favicon.freestuff.png',
+      pagename: 'FreeStuff • Tude',
+      pagedesc: 'An easy way to get informed about all the free games out there'
     },
     'freestuff/notfound': {
       entry: 'src/pages/freestuff/notfound.ts',
       template: 'public/index.html',
       filename: 'freestuff/notfound/index.html',
       title: 'Game Not Found - Tude',
-      faviconname: 'favicon.freestuff.png'
+      faviconname: 'favicon.freestuff.png',
+      pagename: 'FreeStuff • Tude',
+      pagedesc: 'An easy way to get informed about all the free games out there'
     },
     'legal': {
       entry: 'src/pages/legal/index.ts',

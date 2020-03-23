@@ -145,10 +145,6 @@ header {
 .mobileHeader {
 	visibility: hidden;
 	@media (max-width: 848px) { visibility: visible; }
-
-	.headerNav {
-
-	}
 }
 
 .header {
