@@ -5,6 +5,8 @@
 				<h1>Ayy, it's working 🎉</h1>
 				<h2>Just imagine this is the website <br>that offers the free game!</h2>
 				<div class="divider"></div>
+				<span style-a82bb1>Don't know what this is all about?</span>
+				<span style-a82bb1><a href="/freestuff">Click here for more info</a></span>
 			</div>
 		</div>
 
@@ -40,7 +42,17 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss">
-// div[freestuff-app] {
+div[freestuff-app] {
+	span[style-a82bb1] {
+		padding-bottom: 5px;
+		color: $color-regular;
 
-// }
+		a {
+			color: #da5e7d;
+			border-bottom: 3px solid #da5e7d33;
+
+			&:hover { border-bottom: 3px solid #da5e7d; }
+		}
+	}
+}
 </style>

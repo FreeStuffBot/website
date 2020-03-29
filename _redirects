@@ -1,0 +1,8 @@
+
+/login            https://idp.tude.ga/login
+/join             https://idp.tude.ga/join
+/register         https://idp.tude.ga/join
+/resetpassword    https://idp.tude.ga/resetpassword
+
+/events           https://events.tude.ga/
+/discord          https://discord.tude.ga/

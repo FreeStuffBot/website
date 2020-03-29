@@ -78,6 +78,33 @@ module.exports = {
       pagename: 'FreeStuff • Tude',
       pagedesc: 'An easy way to get informed about all the free games out there'
     },
+    'freestuff/troubleshooting': {
+      entry: 'src/pages/freestuff/troubleshooting.ts',
+      template: 'public/index.html',
+      filename: 'freestuff/troubleshooting/index.html',
+      title: 'FreeStuff Bot Troubleshooting - Tude',
+      faviconname: 'favicon.freestuff.png',
+      pagename: 'FreeStuff • Tude',
+      pagedesc: 'An easy way to get informed about all the free games out there'
+    },
+    'freestuff/filter': {
+      entry: 'src/pages/freestuff/filter.ts',
+      template: 'public/index.html',
+      filename: 'freestuff/filter/index.html',
+      title: 'FreeStuff Content Filter - Tude',
+      faviconname: 'favicon.freestuff.png',
+      pagename: 'FreeStuff • Tude',
+      pagedesc: 'An easy way to get informed about all the free games out there'
+    },
+    'half-life-alyx-free': {
+      entry: 'src/pages/freestuff/aprilfools.ts',
+      template: 'public/index.html',
+      filename: 'half-life-alyx-free/index.html',
+      title: 'Half Life Alyx Free For 3 Days',
+      faviconname: 'favicon.freestuff.png',
+      pagename: 'Half Life Alyx Free For 3 Days',
+      pagedesc: 'Steam April Sale, Half Life Alyx 100% off. Requires VR-Gear to play.'
+    },
     'legal': {
       entry: 'src/pages/legal/index.ts',
       template: 'public/index.html',
@@ -88,31 +115,43 @@ module.exports = {
       entry: 'src/pages/legal/imprint.ts',
       template: 'public/index.html',
       filename: 'legal/imprint/index.html',
-      title: 'Legal - Tude'
-    },
-    'legal/privacy': {
-      entry: 'src/pages/legal/privacy.ts',
-      template: 'public/index.html',
-      filename: 'legal/privacy/index.html',
-      title: 'Legal - Tude'
-    },
-    'legal/privacy/linjo': {
-      entry: 'src/pages/legal/privacyLinjo.ts',
-      template: 'public/index.html',
-      filename: 'legal/privacy/linjo/index.html',
-      title: 'Legal - Tude'
+      title: 'Tude Imprint'
     },
     'legal/terms': {
       entry: 'src/pages/legal/terms.ts',
       template: 'public/index.html',
       filename: 'legal/terms/index.html',
-      title: 'Legal - Tude'
+      title: 'Tude Terms of Service'
+    },
+    'legal/privacy': {
+      entry: 'src/pages/legal/privacy.ts',
+      template: 'public/index.html',
+      filename: 'legal/privacy/index.html',
+      title: 'Tude Privacy Policy'
+    },
+    'legal/privacy/linjo': {
+      entry: 'src/pages/legal/privacyLinjo.ts',
+      template: 'public/index.html',
+      filename: 'legal/privacy/linjo/index.html',
+      title: 'Linjo Privacy Policy'
     },
     'legal/terms/tudeapi': {
       entry: 'src/pages/legal/termsTudeapi.ts',
       template: 'public/index.html',
       filename: 'legal/terms/tudeapi/index.html',
-      title: 'Legal - Tude'
+      title: 'TudeAPI Terms of Service'
+    },
+    'legal/terms/freestuff': {
+      entry: 'src/pages/legal/termsFreeStuff.ts',
+      template: 'public/index.html',
+      filename: 'legal/terms/freestuff/index.html',
+      title: 'FreeStuff Terms of Service'
+    },
+    'legal/privacy/freestuff': {
+      entry: 'src/pages/legal/privacyFreeStuff.ts',
+      template: 'public/index.html',
+      filename: 'legal/privacy/freestuff/index.html',
+      title: 'FreeStuff Privacy Policy'
     },
     'about': {
       entry: 'src/pages/about/main.ts',

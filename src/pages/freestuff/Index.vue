@@ -1,71 +1,86 @@
 <template>
 	<div id="app" freestuff-app>
 		<div id="content">
-			<div id="infobox" index>
-				<h1>The internet is full<br />of free games</h1>
-				<h2>And with this Discord bot<br />you'll never miss any of them!</h2>
-				<div id="buttons">
-					<a
-						id="invite-button"
-						href="https://discordapp.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ftude.ga%2Ffreestuff%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code"
-						class="button"
-						>Invite</a
-					>
-					<a id="about-button" href="/freestuff/about" class="button min"
-						>About</a
-					>
-					<img
-						class="deco arrow"
-						id="decoarrow1"
-						src="@/assets/img/freestuff/deco-arrow-1.svg"
-						draggable="false"
-						depth="80"
-					/>
-					<img
-						class="deco arrow"
-						id="decoarrow2"
-						src="@/assets/img/freestuff/deco-arrow-2.svg"
-						draggable="false"
-						depth="90"
-					/>
-				</div>
-			</div>
-			<div id="gameslist">
-				<div id="pricetagcont">
-					<div id="pricetag">
-						<div class="price">€24.99</div>
-						<div class="free">FREE</div>
-						<div class="strike"></div>
+			<div id="landing">
+				<div id="infobox" index>
+					<h1>The internet is full<br />of free games</h1>
+					<h2>And with this Discord bot<br />you'll never miss any of them!</h2>
+					<div id="buttons">
+						<a
+							id="invite-button"
+							href="https://discordapp.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ftude.ga%2Ffreestuff%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code"
+							class="button"
+							>Invite</a
+						>
+						<a id="about-button" href="/freestuff/about" class="button min"
+							>About</a
+						>
+						<img
+							class="deco arrow"
+							id="decoarrow1"
+							src="@/assets/img/freestuff/deco-arrow-1.svg"
+							draggable="false"
+							depth="80"
+						/>
+						<img
+							class="deco arrow"
+							id="decoarrow2"
+							src="@/assets/img/freestuff/deco-arrow-2.svg"
+							draggable="false"
+							depth="90"
+						/>
 					</div>
 				</div>
-				<img
-					id="imgdecoblob"
-					src="@/assets/img/freestuff/deco-blob-1.svg"
-					draggable="false"
-				/>
-				<img
-					id="imggame3"
-					src="@/assets/img/freestuff/game3.png"
-					draggable="false"
-				/>
-				<img
-					id="imggame2"
-					src="@/assets/img/freestuff/game2.png"
-					draggable="false"
-				/>
-				<img
-					id="imggame1"
-					src="@/assets/img/freestuff/game1.png"
-					draggable="false"
-				/>
-				<img
-					id="imgdiscord"
-					src="@/assets/img/freestuff/discord-example.png"
-					draggable="false"
-				/>
-				<div id="discordimgdetail">Message appearance is customizable</div>
+				<div id="gameslist">
+					<div id="pricetagcont">
+						<div id="pricetag">
+							<div class="price">€24.99</div>
+							<div class="free">FREE</div>
+							<div class="strike"></div>
+						</div>
+					</div>
+					<img id="imgdecoblob" src="@/assets/img/freestuff/deco-blob-1.svg" draggable="false" />
+					<img id="imggame3" src="@/assets/img/freestuff/game3.png" draggable="false" />
+					<img id="imggame2" src="@/assets/img/freestuff/game2.png" draggable="false" />
+					<img id="imggame1" src="@/assets/img/freestuff/game1.png" draggable="false" />
+					<img id="imgdiscord" src="@/assets/img/freestuff/discord-example.png" draggable="false" />
+					<div id="discordimgdetail">Message appearance is customizable</div>
+				</div>
 			</div>
+
+			<!-- <div id="details">
+				SIKE
+			</div> -->
 		</div>
+
+		<!-- More shit here to scroll down, some nice parallax on everything please -->
+
+		<!--
+			
+		Customizea as you like:
+
+		Choose a nice theme
+
+		Apply content filter
+
+		And that all for free! Just like the games!
+
+		Want even more?
+
+		Get freestuff plus:
+		No ads, no branding, no limits.
+
+		What we offer:
+
+		- No ads
+		- Remove branding text in embed
+		- Create custom themes
+		- Subscribe to huge discounts and not only recieve free games but also very good deals
+		- Support the development, servers cost money
+
+		Footer. Links to: privacy, tos, how it works, thank yous
+		
+		-->
 
     <Base />
 	</div>
@@ -246,5 +261,15 @@ div[freestuff-app] {
 	top: 50%;
 	transform: translateY(-1.5px) rotate(-10deg);
 }	
+
+#landing {
+	width: 100%;
+	height: 100vh;
+	min-height: calc(20vh + 650px);
+}
+
+#details {
+	width: 100%;
+}
 }
 </style>

@@ -4,8 +4,12 @@
 [Privacy Policy](/legal/privacy)
 [Imprint](/legal/imprint)
 
-## Games
+## Linjo
 [Linjo Privacy Policy](/legal/privacy/linjo)
 
-## Services
+## Tude API
 [Tude API Terms of Service](/legal/terms/tudeapi)
+
+## FreeStuff
+[FreeStuff Terms of Service](/legal/terms/freestuff)
+[FreeStuff Privacy Policy](/legal/privacy/freestuff)

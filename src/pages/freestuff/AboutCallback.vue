@@ -41,6 +41,10 @@
 					<span>With some themes the bot also shows the original price. You can choose to show this price either in euros or us-dollars using:</span>
 					<code>@FreeStuff set currency €</code>
 					<span>You can also write euro / dollar if you don't have access to these symbols.</span>
+					<h4>Content Filter</h4>
+					<span>Since the bot announces games in every price range but some of you might for instance not be interested in already cheap games, you can specify which type of games you're interested in. To simply set a minimum original price, use:</span>
+					<code>@FreeStuff set minimum price 3€</code>
+					<span>... and the bot will no longer announce games cheaper than 3€. You can use any number there. If you want to go further and only allow certain stores, <a href="/freestuff/filter">click here</a></span>
 					<h4>Enable auto-reaction</h4>
 					<span>The bot can automatically react with the :free: emoji to each of it's messages. You can toggle this using:</span>
 					<code>@FreeStuff set reaction on/off</code>
@@ -48,12 +52,19 @@
 				<div class="box">
 					<h3 style="color: var(--sub)" id="more">More</h3>
 					<h4>Bot made by</h4>
-					<span><a href="https://maanex.tk/">Maanex</a>, <a href="https://twitter.com/Maanex_">@Maanex_</a> on Twitter</span>
+					<span><a href="https://maanex.tk/">Maanex</a> (<a href="https://twitter.com/Maanex_">@Maanex_</a> on Twitter)</span>
 					<h4>Technical Details</h4>
 					<span>The bot is written in TypeScript using Discord.js and a MongoDB database</span>
 					<h4>Where do you get the information from?</h4>
-					<span>We have our spies everywhere 😉</span>
+					<span>We have spies everywhere 😉</span>
+					<span>For a more technical answer to the question <a href="https://docs.google.com/document/d/1C5aRG7gVryX25N_61WtHbMduJp61qQ5j2vkU0D2ND8g" target="_blank">click here</a></span>
 					<span>If you do wanna send something in that we haven't found yet, feel free to contact us over on <a href="https://discord.gg/mJnQXet">our discord server</a></span>
+					<h4>The "thank you" section</h4>
+					<span>Hardy#7741 - free games search squad</span>
+					<span>EasyThe#2836 - free games search squad</span>
+					<span>Badosz#0001 - new ideas</span>
+					<h4>Bottom text.</h4>
+					<span><a href="/legal/privacy/freestuff">FreeStuff Privacy Policy</a> - <a href="/legal/terms/freestuff">FreeStuff Terms of Service</a></span>
 				</div>
 				<footer>Copyright &copy; 2020 Tude</footer>
 			</div>

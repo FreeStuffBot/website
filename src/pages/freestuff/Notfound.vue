@@ -3,7 +3,8 @@
 		<div id="content">
 			<div id="infobox">
 				<h1>Game not found 😕</h1>
-				<h2>The game you were looking for was not found!<br>Maybe just google for it or something...</h2>
+				<h2>The game you were looking for was not found!<br>
+						Maybe just google it or something...</h2>
 				<div class="divider"></div>
 			</div>
 		</div>
