@@ -2,7 +2,7 @@
 	<div id="app" freestuff-app>
 		<div id="content">
 			<div id="infobox">
-				<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0"></iframe>
+				<iframe allow="autoplay" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0"></iframe>
 
 				<span>Happy april fools day!</span>
 				<br>
