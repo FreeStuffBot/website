@@ -13,7 +13,7 @@
             :theme="theme"
           ></HeaderCategory>
         </ul>
-        <!-- <button class="headerLogin">Login</button> -->
+        <!-- <button class="headerLogin" @click="login()">Login</button> -->
       </div>
     </div>
     <div class="header mobileHeader">
@@ -93,7 +93,11 @@ export default class Header extends Vue {
       case 'light': return '/assets/img/mini_logo_white.svg';
       default: return '/assets/img/mini_logo_black.svg';
     }
-  }
+	}
+	
+	login() {
+		location.href = 'https://idp.tude.ga/login/';
+	}
 }
 </script>
 
@@ -213,8 +217,8 @@ header {
 	font-size: 12pt;
 
 	header[theme="light"] & {
-		--color: #{$color-minor};
-		--color-hover: #{$color-sub};
+		--color: #{$color-sub};
+		--color-hover: #{darken($color-sub, 5)};
 	}
 	header[monochrome="true"] & {
 		--color: #{$color-sub};
