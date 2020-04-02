@@ -41,10 +41,13 @@
 					<span>With some themes the bot also shows the original price. You can choose to show this price either in euros or us-dollars using:</span>
 					<code>@FreeStuff set currency €</code>
 					<span>You can also write euro / dollar if you don't have access to these symbols.</span>
-					<h4>Content Filter</h4>
+					<h4>Minimum price</h4>
 					<span>Since the bot announces games in every price range but some of you might for instance not be interested in already cheap games, you can specify which type of games you're interested in. To simply set a minimum original price, use:</span>
 					<code>@FreeStuff set minimum price 3€</code>
-					<span>... and the bot will no longer announce games cheaper than 3€. You can use any number there. If you want to go further and only allow certain stores, <a href="/freestuff/filter">click here</a></span>
+					<span>... and the bot will no longer announce games cheaper than 3€. You can use any number there. The currency will be the same as you set above.<!-- If you want to go further and only allow certain stores, <a href="/freestuff/filter">click here</a>--></span>
+					<h4>Trashy games</h4>
+					<span>Games with really bad ratings or overall bad quality are marked as trash and will by default not reach your server. If you want them anyways you can enable "trash games" using:</span>
+					<code>@FreeStuff set trash on</code>
 					<h4>Enable auto-reaction</h4>
 					<span>The bot can automatically react with the :free: emoji to each of it's messages. You can toggle this using:</span>
 					<code>@FreeStuff set reaction on/off</code>
