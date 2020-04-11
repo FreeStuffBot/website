@@ -36,7 +36,7 @@
 					<h4>Apply themes</h4>
 					<span>You can apply a theme that changes the look of the bot's messages:</span>
 					<code>@FreeStuff set theme 1</code>
-					<span>The 1 in this case stands for the theme 1. A full list of all available themes can be found <a href="/freestuff/themes">here</a></span>
+					<span>The 1 in this case stands for the theme 1. A full list of all available themes can be found <a href="/themes">here</a></span>
 					<h4>Change the currency</h4>
 					<span>With some themes the bot also shows the original price. You can choose to show this price either in euros or us-dollars using:</span>
 					<code>@FreeStuff set currency €</code>
@@ -67,7 +67,7 @@
 					<span>EasyThe#2836 - free games search squad</span>
 					<span>Badosz#0001 - new ideas</span>
 					<h4>Bottom text.</h4>
-					<span><a href="/legal/privacy/freestuff">FreeStuff Privacy Policy</a> - <a href="/legal/terms/freestuff">FreeStuff Terms of Service</a></span>
+					<span><a href="/legal/privacy">FreeStuff Privacy Policy</a> - <a href="/legal/terms">FreeStuff Terms of Service</a></span>
 				</div>
 				<footer>Copyright &copy; 2020 Tude</footer>
 			</div>
@@ -79,7 +79,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Base from "@/pages/freestuff/Base.vue";
+import Base from "@/pages/Base.vue";
 
 @Component({
 	components: {
@@ -99,7 +99,7 @@ export default class App extends Vue {
 			switch (url.searchParams.get('error')) {
 				case 'access_denied':
 				default:
-					location.href = './freestuff';
+					location.href = '/';
 					break;
 			}
 		} else {

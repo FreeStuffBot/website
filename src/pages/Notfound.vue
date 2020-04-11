@@ -2,9 +2,9 @@
 	<div id="app" freestuff-app>
 		<div id="content">
 			<div id="infobox">
-				<h1>Game not found 😕</h1>
-				<h2>The game you were looking for was not found!<br>
-						Maybe just google it or something...</h2>
+				<h1>404 Not Found 😕</h1>
+				<h2>I don't know what you were looking for...<br>
+						but it's definitely not here.</h2>
 				<div class="divider"></div>
 			</div>
 		</div>
@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Base from "@/pages/freestuff/Base.vue";
+import Base from "@/pages/Base.vue";
 
 @Component({
 	components: {

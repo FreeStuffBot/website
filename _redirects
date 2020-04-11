@@ -1,8 +1,10 @@
 
+/game/*           https://coyote.tude.ga/freestuff-pageproxy/:splat
+/legal/*          https://tude.ga/legal/:splat/freestuff
+
 /login            https://idp.tude.ga/login
 /join             https://idp.tude.ga/join
 /register         https://idp.tude.ga/join
 /resetpassword    https://idp.tude.ga/resetpassword
 
-/events           https://events.tude.ga/
-/discord          https://discord.tude.ga/
+/discord          https://discord.gg/5nB7pAM

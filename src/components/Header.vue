@@ -53,8 +53,8 @@ export default class Header extends Vue {
 			name: "Club",
 			url: "/club",
 			elements: [
-				{ name: "Tude Club", url: "/club" },
-				// { name: "Arcade", url: "/arcade" },
+				{ name: "Tude Club", url: "https://tude.ga/club" },
+				// { name: "Arcade", url: "https://tude.ga/arcade" },
 				{ name: "Events", url: "https://events.tude.ga/" },
 				{ name: "Discord", url: "https://discord.gg/mJnQXet" }
 			]
@@ -63,20 +63,20 @@ export default class Header extends Vue {
 			name: "Products",
 			// url: "/products",
 			elements: [
-				{ name: "Linjo", url: "https://play.google.com/store/apps/details?id=de.tude.lines" },
-				{ name: "FreeStuff", url: "/freestuff" },
-				// { name: "All Products", url: "/products" }
+				{ name: "Linjo", url: "https://tude.ga/linjo" },
+				{ name: "FreeStuff", url: "https://freestuffbot.xyz/" },
+				// { name: "All Products", url: "https://tude.ga/products" }
 			]
 		},
 		{
 			name: "More",
 			// url: "/more",
 			elements: [
-				{ name: "About", url: "/about" },
+				{ name: "About", url: "https://tude.ga/about" },
 				{ name: "Developers", url: "https://developers.tude.ga/" },
 				{ name: "Contact", url: "mailto:tudeteam@gmail.com" },
-				{ name: "Legal", url: "/legal" },
-				// { name: "Even More", url: "/more" }
+				{ name: "Legal", url: "https://tude.ga/legal" },
+				// { name: "Even More", url: "https://tude.ga/more" }
 			]
 		}
   ];

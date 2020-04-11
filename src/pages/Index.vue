@@ -8,24 +8,24 @@
 					<div id="buttons">
 						<a
 							id="invite-button"
-							href="https://discordapp.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ftude.ga%2Ffreestuff%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code"
+							href="https://discordapp.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code"
 							class="button"
 							>Invite</a
 						>
-						<a id="about-button" href="/freestuff/about" class="button min"
+						<a id="about-button" href="/about" class="button min"
 							>About</a
 						>
 						<img
 							class="deco arrow"
 							id="decoarrow1"
-							src="@/assets/img/freestuff/deco-arrow-1.svg"
+							src="@/assets/img/deco-arrow-1.svg"
 							draggable="false"
 							depth="80"
 						/>
 						<img
 							class="deco arrow"
 							id="decoarrow2"
-							src="@/assets/img/freestuff/deco-arrow-2.svg"
+							src="@/assets/img/deco-arrow-2.svg"
 							draggable="false"
 							depth="90"
 						/>
@@ -39,11 +39,11 @@
 							<div class="strike"></div>
 						</div>
 					</div>
-					<img id="imgdecoblob" src="@/assets/img/freestuff/deco-blob-1.svg" draggable="false" />
-					<img id="imggame3" src="@/assets/img/freestuff/game3.png" draggable="false" />
-					<img id="imggame2" src="@/assets/img/freestuff/game2.png" draggable="false" />
-					<img id="imggame1" src="@/assets/img/freestuff/game1.png" draggable="false" />
-					<img id="imgdiscord" src="@/assets/img/freestuff/discord-example.png" draggable="false" />
+					<img id="imgdecoblob" src="@/assets/img/deco-blob-1.svg" draggable="false" />
+					<img id="imggame3" src="@/assets/img/game3.png" draggable="false" />
+					<img id="imggame2" src="@/assets/img/game2.png" draggable="false" />
+					<img id="imggame1" src="@/assets/img/game1.png" draggable="false" />
+					<img id="imgdiscord" src="@/assets/img/discord-example.png" draggable="false" />
 					<div id="discordimgdetail">Message appearance is customizable</div>
 				</div>
 			</div>
@@ -88,7 +88,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Base from "@/pages/freestuff/Base.vue";
+import Base from "@/pages/Base.vue";
 
 @Component({
 	components: {
@@ -130,7 +130,7 @@ div[freestuff-app] {
 	padding: 12px 44px;
 	margin: 0 10px 0 0;
 	background-color: #7b7fe1;
-	background-image: url("/assets/img/freestuff/button-img.png");
+	background-image: url("/assets/img/button-img.png");
 	background-position: 0 50%;
 	background-size: cover;
 	font-family: $font-regular;

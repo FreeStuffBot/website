@@ -38,7 +38,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Base from "@/pages/freestuff/Base.vue";
+import Base from "@/pages/Base.vue";
 
 @Component({
 	components: {
@@ -49,15 +49,15 @@ export default class App extends Vue {
 	private themeId = 1;
 	private availableThemes = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 	private themeImages = [
-		"/assets/img/freestuff/theme-1.png",
-		"/assets/img/freestuff/theme-2.png",
-		"/assets/img/freestuff/theme-3.png",
-		"/assets/img/freestuff/theme-4.png",
-		"/assets/img/freestuff/theme-5.png",
-		"/assets/img/freestuff/theme-6.png",
-		"/assets/img/freestuff/theme-7.png",
-		"/assets/img/freestuff/theme-8.png",
-		"/assets/img/freestuff/theme-9.png"
+		"/assets/img/theme-1.png",
+		"/assets/img/theme-2.png",
+		"/assets/img/theme-3.png",
+		"/assets/img/theme-4.png",
+		"/assets/img/theme-5.png",
+		"/assets/img/theme-6.png",
+		"/assets/img/theme-7.png",
+		"/assets/img/theme-8.png",
+		"/assets/img/theme-9.png"
 	];
 	private currImg = this.themeImages[this.themeId - 1];
 	private info = "";

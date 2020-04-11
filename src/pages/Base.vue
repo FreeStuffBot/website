@@ -5,25 +5,25 @@
 		<img
 			class="deco"
 			id="decoblob2"
-			src="@/assets/img/freestuff/deco-blob-2.svg"
+			src="@/assets/img/deco-blob-2.svg"
 			draggable="false"
 		/>
 		<img
 			class="deco"
 			id="decoline1"
-			src="@/assets/img/freestuff/deco-line-1.svg"
+			src="@/assets/img/deco-line-1.svg"
 			draggable="false"
 		/>
 		<img
 			class="deco"
 			id="decoline2"
-			src="@/assets/img/freestuff/deco-line-2.svg"
+			src="@/assets/img/deco-line-2.svg"
 			draggable="false"
 		/>
 		<img
 			class="deco decoitem"
 			id="decoitem1"
-			src="@/assets/img/freestuff/deco-item-1.svg"
+			src="@/assets/img/deco-item-1.svg"
 			draggable="false"
 			depth="95"
 			@click="init3D()"
@@ -32,28 +32,28 @@
 		<img
 			class="deco decoitem"
 			id="decoitem2"
-			src="@/assets/img/freestuff/deco-item-2.svg"
+			src="@/assets/img/deco-item-2.svg"
 			draggable="false"
 			depth="120"
 		/>
 		<img
 			class="deco decoitem"
 			id="decoitem3"
-			src="@/assets/img/freestuff/deco-item-3.svg"
+			src="@/assets/img/deco-item-3.svg"
 			draggable="false"
 			depth="92"
 		/>
 		<img
 			class="deco decoitem"
 			id="decoitem4"
-			src="@/assets/img/freestuff/deco-item-4.svg"
+			src="@/assets/img/deco-item-4.svg"
 			draggable="false"
 			depth="106"
 		/>
 		<img
 			class="deco decoitem"
 			id="decoitem5"
-			src="@/assets/img/freestuff/deco-item-5.svg"
+			src="@/assets/img/deco-item-5.svg"
 			draggable="false"
 			depth="100"
 		/>

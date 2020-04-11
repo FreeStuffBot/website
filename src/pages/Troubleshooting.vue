@@ -44,7 +44,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Base from "@/pages/freestuff/Base.vue";
+import Base from "@/pages/Base.vue";
 
 @Component({
 	components: {

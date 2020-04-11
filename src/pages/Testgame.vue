@@ -6,7 +6,7 @@
 				<h2>Just imagine this is the website <br>that offers the free game!</h2>
 				<div class="divider"></div>
 				<span style-a82bb1>Don't know what this is all about?</span>
-				<span style-a82bb1><a href="/freestuff">Click here for more info</a></span>
+				<span style-a82bb1><a href="/">Click here for more info</a></span>
 			</div>
 		</div>
 
@@ -16,7 +16,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Base from "@/pages/freestuff/Base.vue";
+import Base from "@/pages/Base.vue";
 import Confetti from "@/lib/confetti.ts";
 
 @Component({
