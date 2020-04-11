@@ -61,7 +61,7 @@
 					<h4>Where do you get the information from?</h4>
 					<span>We have spies everywhere 😉</span>
 					<span>For a more technical answer to the question <a href="https://docs.google.com/document/d/1C5aRG7gVryX25N_61WtHbMduJp61qQ5j2vkU0D2ND8g" target="_blank">click here</a></span>
-					<span>If you do wanna send something in that we haven't found yet, feel free to contact us over on <a href="https://discord.gg/mJnQXet">our discord server</a></span>
+					<span>If you do wanna send something in that we haven't found yet, feel free to contact us over on <a href="https://discord.gg/5nB7pAM">our discord server</a></span>
 					<h4>The "thank you" section</h4>
 					<span>Hardy#7741 - free games search squad</span>
 					<span>EasyThe#2836 - free games search squad</span>

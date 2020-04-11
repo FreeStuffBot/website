@@ -56,7 +56,7 @@ export default class Header extends Vue {
 				{ name: "Tude Club", url: "https://tude.ga/club" },
 				// { name: "Arcade", url: "https://tude.ga/arcade" },
 				{ name: "Events", url: "https://events.tude.ga/" },
-				{ name: "Discord", url: "https://discord.gg/mJnQXet" }
+				{ name: "Discord", url: "https://discord.gg/5nB7pAM" }
 			]
 		},
 		{
