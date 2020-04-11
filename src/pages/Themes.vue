@@ -1,5 +1,5 @@
 <template>
-	<div id="app" freestuff-app>
+	<div id="app">
 		<div id="content">
 			<h1>Themes</h1>
 			<div id="mid">
@@ -81,7 +81,6 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss">
-div[freestuff-app] {
 #content {
 	position: relative;
 	width: 90%;
@@ -194,6 +193,5 @@ div[freestuff-app] {
 	}
 }
 
-}
 }
 </style>

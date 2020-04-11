@@ -1,5 +1,5 @@
 <template>
-	<div id="app" freestuff-app>
+	<div id="app">
 		<div id="content">
 			<div id="infobox">
 				<h1>404 Not Found 😕</h1>
@@ -26,7 +26,4 @@ export default class App extends Vue {}
 </script>
 
 <style lang="scss">
-// div[freestuff-app] {
-
-// }
 </style>

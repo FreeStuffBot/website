@@ -113,8 +113,7 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss">
-div[freestuff-app] {
-&, * {
+* {
 	--background: #1f2023;
 	--bright: #37393e;
 	--brighter: #3e4046;
@@ -136,7 +135,7 @@ div[freestuff-app] {
 	transform: var(--trans);
 }
 
-& {
+#app {
 	background-color: var(--background);
 	display: flex;
 	justify-content: center;
@@ -484,6 +483,5 @@ footer {
 	#buttons > .deco {
 		opacity: 1;
 	}
-}
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<div id="app" freestuff-app>
+	<div id="app">
 		<div id="content">
 			<div id="infobox">
 				<h1>Ayy, it's working 🎉</h1>
@@ -42,17 +42,15 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss">
-div[freestuff-app] {
-	span[style-a82bb1] {
-		padding-bottom: 5px;
-		color: $color-regular;
+span[style-a82bb1] {
+	padding-bottom: 5px;
+	color: $color-regular;
 
-		a {
-			color: #da5e7d;
-			border-bottom: 3px solid #da5e7d33;
+	a {
+		color: #da5e7d;
+		border-bottom: 3px solid #da5e7d33;
 
-			&:hover { border-bottom: 3px solid #da5e7d; }
-		}
+		&:hover { border-bottom: 3px solid #da5e7d; }
 	}
 }
 </style>

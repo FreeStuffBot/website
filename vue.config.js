@@ -55,7 +55,7 @@ module.exports = {
     notfound: {
       entry: 'src/pages/notfound.ts',
       template: 'public/index.html',
-      filename: 'notfound/index.html',
+      filename: '404.html',
       title: 'Game Not Found - Tude',
       pagename: 'FreeStuff • Tude',
       pagedesc: 'An easy way to get informed about all the free games out there'

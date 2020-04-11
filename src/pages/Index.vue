@@ -1,5 +1,5 @@
 <template>
-	<div id="app" freestuff-app>
+	<div id="app">
 		<div id="content">
 			<div id="landing">
 				<div id="infobox" index>
@@ -99,7 +99,6 @@ export default class App extends Vue {}
 </script>
 
 <style lang="scss">
-div[freestuff-app] {
 #decoarrow1 {
 	position: absolute;
 	width: 80px;
@@ -270,6 +269,5 @@ div[freestuff-app] {
 
 #details {
 	width: 100%;
-}
 }
 </style>

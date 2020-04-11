@@ -1,5 +1,5 @@
 <template>
-	<div id="app" freestuff-app>
+	<div id="app">
 		<div id="content">
 			<h1>Content Filter</h1>
 			<div>
@@ -112,7 +112,6 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss">
-div[freestuff-app] {
 #content {
 	position: relative;
 	width: 90%;
@@ -177,7 +176,5 @@ input {
 	}
 	&:hover span { --trans: translateX(5px); }
 	&:not([good]) span { opacity: .6; }
-}
-
 }
 </style>

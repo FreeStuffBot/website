@@ -1,5 +1,5 @@
 <template>
-	<div id="app" freestuff-app>
+	<div id="app">
 		<div id="content">
 			<div id="infobox">
 				<h1>Troubleshooting</h1>

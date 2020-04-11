@@ -1,5 +1,5 @@
 <template>
-	<div id="app" freestuff-app>
+	<div id="app">
 		<div id="content">
 			<div id="infobox">
 				<h1 v-if="!isCallback">Free Stuff <div class="bottag">BOT</div></h1>
@@ -117,7 +117,6 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss">
-div[freestuff-app] {
 .bottag {
 	display: inline-block;
 	color: var(--text);
@@ -128,6 +127,5 @@ div[freestuff-app] {
 	transform: translateY(-5pt) !important;
 	background: #6574D4;
 	margin-left: 10px;
-}
 }
 </style>
