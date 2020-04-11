@@ -1,4 +1,4 @@
-Visit [tude.ga](https://tude.ga/) for a rendered version
+Visit [freestuffbot.xyz](https://freestuffbot.xyz/) for a rendered version
 
 Created with VueCli 4.2.3
 
