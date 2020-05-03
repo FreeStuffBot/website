@@ -46,6 +46,8 @@ li.he {
 		text-align: left;
 		text-decoration: none !important;
 		cursor: pointer;
+		white-space: nowrap;
+		overflow: hidden;
 
 		i {
 			transform: scale(0.7) translateY(2px);

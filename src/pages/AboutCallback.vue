@@ -3,7 +3,7 @@
 		<div id="content">
 			<div id="infobox">
 				<h1 v-if="!isCallback">Free Stuff <div class="bottag">BOT</div></h1>
-				<h2 v-if="!isCallback">An easy way to get informed about <br>all the free games out there!</h2>
+				<h2 v-if="!isCallback">Get notifications about free games<br>right into your Discord server!</h2>
 				<h1 v-if="isCallback">Looking good!</h1>
 				<h2 v-if="isCallback">The bot should now appear<br>on your discord server!</h2>
 
@@ -42,9 +42,9 @@
 					<code>@FreeStuff set currency €</code>
 					<span>You can also write euro / dollar if you don't have access to these symbols.</span>
 					<h4>Minimum price</h4>
-					<span>Since the bot announces games in every price range but some of you might for instance not be interested in already cheap games, you can specify which type of games you're interested in. To simply set a minimum original price, use:</span>
+					<span>Since the bot announces games in every price range but some of you might for instance not be interested in already cheap games, you can specify which type of games you want to get informed about. To set a minimum original price for instance, use:</span>
 					<code>@FreeStuff set minimum price 3€</code>
-					<span>... and the bot will no longer announce games cheaper than 3€. You can use any number there. The currency will be the same as you set above.<!-- If you want to go further and only allow certain stores, <a href="/freestuff/filter">click here</a>--></span>
+					<span>... and the bot will no longer announce games cheaper than 3€. This is the default value by the way, you don't need to do anything if 3€ sounds good to you! <!-- If you want to go further and only allow certain stores, <a href="/freestuff/filter">click here</a>--></span>
 					<h4>Trashy games</h4>
 					<span>Games with really bad ratings or overall bad quality are marked as trash and will by default not reach your server. If you want them anyways you can enable "trash games" using:</span>
 					<code>@FreeStuff set trash on</code>
@@ -54,22 +54,23 @@
 				</div>
 				<div class="box">
 					<h3 style="color: var(--sub)" id="more">More</h3>
-					<h4>Bot made by</h4>
-					<span><a href="https://maanex.tk/">Maanex</a> (<a href="https://twitter.com/Maanex_">@Maanex_</a> on Twitter)</span>
-					<h4>Technical Details</h4>
-					<span>The bot is written in TypeScript using Discord.js and a MongoDB database</span>
 					<h4>Where do you get the information from?</h4>
 					<span>We have spies everywhere 😉</span>
 					<span>For a more technical answer to the question <a href="https://docs.google.com/document/d/1C5aRG7gVryX25N_61WtHbMduJp61qQ5j2vkU0D2ND8g" target="_blank">click here</a></span>
 					<span>If you do wanna send something in that we haven't found yet, feel free to contact us over on <a href="https://discord.gg/5nB7pAM">our discord server</a></span>
-					<h4>The "thank you" section</h4>
-					<span>Hardy#7741 - free games search squad</span>
-					<span>EasyThe#2836 - free games search squad</span>
-					<span>Badosz#0001 - new ideas</span>
+					<h4>Technical Details</h4>
+					<span>The bot is written in TypeScript using Discord.js and a MongoDB database. Webscraping is done using the puppeteer library and several public apis. The dashboard is built with Vue.js using Nuxt.js for server side rendering.</span>
+					<h4>The Team</h4>
+					<span style="margin-bottom: 5px"><a href="https://twitter.com/maanex_/">Maanex</a>: Founder & Lead Developer</span>
+					<span style="margin-bottom: 5px"><a href="https://twitter.com/badosz_/">Badosz</a>: Developer</span>
+					<span style="margin-bottom: 5px"><a href="https://twitter.com/TheMagicalL/">TheMagicalL</a>: Content Moderator</span>
+					<span style="margin-bottom: 5px"><a href="https://twitter.com/EasyTheBG/">EasyThe</a>: Content Moderator</span>
+					<span style="margin-bottom: 5px"><a href="https://twitter.com/daarendotwav/">Daaren</a>: Tude Management</span>
+					<span style="margin-bottom: 5px"><a href="https://twitter.com/max_zyxt/">Zyxt</a>: Tude Management</span>
 					<h4>Bottom text.</h4>
 					<span><a href="/legal/privacy">FreeStuff Privacy Policy</a> - <a href="/legal/terms">FreeStuff Terms of Service</a></span>
 				</div>
-				<footer>Copyright &copy; 2020 Tude</footer>
+				<footer><a href="https://tude.ga/">Copyright &copy; 2020 Tude</a></footer>
 			</div>
 		</div>
 

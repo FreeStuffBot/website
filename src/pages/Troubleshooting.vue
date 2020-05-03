@@ -34,7 +34,7 @@
 					<h4>That means the bot doesn't have permission</h4>
 					<span>This text is yet to be written, hold on!</span>
 				</div>
-				<footer>Copyright &copy; 2020 Tude</footer>
+				<footer><a href="https://tude.ga/">Copyright &copy; 2020 Tude</a></footer>
 			</div>
 		</div>
 

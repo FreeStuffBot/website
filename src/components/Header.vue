@@ -11,6 +11,7 @@
             :elements="category.elements"
             :url="category.url"
             :theme="theme"
+            :color="category.color"
           ></HeaderCategory>
         </ul>
         <!-- <button class="headerLogin" @click="login()">Login</button> -->
@@ -25,6 +26,7 @@
             :elements="data.map(c => c.elements).flat()"
             :url="null"
             :theme="theme"
+            :color="color"
           ></HeaderCategory>
 				</div>
         <!-- <div class="headerLogo"><a href="https://tude.ga/">LOGIN BUTTON HERE<img :src="getMobileLogo()"></a></div> -->
@@ -50,33 +52,29 @@ export default class Header extends Vue {
 
 	public data = [
 		{
-			name: "Club",
-			url: "/club",
-			elements: [
-				{ name: "Tude Club", url: "https://tude.ga/club" },
-				// { name: "Arcade", url: "https://tude.ga/arcade" },
-				{ name: "Events", url: "https://events.tude.ga/" },
-				{ name: "Discord", url: "https://discord.gg/5nB7pAM" }
-			]
+			name: "FreeStuffBot",
+			url: "/",
+			elements: [ ]
 		},
 		{
-			name: "Products",
-			// url: "/products",
-			elements: [
-				{ name: "Linjo", url: "https://tude.ga/linjo" },
-				{ name: "FreeStuff", url: "https://freestuffbot.xyz/" },
-				// { name: "All Products", url: "https://tude.ga/products" }
-			]
+			name: "About",
+			url: "/about",
+			elements: [ ]
+		},
+		{
+			name: "Invite",
+			url: "https://discordapp.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code",
+			elements: [ ],
+			// color: '#7b7fe1'
 		},
 		{
 			name: "More",
-			// url: "/more",
 			elements: [
-				{ name: "About", url: "https://tude.ga/about" },
-				{ name: "Developers", url: "https://developers.tude.ga/" },
+				{ name: "Theme List", url: "/themes" },
+				{ name: "About Tude", url: "https://tude.ga/about" },
+				{ name: "Business Requests", url: "https://business.tude.ga/freestuff" },
 				{ name: "Contact", url: "mailto:tudeteam@gmail.com" },
 				{ name: "Legal", url: "https://tude.ga/legal" },
-				// { name: "Even More", url: "https://tude.ga/more" }
 			]
 		}
   ];

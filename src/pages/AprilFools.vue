@@ -6,8 +6,8 @@
 
 				<span>Happy april fools day!</span>
 				<br>
-				<footer>This page is not affiliated with Valve or Steam.<br>
-								And Half Life Alyx is not free, unfortunately.</footer>
+				<footer><span>This page is not affiliated with Valve or Steam.<br>
+											And Half Life Alyx is not free, unfortunately.</span></footer>
 			</div>
 		</div>
 

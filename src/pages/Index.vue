@@ -34,7 +34,7 @@
 				<div id="gameslist">
 					<div id="pricetagcont">
 						<div id="pricetag">
-							<div class="price">€24.99</div>
+							<div class="price">24.99€</div>
 							<div class="free">FREE</div>
 							<div class="strike"></div>
 						</div>

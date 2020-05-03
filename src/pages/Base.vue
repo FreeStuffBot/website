@@ -238,12 +238,20 @@ code {
 }
 
 footer {
-	opacity: .2;
 	margin-bottom: 40px;
-	font-size: 11pt;
-	text-align: center;
-	color: var(--text);
-	font-family: $font-regular;
+	width: 100%;
+
+	* {
+		display: block;
+		opacity: .2;
+		font-size: 11pt;
+		text-align: center;
+		color: var(--text);
+		font-family: $font-regular;
+		text-decoration: none;
+
+		&:hover { text-decoration: underline; opacity: .5; }
+	}
 }
 
 .info {

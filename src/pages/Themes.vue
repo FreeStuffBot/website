@@ -29,7 +29,7 @@
 					</div>
 				</div>
 			</div>
-			<footer>Copyright &copy; 2020 Tude</footer>
+			<footer><a href="https://tude.ga/">Copyright &copy; 2020 Tude</a></footer>
 		</div>
 
 		<Base />
@@ -60,7 +60,7 @@ export default class App extends Vue {
 		"/assets/img/theme-9.png"
 	];
 	private currImg = this.themeImages[this.themeId - 1];
-	private info = "";
+	private info = "The image will be some official artwork or logo of the game";
 
 	created() {
 		this.$watch("themeId", (id: number) => {

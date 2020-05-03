@@ -56,7 +56,7 @@
 					<code>@FreeStuff set filter {{ cmdout }}</code>
 				</div>
 			</div>
-			<footer>Copyright &copy; 2020 Tude</footer>
+			<footer><a href="https://tude.ga/">Copyright &copy; 2020 Tude</a></footer>
 		</div>
 
 		<Base />
