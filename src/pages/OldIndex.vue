@@ -1,5 +1,5 @@
 <template>
-	<div id="app" :style="`--scroll: ${scroll}; --scrollPos: ${scrollPos}`" @scroll="handleScroll">
+	<div id="app">
 		<div id="content">
 			<div id="landing">
 				<div id="infobox" index>
@@ -13,37 +13,37 @@
 							id="decoarrow1"
 							src="@/assets/img/deco-arrow-1.svg"
 							draggable="false"
+							depth="80"
 						/>
 						<img
 							class="deco arrow"
 							id="decoarrow2"
 							src="@/assets/img/deco-arrow-2.svg"
 							draggable="false"
+							depth="90"
 						/>
 					</div>
 				</div>
 				<div id="gameslist">
+					<div id="pricetagcont">
+						<div id="pricetag">
+							<div class="price">24.99€</div>
+							<div class="free">FREE</div>
+							<div class="strike"></div>
+						</div>
+					</div>
 					<img id="imgdecoblob" src="@/assets/img/deco-blob-1.svg" draggable="false" />
 					<img id="imggame3" src="@/assets/img/game3.png" draggable="false" />
 					<img id="imggame2" src="@/assets/img/game2.png" draggable="false" />
-					<div id="imggame1">
-						<div id="pricetagcont">
-							<div id="pricetag">
-								<div class="price">24.99€</div>
-								<div class="free">FREE</div>
-								<div class="strike"></div>
-							</div>
-						</div>
-						<img src="@/assets/img/game1.png" draggable="false" />
-					</div>
+					<img id="imggame1" src="@/assets/img/game1.png" draggable="false" />
 					<img id="imgdiscord" src="@/assets/img/discord-example.png" draggable="false" />
 					<div id="discordimgdetail">Message appearance is customizable</div>
 				</div>
 			</div>
 
-			<div id="details">
+			<!-- <div id="details">
 				SIKE
-			</div>
+			</div> -->
 		</div>
 
 		<!-- More shit here to scroll down, some nice parallax on everything please -->
@@ -80,47 +80,23 @@
 </template>
 
 <script lang="ts">
-import { Vue } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 import Base from "@/pages/Base.vue";
 
-export default Vue.extend({
+@Component({
 	components: {
-		Base
+		Base,
 	},
-	data() {
-		return {
-			scrollPos: 0,
-			scroll: 0,
-			timer: 0,
-		}
-	},
-	methods: {
-		handleScroll(event: any) {
-			const top = document.getElementById('app')?.scrollTop ?? 0;
-			const delta = top - this.scrollPos;
-			this.scroll = Math.min(this.scroll + delta * .9, 100);
-			this.scrollPos = top;
-		}
-	},
-	created() {
-		this.timer = setInterval(() => {
-			if (this.scroll != 0) this.scroll *= .9;
-			if (Math.abs(this.scroll) < .1) this.scroll = 0;
-		}, 10);
-	},
-	destroyed() {
-		clearInterval(this.timer);
-	}
 })
-
+export default class App extends Vue {}
 </script>
 
 <style lang="scss">
 
 *::-webkit-scrollbar { width: 14px; height: 0; }
 *::-webkit-scrollbar-track { background-color: transparent; }
-*::-webkit-scrollbar-thumb { background-color: $bg-bright; border-radius: 99px; border: 4px solid $backpage; }
-*::-webkit-scrollbar-thumb:hover { background-color: $bg-brighter; }
+*::-webkit-scrollbar-thumb { background-color: $bg-bright; border-radius: 99px; border: 4px solid $bg-dark; }
+*::-webkit-scrollbar-thumb:hover { background-color: $bg-brighter }
 
 
 #decoarrow1 {
@@ -146,9 +122,6 @@ export default Vue.extend({
 	top: 25vh;
 	left: 0;
 	z-index: 20;
-
-	h1 { transform: scale(.95) translate3d(4%, 15%, 5px) rotateX(calc(var(--scroll) * .004deg)); }
-	h2 { transform: rotateX(calc(var(--scroll) * .004deg)); }
 }
 
 .button {
@@ -194,137 +167,109 @@ export default Vue.extend({
 	top: 20vh;
 	right: 0;
 	z-index: 10;
-	transform-style: preserve-3d;
+}
 
-	& > *, & > * > * {
-		position: absolute;
-		width: 320px;
-		border-radius: 1vh;
-		user-select: none;
-	}
+#pricetagcont,
+#gameslist > img {
+	position: absolute;
+	width: 320px;
+	border-radius: 1vh;
+	user-select: none;
+}
+#pricetagcont {
+	transform: var(--transf);
 }
 
 #imggame1 {
-	position: absolute;
 	right: 100px;
-	height: 427px;
 	box-shadow: 0 0 15px #00000088;
-	transform: translateZ(0px) rotateX(calc(var(--scroll) * .005deg));
-
-	& > * {
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
 }
 
 #imggame2 {
-	top: -20px;
-	right: -60px;
-	transform: scale(1.1) translateZ(-20px) rotateX(calc(var(--scroll) * .004deg));
+	right: 30px;
+	transform: var(--trans, scale(0.9));
 	box-shadow: 0 0 10px #00000066;
 }
 
 #imggame3 {
-	top: -30px;
-	right: -200px;
-	transform: scale(1.1) translateZ(-40px) rotateX(calc(var(--scroll) * .003deg));
+	right: -10px;
+	transform: var(--trans, scale(0.8));
 	opacity: 0.5;
 	box-shadow: 0 0 5px #00000044;
 }
 
 #imgdiscord {
-	top: 170px;
-	right: 310px;
-	width: 400px;
+	top: 210px;
+	right: 260px;
 	box-shadow: 0 0 15px #00000088;
-	transform: scale(.7) translateZ(30px) rotateX(calc(var(--scroll) * .006deg));
+}
+@media (min-width: 1199px) {
+	#imgdiscord {
+		width: 400px !important;
+	}
 }
 
 #discordimgdetail {
 	position: absolute;
 	width: 400px !important;
-	top: 495px;
-	right: 310px;
+	top: 600px;
+	right: 260px;
 	text-align: center;
 	font-size: 14px;
+	opacity: 0.3;
 	font-family: $font-regular;
 	color: $color-sub;
-	transform: scale(.7) translateZ(30px);
-	opacity: calc(.4 - (var(--scrollPos) * .002));
 }
 
 #imgdecoblob {
 	width: 380px !important;
-	top: 300px;
-	right: -300px;
-	transform: translateZ(-100px) scale(2);
+	top: 200px;
+	right: 65px;
 }
 
 #pricetagcont {
 	right: 100px;
 	z-index: 100;
-
-	#pricetag {
-		display: inline-flex;
-		border-radius: 0.5vh;
-		background: #00000088;
-		backdrop-filter: blur(5px);
-		margin: 15px;
-		padding: 10px;
-		font-size: 16px;
-
-		.price {
-			color: $color-regular;
-			font-family: $font-regular;
-		}
-
-		.free {
-			margin-left: 10px;
-			color: #ffc200;
-			font-family: $font-header;
-		}
-
-		.strike {
-			background: #ffc200;
-			display: inline-block;
-			height: 3px;
-			width: 64px;
-			position: absolute;
-			left: 5px;
-			top: 50%;
-			transform: translateY(-1.5px) rotate(-10deg);
-		}
-	}
+}
+#pricetag {
+	display: inline-flex;
+	border-radius: 0.5vh;
+	background: #00000088;
+	backdrop-filter: blur(5px);
+	margin: 15px;
+	padding: 10px;
+	font-size: 16px;
 }
 
-#decoline1 {
-	transform: translate3d(-840%, 350%, -500px) scale(6);
+#pricetag > .price {
+	color: $color-regular;
+	font-family: $font-regular;
 }
 
-#decoline2 {
-	transform: translate3d(1510%, -50%, -200px) scale(3);
+#pricetag > .free {
+	margin-left: 10px;
+	color: #ffc200;
+	font-family: $font-header;
 }
 
-//
-
-#app {
-	perspective: 100px;
+#pricetag > .strike {
+	background: #ffc200;
+	display: inline-block;
+	height: 3px;
+	width: 64px;
+	position: absolute;
+	left: 5px;
+	top: 50%;
+	transform: translateY(-1.5px) rotate(-10deg);
 }
 
 #landing {
-	position: relative;
-	z-index: 10;
 	width: 100%;
 	height: 100vh;
 	min-height: calc(20vh + 650px);
-
-	transform-style: preserve-3d;
 }
 
 #details {
 	width: 100%;
-
-	height: 100vh; // TODO REMOVE
 }
 </style>

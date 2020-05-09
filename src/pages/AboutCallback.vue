@@ -53,7 +53,7 @@
 					<code>@FreeStuff set reaction on/off</code>
 				</div>
 				<div class="box">
-					<h3 style="color: var(--sub)" id="more">More</h3>
+					<h3 style="color: #cccccc" id="more">More</h3>
 					<h4>Where do you get the information from?</h4>
 					<span>We have spies everywhere 😉</span>
 					<span>For a more technical answer to the question <a href="https://docs.google.com/document/d/1C5aRG7gVryX25N_61WtHbMduJp61qQ5j2vkU0D2ND8g" target="_blank">click here</a></span>
@@ -120,7 +120,7 @@ export default class App extends Vue {
 <style lang="scss">
 .bottag {
 	display: inline-block;
-	color: var(--text);
+	color: $color-regular;
 	font-family: $font-regular;
 	font-size: 30px;
 	padding: 3px 20px;

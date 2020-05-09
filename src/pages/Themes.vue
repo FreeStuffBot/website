@@ -103,7 +103,7 @@ export default class App extends Vue {
 
 #imgbox {
 	width: 48%;
-	background-color: var(--bright);
+	background-color: $bg-bright;
 	border-radius: 0.5vh;
 	box-shadow: 0 2px 10px #00000066;
 	display: flex;
@@ -120,8 +120,8 @@ export default class App extends Vue {
 #info {
 	position: absolute;
 	bottom: 20px;
-	color: var(--sub);
-		font-family: $font-regular;
+	color: $color-sub;
+	font-family: $font-regular;
 	font-size: 14px;
 }
 
@@ -151,25 +151,25 @@ export default class App extends Vue {
 		border: none;
 		outline: none;
 		cursor: pointer;
-		background: var(--bright);
+		background: $bg-bright;
 		box-shadow: 0 2px 10px #00000066;
 		transition: 0.2s ease all;
 
 		&:hover {
-			background: var(--brighter);
+			background: $bg-brighter;
 			transform: translateY(-2px);
 			box-shadow: 0 4px 14px #00000055;
 		}
 
 		&[active] {
 			background: var(--theme);
-			color: var(--bright);
+			color: $bg-bright
 		}
 	}
 }
 
 #tutorial {
-	background-color: var(--bright);
+	background-color: $bg-bright;
 	border-radius: 0.5vh;
 	box-shadow: 0 2px 10px #00000066;
 	padding: 40px 20px 20px 20px;

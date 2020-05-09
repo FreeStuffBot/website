@@ -50,3 +50,310 @@ button, a[button] {
     padding: 1vh 0;
   }
 }
+
+/* */
+
+#content *, .deco {
+	transform: var(--trans);
+}
+
+#app {
+	background-color: $backpage;
+	display: flex;
+	justify-content: center;
+	overflow-x: hidden;
+}
+
+#content {
+	position: relative;
+	width: 90%;
+	max-width: 1300px;
+}
+
+#infobox:not([index]) {
+	position: absolute;
+	top: 25vh;
+	left: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 20;
+
+	h1, h2 { text-align: center; }
+}
+
+h1 {
+	color: $color-header;
+	font-family: $font-header;
+	font-size: 50px;
+	line-height: 45px;
+	margin-bottom: 20px;
+}
+
+h2 {
+	color: $color-header;
+	font-family: $font-regular;
+	font-size: 26px;
+	line-height: 26px;
+	margin-bottom: 60px;
+}
+
+h3 {
+	border-radius: .4vh;
+	background: $bg-bright;
+	display: inline-block;
+	position: absolute;
+	left: 10px;
+	top: -10px;
+	font-size: 20px;
+	padding: 4px 7px;
+	color: $color-header;
+	font-family: $font-header;
+	box-shadow: 0 1px 2px #00000099;
+}
+
+h4 {
+	font-size: 16px;
+	margin: 20px 0 5px 0;
+	color: $color-header;
+	font-family: $font-header;
+}
+
+.box {
+	position: relative;
+	width: 50%;
+	background: $bg-bright;
+	border-radius: .5vh;
+	padding: 20px;
+	box-shadow: 0 2px 10px #00000066;
+	margin-bottom: 40px;
+
+	a {
+		color: #da5e7d;
+		border-bottom: 3px solid #da5e7d33;
+
+		&:hover { border-bottom: 3px solid #da5e7d; }
+	}
+}
+	
+#content span {
+	display: block;
+	font-size: 12pt;
+	color: $color-regular;
+	font-family: $font-regular;
+}
+
+code {
+	background: #00000055;
+	color: $color-regular;
+	padding: 5px 9px;
+	margin: 5px 0;
+	font-size: 12pt;
+	display: block;
+	font-family: monospace;
+	border-radius: .3vh;
+
+	&[inline] {
+		display: inline-block;
+	}
+}
+
+footer {
+	margin-bottom: 40px;
+	width: 100%;
+
+	* {
+		display: block;
+		opacity: .2;
+		font-size: 11pt;
+		text-align: center;
+		color: $color-regular;
+		font-family: $font-regular;
+		text-decoration: none;
+
+		&:hover { text-decoration: underline; opacity: .5; }
+	}
+}
+
+.info {
+	border-left: 3px solid #2aa9c9;
+	background: #3f5155;
+	margin-top: 20px;
+	padding: 10px 0 10px 15px;
+	border-radius: 0 .3vh .3vh 0;
+	color: $color-regular;
+	font-family: $font-regular;
+}
+
+.divider {
+	margin: 30px 0 60px 0;
+	width: 50px;
+	height: 2px;
+	background: $color-sub;
+	transform: translateX(-10px);
+		
+	&::after {
+		content: '';
+		position: relative;
+		display: block;
+		right: -60px;
+		width: 10px;
+		height: 2px;
+		background: $color-sub;
+	}
+}
+
+/*
+ *
+ */
+
+@media (max-width: 1200px) {
+	
+	* {
+		transform: unset !important;
+	}
+
+	#infobox {
+		width: 100%;
+	}
+
+	h1 {
+		font-size: 30px;
+		line-height: 30px;
+		text-align: center;
+	}
+
+	h2 {
+		font-size: 16px;
+		line-height: 16px;
+		text-align: center;
+	}
+
+	#decoarrow1 {
+		position: absolute;
+		width: 80px;
+		left: 50%;
+		top: 12px;
+		transform: translateX(-250px);
+	}
+
+	#decoarrow2 {
+		position: absolute;
+		width: 60px;
+		left: 42%;
+		top: 65px;
+	}
+
+	#gameslist {
+		top: 80vh !important;
+		transform: scale(0.7);
+		width: 100%;
+		right: 50%;
+  }
+  
+  #pricetagcont {
+		right: unset;
+    left: 2vw;
+  }
+
+	#imggame1 {
+		right: unset;
+    left: 2vw;
+    width: 70vw !important;
+	}
+
+	#imggame2 {
+    right: 8% !important;
+    width: 70vw !important;
+	}
+
+	#imggame3 {
+    right: 0 !important;
+    width: 70vw !important;
+	}
+
+	#imgdiscord {
+    right: 0 !important;
+    margin: auto;
+		width: 90vw !important;
+		top: 300px;
+		margin-bottom: 75px;
+	}
+
+	#discordimgdetail {
+		position: absolute;
+		width: 100% !important;
+		top: 620px;
+		right: 0 !important;
+		text-align: center;
+		font-size: 14px;
+		opacity: 0.3;
+	}
+
+  .button {
+    font-size: 20px;
+	}
+	
+  #imgdiscord {
+    right: 0vw !important;
+    width: 90vw !important;
+    top: 300px !important;
+    margin-bottom: 50px;
+  }
+
+  #decoline1,
+  #decoline2,
+  #decoblob2 {
+    display: none;
+  }
+
+  #mid {
+    flex-direction: column;
+  }
+
+  #imgbox {
+    width: 100% !important;
+    min-height: 330px;
+    margin-bottom: 30px !important;
+    margin-top: 30px !important;
+  }
+  
+  #buttonsbox {
+    width: 100% !important;
+  }
+
+  #buttons {
+    width: calc(100% + 5px);
+    display: flex;
+    justify-content: center;
+    transform: translate(0px, 0px);
+    flex-wrap: wrap;
+		margin-bottom: 30px;
+
+		a {
+			margin-top: 10px;
+			font-size: 18px;
+		}
+  }
+
+  footer {
+    display: none;
+  }
+
+  .box {
+    width: 90% !important;
+  }
+
+  #tutorial {
+    margin-bottom: 30px;
+  }
+	
+	.deco {
+		opacity: .2;
+	}
+
+	#buttons > .deco {
+		opacity: 1;
+	}
+}

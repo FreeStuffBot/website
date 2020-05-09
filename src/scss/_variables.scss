@@ -1,14 +1,16 @@
 
 /* COLORS */
-$color-header: #111111;
-$color-major: #202020;
-$color-regular: #333333;
-$color-sub: #666666;
-$color-minor: #888888;
+$color-header: #ffffff;
+$color-major: #ffffff;
+$color-regular: #eeeeee;
+$color-sub: #cccccc;
+$color-minor: #777777;
 
-$backpage: #fafafa;
-$background-a: #ffffff;
-$background-b: #eeeeee;
+$backpage: #1f2023;
+$bg-bright: #37393e;
+$bg-brighter: #3e4046;
+$bg-dark: #181a1c;
+$bg-darker: #0c0d0e;
 
 $primary-orange: #f18912;
 $primary-orange-trans: #f18912cc;
@@ -23,6 +25,7 @@ $theme-a: #73988A;
 $theme-b: #C5DCD4;
 $theme-a-hover: #4d695e;
 $theme-b-hover: #92ada4;
+$error: #f16248;
 
 $button-primary: $primary-violett-trans;
 $button-primary-hover: $primary-violett;

@@ -145,7 +145,7 @@ input {
 	border-radius: .3vh;
 	margin: 5px 0;
 	background: #00000055;
-	color: var(--text);
+	color: $color-regular;
 	font-size: 12pt;
 }
 

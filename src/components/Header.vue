@@ -48,6 +48,7 @@ import HeaderCategory from "@/components/HeaderCategory.vue";
 export default class Header extends Vue {
 	@Prop() private pagename!: string;
 	@Prop() private theme!: "light" | "dark";
+	@Prop() private color!: string;
 	@Prop() private monochrome!: boolean;
 
 	public data = [
@@ -123,7 +124,7 @@ header {
 	z-index: 110;
 	width: 100%;
 	border: 0;
-	font-family: $color-header;
+	font-family: $font-header;
 	font-size: 18px;
 	font-style: inherit;
 	font-weight: inherit;
