@@ -63,7 +63,7 @@ export default class Header extends Vue {
 		},
 		{
 			name: "Invite",
-			url: "https://discordapp.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code",
+			url: "https://discord.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code",
 			elements: [ ],
 			// color: '#7b7fe1'
 		},
