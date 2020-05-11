@@ -2,7 +2,7 @@
 	<header :theme="theme" :monochrome="monochrome">
     <div class="header desktopHeader">
       <div class="headerInner">
-        <div class="headerLogo"><a href="https://tude.ga/"><img :src="getLogo()"></a></div>
+        <div class="headerLogo"><a href="/"><img :src="getLogo()"></a></div>
         <ul class="headerNav">
           <HeaderCategory
             v-for="category in data"
@@ -19,7 +19,7 @@
     </div>
     <div class="header mobileHeader">
 			<div class="headerInner">
-        <div class="headerLogo"><a href="https://tude.ga/"><img :src="getMobileLogo()"></a></div>
+        <div class="headerLogo"><a href="/"><img :src="getMobileLogo()"></a></div>
 				<div class="headerNav">
 					<HeaderCategory
             :name="pagename"
@@ -53,11 +53,6 @@ export default class Header extends Vue {
 
 	public data = [
 		{
-			name: "FreeStuffBot",
-			url: "/",
-			elements: [ ]
-		},
-		{
 			name: "About",
 			url: "/about",
 			elements: [ ]
@@ -69,29 +64,27 @@ export default class Header extends Vue {
 			// color: '#7b7fe1'
 		},
 		{
+			name: "Themes",
+			url: "/themes",
+			elements: [ ]
+		},
+		{
 			name: "More",
 			elements: [
-				{ name: "Theme List", url: "/themes" },
-				{ name: "About Tude", url: "https://tude.ga/about" },
+				{ name: "Support Server", url: "https://discord.gg/WrnKKF8" },
 				{ name: "Business Requests", url: "https://business.tude.ga/freestuff" },
 				{ name: "Contact", url: "mailto:tudeteam@gmail.com" },
-				{ name: "Legal", url: "https://tude.ga/legal" },
+				{ name: "Legal Guidelines", url: "https://tude.ga/legal" },
 			]
 		}
   ];
   
   getLogo() {
-    switch(this.theme) {
-      case 'light': return '/assets/img/logo_white.svg';
-      default: return '/assets/img/logo_black.svg';
-    }
+    return '/assets/img/icon_round.png';
   }
   
   getMobileLogo() {
-    switch(this.theme) {
-      case 'light': return '/assets/img/mini_logo_white.svg';
-      default: return '/assets/img/mini_logo_black.svg';
-    }
+    return '/assets/img/icon_round.png';
 	}
 	
 	login() {
@@ -104,14 +97,14 @@ export default class Header extends Vue {
 header,
 header * {
 	--hover: #f5f5f5;
-	--text: #000000b9;
+	--text: #000000;
 	--morelist: #ffffff;
 	--morelist-text: #111111;
 }
 header[theme="light"],
 header[theme="light"] * {
 	--hover: #e4e4e4;
-	--text: #e9e9e9b9;
+	--text: #ffffff;
 	--morelist: #fafafa;
 	--morelist-text: #111111;
 }

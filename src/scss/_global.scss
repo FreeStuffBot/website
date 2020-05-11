@@ -53,10 +53,6 @@ button, a[button] {
 
 /* */
 
-#content *, .deco {
-	transform: var(--trans);
-}
-
 #app {
 	background-color: $backpage;
 	display: flex;
@@ -86,15 +82,15 @@ button, a[button] {
 h1 {
 	color: $color-header;
 	font-family: $font-header;
-	font-size: 50px;
+	font-size: 38pt;
 	line-height: 45px;
 	margin-bottom: 20px;
 }
 
 h2 {
-	color: $color-header;
+	color: $color-sub;
 	font-family: $font-regular;
-	font-size: 26px;
+	font-size: 20pt;
 	line-height: 26px;
 	margin-bottom: 60px;
 }
@@ -106,7 +102,7 @@ h3 {
 	position: absolute;
 	left: 10px;
 	top: -10px;
-	font-size: 20px;
+	font-size: 14pt;
 	padding: 4px 7px;
 	color: $color-header;
 	font-family: $font-header;
@@ -118,6 +114,26 @@ h4 {
 	margin: 20px 0 5px 0;
 	color: $color-header;
 	font-family: $font-header;
+}
+
+h5 {
+	margin: 20px 0 5px 0;
+	display: block;
+	overflow: visible;
+	transform: rotate(calc(var(--scroll) * .03deg)) translateZ(10px);
+	
+	span {
+		display: block;
+		font-size: 22pt;
+		color: $color-header;
+		font-family: $font-header;
+		transform: translateX(-5%);
+		transition: transform .5s cubic-bezier(0.34, 1.56, 0.64, 1);
+	}
+	&[left] span { text-align: left; }
+	&[center] span { text-align: center; }
+	&[right] span { text-align: right; }
+	&.visible span { transform: translateX(0); }
 }
 
 .box {
@@ -137,7 +153,7 @@ h4 {
 	}
 }
 	
-#content span {
+#content span:not([component]) {
 	display: block;
 	font-size: 12pt;
 	color: $color-regular;
