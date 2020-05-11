@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Index from './Index.vue'
+import Index from './NewIndex.vue'
 
 Vue.config.productionTip = false
 

@@ -73,7 +73,7 @@ export default class Header extends Vue {
 			elements: [
 				{ name: "Support Server", url: "https://discord.gg/WrnKKF8" },
 				{ name: "Business Requests", url: "https://business.tude.ga/freestuff" },
-				{ name: "Contact", url: "mailto:tudeteam@gmail.com" },
+				{ name: "Contact", url: "mailto:team@freestuffbot.xyz" },
 				{ name: "Legal Guidelines", url: "https://tude.ga/legal" },
 			]
 		}
