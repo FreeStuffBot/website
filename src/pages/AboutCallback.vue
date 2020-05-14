@@ -22,7 +22,7 @@
 					<span>Tell the bot in which channel it should send the annoucements using:</span>
 					<code>@FreeStuff set channel #channel</code>
 					<span>with #channel being a channel of your choice, of course.</span>
-					<h4>Step one:</h4>
+					<h4>Step three:</h4>
 					<span>Try it out! You can at any time try if everything works correctly by using this command:</span>
 					<code>@FreeStuff test</code>
 					<span>If you get a message in the channel you've set up in step one, congratulations, your job here is done! You will from now on get news about new free games in that channel!</span>
