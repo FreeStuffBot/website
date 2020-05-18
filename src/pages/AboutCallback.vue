@@ -28,7 +28,7 @@
 					<span>Scroll down a bit to see how you can customize the bot's message.</span>
 					<div class="info">Ever feel lost? Type <code inline>@FreeStuff help</code> for help!</div>
 				</div>
-				<div class="box" v-if="isCallback">
+				<div class="box" v-if="!isCallback">
 					<h3 style="color: #00f0a5" id="quick-setup">Getting Started</h3>
 					<h4>Step one:</h4>
 					<span>Invite the bot to your server by <a href="https://discord.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code">clicking here</a></span>
