@@ -14,8 +14,22 @@
 					<span>Please make sure the bot can read and send messages.</span>
 					<span>Some themes also require external emojis.</span>
 				</div>
-				<div class="box">
+				<div class="box" v-if="isCallback">
 					<h3 style="color: #00f0a5" id="quick-setup">Quick Setup</h3>
+					<h4>Step one:</h4>
+					<span>Tell the bot in which channel it should send the annoucements using:</span>
+					<code>@FreeStuff set channel #channel</code>
+					<span>with #channel being a channel of your choice, of course.</span>
+					<h4>Step two:</h4>
+					<span>Try it out! You can at any time try if everything works correctly by using this command:</span>
+					<code>@FreeStuff test</code>
+					<span>If you get a message in the channel you've set up in step one, congratulations, your job here is done! You will from now on get news about new free games in that channel!</span>
+					<br>
+					<span>Scroll down a bit to see how you can customize the bot's message.</span>
+					<div class="info">Ever feel lost? Type <code inline>@FreeStuff help</code> for help!</div>
+				</div>
+				<div class="box" v-if="isCallback">
+					<h3 style="color: #00f0a5" id="quick-setup">Getting Started</h3>
 					<h4>Step one:</h4>
 					<span>Invite the bot to your server by <a href="https://discord.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code">clicking here</a></span>
 					<h4>Step two:</h4>

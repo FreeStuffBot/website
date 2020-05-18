@@ -17,7 +17,7 @@
 					<span><a href="#nopermission">The bot only says that it doesn't have permissions</a></span>
 				</div>
 				<div class="box">
-					<h3 style="color: var(--sub)" id="noresponse">Bot does not respond</h3>
+					<h3 style="color: #cccccc" id="noresponse">Bot does not respond</h3>
 					<h4>99% of the time is this a permission issue.</h4>
 					<span>The other 1% you can't do anything about it except to wait a bit and try it again later. Try the steps below though before telling yourself that your case is one of the 1%!</span>
 					<h4>Checking bot's permissions</h4>
@@ -30,7 +30,7 @@
 					<span>you can join our Discord for one to one human help though we probably can't do anything else than tell you what you've already read above. You might also just be very unlucky and the bot currently has issues, sorry for the inconvenience if that's the case. Just relax a bit and try it again at a later point in time. You've lived multiple years without this bot now, you can wait another hour or two!</span>
 				</div>
 				<div class="box">
-					<h3 style="color: var(--sub)" id="nopermission">Bot says: No permission</h3>
+					<h3 style="color: #cccccc" id="nopermission">Bot says: No permission</h3>
 					<h4>That means the bot doesn't have permission</h4>
 					<span>This text is yet to be written, hold on!</span>
 				</div>
