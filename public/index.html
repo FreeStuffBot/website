@@ -3,25 +3,42 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="<%= htmlWebpackPlugin.options.pagedesc || 'Tude' %>">
+    <meta name="description" content="<%= htmlWebpackPlugin.options.pagedesc || 'FreeStuff Bot' %>">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="theme-color" content="#4dc47b" id="metacolor" />
+    <meta name="theme-color" content="#cd4fd1" id="metacolor" />
+    <meta name="application-name" content="FreeStuff Bot" id="metaname" />
+    <meta name="robots" content="index, follow" />
+    <meta name="image" content="https://freestuffbot.xyz/icons/180.png" />
+    <meta name="author" content="Andreas May" />
+    <meta name="publisher" content="Tude" />
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="<%= htmlWebpackPlugin.options.pagename || 'Tude' %>" />
-    <meta name="twitter:description" content="<%= htmlWebpackPlugin.options.pagedesc || 'Tude' %>" />
-    <meta name="twitter:site" content="@tudeteam" />
+    <meta data-hid="twitter:card" name="twitter:card" content="summary" />
+    <meta data-hid="twitter:title" name="twitter:title" content="<%= htmlWebpackPlugin.options.pagename || 'Tude' %>" />
+    <meta data-hid="twitter:description" name="twitter:description" content="<%= htmlWebpackPlugin.options.pagedesc || 'Tude' %>" />
+    <meta data-hid="twitter:site" name="twitter:site" content="@tudeteam" />
+    <meta data-hid="twitter:creator" name="twitter:creator" content="@maanex_">
 
     <link rel="icon" href="<%= BASE_URL %><%= htmlWebpackPlugin.options.faviconname || 'favicon.png' %>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%= BASE_URL %><%= htmlWebpackPlugin.options.faviconname || 'icons/16.png' %>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%= BASE_URL %><%= htmlWebpackPlugin.options.faviconname || 'icons/32.png' %>">
+    <link rel="icon" type="image/png" sizes="96x96" href="<%= BASE_URL %><%= htmlWebpackPlugin.options.faviconname || 'icons/96.png' %>">
+    <link rel="icon" type="image/png" sizes="180x180" href="<%= BASE_URL %><%= htmlWebpackPlugin.options.faviconname || 'icons/180.png' %>">
     <title><%= htmlWebpackPlugin.options.title %></title>
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tude.ga/">
-    <meta property="og:title" content="<%= htmlWebpackPlugin.options.pagename || 'Tude' %>">
-    <meta property="og:description" content="<%= htmlWebpackPlugin.options.pagedesc || 'Tude' %>">
-    <meta property="og:image" content="<%= BASE_URL %><%= htmlWebpackPlugin.options.faviconname || 'favicon.png' %>">
-    <meta property="og:site_name" content="Tude">
-    <meta property="og:locale" content="de-DE">
+    <meta property="og:url" content="https://freestuffbot.xyz/">
+    <meta property="og:title" content="<%= htmlWebpackPlugin.options.pagename || 'FreeStuff Bot' %>">
+    <meta property="og:description" content="<%= htmlWebpackPlugin.options.pagedesc || 'FreeStuff Bot' %>">
+    <meta property="og:image" content="<%= BASE_URL %><%= htmlWebpackPlugin.options.faviconname || 'icons/180.png' %>">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="180">
+    <meta property="og:image:height" content="180">
+    <meta property="og:image:alt" content="FreeStuff Bot Logo">
+    <meta property="og:site_name" content="FreeStuff Bot">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="@freestuff/website">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112300017-4"></script>
@@ -29,7 +46,7 @@
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but the Tude Website doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>We're sorry but the FreeStuff Bot Website doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
   </body>

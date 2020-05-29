@@ -16,65 +16,65 @@ module.exports = {
       entry: 'src/pages/index.ts',
       template: 'public/index.html',
       filename: 'index.html',
-      title: 'Free Stuff - Tude',
-      pagename: 'FreeStuff • Tude',
-      pagedesc: 'An easy way to get informed about all the free games out there'
+      title: 'FreeStuff Bot',
+      pagename: 'FreeStuff Bot',
+      pagedesc: 'A highly customizeable discord bot that sends news about free games right into your server. Supports every major platform, many filter options and customizeable appearance!'
     },
     about: {
       entry: 'src/pages/aboutCallback.ts',
       template: 'public/index.html',
       filename: 'about/index.html',
-      title: 'About Free Stuff - Tude',
-      pagename: 'FreeStuff • Tude',
-      pagedesc: 'An easy way to get informed about all the free games out there'
+      title: 'About FreeStuff Bot',
+      pagename: 'About FreeStuff Bot',
+      pagedesc: 'A highly customizeable discord bot that sends news about free games right into your server. Supports every major platform, many filter options and customizeable appearance!'
     },
     callback: {
       entry: 'src/pages/aboutCallback.ts',
       template: 'public/index.html',
       filename: 'callback/index.html',
-      title: 'Thank you for using the Free Stuff Bot! - Tude',
-      pagename: 'FreeStuff • Tude',
-      pagedesc: 'An easy way to get informed about all the free games out there'
+      title: 'Thank you for using the Free Stuff Bot!',
+      pagename: 'FreeStuff Bot',
+      pagedesc: 'A highly customizeable discord bot that sends news about free games right into your server. Supports every major platform, many filter options and customizeable appearance!'
     },
     testgame: {
       entry: 'src/pages/testgame.ts',
       template: 'public/index.html',
       filename: 'testgame/index.html',
-      title: 'Example Game - Tude',
-      pagename: 'FreeStuff • Tude',
-      pagedesc: 'An easy way to get informed about all the free games out there'
+      title: 'FreeStuff Example Game',
+      pagename: 'FreeStuff Example Game',
+      pagedesc: 'A highly customizeable discord bot that sends news about free games right into your server. Supports every major platform, many filter options and customizeable appearance!'
     },
     themes: {
       entry: 'src/pages/themes.ts',
       template: 'public/index.html',
       filename: 'themes/index.html',
-      title: 'Free Stuff Themes - Tude',
-      pagename: 'FreeStuff • Tude',
-      pagedesc: 'An easy way to get informed about all the free games out there'
+      title: 'FreeStuff Bot Themes',
+      pagename: 'FreeStuff Bot Themes',
+      pagedesc: 'A highly customizeable discord bot that sends news about free games right into your server. Supports every major platform, many filter options and customizeable appearance!'
     },
     notfound: {
       entry: 'src/pages/notfound.ts',
       template: 'public/index.html',
       filename: '404.html',
-      title: 'Game Not Found - Tude',
-      pagename: 'FreeStuff • Tude',
-      pagedesc: 'An easy way to get informed about all the free games out there'
+      title: 'FreeStuff 404',
+      pagename: 'FreeStuff 404',
+      pagedesc: 'A highly customizeable discord bot that sends news about free games right into your server. Supports every major platform, many filter options and customizeable appearance!'
     },
     troubleshooting: {
       entry: 'src/pages/troubleshooting.ts',
       template: 'public/index.html',
       filename: 'troubleshooting/index.html',
-      title: 'FreeStuff Bot Troubleshooting - Tude',
-      pagename: 'FreeStuff • Tude',
-      pagedesc: 'An easy way to get informed about all the free games out there'
+      title: 'FreeStuff Bot Troubleshooting',
+      pagename: 'FreeStuff Bot Troubleshooting',
+      pagedesc: 'A highly customizeable discord bot that sends news about free games right into your server. Supports every major platform, many filter options and customizeable appearance!'
     },
     filter: {
       entry: 'src/pages/filter.ts',
       template: 'public/index.html',
       filename: 'filter/index.html',
-      title: 'FreeStuff Content Filter - Tude',
-      pagename: 'FreeStuff • Tude',
-      pagedesc: 'An easy way to get informed about all the free games out there'
+      title: 'FreeStuff Bot',
+      pagename: 'FreeStuff Bot',
+      pagedesc: 'A highly customizeable discord bot that sends news about free games right into your server. Supports every major platform, many filter options and customizeable appearance!'
     },
     'half-life-alyx-free': {
       entry: 'src/pages/aprilfools.ts',
