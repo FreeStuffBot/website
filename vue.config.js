@@ -16,24 +16,24 @@ module.exports = {
       entry: 'src/pages/index.ts',
       template: 'public/index.html',
       filename: 'index.html',
-      title: 'FreeStuff Bot',
-      pagename: 'FreeStuff Bot',
+      title: 'FreeStuff Discord Bot',
+      pagename: 'FreeStuff Discord Bot',
       pagedesc: 'A highly customizeable discord bot that sends news about free games right into your server. Supports every major platform, many filter options and customizeable appearance!'
     },
     about: {
       entry: 'src/pages/aboutCallback.ts',
       template: 'public/index.html',
       filename: 'about/index.html',
-      title: 'About FreeStuff Bot',
-      pagename: 'About FreeStuff Bot',
+      title: 'About the FreeStuff Discord Bot',
+      pagename: 'About the FreeStuff Discord Bot',
       pagedesc: 'A highly customizeable discord bot that sends news about free games right into your server. Supports every major platform, many filter options and customizeable appearance!'
     },
     callback: {
       entry: 'src/pages/aboutCallback.ts',
       template: 'public/index.html',
       filename: 'callback/index.html',
-      title: 'Thank you for using the Free Stuff Bot!',
-      pagename: 'FreeStuff Bot',
+      title: 'Thank you for using the FreeStuff Bot!',
+      pagename: 'FreeStuff Discord Bot',
       pagedesc: 'A highly customizeable discord bot that sends news about free games right into your server. Supports every major platform, many filter options and customizeable appearance!'
     },
     testgame: {
@@ -72,8 +72,8 @@ module.exports = {
       entry: 'src/pages/filter.ts',
       template: 'public/index.html',
       filename: 'filter/index.html',
-      title: 'FreeStuff Bot',
-      pagename: 'FreeStuff Bot',
+      title: 'FreeStuff Discord Bot',
+      pagename: 'FreeStuff Discord Bot',
       pagedesc: 'A highly customizeable discord bot that sends news about free games right into your server. Supports every major platform, many filter options and customizeable appearance!'
     },
     'half-life-alyx-free': {
