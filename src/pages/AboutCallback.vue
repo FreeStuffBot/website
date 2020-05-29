@@ -79,7 +79,7 @@
 					<h4>The Team</h4>
 					<span style="margin-bottom: 5px"><a href="https://twitter.com/maanex_/">Maanex</a>: Founder & Lead Developer</span>
 					<span style="margin-bottom: 5px"><a href="https://twitter.com/badosz_/">Badosz</a>: Developer</span>
-					<span style="margin-bottom: 5px"><a href="https://twitter.com/TheMagicalL/">TheMagicalL</a>: Content Moderator</span>
+					<span style="margin-bottom: 5px"><a href="https://twitter.com/TheMagicalL1/">TheMagicalL</a>: Content Moderator</span>
 					<span style="margin-bottom: 5px"><a href="https://twitter.com/EasyTheBG/">EasyThe</a>: Content Moderator</span>
 					<span style="margin-bottom: 5px"><a href="https://twitter.com/daarendotwav/">Daaren</a>: Tude Management</span>
 					<span style="margin-bottom: 5px"><a href="https://twitter.com/max_zyxt/">Zyxt</a>: Tude Management</span>
