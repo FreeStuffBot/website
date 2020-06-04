@@ -8,18 +8,8 @@
 					<div id="buttons">
 						<a id="invite-button" class="button" href="https://discord.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code">Invite</a>
 						<a id="about-button" class="button min" href="/about">About</a>
-						<img
-							class="deco arrow"
-							id="decoarrow1"
-							src="@/assets/img/deco-arrow-1.svg"
-							draggable="false"
-						/>
-						<img
-							class="deco arrow"
-							id="decoarrow2"
-							src="@/assets/img/deco-arrow-2.svg"
-							draggable="false"
-						/>
+						<img class="deco arrow" id="decoarrow1" src="@/assets/img/deco-arrow-1.svg" draggable="false"/>
+						<img class="deco arrow" id="decoarrow2" src="@/assets/img/deco-arrow-2.svg" draggable="false"/>
 					</div>
 				</div>
 				<div id="gameslist">
@@ -40,6 +30,7 @@
 					<div id="discordimgdetail">Message appearance is customizable</div>
 				</div>
 			</div>
+			<!-- <img id="imgdecoblob-2" src="@/assets/img/deco-blob-3.svg" draggable="false" /> -->
 
 			<div id="details">
 				<h5 data-trigger center>
