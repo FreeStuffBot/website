@@ -43,7 +43,7 @@
 					<div class="panel">
 						<img src="@/assets/img/landing-customize-themes.svg" alt="">
 						<span component class="title">CHOOSE A NICE THEME</span>
-						<span component class="desc">Select one of 9 themes to match the look and feel of your server or even create your own with FreeStuff Plus!</span>
+						<span component class="desc">Select one of 10 themes to match the look and feel of your server or even create your own with FreeStuff Plus!</span>
 					</div>
 					<div class="panel">
 						<img src="@/assets/img/landing-customize-filter.svg" alt="">
@@ -56,9 +56,9 @@
 						<span component class="desc">Would you like to get pinged on new free games? Just provide the bot with a role to ping and you'll never be too late!</span>
 					</div>
 					<div class="panel">
-						<img src="@/assets/img/landing-customize-themes.svg" alt="">
-						<span component class="title">MORE TO COME</span>
-						<span component class="desc">The bot receives updates and new features on a regular basis to ensure you the nicest and best possible experience!</span>
+						<img src="@/assets/img/landing-customize-language.svg" alt="">
+						<span component class="title">LOCALISATION</span>
+						<span component class="desc">English is not your primary language? No worries, we got a good amount of languages to choose from!</span>
 					</div>
 				</div>
 			</div>
@@ -398,6 +398,11 @@ export default Vue.extend({
 		background-color: $bg-bright;
 		border-radius: $component-border-radius;
 		transform: rotateX(calc(var(--scroll) * .004deg));
+
+		&:nth-child(1) { transform: rotateX(calc(var(--scroll) * .004deg)) translateY(calc(-0.08px * var(--scroll))) !important; }
+		&:nth-child(2) { transform: rotateX(calc(var(--scroll) * .004deg)) translateY(calc(-0.04px * var(--scroll))) !important; }
+		&:nth-child(3) { transform: rotateX(calc(var(--scroll) * .004deg)) translateY(calc(0.04px * var(--scroll))) !important; }
+		&:nth-child(4) { transform: rotateX(calc(var(--scroll) * .004deg)) translateY(calc(0.08px * var(--scroll))) !important; }
 
 		span {
 			display: block;
