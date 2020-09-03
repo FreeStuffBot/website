@@ -1,0 +1,20 @@
+
+/game/*           https://coyote.tude.ga/freestuff-pageproxy/:splat
+/game/*   g=:g    https://coyote.tude.ga/freestuff-pageproxy/:splat?g=:g
+
+/legal/*          https://tude.ga/legal/:splat/freestuff
+
+/login            https://idp.tude.ga/login
+/join             https://idp.tude.ga/join
+/register         https://idp.tude.ga/join
+/resetpassword    https://idp.tude.ga/resetpassword
+
+/discord          https://discord.gg/WrnKKF8
+/invite           https://discord.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code
+
+
+/o/source         https://github.com/TudeTeam/freestuff-bot
+/o/trello         https://trello.com/b/Zhw6umTy/freestuff
+/o/translating    https://forms.gle/Hnb29Cggnq6D2eAW9
+/o/patreon        https://www.patreon.com/freestuffbot
+/o/ko-fi          https://ko-fi.com/freestuff

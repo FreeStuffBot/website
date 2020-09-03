@@ -1,0 +1,6 @@
+
+User-agent: *
+Disallow: /legal
+Disallow: /half-life-alyx-free
+
+Sitemap: https://freestuffbot.xyz/sitemap.xml

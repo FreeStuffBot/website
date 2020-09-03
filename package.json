@@ -1,0 +1,34 @@
+{
+  "name": "freestuffbot.xyz",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "yarn lint:js"
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^1.0.0",
+    "@nuxtjs/markdownit": "^1.2.10",
+    "@types/twemoji": "^12.1.1",
+    "node-sass": "^4.14.1",
+    "nuxt": "^2.14.0",
+    "sass-loader": "^9.0.3",
+    "twemoji": "^13.0.1"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.14.0",
+    "@nuxt/typescript-build": "^2.0.2",
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-config-typescript": "^3.0.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.5.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "vue-loader": "^15.9.3",
+    "vue-template-compiler": "^2.6.11"
+  }
+}

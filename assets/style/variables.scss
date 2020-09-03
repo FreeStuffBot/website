@@ -1,0 +1,49 @@
+
+/* COLORS */
+$color-header: #ffffff;
+$color-major: #ffffff;
+$color-regular: #eeeeee;
+$color-sub: #cccccc;
+$color-minor: #888888;
+
+$backpage: #1f2023;
+$bg-bright: #37393e;
+$bg-brighter: #3e4046;
+$bg-dark: #181a1c;
+$bg-darker: #0c0d0e;
+
+$primary-orange: #f18912;
+$primary-orange-trans: #f18912cc;
+$primary-gold: #f8ce45;
+$primary-gold-trans: #f8ce45cc;
+$primary-violett: #732597;
+$primary-violett-trans: #732597cc;
+$primary-deep-violett: #401753;
+$primary-deep-violett-trans: #401753cc;
+
+$theme-a: #73988A;
+$theme-b: #C5DCD4;
+$theme-a-hover: #4d695e;
+$theme-b-hover: #92ada4;
+$error: #f16248;
+
+$button-primary: $primary-violett-trans;
+$button-primary-hover: $primary-violett;
+$button-regular: #111111cc;
+$button-regular-hover: #111111;
+$button-minor: #00000022;
+$button-minor-hover: #00000077;
+
+
+/* General */
+$font-header: 'Montserrat 900', 'Roboto', sans-serif;
+$font-major: 'Montserrat 600', 'Roboto', sans-serif;
+$font-regular: 'Montserrat 400', 'Roboto', sans-serif;
+$font-sub: 'Montserrat 400', 'Roboto', sans-serif;
+$font-minor: 'Montserrat 400', 'Roboto', sans-serif;
+
+
+/* Components */
+$component-border-radius: 7px;
+$component-margin: 10pt;
+$component-margin-half: 5pt;
