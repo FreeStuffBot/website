@@ -54,7 +54,7 @@ export default Vue.extend({
     justify-content: center;
     align-items: center;
     transform: scale(10);
-    filter: blur(1vmin);
+    filter: blur(7px);
   }
 
   .icon {

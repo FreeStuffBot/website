@@ -77,10 +77,13 @@ export default Vue.extend({
           elements: []
         },
         {
-          // @ts-ignore
-          name: this.audience == 'discord' ? 'Telegram Bot' : 'Discord Bot',
-          // @ts-ignore
-          url: this.audience == 'discord' ? 'https://freestuffbot.xyz/?audience=telegram' : 'https://freestuffbot.xyz/?audience=discord',
+          // // @ts-ignore
+          // name: this.audience == 'discord' ? 'Telegram Bot' : 'Discord Bot',
+          // // @ts-ignore
+          // url: this.audience == 'discord' ? 'https://freestuffbot.xyz/?audience=telegram' : 'https://freestuffbot.xyz/?audience=discord',
+          // elements: []
+          name: 'FAQ',
+          url: '/faq',
           elements: []
         }
       ]

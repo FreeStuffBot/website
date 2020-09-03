@@ -8,7 +8,7 @@
 			That would be amazing!
 		</h2>
 		<div class="divier dotted vertical"></div>
-		<h2>Where does the money go to?</h2>
+		<h2>Where does my money go to?</h2>
 	</div>
 </template>
 

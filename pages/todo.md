@@ -5,7 +5,7 @@
 0 0 Tutorial
 0 0 Themes
 0 0 Troubleshooting
-X 0 Team
+9 0 Team
       [x] Hall of fame section with donator names
       [ ] Add a section with like "interested in helping?" or smth with a   translator form and stuff
 0 0 Faq

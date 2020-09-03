@@ -5,7 +5,7 @@
         <div class="left">
           <div class="content">
             <span>Featured Donor:</span>
-            <nuxt-link to="donate">
+            <nuxt-link to="/donate">
               <DonorCard :data="featuredDonor" />
             </nuxt-link>
             <span class="subtext" v-text="genSubtext()"></span>
@@ -23,7 +23,7 @@
           <span>Support</span>
           <nuxt-link to="/faq">FAQ</nuxt-link>
           <nuxt-link to="/troubleshooting">Troubleshooting</nuxt-link>
-          <nuxt-link to="/discord">Support Server</nuxt-link>
+          <a href="/discord">Support Server</a>
           <a href="mailto:team@freestuffbot.xyz">Contact</a>
         </div>
         <div>
@@ -33,13 +33,15 @@
           <a href="/o/source" target="_blank">Open Source</a>
           <a href="/o/trello" target="_blank">Roadmap</a>
           <nuxt-link to="/donate">Donate</nuxt-link>
+          <a href="/o/translating" target="_blank">Help Translating</a>
+          <a href="https://freestuff.statuspage.io/" target="_blank">Status</a>
         </div>
         <div>
           <span>Legal Mumbo Jumbo</span>
           <nuxt-link to="/privacy">Privacy Policy</nuxt-link>
           <nuxt-link to="/terms">Terms of Service</nuxt-link>
           <nuxt-link to="/licenses">Licenses</nuxt-link>
-          <!-- <a href="https://cookiesandyou.com/" target="_blank">Cookies</a> -->
+          <a v-if="Math.random() < .01" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Free Bitcoin</a>
         </div>
       </div>
       <div class="lower">
@@ -47,7 +49,7 @@
           <img src="@/assets/img/icon_round.png">
           <span class="name">FreeStuff</span>
         </nuxt-link>
-        <span class="copyright">Copyright &copy; 2020 FreeStuff Services</span>
+        <span class="copyright">Copyright &copy; 2020 FreeStuff Services. All rights reserved.</span>
         <nuxt-link to="/start" class="footerButton">Get Started</nuxt-link>
       </div>
     </div>

@@ -16,7 +16,7 @@
           <img :src="member.image" :alt="member.name">
           <img v-if="member.imageHover" :src="member.imageHover" alt="" class="hover">
         </div>
-        <a :href="member.url" v-text="member.name" :style="`--color: ${member.color}; --txtcolor: ${member.txtcolor||''}`" target="_blank"></a>
+        <a :href="member.url" v-text="member.name" :style="`--color: ${member.color}; --txtcolor: ${member['txtcolor']||''}`" target="_blank"></a>
         <span class="role" v-for="role of member.roles" :key="role" v-text="role"></span>
       </div>
     </section>
@@ -29,7 +29,7 @@
       >
         <div class="img-wrapper">
           <img :src="member.image" :alt="member.name">
-          <img v-if="member.imageHover" :src="member.imageHover" alt="" class="hover">
+          <img v-if="member['imageHover']" :src="member['imageHover']" alt="" class="hover">
         </div>
         <a :href="member.url" v-text="member.name" :style="`--color: ${member.color}; --txtcolor: ${member.txtcolor||''}`" target="_blank"></a>
         <span class="role" v-for="role of member.roles" :key="role" v-text="role"></span>
@@ -39,6 +39,28 @@
       <h2 h1 class="center" id="donors">Donors</h2>
       <DonorCard v-for="donor of donors" :key="donor.name" :data="donor" />
     </section>
+    <div fade-in class="divider dotted vertical"></div>
+    <div fade-in class="popbox green small">
+      <h2>Want your name on this page?</h2>
+      <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="deco" class="bgdeco" draggable="false">
+      <div class="gallery" items="3">
+        <a href="/o/translating" target="_blank">
+          <img src="@/assets/icons/translation.svg" alt="Translation">
+          <span>Help with Translating!</span>
+          <span>Even if your language is already supported, sometimes a second translator doesn't hurt!</span>
+        </a>
+        <a href="/discord" target="_blank">
+          <img src="@/assets/icons/laptopcode.svg" alt="Laptop">
+          <span>Help out elsewhere!</span>
+          <span>Like programming, bug-finding, providing support and whatever else needs to be done!</span>
+        </a>
+        <nuxt-link to="/donate">
+          <img src="@/assets/icons/dollar.svg" alt="Donation">
+          <span>Donate.</span>
+          <span>Even the smallest amount helps this project stay alive! Thanks for every cent!</span>
+        </nuxt-link>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -163,7 +185,7 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 30pt 0 80pt 0;
+  margin: 30pt 0;
 
   h1, h2 {
     margin-bottom: 10pt !important;
@@ -174,7 +196,7 @@ section {
 
     background-color: $background;
     padding: 20pt;
-    margin: 40pt 10pt 10pt 10pt;
+    margin: 30pt 10pt 10pt 10pt;
     width: 150pt;
     display: flex;
     flex-direction: column;

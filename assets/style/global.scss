@@ -80,7 +80,7 @@ button, a[button] {
 .pageroot {
 	// position: relative;
 	width: 90%;
-	max-width: 1300px;
+	max-width: $content-width;
 	flex-grow: 1;
 
 	&.padtop { padding: 150pt 0 0 0; }
@@ -269,8 +269,8 @@ code {
 }
 
 .divider {
-	.dash {
-		.horizontal {
+	&.dash {
+		&.horizontal {
 			margin: 30px 0 60px 0;
 			width: 50px;
 			height: 2px;
@@ -293,9 +293,98 @@ code {
 		}
 	}
 
-	.dotted {
-		.vertical {
-			
+	&.dotted {
+		&.vertical {
+			position: relative;
+			display: flex;
+			height: 150pt;
+			justify-content: center;
+			align-items: center;
+
+			&::before {
+				content: '• • •';
+				color: #ffffff66;
+				font-size: 20pt;
+				transform-origin: top;
+				transform: rotate(90deg);
+			}
+		}
+	}
+}
+
+.popbox {
+	position: relative;
+	background-color: #dddddd;
+	border-radius: 20pt;
+	padding: 20pt;
+	margin: auto;
+	box-shadow: 0 5pt 20pt #000000;
+
+	& > *:first-child {
+		margin: 10pt 0 0 10pt !important;
+	}
+
+	* { color: #000000; }
+
+	&.small {
+		max-width: $content-width / 2;
+	}
+
+	&.green {
+		background-image: linear-gradient(30deg, #71d89a, #80a2f1);
+	}
+
+	.bgdeco {
+		position: absolute;
+		width: 100pt;
+		opacity: .2;
+		right: -10pt;
+		top: -30pt;
+	}
+
+	h2 {
+		font-family: $font-header;
+	}
+
+	.gallery {
+		display: grid;
+		margin-top: 20pt;
+		column-gap: 10pt;
+
+		&[items="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+		&[items="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+		&[items="4"] { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+		&[items="5"] { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+		
+		& > a {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			padding: 0 15pt 15pt 15pt;
+			background-color: #00000000;
+			transition: background-color .1s ease;
+			border-radius: $component-border-radius*2;
+
+			&:hover {
+				background-color: #00000018;
+			}
+
+			img {
+				width: 55%;
+			}
+
+			span {
+				color: #000000;
+				font-family: $font-regular;
+				font-size: 11pt;
+				text-align: center;
+
+				&:first-of-type {
+					font-family: $font-header;
+					font-size: 12pt;
+					margin-bottom: 5pt;
+				}
+			}
 		}
 	}
 }
