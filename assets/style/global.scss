@@ -42,37 +42,37 @@ html, body {
 
 /* */
 
-button, a[button] {
-  --color: $theme-a;
-  --color-hover: $theme-a-hover;
-
-  padding: 1vh 3vh;
-  outline: none;
-  border: none;
-  text-transform: capitalize;
+button, *[btn] {
+  display: inline-block;
+  padding: 12pt 30pt;
+  background-image: linear-gradient(30deg, #ba38be, #7b7fe1);
   font-family: $font-major;
-  font-size: 17pt;
-  text-align: center;
-  margin: 0;
-  border-radius: 3pt;
-  background: var(--color);
-  color: $backpage;
-  cursor: pointer;
-  transition: .2s all ease-out;
+  font-size: 15pt;
+  color: $color-regular;
+  user-select: none;
+  border-radius: 999px;
+  box-shadow: 0 0 15px #00000088;
+  transition: 0.2s ease opacity
+            , 0.2s ease background-position
+            , 0.2s ease box-shadow;
+  position: relative;
 
   &:hover {
-    box-shadow: inset 16vh 0 0 0 var(--color-hover);
+    background-image: linear-gradient(30deg, #9e35a1, #6b6eb9);
+    box-shadow: 0 1px 15px #00000088;
   }
 
-  &[wide] {
-    margin: 4vh 0 0 0;
-    width: 16vh;
-    padding: 1vh 0;
-  }
+  &[min] {
+    background: transparent;
+    border: 2px solid $color-sub;
+    color: $color-sub;
+    padding: calc(12pt - 2px) calc(30pt - 2px);
+    box-shadow: none;
 
-	* {
-		pointer-events: none;
-	}
+    &:hover {
+      background: #ffffff11;
+    }
+  }
 }
 
 /* */
@@ -84,6 +84,30 @@ button, a[button] {
 	flex-grow: 1;
 
 	&.padtop { padding: 150pt 0 0 0; }
+	&.padbot { padding: 0 0 100pt 0; }
+	&.padboth { padding: 150pt 0 100pt 0; }
+	&.padfullscreen { padding: 150pt 0 100pt 0; min-height: calc(100vh - 300pt); }
+
+	&.plaintext {
+		span {
+			padding-bottom: 5px;
+			color: $color-regular;
+		
+			a {
+				color: #da5e7d;
+				border-bottom: 3px solid #da5e7d33;
+		
+				&:hover { border-bottom: 3px solid #da5e7d; }
+			}
+		}
+	}
+}
+
+div.center {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 h1, h2[h1] {
@@ -241,6 +265,10 @@ h5, h5 span {
 	font-size: 12pt;
 	color: $color-regular;
 	font-family: $font-regular;
+	margin-bottom: 10pt;
+
+	&.center { text-align: center; }
+	&.slim { max-width: $content-width / 2; margin: 0 auto 10pt auto; }
 }
 
 code {
@@ -326,9 +354,8 @@ code {
 
 	* { color: #000000; }
 
-	&.small {
-		max-width: $content-width / 2;
-	}
+	&.small { max-width: $content-width / 2; }
+	&.medium { max-width: $content-width / 3 * 2; }
 
 	&.green {
 		background-image: linear-gradient(30deg, #71d89a, #80a2f1);
@@ -370,7 +397,7 @@ code {
 			}
 
 			img {
-				width: 55%;
+				width: 50%;
 			}
 
 			span {

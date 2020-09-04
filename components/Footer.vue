@@ -5,10 +5,12 @@
         <div class="left">
           <div class="content">
             <span>Featured Donor:</span>
-            <nuxt-link to="/donate">
-              <DonorCard :data="featuredDonor" />
-            </nuxt-link>
-            <span class="subtext" v-text="genSubtext()"></span>
+            <no-ssr>
+              <nuxt-link to="/donate">
+                <DonorCard :data="featuredDonor" />
+              </nuxt-link>
+              <span class="subtext" v-text="genSubtext()"></span>
+            </no-ssr>
           </div>
           <div class="vertdiv"></div>
         </div>
@@ -21,8 +23,9 @@
         </div>
         <div>
           <span>Support</span>
-          <nuxt-link to="/faq">FAQ</nuxt-link>
-          <nuxt-link to="/troubleshooting">Troubleshooting</nuxt-link>
+          <nuxt-link to="/support">Support Center</nuxt-link>
+          <nuxt-link to="/support/faq">FAQ</nuxt-link>
+          <nuxt-link to="/support/troubleshooting">Troubleshooting</nuxt-link>
           <a href="/discord">Support Server</a>
           <a href="mailto:team@freestuffbot.xyz">Contact</a>
         </div>

@@ -1,12 +1,10 @@
 <template>
 	<div>
-		<div id="infobox">
-			<h1>FAQ</h1>
-			<div class="divider"></div>
-			<h2>How do you make money?</h2>
-			<span>We... don't. Donate pls.</span>
-			<div class="divider"></div>
-		</div>
+		<h1>FAQ</h1>
+		<div class="divider"></div>
+		<h2>How do you make money?</h2>
+		<span>We... don't. Donate pls.</span>
+		<div class="divider"></div>
 	</div>
 </template>
 

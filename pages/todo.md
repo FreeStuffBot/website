@@ -1,15 +1,19 @@
+0-9 Progress
+  X Done
+  C Content Missing
+  H On Hold, shipable
+
 # Pages
 4 0 Index
 0 0 About
 0 0 Getting Started
 0 0 Tutorial
-0 0 Themes
-0 0 Troubleshooting
-9 0 Team
-      [x] Hall of fame section with donator names
-      [ ] Add a section with like "interested in helping?" or smth with a   translator form and stuff
-0 0 Faq
-0 0 Press
+H 0 Themes
+H 0 Troubleshooting
+X 0 Team
+X 0 Donating
+H 0 Faq
+H 0 Press
       * Some texts
         • How it came to be
         • Statistics
@@ -26,6 +30,7 @@ X - Robots.txt
 
 # Other
 X 0 Footer
+X 0 Header
 
 
 ---

@@ -40,7 +40,7 @@
       <DonorCard v-for="donor of donors" :key="donor.name" :data="donor" />
     </section>
     <div fade-in class="divider dotted vertical"></div>
-    <div fade-in class="popbox green small">
+    <div fade-in class="popbox green medium">
       <h2>Want your name on this page?</h2>
       <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="deco" class="bgdeco" draggable="false">
       <div class="gallery" items="3">

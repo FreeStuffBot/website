@@ -32,14 +32,16 @@
         <div id="buttons">
           <a
             id="invite-button"
-            class="button"
+            btn
+            class="button1"
             :href="audience.cta.url"
             d="0"
             v-text="audience.cta.text"
           />
           <nuxt-link
             id="about-button"
-            class="button min"
+            btn min
+            class="button2"
             to="/about"
             d="1"
           >
@@ -224,45 +226,6 @@ export default Vue.extend({
   margin-top: 5vh;
 }
 
-.button {
-  display: inline-block;
-  padding: 12pt 30pt;
-  margin: 0 16pt 0 0;
-  background-image: linear-gradient(30deg, #ba38be, #7b7fe1);
-  font-family: $font-major;
-  font-size: 15pt;
-  color: $color-regular;
-  user-select: none;
-  border-radius: 999px;
-  box-shadow: 0 0 15px #00000088;
-  transition: 0.2s ease opacity
-            , 0.2s ease background-position
-            , 0.2s ease box-shadow;
-  position: relative;
-  opacity: 0;
-  animation: button1-in 1s cubic-bezier(0.22, 1, 0.36, 1) 3s;
-  animation-fill-mode: forwards;
-
-  &:hover {
-    background-image: linear-gradient(30deg, #9e35a1, #6b6eb9);
-    box-shadow: 0 1px 15px #00000088;
-  }
-
-  &.min {
-    background: transparent;
-    border: 2px solid $color-sub;
-    color: $color-sub;
-    padding: calc(12pt - 2px) calc(30pt - 2px);
-    box-shadow: none;
-    animation: button2-in 1s ease 3.2s;
-    animation-fill-mode: forwards;
-
-    &:hover {
-      background: #ffffff11;
-    }
-  }
-}
-
 #gamelist {
   --anim: 0;
   position: absolute;
@@ -379,6 +342,19 @@ export default Vue.extend({
 }
 
 //
+
+.button1 {
+  opacity: 0;
+  margin: 0 16pt 0 0;
+  animation: button1-in 1s cubic-bezier(0.22, 1, 0.36, 1) 3s;
+  animation-fill-mode: forwards;
+}
+
+.button2 {
+  opacity: 0;
+  animation: button2-in 1s ease 3.2s;
+  animation-fill-mode: forwards;
+}
 
 #decoarrow1el1 {
   animation: .7s decoarrow1el1-in cubic-bezier(0.33, 1, 0.68, 1) 4.5s;

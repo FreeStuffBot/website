@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <div id="infobox">
-      <h1 v-html="`Ayy, it's working ${twemoji('🎉')}`"></h1>
-      <h2>Just imagine this is the website <br>that offers the free game!</h2>
-      <div class="divider"></div>
+  <div class="padfullscreen plaintext">
+    <h1 class="center" v-html="`Ayy, it's working ${twemoji('🎉')}`"></h1>
+    <h2 class="center" sub>Just imagine this is the website <br>that offers the free game!</h2>
+    <div class="center">
+      <div class="divider dash horizontal"></div>
       <span>Don't know what this is all about?</span>
       <span><a href="/">Click here for more info</a></span>
     </div>
@@ -49,21 +49,4 @@ export default Vue.extend({
 </script>
 
 <style scoped lang="scss">
-@import '~/assets/style/all.scss';
-
-span {
-  padding-bottom: 5px;
-  color: $color-regular;
-
-  a {
-    color: #da5e7d;
-    border-bottom: 3px solid #da5e7d33;
-
-    &:hover { border-bottom: 3px solid #da5e7d; }
-  }
-}
-
-h2 {
-  color: $color-sub;
-}
 </style>
