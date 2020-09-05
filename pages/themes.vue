@@ -1,79 +1,110 @@
 <template>
-	<div class="pageroot">
-		<h1>Themes</h1>
-		<div id="mid">
-			<div id="imgbox">
-				<h3 style="color: #00f0a5">Preview</h3>
-				<img :src="currImg" draggable="false" />
-				<div id="info" v-if="info">
-					<i class="fas fa-info-circle"></i>
-					{{ info }}
+	<div class="pageroot padtop">
+		<h1 class="center">Themes</h1>
+		<div class="wrapper">
+			<div class="preview">
+				<div class="inner">
+					<img src="/assets/img/theme-1.png" alt="">
 				</div>
 			</div>
-			<div id="buttonsbox">
-				<div id="buttons">
-					<button
-						v-for="theme of availableThemes"
-						v-text="theme"
-						:key="theme"
-						@click="themeId = theme"
-						:style="`--theme: hsl(${(theme * 77) % 360}, 80%, 70%)`"
-						:active="themeId == theme"
-					/>
-				</div>
-				<div id="tutorial">
-					<h3 style="color: #ffaa25">And now?</h3>
-					<span>To change the theme use the following command in discord:</span>
-					<code>@FreeStuff set theme {{ themeId || 1 }}</code>
+			<div class="controls">
+				<div
+					class="button"
+					v-for="theme of themes"
+					:key="theme.id"
+					:style="`--hue: ${(theme.id * 100) % 360}`"
+					:selected="selected == theme.id"
+					@click="selected = theme.id"
+				>
+					<span class="number" v-text="theme.id"></span>
+					<span class="name" v-text="theme.name"></span>
+					<span class="flag1">Images</span>
+					<span class="flag2">External Emotes</span>
+					<span class="flag3">Embed messages</span>
 				</div>
 			</div>
 		</div>
-		<footer>
-			<a href="https://tude.ga/">
-				Copyright &copy; 2020 Tude
-			</a>
-		</footer>
+		<h2 sub class="center" v-html="`Found what you were looking for?&nbsp;${twemoji('👀')}`" />
 	</div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import twemoji from 'twemoji'
 
 export default Vue.extend({
 	data () {
 		return {
-			themeId: 1,
-			availableThemes: [1, 2, 3, 4, 5, 6, 7, 8, 9],
-			themeImages: [
-				"/assets/img/theme-1.png",
-				"/assets/img/theme-2.png",
-				"/assets/img/theme-3.png",
-				"/assets/img/theme-4.png",
-				"/assets/img/theme-5.png",
-				"/assets/img/theme-6.png",
-				"/assets/img/theme-7.png",
-				"/assets/img/theme-8.png",
-				"/assets/img/theme-9.png"
-			],
-			currImg: '/assets/img/theme-1.png',
-			info: "The image will be some official artwork or logo of the game"
+			selected: 1,
+			themes: [
+				{
+					id: 1,
+					img: '/assets/img/theme-1.png',
+					name: 'Default Theme',
+					flags: [ true, true, true ]
+				},
+				{
+					id: 2,
+					img: '/assets/img/theme-2.png',
+					name: 'Button = bad',
+					flags: [ true, true, true ]
+				},
+				{
+					id: 3,
+					img: '/assets/img/theme-3.png',
+					name: 'No photos please!',
+					flags: [ true, true, true ]
+				},
+				{
+					id: 4,
+					img: '/assets/img/theme-4.png',
+					name: 'Keep it clean',
+					flags: [ true, true, true ]
+				},
+				{
+					id: 5,
+					img: '/assets/img/theme-5.png',
+					name: 'idk',
+					flags: [ true, true, true ]
+				},
+				{
+					id: 6,
+					img: '/assets/img/theme-6.png',
+					name: 'idk',
+					flags: [ true, true, true ]
+				},
+				{
+					id: 7,
+					img: '/assets/img/theme-7.png',
+					name: 'idk',
+					flags: [ true, true, true ]
+				},
+				{
+					id: 8,
+					img: '/assets/img/theme-8.png',
+					name: 'idk',
+					flags: [ true, true, true ]
+				},
+				{
+					id: 9,
+					img: '/assets/img/theme-9.png',
+					name: 'idk',
+					flags: [ true, true, true ]
+				},
+				{
+					id: 10,
+					img: '/assets/img/theme-10.png',
+					name: 'Details (for ArchiSteamFarm)',
+					flags: [ true, true, true ]
+				}
+			]
 		}
 	},
-	watch: {
-		themeId (id: number) {
-			this.currImg = this.themeImages[id - 1];
-			switch (id) {
-				case 7:
-					this.info = "This theme displayes a website embed, if available";
-					break;
-				case 8:
-					this.info = "This theme will not display a website embed";
-					break;
-				default:
-					this.info = "";
-			}
-		}
-	},
+  methods: {
+    twemoji (emoji: string) {
+      return twemoji.parse(emoji)
+    }
+  },
   transition: {
     afterEnter () {
       document.getElementById('app')?.scrollTo({ top: 0, behavior: 'smooth' })
@@ -85,117 +116,73 @@ export default Vue.extend({
 <style scoped lang="scss">
 @import '~/assets/style/all.scss';
 
-.pageroot {
-	position: relative;
-	width: 90%;
-	max-width: 1100px;
-	z-index: 100;
-	padding: 10vh 0 3vh 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-
-	h1, h2 { text-align: center; }
-}
-#decoitem2, #decoitem3 { display: none; }
-
-#mid {
-	display: flex;
-	justify-content: space-between;
-	min-height: 400px;
-}
-
-#imgbox {
-	width: 48%;
-	background-color: $bg-bright;
-	border-radius: 0.5vh;
-	box-shadow: 0 2px 10px #00000066;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	min-height: 530px;
-}
-
-#imgbox > img {
-	width: 95%;
-}
-
-#info {
-	position: absolute;
-	bottom: 20px;
-	color: $color-sub;
-	font-family: $font-regular;
-	font-size: 14px;
-}
-
-#buttonsbox {
-	width: 48%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-#buttons {
-	width: calc(100% + 20px);
-	display: flex;
-	justify-content: left;
-	transform: translate(-10px, -10px);
-	flex-wrap: wrap;
-	margin-bottom: 30px;
-	
-	button {
-		padding: 20px 0;
-		margin: 10px;
-		width: 117px;
-		color: var(--theme);
-		font-family: $font-major;
-		font-size: 36px;
-		border-radius: 0.5vh;
-		border: none;
-		outline: none;
-		cursor: pointer;
-		background: $bg-bright;
-		box-shadow: 0 2px 10px #00000066;
-		transition: 0.2s ease all;
-
-		&:hover {
-			background: $bg-brighter;
-			transform: translateY(-2px);
-			box-shadow: 0 4px 14px #00000055;
-		}
-
-		&[active] {
-			background: var(--theme);
-			color: $bg-bright
-		}
-	}
-}
-
-#tutorial {
-	background-color: $bg-bright;
-	border-radius: 0.5vh;
-	box-shadow: 0 2px 10px #00000066;
-	padding: 40px 20px 20px 20px;
-	position: relative;
-}
-
-/*
- *
- */
-
-@media (max-width: 1200px) {
-
-#buttons {
-	justify-content: center;
+.wrapper {
 	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	column-gap: 20pt;
+	margin-top: 50pt;
 
-	button {
-		font-size: 26px;
-		width: 80px;
-		padding: 15px;
+	.preview {
+		.inner {	
+			position: sticky;
+			top: 15%;
+		}
+	}
+
+	.controls {
+		.button {
+			$unit: 50pt;
+			--color: hsl(var(--hue), 40%, 50%);
+
+			position: relative;
+			display: grid;
+			grid-template-columns: auto 1fr auto auto auto;
+			background-color: $bg-bright;
+			border-radius: $component-border-radius;
+			overflow: hidden;
+			cursor: pointer;
+			transition: background-color .2s ease;
+			will-change: background-color;
+
+			&:hover { background-color: $bg-brighter; }
+			&:not(:last-child) { margin-bottom: 10pt; }
+			&[selected] {
+				background-color: var(--color);
+				.number { color: $backpage; }
+				.name { color: $backpage; }
+			}
+
+			span { margin-bottom: 0 !important; }
+
+			.number {
+				width: $unit;
+				height: $unit;
+				border-right: 3px solid $backpage;
+				line-height: $unit;
+				text-align: center;
+				font-size: 22pt;
+				font-family: $font-header;
+				color: var(--color);
+				transition: color .2s ease;
+			}
+
+			.name {
+				line-height: $unit;
+				margin-left: $unit / 3;
+				font-size: 14pt;
+				font-family: $font-major;
+				color: $color-sub;
+				transition: color .2s ease;
+				white-space: nowrap;
+			}
+		}
 	}
 }
 
+h2 {
+	margin: 100pt 0 50pt 0;
+	font-size: 12pt;
+	opacity: .8;
 }
 </style>
