@@ -4,7 +4,7 @@
 		<div class="wrapper">
 			<div class="preview">
 				<div class="inner">
-					<img src="/assets/img/theme-1.png" alt="">
+					<img :src="themes[selected-1].img" alt="">
 				</div>
 			</div>
 			<div class="controls">
@@ -18,9 +18,12 @@
 				>
 					<span class="number" v-text="theme.id"></span>
 					<span class="name" v-text="theme.name"></span>
-					<span class="flag1">Images</span>
+					<!-- <span class="flag1">Images</span>
 					<span class="flag2">External Emotes</span>
-					<span class="flag3">Embed messages</span>
+					<span class="flag3">Embed messages</span> -->
+					<img src="@/assets/icons/photo.svg" alt="Photo" :on="theme.flags[0]">
+					<img src="@/assets/icons/emote.svg" alt="Emote" :on="theme.flags[1]">
+					<img src="@/assets/icons/discordembed.svg" alt="Embed" :on="theme.flags[2]">
 				</div>
 			</div>
 		</div>
@@ -47,55 +50,55 @@ export default Vue.extend({
 					id: 2,
 					img: '/assets/img/theme-2.png',
 					name: 'Button = bad',
-					flags: [ true, true, true ]
+					flags: [ true, false, true ]
 				},
 				{
 					id: 3,
 					img: '/assets/img/theme-3.png',
 					name: 'No photos please!',
-					flags: [ true, true, true ]
+					flags: [ false, true, true ]
 				},
 				{
 					id: 4,
 					img: '/assets/img/theme-4.png',
-					name: 'Keep it clean',
-					flags: [ true, true, true ]
+					name: 'Keep it simple',
+					flags: [ false, false, true ]
 				},
 				{
 					id: 5,
 					img: '/assets/img/theme-5.png',
-					name: 'idk',
-					flags: [ true, true, true ]
+					name: 'Keep it very simple',
+					flags: [ false, false, true ]
 				},
 				{
 					id: 6,
 					img: '/assets/img/theme-6.png',
-					name: 'idk',
-					flags: [ true, true, true ]
+					name: 'Images are cool!',
+					flags: [ true, false, true ]
 				},
 				{
 					id: 7,
 					img: '/assets/img/theme-7.png',
-					name: 'idk',
-					flags: [ true, true, true ]
+					name: 'Minimalist with embeds',
+					flags: [ false, false, true ]
 				},
 				{
 					id: 8,
 					img: '/assets/img/theme-8.png',
-					name: 'idk',
-					flags: [ true, true, true ]
+					name: 'Minimalist without embeds',
+					flags: [ false, false, false ]
 				},
 				{
 					id: 9,
 					img: '/assets/img/theme-9.png',
-					name: 'idk',
-					flags: [ true, true, true ]
+					name: 'Text only!',
+					flags: [ false, false, false ]
 				},
 				{
 					id: 10,
 					img: '/assets/img/theme-10.png',
 					name: 'Details (for ArchiSteamFarm)',
-					flags: [ true, true, true ]
+					flags: [ false, false, true ]
 				}
 			]
 		}
@@ -151,6 +154,7 @@ export default Vue.extend({
 				background-color: var(--color);
 				.number { color: $backpage; }
 				.name { color: $backpage; }
+				img { filter: invert(1) }
 			}
 
 			span { margin-bottom: 0 !important; }
@@ -175,6 +179,16 @@ export default Vue.extend({
 				color: $color-sub;
 				transition: color .2s ease;
 				white-space: nowrap;
+			}
+
+			img {
+				width: $unit / 2;
+				height: $unit / 2;
+				padding: $unit / 4 $unit / 4 $unit / 4 0;
+				opacity: .2;
+				transition: filter .2s ease;
+
+				&[on] { opacity: .7; }
 			}
 		}
 	}
