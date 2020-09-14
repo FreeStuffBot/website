@@ -13,7 +13,7 @@
 /invite           https://discord.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code
 
 
-/o/source         https://github.com/TudeTeam/freestuff-bot
+/o/source         https://github.com/FreeStuffBot/discord
 /o/trello         https://trello.com/b/Zhw6umTy/freestuff
 /o/translating    https://forms.gle/Hnb29Cggnq6D2eAW9
 /o/patreon        https://www.patreon.com/freestuffbot

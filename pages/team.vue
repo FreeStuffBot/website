@@ -113,14 +113,14 @@ export default Vue.extend({
           txtcolor: '#333333',
           roles: [
             'Polish Translation',
-            'Programming Help'
+            'Mental Health Helper'
           ]
         },
         {
           name: 'Hadi Da King',
           image: 'https://media.discordapp.net/attachments/748622589324165142/748623596099993681/Hadi_Logo.png',
           url: 'http://getavirus.xyz/',
-          color: '#006ba1',
+          color: 'linear-gradient(20deg, #36d1dc, #5b86e5)',
           roles: [
             'Danish Translation',
             '(he really do be da king)'
@@ -160,6 +160,15 @@ export default Vue.extend({
           color: '#7fb0d1',
           roles: [
             'Helper here and there'
+          ]
+        },
+        {
+          name: 'relevantcroissant',
+          image: 'https://media.discordapp.net/attachments/748622589324165142/752586951906820096/yikes.png',
+          url: 'https://www.plazovnik.si/',
+          color: 'linear-gradient(87deg, rgb(68, 168, 206) 0px, rgb(27, 223, 203) 100%)',
+          roles: [
+            'Slovenian Translation'
           ]
         }
       ]).sort(()=>Math.random()-.5),
@@ -250,7 +259,7 @@ section {
 
       a {
         display: inline-block;
-        background-color: var(--color, #222222);
+        background: var(--color, #222222);
         border-radius: 999px;
         padding: 8pt 30pt;
         font-family: $font-major;
@@ -273,6 +282,7 @@ section {
         width: 100% !important;
         text-align: center !important;
         margin-top: 3pt !important;
+        margin-bottom: 0 !important;
       }
     }
   }

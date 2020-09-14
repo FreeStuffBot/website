@@ -191,7 +191,7 @@ footer {
       background: #00000033;
       border-radius: 999pt;
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: 1fr auto 1fr;
 
       .brand {
         display: flex;

@@ -18,12 +18,33 @@
 				>
 					<span class="number" v-text="theme.id"></span>
 					<span class="name" v-text="theme.name"></span>
-					<!-- <span class="flag1">Images</span>
-					<span class="flag2">External Emotes</span>
-					<span class="flag3">Embed messages</span> -->
-					<img src="@/assets/icons/photo.svg" alt="Photo" :on="theme.flags[0]">
-					<img src="@/assets/icons/emote.svg" alt="Emote" :on="theme.flags[1]">
-					<img src="@/assets/icons/discordembed.svg" alt="Embed" :on="theme.flags[2]">
+					<img
+						src="@/assets/icons/photo.svg"
+						alt="Photo"
+						:on="theme.flags[0]"
+						:content="theme.flags[0]
+							? 'This theme will show<br>external images!'
+							: 'This theme will not<br>show external images!'"
+						v-tippy
+					>
+					<img
+						src="@/assets/icons/emote.svg"
+						alt="Emote"
+						:on="theme.flags[1]"
+						:content="theme.flags[1]
+							? 'This theme will show<br>external emotes!<br><i style=&quot;font-size: .8em; opacity: .8&quot;>Make sure it has the required permissions</i>'
+							: 'This theme will not<br>show external emotes!'"
+						v-tippy
+					>
+					<img
+						src="@/assets/icons/discordembed.svg"
+						alt="Embed"
+						:on="theme.flags[2]"
+						:content="theme.flags[2]
+							? 'This theme will use embeds!<br><i style=&quot;font-size: .8em; opacity: .8&quot;>Make sure it has the required permissions</i>'
+							: 'This theme will not use embeds!'"
+						v-tippy
+					>
 				</div>
 			</div>
 		</div>
@@ -182,13 +203,14 @@ export default Vue.extend({
 			}
 
 			img {
-				width: $unit / 2;
-				height: $unit / 2;
-				padding: $unit / 4 $unit / 4 $unit / 4 0;
-				opacity: .2;
+				width: $unit / 5 * 2;
+				height: $unit / 5 * 2;
+				padding: $unit/10*3;
+				margin-left: -$unit/10*3;
+				opacity: .15;
 				transition: filter .2s ease;
 
-				&[on] { opacity: .7; }
+				&[on] { opacity: .8; }
 			}
 		}
 	}

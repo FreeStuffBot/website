@@ -22,6 +22,15 @@ import Vue from 'vue'
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
 
+Vue.use(require('vue-tippy').default, {
+  arrow: true,
+  arrowType: 'round',
+  animation: 'vertical',
+  duration: 100,
+  theme: 'black'
+});
+Vue.component("tippy", require('vue-tippy').TippyComponent);
+
 export default Vue.extend({
   components: {
     Header,

@@ -17,7 +17,8 @@
     "node-sass": "^4.14.1",
     "nuxt": "^2.14.0",
     "sass-loader": "^9.0.3",
-    "twemoji": "^13.0.1"
+    "twemoji": "^13.0.1",
+    "vue-tippy": "^4.7.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.0",

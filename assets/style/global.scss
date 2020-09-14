@@ -476,6 +476,31 @@ img[draggable="false"] { user-select: none; }
  *
  */
 
+.tippy-tooltip {
+  background-color: black !important;
+  color: $color-regular;
+  font-family: $font-major;
+  font-size: 11pt;
+  padding: 6pt 10pt;
+}
+
+.tippy-tooltip .tippy-roundarrow {
+  fill: black;
+}
+
+.tippy-tooltip.invisible-theme {
+  opacity: 0;
+}
+
+.tippy-tooltip[data-animation='vertical'][data-state='hidden'] {
+  opacity: 0;
+  transform: translateY(5px) scaleY(.95);
+}
+
+/*
+ *
+ */
+
 @media (max-width: 1200px) {
 	
 	* {
