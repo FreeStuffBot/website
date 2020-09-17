@@ -1,7 +1,7 @@
 <template>
   <div id="app" :style="`--scroll: ${scroll}; --scrollPos: ${scrollPosRel}`" @scroll="handleScroll">
     <div>
-      <Header pagename="FreeStuff Bot" theme="light" />
+      <Header pagename="FreeStuff Bot" />
 
       <img
         id="decoblob2"

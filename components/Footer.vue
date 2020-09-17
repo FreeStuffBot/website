@@ -15,11 +15,14 @@
           <div class="vertdiv"></div>
         </div>
         <div>
-          <span>Discord Bot</span>
+          <span>Platform</span>
           <nuxt-link to="/about">About</nuxt-link>
-          <nuxt-link to="/start">Getting Started</nuxt-link>
-          <nuxt-link to="/tutorial">Tutorial</nuxt-link>
           <nuxt-link to="/themes">Themes</nuxt-link>
+          <nuxt-link to="/">Discord Bot</nuxt-link>
+          <!-- <nuxt-link to="/telegram">Telegram Bot</nuxt-link>
+          <nuxt-link to="/twitter">Twitter Bot</nuxt-link>
+          <nuxt-link to="/rss">RSS Feed</nuxt-link>
+          <nuxt-link to="/support/api">API</nuxt-link> -->
         </div>
         <div>
           <span>Support</span>
@@ -31,8 +34,8 @@
         </div>
         <div>
           <span>Resources</span>
-          <nuxt-link to="/press">Press</nuxt-link>
           <nuxt-link to="/team">Team</nuxt-link>
+          <nuxt-link to="/press">Press</nuxt-link>
           <a href="/o/source" target="_blank">Open Source</a>
           <a href="/o/trello" target="_blank">Roadmap</a>
           <nuxt-link to="/donate">Donate</nuxt-link>

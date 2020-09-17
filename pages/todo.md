@@ -6,9 +6,8 @@
 # Pages
 4 0 Index
 0 0 About
-0 0 Getting Started
-0 0 Tutorial
-H 0 Themes
+H 0 Telegram
+3 0 Themes
 H 0 Troubleshooting
 X 0 Team
 X 0 Donating
@@ -21,7 +20,7 @@ H 0 Press
       * Logo and example images + as zip download
 X 0 Privacy Policy
 X 0 Terms of Service
-C 0 Licenses
+X 0 Licenses
 X 0 Testgame
 
 # Meta Info

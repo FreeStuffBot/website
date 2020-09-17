@@ -1,5 +1,5 @@
 <template>
-  <header :theme="theme" :monochrome="monochrome">
+  <header :page="this.$route.name">
     <div class="header desktopHeader">
       <div class="headerInner">
         <div class="headerLogo">
@@ -15,11 +15,10 @@
             :name="category.name"
             :elements="category.elements"
             :url="category.url"
-            :theme="theme"
             :color="category.color"
           />
         </ul>
-        <nuxt-link to="/start" class="headerButton">Get Started</nuxt-link>
+        <nuxt-link :to="startUrl" class="headerButton">Get Started</nuxt-link>
       </div>
     </div>
     <div class="header mobileHeader">
@@ -34,11 +33,9 @@
             :name="pagename"
             :elements="pages.map(c => c.elements).flat()"
             :url="null"
-            :theme="theme"
             :color="color"
           />
         </div>
-        <!-- <div class="headerLogo"><nuxt-link to="https://tude.ga/">LOGIN BUTTON HERE<img :src="getMobileLogo()"></nuxt-link></div> -->
       </div>
     </div>
   </header>
@@ -54,9 +51,7 @@ export default Vue.extend({
   },
   props: {
     pagename: { type: String, default: '' },
-    theme: { type: String, default: '' },
-    color: { type: String, default: '' },
-    monochrome: Boolean
+    color: { type: String, default: '' }
   },
   data () {
     return {
@@ -65,28 +60,49 @@ export default Vue.extend({
   },
   computed: {
     pages () {
-      return [
-        {
-          name: 'About',
-          url: '/about',
-          elements: []
-        },
-        {
-          name: 'Themes',
-          url: '/themes',
-          elements: []
-        },
-        {
-          // // @ts-ignore
-          // name: this.audience == 'discord' ? 'Telegram Bot' : 'Discord Bot',
-          // // @ts-ignore
-          // url: this.audience == 'discord' ? 'https://freestuffbot.xyz/?audience=telegram' : 'https://freestuffbot.xyz/?audience=discord',
-          // elements: []
-          name: 'FAQ',
-          url: '/faq',
-          elements: []
-        }
-      ]
+      switch (this.$route.name) {
+        case 'telegram': return [
+          {
+            name: 'About',
+            url: '/about',
+            elements: []
+          },
+          {
+            name: 'Themes',
+            url: '/themes?platform=telegram',
+            elements: []
+          },
+          {
+            name: 'FAQ',
+            url: '/faq',
+            elements: []
+          }
+        ]
+
+        default: return [
+          {
+            name: 'About',
+            url: '/about',
+            elements: []
+          },
+          {
+            name: 'Themes',
+            url: '/themes',
+            elements: []
+          },
+          {
+            name: 'FAQ',
+            url: '/faq',
+            elements: []
+          }
+        ];
+      }
+    },
+    startUrl() {
+      switch (this.$route.name) {
+        case 'telegram': return '/start-telegram';
+        default: return '/start';
+      }
     }
   },
   mounted () {
@@ -124,10 +140,13 @@ header {
   outline: 0;
   padding: 0;
   vertical-align: baseline;
-  opacity: 0;
-  animation: 1s fadein ease 3s;
-  animation-fill-mode: forwards;
   transition: opacity 0.1s ease-in;
+
+  &[page="index"] {
+    opacity: 0;
+    animation: 1s fadein ease 3s;
+    animation-fill-mode: forwards;
+  }
 
   &[hide] {
     opacity: 0;

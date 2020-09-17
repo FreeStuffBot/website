@@ -16,7 +16,7 @@
           <img :src="member.image" :alt="member.name">
           <img v-if="member.imageHover" :src="member.imageHover" alt="" class="hover">
         </div>
-        <a :href="member.url" v-text="member.name" :style="`--color: ${member.color}; --txtcolor: ${member['txtcolor']||''}`" target="_blank"></a>
+        <a :href="member.url" v-text="member.name" :class="{long:member.name.length>14}" :style="`--color: ${member.color}; --txtcolor: ${member['txtcolor']||''}`" target="_blank"></a>
         <span class="role" v-for="role of member.roles" :key="role" v-text="role"></span>
       </div>
     </section>
@@ -31,7 +31,7 @@
           <img :src="member.image" :alt="member.name">
           <img v-if="member['imageHover']" :src="member['imageHover']" alt="" class="hover">
         </div>
-        <a :href="member.url" v-text="member.name" :style="`--color: ${member.color}; --txtcolor: ${member.txtcolor||''}`" target="_blank"></a>
+        <a :href="member.url" v-text="member.name" :class="{long:member.name.length>14}" :style="`--color: ${member.color}; --txtcolor: ${member.txtcolor||''}`" target="_blank"></a>
         <span class="role" v-for="role of member.roles" :key="role" v-text="role"></span>
       </div>
     </section>
@@ -77,7 +77,7 @@ export default Vue.extend({
           image: 'https://media.discordapp.net/attachments/748622589324165142/748622719578407062/happythonk.png',
           imageHover: 'https://media.discordapp.net/attachments/748622589324165142/748634095734489098/drunkmaanex.gif',
           url: 'https://maanex.me/?utm_campain=project&utm_source=freestuff&utm_medium=teampage',
-          color: '#86A98B',
+          color: 'linear-gradient(0deg, #54787d 0%, #86A98B 100%)',
           roles: [
             'Lead Software Developer',
             'German Translation'
@@ -130,7 +130,7 @@ export default Vue.extend({
           name: 'Elitewarrior009',
           image: 'https://media.discordapp.net/attachments/748622589324165142/748630829672038491/unknown.png',
           url: 'https://www.youtube.com/channel/UCpbEXEkXboiQ3UYlRfdw2JQ?view_as=subscriber',
-          color: '#377d21',
+          color: '#5d884f',
           roles: [
             'Chinese Translation'
           ]
@@ -148,7 +148,7 @@ export default Vue.extend({
           name: 'Yaymaha',
           image: 'https://media.discordapp.net/attachments/748622589324165142/750797323898191964/riBZM05i_400x400.png',
           url: 'https://twitter.com/yaymaha1',
-          color: '#742f29',
+          color: '#b3473e',
           roles: [
             'Portuguese Translation'
           ]
@@ -166,9 +166,19 @@ export default Vue.extend({
           name: 'relevantcroissant',
           image: 'https://media.discordapp.net/attachments/748622589324165142/752586951906820096/yikes.png',
           url: 'https://www.plazovnik.si/',
-          color: 'linear-gradient(87deg, rgb(68, 168, 206) 0px, rgb(27, 223, 203) 100%)',
+          color: 'linear-gradient(87deg, rgb(68, 168, 206) 0%, rgb(27, 223, 203) 100%)',
           roles: [
             'Slovenian Translation'
+          ]
+        },
+        {
+          name: 'Flex Powerzanec',
+          image: 'https://media.discordapp.net/attachments/748622589324165142/755474538594304050/logo_r.png',
+          url: 'https://www.instagram.com/povazzanec/',
+          color: 'linear-gradient(35deg, #c13d27 0%, #ceb22b 100%)',
+          roles: [
+            'Slovak Translation',
+            'Czech Translation'
           ]
         }
       ]).sort(()=>Math.random()-.5),
@@ -270,6 +280,12 @@ section {
 
         &:hover {
           opacity: .8;
+        }
+
+        &.long {
+          padding: 8pt 4pt;
+          width: 100%;
+          text-align: center;
         }
       }
 

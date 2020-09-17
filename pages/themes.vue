@@ -48,7 +48,8 @@
 				</div>
 			</div>
 		</div>
-		<h2 sub class="center" v-html="`Found what you were looking for?&nbsp;${twemoji('👀')}`" />
+		<span class="prefooter center" v-html="`Found what you were looking for?&nbsp;${twemoji('👀')}`" />
+		<!-- <span class="prefooter center">If not, <a href="/discord" target="_blank">let us know!</a></span> -->
 	</div>
 </template>
 
@@ -63,61 +64,61 @@ export default Vue.extend({
 			themes: [
 				{
 					id: 1,
-					img: '/assets/img/theme-1.png',
+					img: '/assets/img/theme-1.webp',
 					name: 'Default Theme',
 					flags: [ true, true, true ]
 				},
 				{
 					id: 2,
-					img: '/assets/img/theme-2.png',
+					img: '/assets/img/theme-2.webp',
 					name: 'Button = bad',
 					flags: [ true, false, true ]
 				},
 				{
 					id: 3,
-					img: '/assets/img/theme-3.png',
+					img: '/assets/img/theme-3.webp',
 					name: 'No photos please!',
 					flags: [ false, true, true ]
 				},
 				{
 					id: 4,
-					img: '/assets/img/theme-4.png',
+					img: '/assets/img/theme-4.webp',
 					name: 'Keep it simple',
 					flags: [ false, false, true ]
 				},
 				{
 					id: 5,
-					img: '/assets/img/theme-5.png',
+					img: '/assets/img/theme-5.webp',
 					name: 'Keep it very simple',
 					flags: [ false, false, true ]
 				},
 				{
 					id: 6,
-					img: '/assets/img/theme-6.png',
+					img: '/assets/img/theme-6.webp',
 					name: 'Images are cool!',
 					flags: [ true, false, true ]
 				},
 				{
 					id: 7,
-					img: '/assets/img/theme-7.png',
+					img: '/assets/img/theme-7.webp',
 					name: 'Minimalist with embeds',
 					flags: [ false, false, true ]
 				},
 				{
 					id: 8,
-					img: '/assets/img/theme-8.png',
+					img: '/assets/img/theme-8.webp',
 					name: 'Minimalist without embeds',
 					flags: [ false, false, false ]
 				},
 				{
 					id: 9,
-					img: '/assets/img/theme-9.png',
+					img: '/assets/img/theme-9.webp',
 					name: 'Text only!',
 					flags: [ false, false, false ]
 				},
 				{
 					id: 10,
-					img: '/assets/img/theme-10.png',
+					img: '/assets/img/theme-10.webp',
 					name: 'Details (for ArchiSteamFarm)',
 					flags: [ false, false, true ]
 				}
@@ -216,7 +217,7 @@ export default Vue.extend({
 	}
 }
 
-h2 {
+.prefooter {
 	margin: 100pt 0 50pt 0;
 	font-size: 12pt;
 	opacity: .8;

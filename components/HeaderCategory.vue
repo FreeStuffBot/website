@@ -48,7 +48,6 @@ export default Vue.extend({
     name: { type: String, default: '' },
     elements: { type: Array, default: new Array(0) },
     url: { type: String, default: '' },
-    theme: { type: String, default: '' },
     color: { type: String, default: '' }
   },
   computed: {
