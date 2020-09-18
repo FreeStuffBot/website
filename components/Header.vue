@@ -4,7 +4,7 @@
       <div class="headerInner">
         <div class="headerLogo">
           <nuxt-link to="/">
-            <img src="@/assets/img/icon_round.png">
+            <img src="@/assets/img/icon_round.webp">
             <span class="name">FreeStuff</span>
           </nuxt-link>
         </div>
@@ -25,7 +25,7 @@
       <div class="headerInner">
         <div class="headerLogo">
           <nuxt-link to="/">
-            <img src="@/assets/img/icon_round.png">
+            <img src="@/assets/img/icon_round.webp">
           </nuxt-link>
         </div>
         <div class="headerNav">

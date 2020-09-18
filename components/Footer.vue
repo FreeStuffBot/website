@@ -35,7 +35,7 @@
         <div>
           <span>Resources</span>
           <nuxt-link to="/team">Team</nuxt-link>
-          <nuxt-link to="/press">Press</nuxt-link>
+          <!-- <nuxt-link to="/press">Press</nuxt-link> -->
           <a href="/o/source" target="_blank">Open Source</a>
           <a href="/o/trello" target="_blank">Roadmap</a>
           <nuxt-link to="/donate">Donate</nuxt-link>

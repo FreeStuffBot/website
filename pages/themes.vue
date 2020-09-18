@@ -6,6 +6,11 @@
 				<div class="inner">
 					<img :src="themes[selected-1].img" alt="">
 				</div>
+				<div class="instructions">
+					<h3>And now?</h3>
+					<span>To make the bot use this theme, use the following command:</span>
+					<cmd :command="`@FreeStuff set theme ${selected}`" />
+				</div>
 			</div>
 			<div class="controls">
 				<div
@@ -48,7 +53,7 @@
 				</div>
 			</div>
 		</div>
-		<span class="prefooter center" v-html="`Found what you were looking for?&nbsp;${twemoji('👀')}`" />
+		<span class="prefooter center" v-html="`Found what you were looking for?&nbsp;${twemoji('👀')}<br>If not, let us know!`" />
 		<!-- <span class="prefooter center">If not, <a href="/discord" target="_blank">let us know!</a></span> -->
 	</div>
 </template>
@@ -56,8 +61,12 @@
 <script lang="ts">
 import Vue from 'vue'
 import twemoji from 'twemoji'
+import cmd from '~/components/ChatCommand.vue'
 
 export default Vue.extend({
+	components: {
+		cmd
+	},
 	data () {
 		return {
 			selected: 1,
@@ -119,7 +128,7 @@ export default Vue.extend({
 				{
 					id: 10,
 					img: '/assets/img/theme-10.webp',
-					name: 'Details (for ArchiSteamFarm)',
+					name: 'Advanced (for ArchiSteamFarm)',
 					flags: [ false, false, true ]
 				}
 			]
@@ -149,9 +158,22 @@ export default Vue.extend({
 	margin-top: 50pt;
 
 	.preview {
-		.inner {	
-			position: sticky;
-			top: 15%;
+		.inner {
+			// position: sticky;
+			// top: 10%;
+			display: block;
+			background-color: #363940;
+			padding: 20pt;
+			border-radius: $component-border-radius;
+		}
+
+		.instructions {
+			background-color: $bg-bright;
+			border-radius: $component-border-radius;
+			margin-top: 10pt;
+			padding: 20pt;
+
+			h3 { margin-top: 0; }
 		}
 	}
 

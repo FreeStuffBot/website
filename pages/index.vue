@@ -127,7 +127,7 @@ const audiences = {
       url: 'https://freestuffbot.xyz/invite'
     },
     graphics: {
-      landingExample: '/assets/img/discord-example.png'
+      landingExample: '/assets/img/discord-example.webp'
     }
   },
   telegram: {
@@ -137,7 +137,7 @@ const audiences = {
       url: 'https://freestuffbot.xyz/invite/telegram'
     },
     graphics: {
-      landingExample: '/assets/img/telegram-example.png'
+      landingExample: '/assets/img/telegram-example.webp'
     }
   }
 } as {[key: string]: any}

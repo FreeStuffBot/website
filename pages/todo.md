@@ -7,7 +7,7 @@
 4 0 Index
 0 0 About
 H 0 Telegram
-3 0 Themes
+x 0 Themes
 H 0 Troubleshooting
 X 0 Team
 X 0 Donating
@@ -24,7 +24,7 @@ X 0 Licenses
 X 0 Testgame
 
 # Meta Info
-X - Sitemap
+C - Sitemap
 X - Robots.txt
 
 # Other
