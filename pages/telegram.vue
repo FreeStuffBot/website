@@ -19,7 +19,7 @@ import Vue from "vue";
 export default Vue.extend({
   transition: {
     afterEnter() {
-      document.getElementById("app")?.scrollTo({ top: 0, behavior: "smooth" });
+      document.getElementById("app")?.scrollTo({ top: 0, behavior: "smooth" })
     }
   }
 });

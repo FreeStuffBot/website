@@ -37,6 +37,8 @@
             :href="audience.cta.url"
             d="0"
             v-text="audience.cta.text"
+            content="yes. do it."
+            v-tippy="{ delay: [2000, 0] }"
           />
           <nuxt-link
             id="about-button"
@@ -44,6 +46,8 @@
             class="button2"
             to="/about"
             d="1"
+            content="wrong button mate.<br>click the left one."
+            v-tippy="{ delay: [2000, 0] }"
           >
             About
           </nuxt-link>
