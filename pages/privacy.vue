@@ -1,7 +1,7 @@
 <template>
   <div class="markdown-page">
     <div v-html="content" />
-    <a href="/download/docs/privacy.pdf">Print Version</a>
+    <!-- <a href="/download/docs/privacy.pdf">Print Version</a> -->
   </div>
 </template>
 

@@ -107,7 +107,7 @@
         <div class="panel">
           <img src="@/assets/img/landing-customize-language.svg" alt="" draggable="false">
           <span component class="title">LOCALISATION</span>
-          <span component class="desc">English is not your primary language? No worries, we got a good amount of languages for you to choose from!</span>
+          <span component class="desc">English is not your primary language? No worries, we got a good amount of translations for you to choose from!</span>
           <nuxt-link to="/themes">More Info</nuxt-link>
         </div>
         <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="" draggable="false">

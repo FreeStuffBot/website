@@ -21,8 +21,8 @@
           <nuxt-link to="/">Discord Bot</nuxt-link>
           <!-- <nuxt-link to="/telegram">Telegram Bot</nuxt-link>
           <nuxt-link to="/twitter">Twitter Bot</nuxt-link>
-          <nuxt-link to="/rss">RSS Feed</nuxt-link>
-          <nuxt-link to="/support/api">API</nuxt-link> -->
+          <nuxt-link to="/rss">RSS Feed</nuxt-link>-->
+          <a href="https://docs.freestuffbot.xyz/">API</a>
         </div>
         <div>
           <span>Support</span>
@@ -47,6 +47,7 @@
           <nuxt-link to="/privacy">Privacy Policy</nuxt-link>
           <nuxt-link to="/terms">Terms of Service</nuxt-link>
           <nuxt-link to="/licenses">Licenses</nuxt-link>
+          <!-- <a href="https://maanex.me/imprint">Impressum</a> -->
           <a v-if="Math.random() < .01" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Free Bitcoin</a>
         </div>
       </div>
@@ -55,7 +56,7 @@
           <img src="@/assets/img/icon_round.png">
           <span class="name">FreeStuff</span>
         </nuxt-link>
-        <span class="copyright">Copyright &copy; 2020 FreeStuff Services. All rights reserved.</span>
+        <span class="copyright">Copyright &copy; 2020 FreeStuff Services. All rights reserved. <a href="https://maanex.me/imprint">Impressum</a></span>
         <nuxt-link to="/start" class="footerButton">Get Started</nuxt-link>
       </div>
     </div>
@@ -225,6 +226,16 @@ footer {
         line-height: 10pt;
         opacity: .3;
         margin-top: calc(20px - 5pt);
+
+        a {
+          color: $color-minor;
+          text-decoration: none;
+
+          &:hover {
+            color: $color-regular;
+            text-decoration: underline;
+          }
+        }
       }
 
       .footerButton {
