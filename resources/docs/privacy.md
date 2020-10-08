@@ -19,8 +19,9 @@ If you have any questions, please contact us via E-Mail: [team@freestuffbot.xyz]
 1. Discord Bot
 2. Telegram Bot
 3. This Website
-4. Children's Information
-5. Contact
+4. Application Programming Interface & Management Platform
+5. Children's Information
+6. Contact
 
 
 ## 1. Discord Bot
@@ -53,7 +54,7 @@ If you have any questions regarding your data, please contact us via E-Mail: [te
 
 This section covers the FreeStuff Bot for Telegram.
 
-The FreeStuff Bot for Telegram is not yet ready for release. Until then, we keep the right to store as much information as we need about you in order to build and improve the service. This will change once the final product is ready for public release. Please do not use the Bot yet, if you do not consent.
+The FreeStuff Bot for Telegram is not yet ready for release. Until then, we keep the right to store as much information as we need about you in order to build and improve the Service. This will change once the final product is ready for public release. Please do not use the Bot yet, if you do not consent.
 
 If you have any questions regarding your data, please contact us via E-Mail: [team@freestuffbot.xyz](mailto:team@freestuffbot.xyz).
 
@@ -66,7 +67,7 @@ This section covers www.freestuffbot.xyz ("the website", "our website" or "this 
 
 The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.
 
-If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.
+If you contact us directly, we may receive additional information about you such as your name, e-mail address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.
 
 ### How we use your information
 
@@ -81,7 +82,7 @@ We use the information we collect in various ways, including to:
 
 ### Log Files
 
-This website follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.
+This website follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting Services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.
 
 ### Cookies and Web Beacons
 
@@ -127,7 +128,7 @@ If you make a request, we have one month to respond to you. If you would like to
 
 We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:
 
-* The right to access – You have the right to request copies of your personal data. We may charge you a small fee for this service.
+* The right to access – You have the right to request copies of your personal data. We may charge you a small fee for this Service.
 * The right to rectification – You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete.
 * The right to erasure – You have the right to request that we erase your personal data, under certain conditions.
 * The right to restrict processing – You have the right to request that we restrict the processing of your personal data, under certain conditions.
@@ -136,13 +137,60 @@ We would like to make sure you are fully aware of all of your data protection ri
 
 If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.
 
-## 4. Children's Information
+## 4. Application Programming Interface & Management Platform
+
+This section covers both the Application Programming Interface ("API") as well as the Content Management System ("CMS"), collectively the Management Platform ("MP" or "Platform"), covering the following domains:
+* https://management.freestuffbot.xyz/
+* https://dashboard.freestuffbot.xyz/
+* https://api.freestuffbot.xyz/
+
+In order to use the MP you have to log in using your Discord account. By doing so Discord provides us with the following user specific data:
+* Your user id, name and tag
+* Your avatar
+* Your account flags, both public and private
+* Your e-mail address, only if specifically provided
+* Your language settings
+* Your two factor authentication status
+* Your guilds. This includes the following data about each guild: it's id, name, icon, features, ownership status and your permissions
+
+Additionally, the following personal data might be collected regardless of your Discord Account:
+* Your internet protocol (IP) address
+* Your browser name and version
+* Timestamps of any interactions with the Platform
+* The pages you visited
+
+We keep the right to store this data as long as we want, as well as to use and process it for any operations compliant with this Privacy Policy. Such operations may include:
+* Providing the Service
+* Analyzing the usage of our Platform in order to maintain and improve the Service
+* Making sure our User's data is properly secured and not accessible from unauthorized access
+* Providing support
+
+### User content
+
+In the CMS you might have access to pages and tools which allow you to enter information. This includes translation pages, content moderation pages, API application settings, as well as document editing pages. We keep the right to use any information you provide through these tools in any way we like as well as storing this information for as long as we like. As a result of this, we cannot guarantee you that private information entered in those pages will remain private. Please keep this in mind.
+
+### API
+
+By using our API you agree that any data submitted through the interface might be stored as long as we like. This data contains
+A) any data submitted through the request payload or request body
+B) any meta data delivered with the request, including but not limited to: HTTP headers and cookies
+C) any data visible through the internet protocol, including but not limited to: request origin internet protocol (IP) address
+
+We use parts of this data for the following purposes:
+* Providing the Service
+* Analyzing the usage of our Platform in order to maintain and improve the Service
+* Detecting and taking action against abusement of our Service as well as Terms of Service violations
+* Detecting and preventing unauthorized access to our Platform
+
+If you have any questions regarding your data, please contact us via E-Mail: [team@freestuffbot.xyz](mailto:team@freestuffbot.xyz).
+
+## 5. Children's Information
 
 Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.
 
-FreeStuff does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information to our service, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.
+FreeStuff does not knowingly collect any Personal Identifiable Information from children under the age of 14. If you think that your child provided this kind of information to our Service, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.
 
-## 5. Contact
+## 6. Contact
 
 Please do not hesitate to contact us if you have any questions or other concerns regarding this policy.
 
