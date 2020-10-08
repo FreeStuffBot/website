@@ -67,6 +67,12 @@
 					<h4>Enable auto-reaction</h4>
 					<span>The bot can automatically react with the :free: emoji to each of it's messages. You can toggle this using:</span>
 					<code>@FreeStuff set reaction on/off</code>
+					<h4>Change the language</h4>
+					<span>We have a handfull of translations available for the bot. To check them out, type:</span>
+					<code>@FreeStuff set language</code>
+					<h4>Filter which Stores / Platforms you like</h4>
+					<span>Our newest addition to the bot allows you to disable certain platforms if you don't like them. For more details, type:</span>
+					<code>@FreeStuff set store</code>
 				</div>
 				<div class="box">
 					<h3 style="color: #cccccc" id="more">More</h3>
@@ -75,14 +81,13 @@
 					<span>For a more technical answer to the question <a href="https://docs.google.com/document/d/1C5aRG7gVryX25N_61WtHbMduJp61qQ5j2vkU0D2ND8g" target="_blank">click here</a></span>
 					<span>If you do wanna send something in that we haven't found yet, feel free to contact us over on <a href="https://discord.gg/WrnKKF8">our discord server</a></span>
 					<h4>Technical Details</h4>
-					<span>The bot is written in TypeScript using Discord.js and a MongoDB database. Webscraping is done using the puppeteer library and several public apis. The dashboard is built with Vue.js using Nuxt.js for server side rendering.</span>
+					<span>The bot is written in TypeScript using Discord.js and a MongoDB database. The sourcecode of which can be found <a href="/o/source">here</a>. The data is gathered using several public apis. The dashboard is built using Nuxt.js.</span>
 					<h4>The Team</h4>
 					<span style="margin-bottom: 5px"><a href="https://twitter.com/maanex_/">Maanex</a>: Founder & Lead Developer</span>
-					<span style="margin-bottom: 5px"><a href="https://twitter.com/badosz_/">Badosz</a>: Developer</span>
-					<span style="margin-bottom: 5px"><a href="https://twitter.com/TheMagicalL1/">TheMagicalL</a>: Content Moderator</span>
+					<span style="margin-bottom: 5px"><a href="https://twitter.com/rami_sab07">Rami</a>: Developer</span>
 					<span style="margin-bottom: 5px"><a href="https://twitter.com/EasyTheBG/">EasyThe</a>: Content Moderator</span>
-					<span style="margin-bottom: 5px"><a href="https://twitter.com/daarendotwav/">Daaren</a>: Tude Management</span>
-					<span style="margin-bottom: 5px"><a href="https://twitter.com/max_zyxt/">Zyxt</a>: Tude Management</span>
+					<span style="margin-bottom: 5px"><a href="https://twitter.com/TheMagicalL1/">TheMagicalL</a>: Content Moderator</span>
+					<span style="margin-bottom: 5px">And of course thank you to all of our translators. We're currently working on a new website to feature all of you &lt;3</span>
 					<h4>Bottom text.</h4>
 					<span><a href="/legal/privacy">FreeStuff Privacy Policy</a> - <a href="/legal/terms">FreeStuff Terms of Service</a></span>
 				</div>
