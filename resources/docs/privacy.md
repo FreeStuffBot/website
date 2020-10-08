@@ -1,6 +1,6 @@
 # Privacy Policy
 
-##### Last changed on September 1st, 2020.
+##### Last changed on October 8th, 2020.
 
 ---
 
