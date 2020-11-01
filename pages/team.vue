@@ -113,7 +113,7 @@ export default Vue.extend({
           txtcolor: '#333333',
           roles: [
             'Polish Translation',
-            'Mental Health Helper'
+            '"Mental Health Helper"'
           ]
         },
         {
@@ -122,8 +122,7 @@ export default Vue.extend({
           url: 'http://getavirus.xyz/',
           color: 'linear-gradient(20deg, #36d1dc, #5b86e5)',
           roles: [
-            'Danish Translation',
-            '(he really do be da king)'
+            'Danish Translation'
           ]
         },
         {
@@ -299,6 +298,30 @@ section {
         text-align: center !important;
         margin-top: 3pt !important;
         margin-bottom: 0 !important;
+      }
+    }
+  
+    @media (max-width: 700px) {
+      width: 120pt !important;
+      padding-left: 15pt !important;
+      padding-right: 15pt !important;
+      padding-bottom: 15pt !important;
+
+      & > a {
+        padding: 8pt 4pt !important;
+        width: 100% !important;
+        text-align: center !important;
+        font-size: 11pt !important;
+      }
+    }
+  
+    @media (max-width: 560px) {
+      width: 100pt !important;
+      margin: 30pt 5pt 5pt 5pt !important;
+
+      & > a {
+        padding: 8pt 2pt !important;
+        font-size: 10pt !important;
       }
     }
   }

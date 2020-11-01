@@ -86,9 +86,9 @@
       <h4 left>
         <span component>Customize as you like:</span>
       </h4>
-      <svg class="h5deco" width="100%" height="100%" viewBox="0 0 119 45" version="1.1" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+      <!-- <svg class="h5deco" width="100%" height="100%" viewBox="0 0 119 45" version="1.1" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
         <path d="M1.875,37.346l26.58,-26.58l31.843,31.843l40.734,-40.734l15.306,15.306" style="fill:none;stroke:#933c6d;stroke-width:3.75px;"/>
-      </svg>
+      </svg> -->
       <div class="featurepanels">
         <div class="panel">
           <img src="@/assets/img/landing-customize-themes.svg" alt="" draggable="false">
@@ -116,6 +116,10 @@
         </div>
         <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="" draggable="false">
       </div>
+    </div>
+
+    <div id="details2">
+
     </div>
   </div>
 </template>
@@ -223,13 +227,6 @@ export default Vue.extend({
   }
 }
 
-#details {
-  position: relative;
-  z-index: 11;
-  width: 100%;
-  margin-top: 5vh;
-}
-
 #gamelist {
   --anim: 0;
   position: absolute;
@@ -237,7 +234,7 @@ export default Vue.extend({
   top: 53vh;
   width: 50vw;
   transform: translateZ(-5px) scale(1.5);
-  opacity: calc((1 - var(--scrollPos) * .6) * var(--anim));
+  opacity: calc((1 - var(--scrollPos) * .8) * var(--anim));
   animation: 1s gamelist-in cubic-bezier(0.33, 1, 0.68, 1) 2.5s;
   animation-fill-mode: forwards;
 }
@@ -255,15 +252,25 @@ export default Vue.extend({
   z-index: 11;
   width: 100%;
   margin-top: 15vh;
-  margin-bottom: -5vh;
+  margin-bottom: 25vh;
 
   h4 {
     position: relative;
     z-index: 12;
-    transform: translateZ(1px) scale(.9);
+    // transform: translateZ(1px) scale(.9);
+    margin-bottom: 30pt;
   }
+}
 
-  height: 200vh; // TODO REMOVE
+#details2 {
+  position: relative;
+  z-index: 13;
+  width: 100vw;
+  left: 50%;
+  margin-bottom: 5vh;
+  background-color: $backpage;
+  transform: translateX(-50%);
+  min-height: 100vh;
 }
 
 .h5deco {
@@ -275,6 +282,7 @@ export default Vue.extend({
   path {
     stroke-dasharray: 1000;
     stroke-dashoffset: calc(1050 - (var(--scrollPos) * 200));
+    transition: stroke-dashoffset .3s cubic-bezier(0.34, 2.36, 0.44, 1);
   }
 }
 
@@ -301,6 +309,7 @@ export default Vue.extend({
     flex-direction: column;
     background-color: $bg-bright;
     border-radius: $component-border-radius;
+    box-shadow: 0 0 5px $bg-dark;
     z-index: 2;
 
     span {

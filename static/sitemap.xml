@@ -2,23 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://freestuffbot.xyz</loc>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://freestuffbot.xyz/about</loc>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://freestuffbot.xyz/themes</loc>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://freestuffbot.xyz/troubleshooting</loc>
+    <loc>https://freestuffbot.xyz/support</loc>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://freestuffbot.xyz/testgame</loc>
+    <priority>0.1</priority>
   </url>
   <url>
     <loc>https://freestuffbot.xyz/callback</loc>
+    <priority>0.1</priority>
   </url>
   <url>
     <loc>https://freestuffbot.xyz/team</loc>
+    <priority>0.5</priority>
   </url>
 </urlset>

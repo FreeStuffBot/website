@@ -21,7 +21,7 @@
         <nuxt-link :to="startUrl" class="headerButton">Get Started</nuxt-link>
       </div>
     </div>
-    <div class="header mobileHeader">
+    <!-- <div class="header mobileHeader">
       <div class="headerInner">
         <div class="headerLogo">
           <nuxt-link to="/">
@@ -37,7 +37,7 @@
           />
         </div>
       </div>
-    </div>
+    </div> -->
   </header>
 </template>
 
@@ -92,7 +92,7 @@ export default Vue.extend({
           },
           {
             name: 'FAQ',
-            url: '/faq',
+            url: '/support/faq',
             elements: []
           }
         ];
@@ -161,12 +161,12 @@ header {
 
 .desktopHeader {
   visibility: visible;
-  @media (max-width: 848px) { visibility: hidden; }
+  // @media (max-width: 848px) { visibility: hidden; }
 }
 
 .mobileHeader {
   visibility: hidden;
-  @media (max-width: 848px) { visibility: visible; }
+  // @media (max-width: 848px) { visibility: visible; }
 }
 
 .header {
@@ -254,6 +254,18 @@ header {
 
       &:hover {
         background-image: linear-gradient(30deg, #9e35a1, #6b6eb9);
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    animation: none !important;
+    
+    .headerInner {
+      grid-template-columns: 1fr 1fr;
+
+      .headerNav {
+        display: none !important;
       }
     }
   }

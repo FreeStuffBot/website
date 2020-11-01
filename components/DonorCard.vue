@@ -76,6 +76,7 @@ export default Vue.extend({
     font-size: 12pt !important;
     font-family: $font-major !important;
     color: #ffffffdd !important;
+    margin-bottom: 0 !important;
   }
 }
 </style>

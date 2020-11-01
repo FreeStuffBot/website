@@ -188,7 +188,7 @@ If you have any questions regarding your data, please contact us via E-Mail: [te
 
 Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.
 
-FreeStuff does not knowingly collect any Personal Identifiable Information from children under the age of 14. If you think that your child provided this kind of information to our Service, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.
+FreeStuff does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information to our Service, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.
 
 ## 6. Contact
 
