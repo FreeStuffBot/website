@@ -43,7 +43,7 @@
           <img :src="member.image" :alt="member.name">
           <img v-if="member['imageHover']" :src="member['imageHover']" :alt="member.name" class="hover">
         </div>
-        <a :href="member.url" rel="noreferrer noopener" v-text="member.name" :class="{long:member.name.length>14}" :style="`--color: ${member.color}; --txtcolor: ${member.txtcolor||''}`" target="_blank"></a>
+        <a :href="member.url" rel="noreferrer noopener" v-html="member.name.replaceAll('<', '<&ZeroWidthSpace;')" :class="{long:member.name.length>14}" :style="`--color: ${member.color}; --txtcolor: ${member.txtcolor||''}`" target="_blank"></a>
         <span class="role" v-for="role of member.roles" :key="role" v-text="role"></span>
       </div>
     </section>
@@ -138,7 +138,7 @@ export default Vue.extend({
           ]
         },
         {
-          name: 'Elitewarrior009',
+          name: 'Elitewarrior&ZeroWidthSpace;009',
           image: 'https://media.discordapp.net/attachments/748622589324165142/748630829672038491/unknown.png',
           url: 'https://www.youtube.com/channel/UCpbEXEkXboiQ3UYlRfdw2JQ?view_as=subscriber',
           color: '#5d884f',
@@ -174,7 +174,7 @@ export default Vue.extend({
           ]
         },
         {
-          name: 'relevantcroissant',
+          name: 'relevant&ZeroWidthSpace;croissant',
           image: 'https://media.discordapp.net/attachments/748622589324165142/752586951906820096/yikes.png',
           url: 'https://www.plazovnik.si/',
           color: 'linear-gradient(87deg, rgb(68, 168, 206) 0%, rgb(27, 223, 203) 100%)',
@@ -298,7 +298,7 @@ section {
       a {
         display: inline-block;
         background: var(--color, #222222);
-        border-radius: 999px;
+        border-radius: 15pt;
         padding: 8pt 30pt;
         font-family: $font-major;
         color: var(--txtcolor, #{$color-major});
@@ -318,29 +318,32 @@ section {
       }
 
       span.role {
-        font-family: $font-sub !important;
-        color: $color-sub !important;
-        opacity: .7 !important;
-        font-size: 11pt !important;
-        display: block !important;
-        width: 100% !important;
-        text-align: center !important;
-        margin-top: 3pt !important;
-        margin-bottom: 0 !important;
+        font-family: $font-sub;
+        color: $color-sub;
+        opacity: .7;
+        font-size: 11pt;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 3pt;
+        margin-bottom: 0;
       }
     }
   
     @media (max-width: 700px) {
       width: 120pt !important;
-      padding-left: 15pt !important;
-      padding-right: 15pt !important;
-      padding-bottom: 15pt !important;
+      padding: calc(20pt + 50px) 15pt 15pt 15pt !important;
 
       & > a {
         padding: 8pt 4pt !important;
         width: 100% !important;
         text-align: center !important;
         font-size: 11pt !important;
+      }
+
+      .img-wrapper {
+        width: 80px !important;
+        height: 80px !important;
       }
     }
   
@@ -351,6 +354,30 @@ section {
       & > a {
         padding: 8pt 2pt !important;
         font-size: 10pt !important;
+      }
+
+      span.role {
+        font-size: 10pt !important;
+      }
+    }
+  
+    @media (max-width: 420px) {
+      width: 75pt !important;
+      margin: 30pt 3pt 3pt 3pt !important;
+      padding: calc(20pt + 40px) 12pt 12pt 12pt !important;
+
+      & > a {
+        padding: 8pt 2pt !important;
+        font-size: 10pt !important;
+      }
+
+      span.role {
+        font-size: 10pt !important;
+      }
+
+      .img-wrapper {
+        width: 70px !important;
+        height: 70px !important;
       }
     }
   }

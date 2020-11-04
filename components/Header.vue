@@ -269,5 +269,15 @@ header {
       }
     }
   }
+
+  @media (max-width: 400px) {
+    .headerLogo {
+      img { height: 30px !important; }
+
+      .name { font-size: 12pt !important; }
+    }
+
+    .headerButton { padding: 6pt 10pt !important; }
+  }
 }
 </style>
