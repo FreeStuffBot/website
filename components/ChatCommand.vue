@@ -7,10 +7,18 @@
       :copied="copied"
       @click="copy"
     />
+    <label
+      :for="'chat-command-' + uuid"
+      class="clipboard-hide"
+      aria-hidden="true"
+    >
+      copy to clipboard
+    </label>
     <input
       :id="'chat-command-' + uuid"
       class="clipboard-hide"
       v-model="command"
+      aria-hidden="true"
     >
   </div>
 </template>

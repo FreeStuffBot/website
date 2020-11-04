@@ -35,6 +35,7 @@
             btn
             class="button1"
             :href="audience.cta.url"
+            rel="noreferrer"
             d="0"
             v-text="audience.cta.text"
             content="yes. do it."
@@ -76,11 +77,11 @@
           </svg>
         </div>
       </div>
-      <img id="discord-example" :src="audience.graphics.landingExample" alt="">  
+      <img id="discord-example" :src="audience.graphics.landingExample" alt="Example Image">  
     </div>
 
-    <img id="gamelist" draggable="false" src="@/assets/img/landing-gamelist.svg" alt="">
-    <img id="wave1" draggable="false" src="@/assets/img/landing-wave-1.svg" alt="">
+    <img id="gamelist" draggable="false" src="@/assets/img/landing-gamelist.svg" alt="" aria-hidden="true">
+    <img id="wave1" draggable="false" src="@/assets/img/landing-wave-1.svg" alt="" aria-hidden="true">
 
     <div id="details">
       <h4 left>
@@ -91,28 +92,28 @@
       </svg> -->
       <div class="featurepanels">
         <div class="panel">
-          <img src="@/assets/img/landing-customize-themes.svg" alt="" draggable="false">
+          <img src="@/assets/img/landing-customize-themes.svg" alt="Customize Themes" draggable="false">
           <span component class="title">CHOOSE A NICE THEME</span>
           <span component class="desc">Select one of 10 themes to match the look and feel of your server! Images or not, minimalistic or with extra info - we got it all!</span>
           <nuxt-link to="/themes">Discover Themes</nuxt-link>
         </div>
         <div class="panel">
-          <img src="@/assets/img/landing-customize-filter.svg" alt="" draggable="false">
+          <img src="@/assets/img/landing-customize-filter.svg" alt="Customize Filter" draggable="false">
           <span component class="title">FILTER THE CONTENT</span>
           <span component class="desc">Don't want cheap games in your server? Only like certain stores? Tell the bot what you like and what you don't and it'll take care!</span>
           <nuxt-link to="/themes">Lean More</nuxt-link>
         </div>
         <div class="panel">
-          <img src="@/assets/img/landing-customize-pings.svg" alt="" draggable="false">
+          <img src="@/assets/img/landing-customize-pings.svg" alt="Customize Pings" draggable="false">
           <span component class="title">GET NOTIFIED</span>
           <span component class="desc">Would you like to get pinged on new free games? Just provide the bot with a role to ping and you'll never be too late!</span>
           <nuxt-link to="/themes">Read How</nuxt-link>
         </div>
         <div class="panel">
-          <img src="@/assets/img/landing-customize-language.svg" alt="" draggable="false">
+          <img src="@/assets/img/landing-customize-language.svg" alt="Customize Language" draggable="false">
           <span component class="title">LOCALISATION</span>
           <span component class="desc">English is not your primary language? No worries, we got a good amount of translations for you to choose from!</span>
-          <nuxt-link to="/themes">More Info</nuxt-link>
+          <nuxt-link to="/themes">View Translations</nuxt-link>
         </div>
         <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="" draggable="false">
       </div>

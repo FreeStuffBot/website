@@ -8,7 +8,7 @@
       <div class="box">
         <h3 style="color: #7fcf42">Table of contents</h3>
         <h4>Please click on whatever describes your issue the best.</h4>
-        <span>If you don't find anything that helps here, you can visit us on our Discord server for support. <a href="https://discord.gg/WrnKKF8">Click here to join</a></span>
+        <span>If you don't find anything that helps here, you can visit us on our Discord server for support. <a href="https://discord.gg/WrnKKF8" rel="noreferrer">Click here to join</a></span>
         <br>
         <br>
         <span><a href="#noresponse">The bot does not respond to my messages</a></span>
@@ -33,7 +33,7 @@
         <h4>That means the bot doesn't have permission</h4>
         <span>This text is yet to be written, hold on!</span>
       </div>
-      <footer><a href="https://tude.ga/">Copyright &copy; 2020 Tude</a></footer>
+      <footer><a href="https://tude.ga/" rel="noreferrer">Copyright &copy; 2020 Tude</a></footer>
     </div>
   </div>
 </template>

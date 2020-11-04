@@ -14,10 +14,22 @@
       >
         <div class="img-wrapper">
           <img :src="member.image" :alt="member.name">
-          <img v-if="member.imageHover" :src="member.imageHover" alt="" class="hover">
+          <img v-if="member.imageHover" :src="member.imageHover" :alt="member.name" class="hover">
         </div>
-        <a :href="member.url" v-text="member.name" :class="{long:member.name.length>14}" :style="`--color: ${member.color}; --txtcolor: ${member['txtcolor']||''}`" target="_blank"></a>
-        <span class="role" v-for="role of member.roles" :key="role" v-text="role"></span>
+        <a
+          :href="member.url"
+          rel="noreferrer noopener"
+          v-text="member.name"
+          :class="{long:member.name.length>14}"
+          :style="`--color: ${member.color}; --txtcolor: ${member['txtcolor']||''}`"
+          target="_blank"
+        />
+        <span
+          v-for="role of member.roles"
+          :key="role"
+          class="role"
+          v-text="role"
+        />
       </div>
     </section>
     <section fade-in>
@@ -29,9 +41,9 @@
       >
         <div class="img-wrapper">
           <img :src="member.image" :alt="member.name">
-          <img v-if="member['imageHover']" :src="member['imageHover']" alt="" class="hover">
+          <img v-if="member['imageHover']" :src="member['imageHover']" :alt="member.name" class="hover">
         </div>
-        <a :href="member.url" v-text="member.name" :class="{long:member.name.length>14}" :style="`--color: ${member.color}; --txtcolor: ${member.txtcolor||''}`" target="_blank"></a>
+        <a :href="member.url" rel="noreferrer noopener" v-text="member.name" :class="{long:member.name.length>14}" :style="`--color: ${member.color}; --txtcolor: ${member.txtcolor||''}`" target="_blank"></a>
         <span class="role" v-for="role of member.roles" :key="role" v-text="role"></span>
       </div>
     </section>
@@ -42,14 +54,14 @@
     <div fade-in class="divider dotted vertical"></div>
     <div fade-in class="popbox green medium">
       <h2>Want your name on this page?</h2>
-      <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="deco" class="bgdeco" draggable="false">
+      <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="" class="bgdeco" draggable="false" aria-hidden="true">
       <div class="gallery" items="3">
-        <a href="/o/translating" target="_blank">
+        <a href="/o/translating" rel="noreferrer" target="_blank">
           <img src="@/assets/icons/translation.svg" alt="Translation">
           <span>Help with Translating!</span>
           <span>Even if your language is already supported, sometimes a second translator doesn't hurt!</span>
         </a>
-        <a href="/discord" target="_blank">
+        <a href="/discord" rel="noreferrer" target="_blank">
           <img src="@/assets/icons/laptopcode.svg" alt="Laptop">
           <span>Help out elsewhere!</span>
           <span>Like programming, bug-finding, providing support and whatever else needs to be done!</span>
@@ -74,8 +86,8 @@ export default Vue.extend({
       core: ([
         {
           name: 'Maanex',
-          image: 'https://media.discordapp.net/attachments/748622589324165142/748622719578407062/happythonk.png',
-          imageHover: 'https://media.discordapp.net/attachments/748622589324165142/748634095734489098/drunkmaanex.gif',
+          image: 'https://media.discordapp.net/attachments/748622589324165142/748622719578407062/happythonk.png?size=100',
+          imageHover: 'https://media.discordapp.net/attachments/748622589324165142/748634095734489098/drunkmaanex.gif?size=100',
           url: 'https://maanex.me/?utm_campain=project&utm_source=freestuff&utm_medium=teampage',
           color: 'linear-gradient(0deg, #54787d 0%, #86A98B 100%)',
           roles: [
@@ -85,7 +97,7 @@ export default Vue.extend({
         },
         {
           name: 'EasyThe',
-          image: 'https://media.discordapp.net/attachments/748622589324165142/748622666432380958/6q2TRvY2_400x400.png',
+          image: 'https://media.discordapp.net/attachments/748622589324165142/748622666432380958/6q2TRvY2_400x400.png?size=100',
           url: 'https://twitter.com/EasyTheBg',
           color: '#9535ce',
           roles: [
@@ -95,7 +107,7 @@ export default Vue.extend({
         },
         {
           name: 'Rami',
-          image: 'https://media.discordapp.net/attachments/748622589324165142/748622636057362472/White.png',
+          image: 'https://media.discordapp.net/attachments/748622589324165142/748622636057362472/White.png?size=100',
           url: 'https://rami-sabbagh.github.io/',
           color: '#2ba0da',
           roles: [
@@ -107,7 +119,7 @@ export default Vue.extend({
       contributors: ([
         {
           name: 'Bartosz Król',
-          image: 'https://media.discordapp.net/attachments/748622589324165142/748622611935658014/bIcon-white.png',
+          image: 'https://media.discordapp.net/attachments/748622589324165142/748622611935658014/bIcon-white.png?size=100',
           url: 'http://badosz.com/',
           color: '#ffffff',
           txtcolor: '#333333',
@@ -188,7 +200,24 @@ export default Vue.extend({
     afterEnter () {
       document.getElementById('app')?.scrollTo({ top: 0, behavior: 'smooth' })
     }
-  }
+  },
+	head() {
+		return {
+			title: 'FreeStuff Team',
+			meta: [
+				{
+					hid: 'description',
+					name: 'description',
+					content: 'We are the team behind the FreeStuffBot.'
+				},
+				{
+					hid: 'keywords',
+					name: 'keywords',
+					content: 'freestuff, freestuffbot, team, maanex, easythe, tude'
+				}
+			]
+		}
+	}
 })
 </script>
 

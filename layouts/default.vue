@@ -8,6 +8,8 @@
         class="deco"
         src="@/assets/img/deco-blob-2.svg"
         draggable="false"
+        alt=""
+        aria-hidden="true"
       >
     </div>
 

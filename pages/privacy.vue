@@ -20,7 +20,19 @@ export default Vue.extend({
     afterEnter () {
       document.getElementById('app')?.scrollTo({ top: 0, behavior: 'smooth' })
     }
-  }
+  },
+	head() {
+		return {
+			title: 'FreeStuff Privacy Policy',
+			meta: [
+				{
+					hid: 'description',
+					name: 'description',
+					content: 'Your privacy is important to us. FreeStuff and its affiliates are dedicated to protecting the privacy rights of our users.'
+				}
+			]
+		}
+	}
 })
 </script>
 

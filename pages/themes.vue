@@ -4,7 +4,7 @@
 		<div class="wrapper">
 			<div class="preview">
 				<div class="inner">
-					<img :src="themes[selected-1].img" alt="">
+					<img :src="themes[selected-1].img" alt="Theme Preview">
 				</div>
 				<div class="instructions">
 					<h3>And now?</h3>
@@ -63,6 +63,69 @@ import Vue from 'vue'
 import twemoji from 'twemoji'
 import cmd from '~/components/ChatCommand.vue'
 
+const themes = [
+	{
+		id: 1,
+		img: '/assets/img/theme-1.webp',
+		name: 'Default Theme',
+		flags: [ true, true, true ]
+	},
+	{
+		id: 2,
+		img: '/assets/img/theme-2.webp',
+		name: 'Button = bad',
+		flags: [ true, false, true ]
+	},
+	{
+		id: 3,
+		img: '/assets/img/theme-3.webp',
+		name: 'No photos please!',
+		flags: [ false, true, true ]
+	},
+	{
+		id: 4,
+		img: '/assets/img/theme-4.webp',
+		name: 'Keep it simple',
+		flags: [ false, false, true ]
+	},
+	{
+		id: 5,
+		img: '/assets/img/theme-5.webp',
+		name: 'Keep it very simple',
+		flags: [ false, false, true ]
+	},
+	{
+		id: 6,
+		img: '/assets/img/theme-6.webp',
+		name: 'Images are cool!',
+		flags: [ true, false, true ]
+	},
+	{
+		id: 7,
+		img: '/assets/img/theme-7.webp',
+		name: 'Minimalist with embeds',
+		flags: [ false, false, true ]
+	},
+	{
+		id: 8,
+		img: '/assets/img/theme-8.webp',
+		name: 'Minimalist without embeds',
+		flags: [ false, false, false ]
+	},
+	{
+		id: 9,
+		img: '/assets/img/theme-9.webp',
+		name: 'Text only!',
+		flags: [ false, false, false ]
+	},
+	{
+		id: 10,
+		img: '/assets/img/theme-10.webp',
+		name: 'Advanced (for ArchiSteamFarm)',
+		flags: [ false, false, true ]
+	}
+]
+
 export default Vue.extend({
 	components: {
 		cmd
@@ -70,68 +133,7 @@ export default Vue.extend({
 	data () {
 		return {
 			selected: 1,
-			themes: [
-				{
-					id: 1,
-					img: '/assets/img/theme-1.webp',
-					name: 'Default Theme',
-					flags: [ true, true, true ]
-				},
-				{
-					id: 2,
-					img: '/assets/img/theme-2.webp',
-					name: 'Button = bad',
-					flags: [ true, false, true ]
-				},
-				{
-					id: 3,
-					img: '/assets/img/theme-3.webp',
-					name: 'No photos please!',
-					flags: [ false, true, true ]
-				},
-				{
-					id: 4,
-					img: '/assets/img/theme-4.webp',
-					name: 'Keep it simple',
-					flags: [ false, false, true ]
-				},
-				{
-					id: 5,
-					img: '/assets/img/theme-5.webp',
-					name: 'Keep it very simple',
-					flags: [ false, false, true ]
-				},
-				{
-					id: 6,
-					img: '/assets/img/theme-6.webp',
-					name: 'Images are cool!',
-					flags: [ true, false, true ]
-				},
-				{
-					id: 7,
-					img: '/assets/img/theme-7.webp',
-					name: 'Minimalist with embeds',
-					flags: [ false, false, true ]
-				},
-				{
-					id: 8,
-					img: '/assets/img/theme-8.webp',
-					name: 'Minimalist without embeds',
-					flags: [ false, false, false ]
-				},
-				{
-					id: 9,
-					img: '/assets/img/theme-9.webp',
-					name: 'Text only!',
-					flags: [ false, false, false ]
-				},
-				{
-					id: 10,
-					img: '/assets/img/theme-10.webp',
-					name: 'Advanced (for ArchiSteamFarm)',
-					flags: [ false, false, true ]
-				}
-			]
+			themes
 		}
 	},
   methods: {
@@ -143,7 +145,24 @@ export default Vue.extend({
     afterEnter () {
       document.getElementById('app')?.scrollTo({ top: 0, behavior: 'smooth' })
     }
-  }
+	},
+	head() {
+		return {
+			title: 'FreeStuffBot Themes',
+			meta: [
+				{
+					hid: 'description',
+					name: 'description',
+					content: `View all ${themes.length} available themes for the FreeStuff Discord Bot-`
+				},
+				{
+					hid: 'keywords',
+					name: 'keywords',
+					content: 'discord, free, games, bot, customizeable, stuff, freestuff, freestuffbot, themes'
+				}
+			]
+		}
+	}
 })
 </script>
 
@@ -180,7 +199,7 @@ export default Vue.extend({
 	.controls {
 		.button {
 			$unit: 50pt;
-			--color: hsl(var(--hue), 40%, 50%);
+			--color: hsl(var(--hue), 50%, 60%);
 
 			position: relative;
 			display: grid;

@@ -20,7 +20,19 @@ export default Vue.extend({
     afterEnter () {
       document.getElementById('app')?.scrollTo({ top: 0, behavior: 'smooth' })
     }
-  }
+  },
+	head() {
+		return {
+			title: 'FreeStuff Terms of Service',
+			meta: [
+				{
+					hid: 'description',
+					name: 'description',
+					content: 'By using any of the FreeStuff Services, you agree to out terms and conditions.'
+				}
+			]
+		}
+	}
 })
 </script>
 

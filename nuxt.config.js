@@ -4,13 +4,15 @@ export default {
   target: 'static',
   head: {
     title: 'FreeStuff' || process.env.npm_package_name || '',
+    htmlAttrs: {
+      lang: 'en'
+    },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width: device-width, initial-scale: 1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
       { 'http-equiv': 'X-UA-Compatible', content: 'IE: edge' },
-      { name: 'description', content: 'A highly customizeable discord bot that sends news about free games right into your server. Supports every major platform, many filter options and customizeable appearance!' },
-      { name: 'viewport', content: 'width: device-width,initial-scale: 1.0' },
+      { name: 'description', hid: 'description', content: 'A highly customizeable discord bot that sends news about free games right into your server. Supports every major platform, many filter options and customizeable appearance!' },
+      { name: 'keywords', hid: 'keywords', content: 'discord, free, games, bot, customizeable, stuff, freestuff, freestuffbot' },
       { name: 'theme-color', content: '#cd4fd1', id: 'metacolor' },
       { name: 'application-name', content: 'FreeStuff Bot', id: 'metaname' },
       { name: 'robots', content: 'index, follow' },

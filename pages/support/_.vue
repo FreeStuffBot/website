@@ -7,7 +7,7 @@
     <div class="center">
       <div class="divider dash horizontal"></div>
 			<span>Any questions?</span>
-      <span><a href="/discord">Contact us on Discord</a></span>
+      <span><a href="/discord" rel="noreferrer">Contact us on Discord</a></span>
     </div>
   </div>
 </template>

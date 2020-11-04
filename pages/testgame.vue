@@ -44,7 +44,19 @@ export default Vue.extend({
     afterEnter () {
       document.getElementById('app')?.scrollTo({ top: 0, behavior: 'smooth' })
     }
-  }
+  },
+	head() {
+		return {
+			title: 'FreeStuffBot Example Game',
+			meta: [
+				{
+					hid: 'description',
+					name: 'description',
+					content: 'This link is used as an example for a free game. There is not actually a free game here.'
+				}
+			]
+		}
+	}
 })
 </script>
 

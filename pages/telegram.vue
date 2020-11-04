@@ -8,7 +8,7 @@
     <div class="center">
       <div class="divider dash horizontal"></div>
 			<span>Any questions?</span>
-      <span><a href="mailto:team@freestuffbot.xyz">Send an E-Mail</a></span>
+      <span><a href="mailto:team@freestuffbot.xyz" rel="noreferrer">Send an E-Mail</a></span>
     </div>
   </div>
 </template>

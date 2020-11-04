@@ -14,7 +14,7 @@
         </svg>
       </span>
     </nuxt-link>
-    <a v-else :href="url">
+    <a v-else :href="url" rel="noreferrer">
       <span :style="color?`color:${color}`:''">
         {{ name }}
         <svg v-if="elements && elements.length" xmlns="http://www.w3.org/2000/svg" width="7" height="5">

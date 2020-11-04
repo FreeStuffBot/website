@@ -17,15 +17,15 @@
 		<div class="divider dotted vertical"></div>
 		<h2 class="center" v-html="`And what do I get out of this?&nbsp;${twemoji('🤔')}`"></h2>
 		<span class="slim">Uhhhh... not much. This is a donation nevertheless, not a purchase. We got some tiny rewards though, just as a little thank-you :)</span>
-		<span class="slim">&bull; Donator role with access to a secret channel on <a href="/discord" target="_blank">our Discord server</a></span>
+		<span class="slim">&bull; Donator role with access to a secret channel on <a href="/discord" rel="noreferrer" target="_blank">our Discord server</a></span>
 		<span class="slim">&bull; Your name on the <nuxt-link to="/team">team page</nuxt-link></span>
 		<span class="slim">&bull; A chance to have your name there at the bottom. Scoll down a bit. See that name? You could be there too! We always select a random donator. It doesn't matter how much you donated or how long it was ago.</span>
 		<div class="divider dotted vertical"></div>
 		<h2 class="center" v-html="`Convinced?&nbsp;${twemoji('✨')}`"></h2>
 		<span class="slim">Even if it's just as little as $1 &mdash; every cent helps!</span>
-		<span class="slim"><a href="/o/patreon" target="_blank">Donate via Patreon</a></span>
-		<span class="slim"><a href="/o/ko-fi" target="_blank">Donate via Ko-fi</a></span>
-		<span class="slim"><a href="/discord" target="_blank">Contact</a></span>
+		<span class="slim"><a href="/o/patreon" rel="noreferrer" target="_blank">Donate via Patreon</a></span>
+		<span class="slim"><a href="/o/ko-fi" rel="noreferrer" target="_blank">Donate via Ko-fi</a></span>
+		<span class="slim"><a href="/discord" rel="noreferrer" target="_blank">Contact</a></span>
 	</div>
 </template>
 
@@ -44,7 +44,19 @@ export default Vue.extend({
     afterEnter () {
       document.getElementById('app')?.scrollTo({ top: 0, behavior: 'smooth' })
     }
-  }
+  },
+	head() {
+		return {
+			title: 'FreeStuffBot Donating',
+			meta: [
+				{
+					hid: 'description',
+					name: 'description',
+					content: 'As an open source project, we fully rely on donations to pay for running costs such as servers and infrastructure.'
+				}
+			]
+		}
+	}
 })
 </script>
 

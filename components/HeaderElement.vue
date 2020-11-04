@@ -5,7 +5,7 @@
       :to="url"
       v-text="name"
     />
-    <a v-else :href="url">
+    <a v-else :href="url" rel="noreferrer">
       {{ name }}
       <i
         v-if="isExternal && false"

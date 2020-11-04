@@ -19,7 +19,19 @@ export default Vue.extend({
     afterEnter () {
       document.getElementById('app')?.scrollTo({ top: 0, behavior: 'smooth' })
     }
-  }
+  },
+	head() {
+		return {
+			title: 'FreeStuff OSS Licenses',
+			meta: [
+				{
+					hid: 'description',
+					name: 'description',
+					content: 'We use a wide range of open source libraries and tools in order to build, provide and maintain our services.'
+				}
+			]
+		}
+	}
 })
 </script>
 

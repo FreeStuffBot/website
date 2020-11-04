@@ -22,25 +22,25 @@
           <!-- <nuxt-link to="/telegram">Telegram Bot</nuxt-link>
           <nuxt-link to="/twitter">Twitter Bot</nuxt-link>
           <nuxt-link to="/rss">RSS Feed</nuxt-link>-->
-          <a href="https://docs.freestuffbot.xyz/">API</a>
+          <a href="https://docs.freestuffbot.xyz/" rel="noreferrer">API</a>
         </div>
         <div>
           <span>Support</span>
           <nuxt-link to="/support">Support Center</nuxt-link>
           <nuxt-link to="/support/faq">FAQ</nuxt-link>
           <nuxt-link to="/support/troubleshooting">Troubleshooting</nuxt-link>
-          <a href="/discord">Support Server</a>
-          <a href="mailto:team@freestuffbot.xyz">Contact</a>
+          <a href="/discord" rel="noreferrer">Support Server</a>
+          <a href="mailto:team@freestuffbot.xyz" rel="noreferrer">Contact</a>
         </div>
         <div>
           <span>Resources</span>
           <nuxt-link to="/team">Team</nuxt-link>
           <!-- <nuxt-link to="/press">Press</nuxt-link> -->
-          <a href="/o/source" target="_blank">Open Source</a>
-          <a href="/o/trello" target="_blank">Roadmap</a>
+          <a href="/o/source" rel="noreferrer" target="_blank">Open Source</a>
+          <a href="/o/trello" rel="noreferrer" target="_blank">Roadmap</a>
           <nuxt-link to="/donate">Donate</nuxt-link>
-          <a href="/o/translating" target="_blank">Help Translating</a>
-          <a href="https://freestuff.statuspage.io/" target="_blank">Status</a>
+          <a href="/o/translating" rel="noreferrer" target="_blank">Help Translating</a>
+          <a href="https://freestuff.statuspage.io/" rel="noreferrer" target="_blank">Status</a>
         </div>
         <div>
           <span>Legal Mumbo Jumbo</span>
@@ -48,15 +48,15 @@
           <nuxt-link to="/terms">Terms of Service</nuxt-link>
           <nuxt-link to="/licenses">Licenses</nuxt-link>
           <!-- <a href="https://maanex.me/imprint">Impressum</a> -->
-          <a v-if="Math.random() < .01" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Free Bitcoin</a>
+          <a v-if="Math.random() < .01" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" rel="noreferrer" target="_blank">Free Bitcoin</a>
         </div>
       </div>
       <div class="lower">
         <nuxt-link to="/" class="brand">
-          <img src="@/assets/img/icon_round.png">
+          <img src="@/assets/img/icon_round.png" alt="FreeStuff Logo">
           <span class="name">FreeStuff</span>
         </nuxt-link>
-        <span class="copyright">Copyright &copy; 2020 FreeStuff Services. All rights reserved. <a href="https://maanex.me/imprint">Impressum</a></span>
+        <span class="copyright">Copyright &copy; 2020 FreeStuff Services. All rights reserved. <a href="https://maanex.me/imprint" rel="noopener">Impressum</a></span>
         <nuxt-link to="/start" class="footerButton">Get Started</nuxt-link>
       </div>
     </div>
@@ -193,7 +193,7 @@ footer {
     .lower {
       margin-top: 50pt;
       padding: 15pt;
-      background: #00000033;
+      background-color: #131516;
       border-radius: 999pt;
       display: grid;
       grid-template-columns: 1fr auto 1fr;
@@ -225,7 +225,6 @@ footer {
         color: $color-minor;
         font-size: 10pt;
         line-height: 10pt;
-        opacity: .3;
         margin-top: calc(20px - 5pt);
 
         a {
