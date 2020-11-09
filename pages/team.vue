@@ -43,7 +43,7 @@
           <img :src="member.image" :alt="member.name">
           <img v-if="member['imageHover']" :src="member['imageHover']" :alt="member.name" class="hover">
         </div>
-        <a :href="member.url" rel="noreferrer noopener" v-html="member.name.replaceAll('<', '<&ZeroWidthSpace;')" :class="{long:member.name.length>14}" :style="`--color: ${member.color}; --txtcolor: ${member.txtcolor||''}`" target="_blank"></a>
+        <a :href="member.url" rel="noreferrer noopener" v-html="member.name.split('<').join('<&ZeroWidthSpace;')" :class="{long:member.name.length>14}" :style="`--color: ${member.color}; --txtcolor: ${member.txtcolor||''}`" target="_blank"></a>
         <span class="role" v-for="role of member.roles" :key="role" v-text="role"></span>
       </div>
     </section>

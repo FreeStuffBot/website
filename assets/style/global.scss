@@ -174,6 +174,7 @@ h2, h2 span {
 		text-align: center;
 		&:not([nospace]) span { margin-right: 6pt }
 	}
+	&.overflow-visible { overflow: visible; }
 	
 	span {
 		color: inherit;
@@ -466,6 +467,15 @@ code {
 	}
 }
 
+.new-badge {
+	background-color: #584db9;
+	font-size: .7em !important;
+	display: inline-block !important;
+	padding: 2pt 4pt;
+	border-radius: 2pt;
+	margin: 0 0 0 .5em !important;
+}
+
 img.emoji {
   height: 1em;
   width: 1em;
@@ -557,14 +567,25 @@ img[draggable="false"] { user-select: none; }
 	}
 
 	h1, h2[h1] {
-		font-size: 30px !important;
-		line-height: 30px !important;
+		font-size: 24pt !important;
+		line-height: 24pt !important;
 		text-align: center !important;
+		padding-bottom: 10pt !important;
 	}
 
 	h2:not([h1]) {
-		font-size: 16px !important;
-		line-height: 16px !important;
+		font-size: 16pt !important;
+		line-height: 16pt !important;
+		text-align: center !important;
+		// padding-bottom: 5pt !important;
+	}
+
+	h3 {
+		font-size: 12pt !important;
+		margin: 15pt 0 5pt 0 !important;
+	}
+
+	h5 {
 		text-align: center !important;
 	}
 

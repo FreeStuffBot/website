@@ -22,7 +22,7 @@
           <!-- <nuxt-link to="/telegram">Telegram Bot</nuxt-link>
           <nuxt-link to="/twitter">Twitter Bot</nuxt-link>
           <nuxt-link to="/rss">RSS Feed</nuxt-link>-->
-          <a href="https://docs.freestuffbot.xyz/" rel="noreferrer">API</a>
+          <a href="https://docs.freestuffbot.xyz/" rel="noreferrer">API<span class="new-badge">NEW</span></a>
         </div>
         <div>
           <span>Support</span>
@@ -47,7 +47,6 @@
           <nuxt-link to="/privacy">Privacy Policy</nuxt-link>
           <nuxt-link to="/terms">Terms of Service</nuxt-link>
           <nuxt-link to="/licenses">Licenses</nuxt-link>
-          <!-- <a href="https://maanex.me/imprint">Impressum</a> -->
           <a v-if="Math.random() < .01" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" rel="noreferrer" target="_blank">Free Bitcoin</a>
         </div>
       </div>

@@ -2,25 +2,26 @@
   <div>
     <div id="landing">
       <div id="infobox" index>
-        <h1 multiline>
+        <h1 multiline class="mobile-hidden">
           <span component d="0">The</span>
           <span component d="1">internet</span>
           <span component d="2">is</span>
           <span component d="3">full</span>
         </h1>
-        <h1 multiline>
+        <h1 multiline class="mobile-hidden">
           <span component d="4">of</span>
           <span component d="5">free</span>
           <span component d="6">games</span>
         </h1>
-        <h2 multiline sub>
+        <h1 class="mobile-visible">The&nbsp;internet is&nbsp;full&nbsp;of free&nbsp;games.</h1>
+        <h2 multiline sub class="mobile-hidden">
           <span component d="0">And</span>
           <span component d="1">with</span>
           <span component d="2">this</span>
           <span component d="3" v-text="audience.platform"></span>
           <span component d="4">bot</span>
         </h2>
-        <h2 multiline sub>
+        <h2 multiline sub class="mobile-hidden">
           <span component d="5">you'll</span>
           <span component d="6">never</span>
           <span component d="7">miss</span>
@@ -28,6 +29,7 @@
           <span component d="9">of</span>
           <span component d="10">them!</span>
         </h2>
+        <h2 class="mobile-visible">And&nbsp;with&nbsp;this {{ audience.platform }} bot&nbsp;you'll&nbsp;never miss&nbsp;any&nbsp;of&nbsp;them!</h2>
 
         <div id="buttons">
           <a
@@ -176,6 +178,14 @@ export default Vue.extend({
 <style scoped lang="scss">
 @import '~/assets/style/all.scss';
 
+@media (max-width: 1200px) {
+  .mobile-hidden { display: none; }
+}
+
+@media (min-width: 1201px) {
+  .mobile-visible { display: none; }
+}
+
 #landing {
   position: relative;
   z-index: 10;
@@ -203,6 +213,8 @@ export default Vue.extend({
         width: 80px;
         left: -110px;
         top: 12px;
+
+        @media (max-width: 1200px) { display: none; }
       }
 
       #decoarrow2 {
@@ -210,6 +222,8 @@ export default Vue.extend({
         width: 60px;
         left: 130px;
         top: 75px;
+
+        @media (max-width: 400px) { display: none; }
       }
     }
   }
@@ -225,6 +239,13 @@ export default Vue.extend({
     opacity: 0;
     animation: 1.5s discord-example-in cubic-bezier(0.33, 1, 0.68, 1) 2.5s;
     animation-fill-mode: forwards;
+
+    @media (max-width: 1200px) {
+      top: 80% !important;
+      right: unset !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+    }
   }
 }
 
@@ -238,6 +259,10 @@ export default Vue.extend({
   opacity: calc((1 - var(--scrollPos) * .8) * var(--anim));
   animation: 1s gamelist-in cubic-bezier(0.33, 1, 0.68, 1) 2.5s;
   animation-fill-mode: forwards;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 }
 
 #wave1 {
