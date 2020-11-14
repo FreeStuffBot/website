@@ -103,7 +103,7 @@
           <img src="@/assets/img/landing-customize-filter.svg" alt="Customize Filter" draggable="false">
           <span component class="title">FILTER THE CONTENT</span>
           <span component class="desc">Don't want cheap games in your server? Only like certain stores? Tell the bot what you like and what you don't and it'll take care!</span>
-          <nuxt-link to="/themes">Lean More</nuxt-link>
+          <nuxt-link to="/themes">Learn More</nuxt-link>
         </div>
         <div class="panel">
           <img src="@/assets/img/landing-customize-pings.svg" alt="Customize Pings" draggable="false">
@@ -122,7 +122,11 @@
     </div>
 
     <div id="details2">
-
+      <div class="inner">
+        <h4 left>
+          <span component>How it works:</span>
+        </h4>
+      </div>
     </div>
   </div>
 </template>
@@ -231,6 +235,8 @@ export default Vue.extend({
   #discord-example {
     position: absolute;
     right: 0;
+    padding: 10pt;
+    background-color: $bg-bright;
     top: 50%;
     transform: translate3d(0, -50%, -2px) scale(1.2);
     border-radius: $component-border-radius;
@@ -283,7 +289,6 @@ export default Vue.extend({
   h4 {
     position: relative;
     z-index: 12;
-    // transform: translateZ(1px) scale(.9);
     margin-bottom: 30pt;
   }
 }
@@ -294,9 +299,20 @@ export default Vue.extend({
   width: 100vw;
   left: 50%;
   margin-bottom: 5vh;
-  background-color: $backpage;
+  background-color: $bg-dark;
   transform: translateX(-50%);
   min-height: 100vh;
+
+  .inner {
+    width: $content-width;
+    margin: auto;
+  }
+
+  h4 {
+    position: relative;
+    z-index: 12;
+    margin-bottom: 30pt;
+  }
 }
 
 .h5deco {
@@ -328,6 +344,7 @@ export default Vue.extend({
     height: 220px;
     transform: translateZ(-2px) scale(1.2);
     z-index: -1;
+    opacity: .2;
   }
 
   .panel {
