@@ -11,6 +11,10 @@ export const state = () => ({
     {
       name: 'TacTwo',
       emoji: '🧙‍♂️'
+    },
+    {
+      name: 'Andreas',
+      emoji: '🦦'
     }
   ]
 })

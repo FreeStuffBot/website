@@ -83,49 +83,100 @@
     </div>
 
     <img id="gamelist" draggable="false" src="@/assets/img/landing-gamelist.svg" alt="" aria-hidden="true">
-    <img id="wave1" draggable="false" src="@/assets/img/landing-wave-1.svg" alt="" aria-hidden="true">
+    <div id="wave1">
+      <img draggable="false" src="@/assets/img/landing-wave-1.svg" alt="" aria-hidden="true">
+    </div>
 
-    <div id="details">
+    <div id="details1" class="details">
       <h4 left>
-        <span component>Customize as you like:</span>
+        <span component>Here's how it works:</span>
       </h4>
       <!-- <svg class="h5deco" width="100%" height="100%" viewBox="0 0 119 45" version="1.1" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
         <path d="M1.875,37.346l26.58,-26.58l31.843,31.843l40.734,-40.734l15.306,15.306" style="fill:none;stroke:#933c6d;stroke-width:3.75px;"/>
       </svg> -->
-      <div class="featurepanels">
+      <div class="howtopanels">
         <div class="panel">
-          <img src="@/assets/img/landing-customize-themes.svg" alt="Customize Themes" draggable="false">
-          <span component class="title">CHOOSE A NICE THEME</span>
-          <span component class="desc">Select one of 10 themes to match the look and feel of your server! Images or not, minimalistic or with extra info - we got it all!</span>
-          <nuxt-link to="/themes">Discover Themes</nuxt-link>
+          <div class="icon bullhorn">
+            <BullhornIcon />
+          </div>
+          <div class="content">
+            <span component class="title">NEVER MISS A SINGLE FREEBIE</span>
+            <span component class="desc">Provide the bot with a channel to use and it will send a message there each time a new game gets free. Yes, it really only takes one command to set it up!</span>
+            <cmd command="@FreeStuff set channel #free-games" />
+          </div>
         </div>
         <div class="panel">
-          <img src="@/assets/img/landing-customize-filter.svg" alt="Customize Filter" draggable="false">
-          <span component class="title">FILTER THE CONTENT</span>
-          <span component class="desc">Don't want cheap games in your server? Only like certain stores? Tell the bot what you like and what you don't and it'll take care!</span>
-          <nuxt-link to="/themes">Learn More</nuxt-link>
-        </div>
-        <div class="panel">
-          <img src="@/assets/img/landing-customize-pings.svg" alt="Customize Pings" draggable="false">
-          <span component class="title">GET NOTIFIED</span>
-          <span component class="desc">Would you like to get pinged on new free games? Just provide the bot with a role to ping and you'll never be too late!</span>
-          <nuxt-link to="/themes">Read How</nuxt-link>
-        </div>
-        <div class="panel">
-          <img src="@/assets/img/landing-customize-language.svg" alt="Customize Language" draggable="false">
-          <span component class="title">LOCALISATION</span>
-          <span component class="desc">English is not your primary language? No worries, we got a good amount of translations for you to choose from!</span>
-          <nuxt-link to="/themes">View Translations</nuxt-link>
+          <div class="icon list">
+            <ListIcon />
+          </div>
+          <div class="content">
+            <span component class="title">LIST ALL CURRENT FREE GAMES</span>
+            <span component class="desc">Getting paranoid that you missed a discount? The bot also has a very convenient and easy to use way of listing all current freebies. Try it out for yourself:</span>
+            <cmd command="@FreeStuff free" />
+          </div>
         </div>
         <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="" draggable="false">
       </div>
     </div>
 
-    <div id="details2">
+    <div id="details2" class="details">
       <div class="inner">
         <h4 left>
-          <span component>How it works:</span>
+          <span component>Customize as you like:</span>
         </h4>
+        <div class="featurepanels">
+          <div class="panel">
+            <img src="@/assets/img/landing-customize-themes.svg" alt="Customize Themes" draggable="false">
+            <span component class="title">CHOOSE A NICE THEME</span>
+            <span component class="desc">Select one of 10 themes to match the look and feel of your server! Images or not, minimalistic or with extra info - we got it all!</span>
+            <nuxt-link to="/themes">Discover Themes</nuxt-link>
+          </div>
+          <div class="panel">
+            <img src="@/assets/img/landing-customize-filter.svg" alt="Customize Filter" draggable="false">
+            <span component class="title">FILTER THE CONTENT</span>
+            <span component class="desc">Don't want cheap games in your server? Only like certain stores? Tell the bot what you like and what you don't and it'll take care!</span>
+            <nuxt-link to="/themes">Learn More</nuxt-link>
+          </div>
+          <div class="panel">
+            <img src="@/assets/img/landing-customize-pings.svg" alt="Customize Pings" draggable="false">
+            <span component class="title">GET NOTIFIED</span>
+            <span component class="desc">Would you like to get pinged on new free games? Just provide the bot with a role to ping and you'll never be too late!</span>
+            <nuxt-link to="/themes">Read How</nuxt-link>
+          </div>
+          <div class="panel">
+            <img src="@/assets/img/landing-customize-language.svg" alt="Customize Language" draggable="false">
+            <span component class="title">LOCALISATION</span>
+            <span component class="desc">English is not your primary language? No worries, we got a good amount of translations for you to choose from!</span>
+            <nuxt-link to="/themes">View Translations</nuxt-link>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="details3" class="details">
+      <img class="left" src="@/assets/img/deco-stalactites-left.svg" alt="Deco Stalactites" draggable="false" aria-hidden="true">
+      <img class="right" src="@/assets/img/deco-stalactites-right.svg" alt="Deco Stalactites" draggable="false" aria-hidden="true">
+      <div class="inner">
+        <h4 center>
+          <span component>Questions?</span>
+        </h4>
+        <div class="faqs">
+          <div
+            v-for="(data,i) of faqs"
+            :key="i"
+            class="faq index--faq-element"
+            :focused="i == activeFaq"
+            @keydown.enter.prevent="i == activeFaq ? activeFaq = -1 : activeFaq = i"
+            tabindex="1"
+          >
+            <div class="compact" @click="i == activeFaq ? activeFaq = -1 : activeFaq = i">
+              <span v-text="data.title" class="title" />
+            </div>
+            <div class="details">
+              <span v-html="data.answer" class="answer" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -133,6 +184,9 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import cmd from '~/components/ChatCommand.vue'
+const BullhornIcon =  require('~/assets/icons/bullhorn.svg?inline')
+const ListIcon =  require('~/assets/icons/list.svg?inline')
 
 const audiences = {
   discord: {
@@ -157,10 +211,40 @@ const audiences = {
   }
 } as {[key: string]: any}
 
+const faqs = [
+  {
+    title: 'Why does the bot not respond to my messages?',
+    answer: `This just screams like a permission issue! By default you should have given the bot all of the permissions it need when you added it to the server. Since the bot doesn't respond though, the channel you're trying to use it in may have overwritten those permissions. In simpler words: try using the bot in a different channel; if a normal user can type there, the bot should be able to do so too. If that doesn't solve it, you only got one option now: Go full out Discord-Admin-Mode. Doublecheck every permission setting you can find, both for the bot's roles and the channel. If you were not the one to set up the permissions in your server, maybe even consider asking them for help. Crazy idea, I know.`
+  },
+  {
+    title: 'Why do the bots messages look different than on that other Discord server?',
+    answer: `The bot has a large variety of customisation options available that change the appearance of the bot's messages. Make sure to check out the available <a href="/themes">Themes</a> and other <a href="/themes">Options</a>!`
+  },
+  {
+    title: "The bot didn't announce a game that's currently free!",
+    answer: `This can have a multitude of reasons. Let's run them through real quick:<br>&bull; We don't know about it yet. Go <a href="/discord" target="_blank">join our Discord Server</a> to let us know!<br>&bull; The game is always free, not 100% off. In that case we will not announce it.<br>&bull; The game got filtered out and didn't reach your server. If you've seen it announced on a different server but your's got left behind, please take a look at our <a href="/about">filter options</a> and adjust them to your likings!`
+  },
+  {
+    title: "Why is language xyz not supported?",
+    answer: `That's because we haven't found a translator for that language yet! If you would like to translate it into your language, <a href="/o/translating" target="_blank">hit us up</a> and get your name on the team page :)`
+  },
+  {
+    title: "I have a question that's not answered above, where can I ask?",
+    answer: `We have a support server for exactly that! (and much more) <a href="/discord" target="_blank">Click here to join!</a>`
+  }
+]
+
 export default Vue.extend({
+	components: {
+    cmd,
+    BullhornIcon,
+    ListIcon
+	},
   data () {
     return {
-      audience: audiences.discord
+      audience: audiences.discord,
+      faqs,
+      activeFaq: -1
     }
   },
   mounted () {
@@ -273,45 +357,71 @@ export default Vue.extend({
 
 #wave1 {
   position: absolute;
-  left: 0;
-  top: 111vh;
-  width: 100vw;
-  transform: translateZ(-1px) scale(1.1);
+  left: -5vw;
+  top: 100vh;
+  width: 110vw;
+  transform: translateZ(-1px) scale(1.02);
+  max-height: 100vh;
+  overflow: hidden;
+
+  img { width: 100%; }
 }
 
-#details {
+.details {
   position: relative;
+
+  h4 {
+    position: relative;
+    z-index: 12;
+    margin-bottom: 30pt;
+  }
+}
+
+#details1 {
   z-index: 11;
   width: 100%;
   margin-top: 15vh;
   margin-bottom: 25vh;
-
-  h4 {
-    position: relative;
-    z-index: 12;
-    margin-bottom: 30pt;
-  }
 }
 
 #details2 {
-  position: relative;
   z-index: 13;
   width: 100vw;
   left: 50%;
-  margin-bottom: 5vh;
+  padding-bottom: 20vh;
   background-color: $bg-dark;
   transform: translateX(-50%);
-  min-height: 100vh;
 
   .inner {
-    width: $content-width;
+    width: 100%;
+    max-width: $content-width;
     margin: auto;
   }
+}
 
-  h4 {
-    position: relative;
-    z-index: 12;
-    margin-bottom: 30pt;
+#details3 {
+  position: relative;
+  z-index: 11;
+  width: 100vw;
+  left: 50%;
+  padding-top: 15vh;
+  padding-bottom: 10vh;
+  transform: translateX(-50%);
+
+  img {
+    position: absolute;
+    top: 0;
+    height: 140pt;
+    user-select: none;
+
+    &.left { left: 10pt; }
+    &.right { right: 10pt; }
+  }
+
+  .inner {
+    width: 100%;
+    max-width: $content-width / 3 * 2;
+    margin: auto;
   }
 }
 
@@ -328,24 +438,90 @@ export default Vue.extend({
   }
 }
 
-.featurepanels {
+.howtopanels {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax($content-width/3,1fr));
   grid-column-gap: 1vw;
   grid-row-gap: 1vw;
   row-gap: 1vw;
   position: relative;
 
+  .panel {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color: $bg-bright;
+    border-radius: $component-border-radius;
+    box-shadow: 0 0 5px $bg-dark;
+    padding: $component-margin*2;
+    z-index: 2;
+
+    .icon {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 20px;
+      border-radius: 9999px;
+      
+      &.bullhorn {
+        background-color: #c4a33960;
+        svg {
+          color: #ebe37a;
+          transform: rotate(-10deg);
+        }
+      }
+      
+      &.list {
+        background-color: #39a4c460;
+        svg {
+          color: #7adaeb;
+          transform: rotate(-3deg);
+        }
+      }
+
+      svg { width: 40px; }
+    }
+
+    span {
+      display: block;
+      text-align: left;
+
+      &.title {
+        font-family: $font-header;
+        font-size: 15pt;
+        color: $color-header;
+      }
+
+      &.desc {
+        font-family: $font-regular;
+        font-size: 11pt;
+        color: $color-sub;
+        flex-grow: 1;
+        margin:$component-margin 0;
+      }
+    }
+  }
+
   & > img {
     position: absolute;
     left: -25%;
-    bottom: -13%;
+    bottom: -53%;
     width: 220px;
     height: 220px;
     transform: translateZ(-2px) scale(1.2);
     z-index: -1;
     opacity: .2;
   }
+}
+
+.featurepanels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  grid-column-gap: 1vw;
+  grid-row-gap: 1vw;
+  row-gap: 1vw;
+  position: relative;
 
   .panel {
     display: flex;
@@ -392,6 +568,55 @@ export default Vue.extend({
       &:hover {
         background-color: $primary-gold;
         box-shadow: 0 2px 7px #00000033;
+      }
+    }
+  }
+}
+
+.faqs {
+  .faq {
+    $closed-height: 40pt;
+
+    width: 100%;
+    max-height: $closed-height;
+    overflow: hidden;
+    background-color: $bg-bright;
+    border-radius: $component-border-radius;
+    margin-bottom: $component-margin;
+    outline: none;
+    transition: max-height .2s cubic-bezier(0, 1, 0, 1);
+
+    &:focus-visible { background-color: $bg-brighter; }
+    &[focused] {
+      max-height: 100vh;
+      transition: max-height .5s ease-in;
+    }
+
+    .compact {
+      height: $closed-height;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      padding: 0 15pt;
+      cursor: pointer;
+
+      span {
+        margin: 0;
+        font-size: 12pt;
+        font-family: $font-major;
+        color: $color-major;
+      }
+    }
+
+    .details {
+      padding: 0 15pt 15pt 15pt;
+      
+      span {
+        margin: 0;
+        font-size: 12pt;
+        font-family: $font-regular;
+        color: $color-regular;
+        line-height: 15pt;
       }
     }
   }
@@ -473,5 +698,15 @@ export default Vue.extend({
   80% { --anim: .8 }
   90% { --anim: .9 }
   100% { top: 33vh; right: -14vw; --anim: 1 }
+}
+</style>
+<style lang="scss">
+.index--faq-element {
+  .details a {
+    color: #da5e7d;
+    border-bottom: 3px solid #da5e7d33;
+
+    &:hover { border-bottom: 3px solid #da5e7d; }
+  }
 }
 </style>

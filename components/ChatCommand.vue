@@ -48,7 +48,7 @@ export default Vue.extend({
       el.setSelectionRange(0, 99999);
       document.execCommand('copy');
       this.copied = true;
-      Vue.nextTick(() => this.copied = false);
+      setTimeout(() => Vue.nextTick(() => this.copied = false), 30);
     }
   }
 })

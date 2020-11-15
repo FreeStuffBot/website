@@ -46,39 +46,19 @@ export default {
       { rel: 'icon', type: 'image/png', href: '/icons/180.png', sizes: '180x180' }
     ]
   },
-  /*
-  ** Global CSS
-  */
   css: [
     // '@/assets/style/global.scss'
   ],
-  /*
-  ** Plugins to load before mounting the App
-  ** https://nuxtjs.org/guide/plugins
-  */
   plugins: [
   ],
-  /*
-  ** Auto import components
-  ** See https://nuxtjs.org/api/configuration-components
-  */
   components: true,
-  /*
-  ** Nuxt.js dev-modules
-  */
   buildModules: [
-    '@nuxt/typescript-build'
+    '@nuxt/typescript-build',
+    '@nuxtjs/svg'
   ],
-  /*
-  ** Nuxt.js modules
-  */
   modules: [
     '@nuxtjs/markdownit'
   ],
-  /*
-  ** Build configuration
-  ** See https://nuxtjs.org/api/configuration-build/
-  */
   build: {
   }
 }

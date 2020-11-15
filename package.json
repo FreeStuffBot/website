@@ -13,6 +13,7 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "^1.0.0",
     "@nuxtjs/markdownit": "^1.2.10",
+    "@nuxtjs/svg": "^0.1.12",
     "@types/twemoji": "^12.1.1",
     "node-sass": "^4.14.1",
     "nuxt": "^2.14.0",

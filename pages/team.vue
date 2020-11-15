@@ -191,6 +191,16 @@ export default Vue.extend({
             'Slovak Translation',
             'Czech Translation'
           ]
+        },
+        {
+          name: 'Bae',
+          image: 'https://cdn.discordapp.com/attachments/748622589324165142/777629532294610954/afd52085e12763a6e9af2903304b1f8e.png',
+          url: 'https://github.com/baen/',
+          color: '#BAEBAE',
+          txtcolor: '#111111',
+          roles: [
+            'Turkish Translation'
+          ]
         }
       ]).sort(()=>Math.random()-.5),
       donors: this.$store.state.donors
