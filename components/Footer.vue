@@ -22,7 +22,7 @@
           <!-- <nuxt-link to="/telegram">Telegram Bot</nuxt-link>
           <nuxt-link to="/twitter">Twitter Bot</nuxt-link>
           <nuxt-link to="/rss">RSS Feed</nuxt-link>-->
-          <a href="https://docs.freestuffbot.xyz/" rel="noreferrer">API<span class="new-badge">NEW</span></a>
+          <a href="https://docs.freestuffbot.xyz/" rel="noreferrer" target="_blank">API<span class="new-badge">NEW</span></a>
         </div>
         <div>
           <span>Support</span>

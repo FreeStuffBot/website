@@ -99,21 +99,17 @@
           <div class="icon bullhorn">
             <BullhornIcon />
           </div>
-          <div class="content">
-            <span component class="title">NEVER MISS A SINGLE FREEBIE</span>
-            <span component class="desc">Provide the bot with a channel to use and it will send a message there each time a new game gets free. Yes, it really only takes one command to set it up!</span>
-            <cmd command="@FreeStuff set channel #free-games" />
-          </div>
+          <span component class="title">NEVER MISS A SINGLE FREEBIE</span>
+          <span component class="desc">Provide the bot with a channel to use and it will send a message there each time a new game gets free. Yes, it really only takes one command to set it up!</span>
+          <cmd command="@FreeStuff set channel #free-games" />
         </div>
         <div class="panel">
           <div class="icon list">
             <ListIcon />
           </div>
-          <div class="content">
-            <span component class="title">LIST ALL CURRENT FREE GAMES</span>
-            <span component class="desc">Getting paranoid that you missed a discount? The bot also has a very convenient and easy to use way of listing all current freebies. Try it out for yourself:</span>
-            <cmd command="@FreeStuff free" />
-          </div>
+          <span component class="title">LIST ALL CURRENT FREE GAMES</span>
+          <span component class="desc">Getting paranoid that you missed a discount? The bot also has a very convenient and easy to use way of listing all current freebies. Try it out for yourself:</span>
+          <cmd command="@FreeStuff free" />
         </div>
         <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="" draggable="false">
       </div>
@@ -293,8 +289,20 @@ export default Vue.extend({
     }
     img { transform: scale(1.1) translate3d(-80%, 10%, -10px) rotateX(calc(var(--scroll) * .004deg)); }
 
+    @media (max-width: 500px) {
+      top: 20vh;
+      h2 { margin: 0 0 30pt 0; }
+    }
+
     #buttons {
       position: relative;
+
+      @media (max-width: 400px) {
+        a {
+          margin-left: 16pt;
+          margin-right: 16pt;
+        }
+      }
 
       #decoarrow1 {
         position: absolute;
@@ -311,6 +319,7 @@ export default Vue.extend({
         left: 130px;
         top: 75px;
 
+        @media (max-width: 1200px) { left: 40vw; }
         @media (max-width: 400px) { display: none; }
       }
     }
@@ -331,11 +340,15 @@ export default Vue.extend({
     animation-fill-mode: forwards;
 
     @media (max-width: 1200px) {
-      top: 80% !important;
+      top: 65% !important;
       right: unset !important;
       left: 50% !important;
-      transform: translateX(-50%) !important;
+      transform: translate(-50%, 20%) !important;
     }
+
+    @media (max-width: 500px) { top: 60% !important; width: 90%; }
+    @media (max-width: 380px) { top: 65% !important; }
+    @media (max-width: 300px) { top: 70% !important; }
   }
 }
 
@@ -361,10 +374,16 @@ export default Vue.extend({
   top: 100vh;
   width: 110vw;
   transform: translateZ(-1px) scale(1.02);
-  max-height: 100vh;
+  max-height: 140vh;
   overflow: hidden;
 
   img { width: 100%; }
+
+  @media (max-height: 1000px) { max-height: 200vh !important; }
+  @media (max-height: 800px) { max-height: 250vh !important; }
+  @media (max-height: 600px) { max-height: 300vh !important; }
+  @media (max-height: 500px) { max-height: 350vh !important; }
+  @media (max-height: 300px) { max-height: 500vh !important; }
 }
 
 .details {
@@ -382,6 +401,9 @@ export default Vue.extend({
   width: 100%;
   margin-top: 15vh;
   margin-bottom: 25vh;
+
+  @media (max-width: 1200px) { margin-top: 40vh !important; }
+  @media (max-width: 450px) { margin-top: 30vh !important; }
 }
 
 #details2 {
@@ -393,7 +415,7 @@ export default Vue.extend({
   transform: translateX(-50%);
 
   .inner {
-    width: 100%;
+    width: 90%;
     max-width: $content-width;
     margin: auto;
   }
@@ -407,6 +429,8 @@ export default Vue.extend({
   padding-top: 15vh;
   padding-bottom: 10vh;
   transform: translateX(-50%);
+  background-color: $backpage;
+  @media (max-width: 700px) { padding-bottom: 0; }
 
   img {
     position: absolute;
@@ -415,11 +439,14 @@ export default Vue.extend({
     user-select: none;
 
     &.left { left: 10pt; }
-    &.right { right: 10pt; }
+    &.right {
+      right: 10pt;
+      @media (max-width: 800px) { display: none; }
+    }
   }
 
   .inner {
-    width: 100%;
+    width: 90%;
     max-width: $content-width / 3 * 2;
     margin: auto;
   }
@@ -440,20 +467,27 @@ export default Vue.extend({
 
 .howtopanels {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax($content-width/3,1fr));
-  grid-column-gap: 1vw;
-  grid-row-gap: 1vw;
-  row-gap: 1vw;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1vw;
+  row-gap: 5vw;
   position: relative;
+
+  @media (max-width: 1000px) { grid-template-columns: 1fr; }
 
   .panel {
     display: grid;
     grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "icon title" "icon desc" "icon cmd";
+    column-gap: 20px;
     background-color: $bg-bright;
     border-radius: $component-border-radius;
     box-shadow: 0 0 5px $bg-dark;
     padding: $component-margin*2;
     z-index: 2;
+
+    @media (max-width: 570px) { grid-template-areas: "icon title" "icon desc" "cmd cmd"; }
+    @media (max-width: 380px) { grid-template-areas: "title icon" "desc desc" "cmd cmd"; }
 
     .icon {
       width: 80px;
@@ -461,8 +495,8 @@ export default Vue.extend({
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-right: 20px;
       border-radius: 9999px;
+      grid-area: icon;
       
       &.bullhorn {
         background-color: #c4a33960;
@@ -491,6 +525,7 @@ export default Vue.extend({
         font-family: $font-header;
         font-size: 15pt;
         color: $color-header;
+        grid-area: title;
       }
 
       &.desc {
@@ -498,9 +533,12 @@ export default Vue.extend({
         font-size: 11pt;
         color: $color-sub;
         flex-grow: 1;
-        margin:$component-margin 0;
+        margin: $component-margin 0;
+        grid-area: desc;
       }
     }
+
+    .chat-command-wrapper { grid-area: cmd; }
   }
 
   & > img {
@@ -517,11 +555,21 @@ export default Vue.extend({
 
 .featurepanels {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-  grid-column-gap: 1vw;
-  grid-row-gap: 1vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 1vw;
   row-gap: 1vw;
   position: relative;
+
+  @media (max-width: 970px) {
+    grid-template-columns: 1fr 1fr;
+    img { max-width: 150pt; margin: auto; }
+  }
+
+  @media (max-width: 430px) {
+    grid-template-columns: 1fr;
+    row-gap: 5vw;
+    img { max-width: 150pt; margin: auto; }
+  }
 
   .panel {
     display: flex;
@@ -536,7 +584,7 @@ export default Vue.extend({
       text-align: center;
 
       &.title {
-        margin: $component-margin 0;
+        margin: $component-margin;
         font-family: $font-header;
         font-size: 15pt;
         color: $color-header;
@@ -575,10 +623,11 @@ export default Vue.extend({
 
 .faqs {
   .faq {
-    $closed-height: 40pt;
+    --closed-height: 40pt;
+    @media (max-width: 440px) { --closed-height: 60pt; }
 
     width: 100%;
-    max-height: $closed-height;
+    max-height: var(--closed-height);
     overflow: hidden;
     background-color: $bg-bright;
     border-radius: $component-border-radius;
@@ -593,7 +642,7 @@ export default Vue.extend({
     }
 
     .compact {
-      height: $closed-height;
+      height: var(--closed-height);
       display: flex;
       justify-content: left;
       align-items: center;

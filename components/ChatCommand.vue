@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="chat-command-wrapper">
     <code
       v-text="command"
       content="Click to copy"
