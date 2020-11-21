@@ -26,6 +26,12 @@
 		<span class="slim"><a href="/o/patreon" rel="noreferrer" target="_blank">Donate via Patreon</a></span>
 		<span class="slim"><a href="/o/ko-fi" rel="noreferrer" target="_blank">Donate via Ko-fi</a></span>
 		<span class="slim"><a href="/discord" rel="noreferrer" target="_blank">Contact</a></span>
+		<div class="divider dotted vertical"></div>
+    <div class="donors">
+			<h2 class="center overflow-visible" v-html="`Donors:&nbsp;${twemoji('🧡')}`"></h2>
+			<DonorCard v-for="donor of donors" :key="donor.name" :data="donor" />
+			<nuxt-link to="/team">View All</nuxt-link>
+		</div>
 	</div>
 </template>
 
@@ -35,6 +41,11 @@ import twemoji from 'twemoji'
 
 
 export default Vue.extend({
+	data() {
+		return {
+      donors: [...this.$store.state.donors].sort(()=>Math.random()<.5?1:-1).splice(0, 5)
+		}
+	},
   methods: {
     twemoji (emoji: string) {
       return twemoji.parse(emoji)
@@ -61,8 +72,44 @@ export default Vue.extend({
 </script>
 
 <style scoped lang="scss">
+@import '~/assets/style/all.scss';
+
 h2 {
 	margin-top: 0 !important;
+}
+
+.donors {
+	margin: auto;
+	max-width: $content-width / 2;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 30pt;
+
+	.donor {
+		margin: 5pt;
+	}
+
+	a {
+		margin: 5pt;
+		padding: 3pt;
+		width: 130pt;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 12pt;
+		font-family: $font-major;
+		color: $color-regular;
+		border: 2pt solid $bg-brighter;
+		border-radius: $component-border-radius;
+		transition: background-color .1s ease
+							, border-color .1s ease;
+
+		&:hover {
+			background-color: #ffffff11;
+			border-color: $color-minor;
+		}
+	}
 }
 </style>
 <style lang="scss">

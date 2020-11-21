@@ -37,7 +37,7 @@
 						alt="Emote"
 						:on="theme.flags[1]"
 						:content="theme.flags[1]
-							? 'This theme will show<br>external emotes!<br><i style=&quot;font-size: .8em; opacity: .8&quot;>Make sure it has the required permissions</i>'
+							? 'This theme will show<br>external emotes!<br><i style=&quot;font-size: .8em; opacity: .8&quot;>Make sure the bot has the required permissions</i>'
 							: 'This theme will not<br>show external emotes!'"
 						v-tippy
 					>
@@ -46,7 +46,7 @@
 						alt="Embed"
 						:on="theme.flags[2]"
 						:content="theme.flags[2]
-							? 'This theme will use embeds!<br><i style=&quot;font-size: .8em; opacity: .8&quot;>Make sure it has the required permissions</i>'
+							? 'This theme will use embeds!<br><i style=&quot;font-size: .8em; opacity: .8&quot;>Make sure the bot has the required permissions</i>'
 							: 'This theme will not use embeds!'"
 						v-tippy
 					>
@@ -118,12 +118,12 @@ const themes = [
 		name: 'Text only!',
 		flags: [ false, false, false ]
 	},
-	{
-		id: 10,
-		img: '/assets/img/theme-10.webp',
-		name: 'Advanced (for ArchiSteamFarm)',
-		flags: [ false, false, true ]
-	}
+	// {
+	// 	id: 10,
+	// 	img: '/assets/img/theme-10.webp',
+	// 	name: 'Advanced (for ArchiSteamFarm)',
+	// 	flags: [ false, false, true ]
+	// }
 ]
 
 export default Vue.extend({

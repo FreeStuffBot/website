@@ -4,32 +4,33 @@
   H On Hold, shipable
 
 # Pages
-4 0 Index
+X X Index
 0 0 About
-H 0 Telegram
-x 0 Themes
-H 0 Troubleshooting
-X 0 Team
-X 0 Donating
-H 0 Faq
-H 0 Press
+0 0 Callback
+H H Telegram
+X 0 Themes
+H H Troubleshooting
+X X Team
+X X Donating
+H H Faq
+H H Press
       * Some texts
         • How it came to be
         • Statistics
         • Our team
       * Logo and example images + as zip download
-X 0 Privacy Policy
-X 0 Terms of Service
-X 0 Licenses
-X 0 Testgame
+X X Privacy Policy
+X X Terms of Service
+X X Licenses
+X X Testgame
 
 # Meta Info
 C - Sitemap
 X - Robots.txt
 
 # Other
-X 0 Footer
-X 0 Header
+X X Footer
+X X Header
 
 
 ---

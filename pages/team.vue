@@ -201,6 +201,16 @@ export default Vue.extend({
           roles: [
             'Turkish Translation'
           ]
+        },
+        {
+          name: 'Étienne MzA',
+          image: 'https://media.discordapp.net/attachments/748622589324165142/778294827871371274/AATXAJxc23U8Rg9tsiY5frDwaIbU5Yz394ixBpEy35-znQs900-c-k-c0x00ffffff-no-rj.png',
+          url: 'https://www.instagram.com/etienne_mza/',
+          color: 'linear-gradient(5deg, #014254  0%, #01b4e7 100%)',
+          // txtcolor: '#111111',
+          roles: [
+            'German Translation'
+          ]
         }
       ]).sort(()=>Math.random()-.5),
       donors: this.$store.state.donors

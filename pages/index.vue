@@ -153,7 +153,7 @@
       <img class="left" src="@/assets/img/deco-stalactites-left.svg" alt="Deco Stalactites" draggable="false" aria-hidden="true">
       <img class="right" src="@/assets/img/deco-stalactites-right.svg" alt="Deco Stalactites" draggable="false" aria-hidden="true">
       <div class="inner">
-        <h4 center>
+        <h4 center id="faq">
           <span component>Questions?</span>
         </h4>
         <div class="faqs">
@@ -359,7 +359,7 @@ export default Vue.extend({
   top: 53vh;
   width: 50vw;
   transform: translateZ(-5px) scale(1.5);
-  opacity: calc((1 - var(--scrollPos) * .8) * var(--anim));
+  opacity: calc((1 - var(--scrollPos) * .8) * var(--anim, 0));
   animation: 1s gamelist-in cubic-bezier(0.33, 1, 0.68, 1) 2.5s;
   animation-fill-mode: forwards;
 

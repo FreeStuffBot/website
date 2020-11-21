@@ -4,6 +4,8 @@
 
 /legal/*          https://tude.ga/legal/:splat/freestuff
 
+/about            https://freestuffbot.xyz/
+
 /login            https://idp.tude.ga/login
 /join             https://idp.tude.ga/join
 /register         https://idp.tude.ga/join
@@ -12,7 +14,6 @@
 /discord          https://discord.gg/WrnKKF8
 /invite           https://discord.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code
 /start            https://discord.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code
-
 
 /o/source         https://github.com/FreeStuffBot/discord
 /o/trello         https://trello.com/b/Zhw6umTy/freestuff
