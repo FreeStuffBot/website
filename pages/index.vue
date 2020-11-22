@@ -47,12 +47,12 @@
             id="about-button"
             btn min
             class="button2"
-            to="/about"
+            to="/guide"
             d="1"
             content="wrong button mate.<br>click the left one."
             v-tippy="{ delay: [2000, 0] }"
           >
-            About
+            Guide
           </nuxt-link>
 
           <svg id="decoarrow1" class="deco arrow" draggable="false" viewBox="0 0 610 550" version="1.1" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">

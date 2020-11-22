@@ -3,7 +3,7 @@
     <code
       v-text="command"
       content="Click to copy"
-      v-tippy="{ placement : 'left', delay: [500, 0] }"
+      v-tippy="{ placement : 'left', delay: [0, 0] }"
       :copied="copied"
       @click="copy"
     />

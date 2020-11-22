@@ -67,7 +67,7 @@
           <span>Like programming, bug-finding, providing support and whatever else needs to be done!</span>
         </a>
         <nuxt-link to="/donate">
-          <img src="@/assets/icons/dollar.svg" alt="Donation">
+          <img src="@/assets/icons/dollarring.svg" alt="Donation">
           <span>Donate.</span>
           <span>Even the smallest amount helps this project stay alive! Thanks for every cent!</span>
         </nuxt-link>

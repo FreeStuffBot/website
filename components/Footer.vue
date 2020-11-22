@@ -16,7 +16,7 @@
         </div>
         <div>
           <span>Platform</span>
-          <nuxt-link to="/commands">Commands</nuxt-link>
+          <nuxt-link to="/guide">Guide</nuxt-link>
           <nuxt-link to="/themes">Themes</nuxt-link>
           <!-- <nuxt-link to="/">Discord Bot</nuxt-link> -->
           <!-- <nuxt-link to="/telegram">Telegram Bot</nuxt-link>

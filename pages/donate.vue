@@ -115,14 +115,14 @@ h2 {
 <style lang="scss">
 .pageanchor--donate {
 
-	img.emoji {
+	*:not(.donoriconnoscope) > img.emoji {
 		width: 1.2em;
 		height: 1.2em;
 		transform: translateY(-.1em);
 	}
 
 	@media (max-width: 500px) {
-		img.emoji { display: none !important; }
+		*:not(.donoriconnoscope) > img.emoji { display: none !important; }
 	}
 
 }

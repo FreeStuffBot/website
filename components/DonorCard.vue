@@ -68,6 +68,7 @@ export default Vue.extend({
     border-radius: $component-border-radius / 2;
     background-color: #00000033;
     margin-right: 5pt;
+    font-size: 20pt;
   }
 
   span {

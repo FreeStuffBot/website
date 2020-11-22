@@ -63,8 +63,8 @@ export default Vue.extend({
       switch (this.$route.name) {
         case 'telegram': return [
           {
-            name: 'Commands',
-            url: '/commands',
+            name: 'Guide',
+            url: '/guide',
             elements: []
           },
           {
@@ -81,8 +81,8 @@ export default Vue.extend({
 
         default: return [
           {
-            name: 'Commands',
-            url: '/commands',
+            name: 'Guide',
+            url: '/guide',
             elements: []
           },
           {

@@ -5,7 +5,7 @@
 
 # Pages
 X X Index
-0 0 About
+7 0 Guide
 0 0 Callback
 H H Telegram
 X 0 Themes
@@ -14,11 +14,11 @@ X X Team
 X X Donating
 H H Faq
 H H Press
-      * Some texts
-        • How it came to be
-        • Statistics
-        • Our team
-      * Logo and example images + as zip download
+  * Some texts
+    • How it came to be
+    • Statistics
+    • Our team
+  * Logo and example images + as zip download
 X X Privacy Policy
 X X Terms of Service
 X X Licenses
