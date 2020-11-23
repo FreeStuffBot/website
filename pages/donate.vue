@@ -9,7 +9,7 @@
 		<div class="divider dotted vertical"></div>
 		<h2 class="center overflow-visible" v-html="`Where&nbsp;does&nbsp;my money&nbsp;go&nbsp;to?&nbsp;${twemoji('🤔')}`"></h2>
 		<span class="slim">tl;dr &mdash; We have bills to pay!</span>
-		<span class="slim">We're currently paying 10€/mo for two servers in order to host the bot and everything else that's required for the bot to function. We would like to get these costs covered first. If we get to a point where we'll actually have money over at the end of the month, we'll be using it for the following:</span>
+		<span class="slim">We're currently paying around 10€/mo for two servers in order to host the bot and everything else that's required for the bot to function. We would like to get these costs covered first. If we get to a point where we'll actually have money over at the end of the month, we'll be using it for the following:</span>
 		<span class="slim">&bull; Paying for previous months</span>
 		<span class="slim">&bull; Putting some money aside, in case we're not reaching our monthly goal at some point in the future</span>
 		<span class="slim">&bull; Re-Investing into the bot. That means better and more stable servers.</span>

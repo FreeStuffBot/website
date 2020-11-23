@@ -67,6 +67,7 @@ code {
   margin-bottom: 0;
   transition: background-color 1s ease .5s;
   outline: none;
+  color: $color-major !important;
 
   &[copied] {
     background-color: $success-major;

@@ -68,7 +68,8 @@
             <span component class="title">THEMES</span>
           </div>
           <span component class="desc no-grow">Themes allow you to change the appearance of the bot's messages. We have a large variety of themes available to match the look and feel of your server. To view all available themes and how to apply them, click the button below:</span>
-          <nuxt-link to="/themes">Browse Themes</nuxt-link>
+          <nuxt-link to="/themes" btn>Browse Themes</nuxt-link>
+          <div style="flex-grow: 1" />
         </div>
         <div class="panel">
           <div class="header">
@@ -118,8 +119,10 @@
         </div>
       </div>
 		</section>
-    <section>
-    	<h2 h1>Other Commands</h2>
+    <section class="vert">
+      <div class="divider dotted vertical"></div>
+    	<h2 h1>Ever feel lost?</h2>
+      <cmd command="@FreeStuff help" />
 		</section>
   </div>
 </template>
@@ -183,9 +186,15 @@ section {
   flex-wrap: wrap;
   margin: 30pt 0;
 
-  h1, h2 {
-    margin-bottom: 20pt;
+  &.vert {
+    flex-direction: column;
+    align-items: center;
+
+    h2 { margin-top: 0 !important; }
   }
+
+  h1 { margin: 20pt 0 0 0; }
+  h2 { margin: 40pt 0 20pt 0 !important; }
 
   a {
     color: #da5e7d;
@@ -310,6 +319,29 @@ section {
         }
       }
     }
+
+    a[btn] {
+      display: inline-block;
+      width: fit-content;
+      margin: 0;
+      background-color: $primary-gold-trans;
+      font-size: 12pt;
+      font-family: $font-major;
+      color: #000000ee;
+      padding: 10pt 20pt;
+      box-shadow: none;
+      background-image: none !important;
+      border-bottom: none;
+      box-shadow: 0 0px 0px #00000000;
+      transition: background-color .3s ease
+                , box-shadow .3s ease;
+      will-change: background-color, box-shadow;
+
+      &:hover {
+        background-color: $primary-gold;
+        box-shadow: 0 2px 7px #00000033;
+      }
+    }
   }
 
   & > img {
@@ -322,5 +354,13 @@ section {
     z-index: -1;
     opacity: .2;
   }
+}
+
+.popbox {
+  min-width: $content-width / 3;
+  padding: 30pt;
+
+  code { color: #ffffff !important; }
+  span { color: #222222 !important; margin: 5pt 0 0 0; }
 }
 </style>
