@@ -1,108 +1,184 @@
 <template>
-  <div id="content">
-    <div id="infobox">
-      <h1>Looking good!</h1>
-      <h2>The bot should now appear<br>on your discord server!</h2>
+  <div class="pageroot">
+    <section>
+    	<h1 class="center">Looking good!</h1>
+      <h2 sub class="center">The&nbsp;bot should now appear on your&nbsp;server!</h2>
 
-      <div class="divider" />
+      <div class="panels one">
+        <div />
+        <div class="panel">
+          <span component class="title">WARNING!</span>
+          <span component class="desc">Looks like you haven't given the bot all the permissions it needs! <b>Please make sure the bot can read and send messages.</b> Some themes also require external emojis.</span>
+        </div>
+      </div>
+		</section>
+    <section>
+      <div class="panels one">
+        <div />
+        <div class="panel">
+          <span component class="title">QUICK SETUP:</span>
+          <span component class="desc"><b>Step one:</b> Tell the bot which channel it should send the games to:</span>
+          <cmd command="@FreeStuff set channel #free-games" />
+          <span component class="desc">with #free-games being a channel of your choice, of course.</span>
+          <span component class="desc"><b>Step two:</b> Try it out! You can at any time try if everything works correctly by using this command:</span>
+          <cmd command="@FreeStuff test" />
+          <span component class="desc">If you get a message in the channel you've set up in step one, congratulations, your job here is done! You will from now on get news about new free games in that channel!</span>
+        </div>
+        <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="" draggable="false">
+      </div>
+		</section>
+    <section>
+      <div class="panels one">
+        <div />
+        <div class="panel">
+          <span component class="title">FREE GAMES LIST</span>
+          <span component class="desc">If you don't want automated announcements and prefer to just check current free games here and there, you can always use this command to get a list:</span>
+          <cmd command="@FreeStuff free" />
+        </div>
+      </div>
+		</section>
+    <section>
+    	<h2 h1>Filter Options</h2>
 
-      <div v-if="permissionIssue" class="box">
-        <h3 style="color: #da5e7d">Warning!</h3>
-        <h4>Looks like you haven't given the bot all the permissions it needs!</h4>
-        <span>Please make sure the bot can read and send messages.</span>
-        <span>Some themes also require external emojis.</span>
+      <div class="panels three">
+        <div class="panel">
+          <div class="header">
+            <div class="icon steamshield">
+              <SteamShieldIcon />
+            </div>
+            <span component class="title">STORES</span>
+          </div>
+          <span component class="desc">While some people might wanna get every single freebie out there, there are others who only want to recieve free games from one specify store or would like to not get deals from that one platform. If you're one of them, get started using:</span>
+          <cmd command="@FreeStuff set stores" />
+          <span component class="desc">Default: all stores enabled</span>
+        </div>
+        <div class="panel">
+          <div class="header">
+            <div class="icon poop">
+              <PoopIcon />
+            </div>
+            <span component class="title">BAD QUALITY</span>
+          </div>
+          <span component class="desc">Sometimes really cheap made games are getting a 100% discount for more exposure. We flag those games as "trashy" so you can filter them out easily. Use this command to toggle the filter:</span>
+          <cmd command="@FreeStuff set trash on/off" />
+          <span component class="desc">Default: trash games are filtered out</span>
+        </div>
+        <div class="panel">
+          <div class="header">
+            <div class="icon dollar">
+              <DollarIcon />
+            </div>
+            <span component class="title">MINIUM PRICE</span>
+          </div>
+          <span component class="desc">We know that some of you are only behind the big fish in the world of free games. That's why we allow you to set a minimum price a game had to have before the discount in order to be announced on your server.</span>
+          <cmd command="@FreeStuff set minimum price $3" />
+          <span component class="desc">Default: €3/$3</span>
+        </div>
       </div>
+		</section>
+    <section>
+    	<h2 h1>Appearance</h2>
 
-      <div class="box">
-        <h3 style="color: #00f0a5" id="quick-setup">Quick Setup</h3>
-        <h4>Step one:</h4>
-        <span>Tell the bot in which channel it should send the annoucements using:</span>
-        <code>@FreeStuff set channel #channel</code>
-        <span>with #channel being a channel of your choice, of course.</span>
-        <h4>Step two:</h4>
-        <span>Try it out! You can at any time try if everything works correctly by using this command:</span>
-        <code>@FreeStuff test</code>
-        <span>If you get a message in the channel you've set up in step one, congratulations, your job here is done! You will from now on get news about new free games in that channel!</span>
-        <br>
-        <span>Scroll down a bit to see how you can customize the bot's message.</span>
-        <div class="info">Ever feel lost? Type <code inline>@FreeStuff help</code> for help!</div>
+      <div class="panels two">
+        <div class="panel">
+          <div class="header">
+            <div class="icon brush">
+              <BrushIcon />
+            </div>
+            <span component class="title">THEMES</span>
+          </div>
+          <span component class="desc no-grow">Themes allow you to change the appearance of the bot's messages. We have a large variety of themes available to match the look and feel of your server. To view all available themes and how to apply them, click the button below:</span>
+          <nuxt-link to="/themes" btn>Browse Themes</nuxt-link>
+          <div style="flex-grow: 1" />
+        </div>
+        <div class="panel">
+          <div class="header">
+            <div class="icon translate">
+              <TranslateIcon />
+            </div>
+            <span component class="title">LANGUAGE</span>
+          </div>
+          <span component class="desc">English is not your primary language? Well by looking at the amount of typos on this website you could guess that it's not ours either. That's why translating the bot in as many languages as possible always had a huge priority for us. To get started using one of our many translations, type:</span>
+          <cmd command="@FreeStuff set language" />
+          <span component class="desc">Your language is not yet supported? <a href="https://freestuffbot.xyz/o/translate" target="_blank" rel="noreferrer">Hit us up!</a></span>
+        </div>
       </div>
-
-      <div class="box">
-        <h3 id="customisation" style="color: #ffaa25">Customisation</h3>
-        <h4>Mention a role</h4>
-        <span>The bot can mention a role whenever there's free stuff! Works nice with so-called self-roles other bots provide. If you want the bot to mention @everyone, check if it has the permissions to do so!</span>
-        <code>@FreeStuff set mention @rolename</code>
-        <h4>Apply themes</h4>
-        <span>You can apply a theme that changes the look of the bot's messages:</span>
-        <code>@FreeStuff set theme 1</code>
-        <span>The 1 in this case stands for the theme 1. A full list of all available themes can be found <a href="/themes">here</a></span>
-        <h4>Change the currency</h4>
-        <span>With some themes the bot also shows the original price. You can choose to show this price either in euros or us-dollars using:</span>
-        <code>@FreeStuff set currency €</code>
-        <span>You can also write euro / dollar if you don't have access to these symbols.</span>
-        <h4>Minimum price</h4>
-        <span>Since the bot announces games in every price range but some of you might for instance not be interested in already cheap games, you can specify which type of games you want to get informed about. To set a minimum original price for instance, use:</span>
-        <code>@FreeStuff set minimum price 3€</code>
-        <span>... and the bot will no longer announce games cheaper than 3€. This is the default value by the way, you don't need to do anything if 3€ sounds good to you! <!-- If you want to go further and only allow certain stores, <a href="/freestuff/filter">click here</a>--></span>
-        <h4>Trashy games</h4>
-        <span>Games with really bad ratings or overall bad quality are marked as trash and will by default not reach your server. If you want them anyways you can enable "trash games" using:</span>
-        <code>@FreeStuff set trash on</code>
-        <h4>Enable auto-reaction</h4>
-        <span>The bot can automatically react with the :free: emoji to each of it's messages. You can toggle this using:</span>
-        <code>@FreeStuff set reaction on/off</code>
+      <div class="panels three">
+        <div class="panel">
+          <div class="header">
+            <div class="icon atsign">
+              <AtsignIcon />
+            </div>
+            <span component class="title">ROLE MENTION</span>
+          </div>
+          <span component class="desc">While this setting doesn't directly impact the appearance of the annoucements it easily one of the most useful settings. To never miss out you can provide the bot with a role to ping for each freebie by typing:</span>
+          <cmd command="@FreeStuff set mention @rolename" />
+          <span component class="desc">Run the command without a role to disable mentions.</span>
+        </div>
+        <div class="panel">
+          <div class="header">
+            <div class="icon dollar">
+              <DollarIcon />
+            </div>
+            <span component class="title">CURRENCY</span>
+          </div>
+          <span component class="desc">Euro? Dollar? Euro? Dollar? Euro? Dollar? When the bot announces a free game it will also show the original price the game had before it became free. To switch between USD and Euro use:</span>
+          <cmd command="@FreeStuff set currency euro/dollar" />
+          <span component class="desc">The default currency is determined by your server's region.</span>
+        </div>
+        <div class="panel">
+          <div class="header">
+            <div class="icon react">
+              <ReactIcon />
+            </div>
+            <span component class="title">AUTO REACTION</span>
+          </div>
+          <span component class="desc">If you as a server owner would like to see more engagement from your server members, you can encourage reactions by letting the bot react with the :free: emoji to each of it's messages.</span>
+          <cmd command="@FreeStuff set reaction on/off" />
+          <span component class="desc">People are more likely to add their own reactions if they're not the first one to react.</span>
+        </div>
       </div>
-      
-      <div class="box">
-        <h3 id="more" style="color: #cccccc">More</h3>
-        <h4>Where do you get the information from?</h4>
-        <span>We have spies everywhere 😉</span>
-        <span>For a more technical answer to the question <a href="https://docs.google.com/document/d/1C5aRG7gVryX25N_61WtHbMduJp61qQ5j2vkU0D2ND8g" rel="noreferrer" target="_blank">click here</a></span>
-        <span>If you do wanna send something in that we haven't found yet, feel free to contact us over on <a href="https://discord.gg/WrnKKF8" rel="noreferrer">our discord server</a></span>
-        <h4>Technical Details</h4>
-        <span>The bot is written in TypeScript using Discord.js and a MongoDB database. Webscraping is done using the puppeteer library and several public apis. The dashboard is built with Vue.js using Nuxt.js for server side rendering.</span>
-        <h4>The Team</h4>
-        <span style="margin-bottom: 5px"><a href="https://twitter.com/maanex_/" rel="noreferrer">Maanex</a>: Founder & Lead Developer</span>
-        <span style="margin-bottom: 5px"><a href="https://twitter.com/badosz_/" rel="noreferrer">Badosz</a>: Developer</span>
-        <span style="margin-bottom: 5px"><a href="https://twitter.com/TheMagicalL1/" rel="noreferrer">TheMagicalL</a>: Content Moderator</span>
-        <span style="margin-bottom: 5px"><a href="https://twitter.com/EasyTheBG/" rel="noreferrer">EasyThe</a>: Content Moderator</span>
-        <span style="margin-bottom: 5px"><a href="https://twitter.com/daarendotwav/" rel="noreferrer">Daaren</a>: Tude Management</span>
-        <span style="margin-bottom: 5px"><a href="https://twitter.com/max_zyxt/" rel="noreferrer">Zyxt</a>: Tude Management</span>
-        <h4>Bottom text.</h4>
-        <span><a href="/legal/privacy">FreeStuff Privacy Policy</a> - <a href="/legal/terms">FreeStuff Terms of Service</a></span>
+		</section>
+    <section class="vert">
+      <div class="divider dotted vertical"></div>
+    	<h2 h1>Ever feel lost?</h2>
+      <div class="pre-footer">
+        <cmd command="@FreeStuff help" />
+        <SparkIcon />
+        <SparkIcon />
+        <SparkIcon />
       </div>
-      <footer><a href="https://tude.ga/" rel="noreferrer">Copyright &copy; 2020 Tude</a></footer>
-    </div>
+		</section>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import cmd from '~/components/ChatCommand.vue'
+const BullhornIcon =  require('~/assets/icons/bullhorn.svg?inline')
+const ListIcon =  require('~/assets/icons/list.svg?inline')
+const PoopIcon =  require('~/assets/icons/poop.svg?inline')
+const SteamShieldIcon =  require('~/assets/icons/steamshield.svg?inline')
+const DollarIcon =  require('~/assets/icons/dollar.svg?inline')
+const TranslateIcon =  require('~/assets/icons/translate.svg?inline')
+const ReactIcon =  require('~/assets/icons/react.svg?inline')
+const AtsignIcon =  require('~/assets/icons/atsign.svg?inline')
+const BrushIcon =  require('~/assets/icons/brush.svg?inline')
+const SparkIcon =  require('~/assets/icons/spark.svg?inline')
 
 export default Vue.extend({
-  data () {
-    return {
-      permissionIssue: false,
-      guildId: ''
-    }
-  },
-  mounted () {
-    const url = new URL(location.href)
-    if (url.searchParams.has('error')) {
-      switch (url.searchParams.get('error')) {
-        case 'access_denied':
-        default:
-          location.href = '/'
-          break
-      }
-    } else {
-      if (url.searchParams.has('permissions') && (parseInt(url.searchParams.get('permissions') as string) & 265280) != 265280) {
-        this.permissionIssue = true
-      }
-      if (url.searchParams.has('guild_id')) {
-        this.guildId = url.searchParams.get('guild_id') + ''
-      }
-    }
+  components: {
+    cmd,
+    BullhornIcon,
+    ListIcon,
+    PoopIcon,
+    SteamShieldIcon,
+    DollarIcon,
+    TranslateIcon,
+    ReactIcon,
+    AtsignIcon,
+    BrushIcon,
+    SparkIcon,
   },
   transition: {
     afterEnter () {
@@ -111,12 +187,12 @@ export default Vue.extend({
   },
 	head() {
 		return {
-			title: 'Welcome to FreeStuff!',
+			title: 'About FreeStuff',
 			meta: [
 				{
 					hid: 'description',
 					name: 'description',
-					content: 'Thank you for choosing FreeStuff as your number one source of free games! Here is a small overview of how to get started.'
+					content: 'Who says no to free games? We sure don\'t! And for you to never miss out either, we created a discord bot to always keep you up to date!'
 				}
 			]
 		}
@@ -125,4 +201,219 @@ export default Vue.extend({
 </script>
 
 <style scoped lang="scss">
+@import '~/assets/style/all.scss';
+
+.pageroot {
+  margin-top: 15vh;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 30pt 0;
+
+  &.vert {
+    flex-direction: column;
+    align-items: center;
+
+    h2 { margin-top: 0 !important; }
+  }
+
+  h1 { margin: 20pt 0 0pt 0 !important; }
+  h2[sub] { margin: 0 0 80pt 0 !important; }
+  h2:not([sub]) { margin: 40pt 0 20pt 0 !important; }
+
+  a {
+    color: #da5e7d;
+    border-bottom: 3px solid #da5e7d33;
+
+    &:hover { border-bottom: 3px solid #da5e7d; }
+  }
+}
+
+.panels {
+  display: grid;
+  column-gap: 1vw;
+  row-gap: 5vw;
+  position: relative;
+  margin-bottom: 1vw;
+
+  &.one {
+    grid-template-columns: 1fr 2fr 1fr;
+    @media (max-width: 1000px) { grid-template-columns: 0 1fr 0; column-gap: 0; }
+  }
+  &.two {
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 1000px) { grid-template-columns: 1fr; row-gap: 1vw }
+  }
+  &.three {
+    grid-template-columns: 1fr 1fr 1fr;
+    @media (max-width: 800px) { grid-template-columns: 1fr; row-gap: 1vw }
+  }
+  &.four {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    @media (max-width: 970px) { grid-template-columns: 1fr 1fr; row-gap: 1vw; }
+    @media (max-width: 430px) { grid-template-columns: 1fr; }
+  }
+
+  .panel {
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+    background-color: $bg-bright;
+    border-radius: $component-border-radius;
+    box-shadow: 0 0 5px $backpage;
+    padding: $component-margin*2;
+    z-index: 2;
+
+    .header {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 9999px;
+      margin-right: 15px;
+      
+      &.bullhorn {
+        background-color: #c4a33960;
+        svg { color: #ebe37a; transform: rotate(-10deg); }
+      }
+      &.list {
+        background-color: #39a4c460;
+        svg { color: #7adaeb; transform: rotate(-3deg); }
+      }
+      &.poop {
+        background-color: #96632860;
+        svg { color: #d4ae75; transform: rotate(0deg); }
+      }
+      &.steamshield {
+        background-color: #806ec060;
+        svg { color: #a5e6f8; transform: rotate(0deg); }
+      }
+      &.dollar {
+        background-color: #3a9b6660;
+        svg { color: #9cca60; transform: rotate(0deg); }
+      }
+      &.translate {
+        background-color: #673a9b60;
+        svg { color: #cc8fd1; transform: rotate(0deg); }
+      }
+      &.react {
+        background-color: #5a637560;
+        svg { color: #759bee; transform: rotate(0deg); }
+      }
+      &.atsign {
+        background-color: #db4f4a60;
+        svg { color: #e68a73; transform: rotate(0deg); }
+      }
+      &.brush {
+        background-color: #c7a55a60;
+        svg { color: #f5c952; transform: rotate(0deg); }
+      }
+
+      svg { width: 25px; }
+    }
+
+    span {
+      display: block;
+      text-align: left;
+
+      &.title {
+        font-family: $font-header;
+        font-size: 15pt;
+        color: $color-header;
+      }
+
+      &.desc {
+        font-family: $font-regular;
+        font-size: 11pt;
+        color: $color-sub;
+        flex-grow: 1;
+        margin: $component-margin 0;
+
+        &:last-child {
+          margin: $component-margin 0 0 0;
+          &:not(.no-grow) { flex-grow: 0; }
+        }
+
+        b {
+          color: $color-major;
+          font-family: $font-major;
+        }
+      }
+    }
+
+    a[btn] {
+      display: inline-block;
+      width: fit-content;
+      margin: 0;
+      background-color: $primary-gold-trans;
+      font-size: 12pt;
+      font-family: $font-major;
+      color: #000000ee;
+      padding: 10pt 20pt;
+      box-shadow: none;
+      background-image: none !important;
+      border-bottom: none;
+      box-shadow: 0 0px 0px #00000000;
+      transition: background-color .3s ease
+                , box-shadow .3s ease;
+      will-change: background-color, box-shadow;
+
+      &:hover {
+        background-color: $primary-gold;
+        box-shadow: 0 2px 7px #00000033;
+      }
+    }
+  }
+
+  & > img {
+    position: absolute;
+    right: -37%;
+    bottom: -70%;
+    width: 220px;
+    height: 220px;
+    transform: translateZ(-2px) scale(1.2);
+    z-index: -1;
+    opacity: .2;
+  }
+}
+
+.pre-footer {
+  margin-bottom: 20pt;
+  position: relative;
+
+  svg {
+    position: absolute;
+   
+    &:nth-of-type(1) {
+      width: 20pt;
+      color: #FFBF00;
+      top: -40%;
+      left: -40%;
+    }
+    &:nth-of-type(2) {
+      width: 15pt;
+      color: #41CCA4;
+      top: -15%;
+      right: -30%;
+    }
+    &:nth-of-type(3) {
+      width: 10pt;
+      color: #8441CC;
+      left: -20%;
+      bottom: -60%;
+    }
+  }
+}
 </style>

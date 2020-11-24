@@ -11,10 +11,18 @@
           <cmd command="@FreeStuff set channel #free-games" />
           <span component class="desc">with #free-games being a channel of your choice, of course. And that's already it. You're done here. Free games will now come flying in! Still sceptical? You can test if everything works by typing:</span>
           <cmd command="@FreeStuff test" />
-          <span component class="desc">Or if you don't want announcements and just check current free games here and there, you can always use this command to get a list:</span>
-          <cmd command="@FreeStuff free" />
         </div>
         <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="" draggable="false">
+      </div>
+		</section>
+    <section>
+      <div class="panels one">
+        <div />
+        <div class="panel">
+          <span component class="title">FREE GAMES LIST</span>
+          <span component class="desc">If you don't want automated announcements and prefer to just check current free games here and there, you can always use this command to get a list:</span>
+          <cmd command="@FreeStuff free" />
+        </div>
       </div>
 		</section>
     <section>
@@ -122,7 +130,12 @@
     <section class="vert">
       <div class="divider dotted vertical"></div>
     	<h2 h1>Ever feel lost?</h2>
-      <cmd command="@FreeStuff help" />
+      <div class="pre-footer">
+        <cmd command="@FreeStuff help" />
+        <SparkIcon />
+        <SparkIcon />
+        <SparkIcon />
+      </div>
 		</section>
   </div>
 </template>
@@ -139,6 +152,7 @@ const TranslateIcon =  require('~/assets/icons/translate.svg?inline')
 const ReactIcon =  require('~/assets/icons/react.svg?inline')
 const AtsignIcon =  require('~/assets/icons/atsign.svg?inline')
 const BrushIcon =  require('~/assets/icons/brush.svg?inline')
+const SparkIcon =  require('~/assets/icons/spark.svg?inline')
 
 export default Vue.extend({
   components: {
@@ -152,6 +166,7 @@ export default Vue.extend({
     ReactIcon,
     AtsignIcon,
     BrushIcon,
+    SparkIcon,
   },
   transition: {
     afterEnter () {
@@ -193,7 +208,7 @@ section {
     h2 { margin-top: 0 !important; }
   }
 
-  h1 { margin: 20pt 0 0 0; }
+  h1 { margin: 20pt 0 20pt 0 !important; }
   h2 { margin: 40pt 0 20pt 0 !important; }
 
   a {
@@ -217,11 +232,11 @@ section {
   }
   &.two {
     grid-template-columns: 1fr 1fr;
-    @media (max-width: 1000px) { grid-template-columns: 1fr; }
+    @media (max-width: 1000px) { grid-template-columns: 1fr; row-gap: 1vw }
   }
   &.three {
     grid-template-columns: 1fr 1fr 1fr;
-    @media (max-width: 800px) { grid-template-columns: 1fr; }
+    @media (max-width: 800px) { grid-template-columns: 1fr; row-gap: 1vw }
   }
   &.four {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -356,11 +371,31 @@ section {
   }
 }
 
-.popbox {
-  min-width: $content-width / 3;
-  padding: 30pt;
+.pre-footer {
+  margin-bottom: 20pt;
+  position: relative;
 
-  code { color: #ffffff !important; }
-  span { color: #222222 !important; margin: 5pt 0 0 0; }
+  svg {
+    position: absolute;
+   
+    &:nth-of-type(1) {
+      width: 20pt;
+      color: #FFBF00;
+      top: -40%;
+      left: -40%;
+    }
+    &:nth-of-type(2) {
+      width: 15pt;
+      color: #41CCA4;
+      top: -15%;
+      right: -30%;
+    }
+    &:nth-of-type(3) {
+      width: 10pt;
+      color: #8441CC;
+      left: -20%;
+      bottom: -60%;
+    }
+  }
 }
 </style>

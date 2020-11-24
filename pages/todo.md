@@ -5,8 +5,8 @@
 
 # Pages
 X X Index
-7 0 Guide
-0 0 Callback
+X X Guide
+X X Callback
 H H Telegram
 X 0 Themes
 H H Troubleshooting
