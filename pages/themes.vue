@@ -172,9 +172,12 @@ export default Vue.extend({
 .wrapper {
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-columns: 1fr 1fr;
 	column-gap: 20pt;
+	row-gap: 10pt;
 	margin-top: 50pt;
+
+	@media (max-width: 1000px) { grid-template-columns: 1fr; }
 
 	.preview {
 		.inner {
@@ -184,6 +187,13 @@ export default Vue.extend({
 			background-color: #363940;
 			padding: 20pt;
 			border-radius: $component-border-radius;
+
+			@media (max-width: 600px) { padding: 10pt; }
+
+			img {
+				width: 100%;
+				max-width: 471px;
+			}
 		}
 
 		.instructions {
@@ -192,7 +202,7 @@ export default Vue.extend({
 			margin-top: 10pt;
 			padding: 20pt;
 
-			h3 { margin-top: 0; }
+			h3 { margin-top: 0 !important; }
 		}
 	}
 
@@ -220,7 +230,7 @@ export default Vue.extend({
 				img { filter: invert(1) }
 			}
 
-			span { margin-bottom: 0 !important; }
+			span { margin-bottom: 0 !important; margin-right: 10pt; }
 
 			.number {
 				width: $unit;
@@ -242,6 +252,13 @@ export default Vue.extend({
 				color: $color-sub;
 				transition: color .2s ease;
 				white-space: nowrap;
+				text-overflow: ellipsis;
+
+				@media (max-width: 600px) {
+					font-size: 12pt;
+					margin-left: $unit / 10;
+					overflow: hidden;
+				}
 			}
 
 			img {
@@ -253,6 +270,8 @@ export default Vue.extend({
 				transition: filter .2s ease;
 
 				&[on] { opacity: .8; }
+
+				@media (max-width: 600px) { display: none; }
 			}
 		}
 	}

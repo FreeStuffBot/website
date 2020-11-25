@@ -8,7 +8,7 @@ X X Index
 X X Guide
 X X Callback
 H H Telegram
-X 0 Themes
+X X Themes
 H H Troubleshooting
 X X Team
 X X Donating
