@@ -64,5 +64,16 @@ export default {
   },
   googleAnalytics: {
     id: 'UA-112300017-4'
+  },
+  generate: {
+    exclude: [
+      /^\/o\//,
+      /^\/start/,
+      /^\/invite/,
+      /^\/discord/,
+      /^\/about/,
+      /^\/legal/,
+      /^\/game/,
+    ]
   }
 }

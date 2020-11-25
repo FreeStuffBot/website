@@ -2,25 +2,16 @@
 /game/*           https://coyote.tude.ga/freestuff-pageproxy/:splat
 /game/*   g=:g    https://coyote.tude.ga/freestuff-pageproxy/:splat?g=:g
 
-/legal/*          https://freestuffbot.xyt/:splat
+/legal/*          https://freestuffbot.xyz/:splat
 
 /about            https://freestuffbot.xyz/guide
-/about/            https://freestuffbot.xyz/guide
 
 /discord          https://discord.gg/WrnKKF8
-/discord/          https://discord.gg/WrnKKF8
 /invite           https://discord.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code
-/invite/           https://discord.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code
 /start            https://discord.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code
-/start/            https://discord.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot&response_type=code
 
 /o/source         https://github.com/FreeStuffBot/discord
-/o/source/         https://github.com/FreeStuffBot/discord
 /o/trello         https://trello.com/b/Zhw6umTy/freestuff
-/o/trello/         https://trello.com/b/Zhw6umTy/freestuff
 /o/translating    https://forms.gle/Hnb29Cggnq6D2eAW9
-/o/translating/    https://forms.gle/Hnb29Cggnq6D2eAW9
 /o/patreon        https://www.patreon.com/freestuffbot
-/o/patreon/        https://www.patreon.com/freestuffbot
 /o/ko-fi          https://ko-fi.com/freestuff
-/o/ko-fi/          https://ko-fi.com/freestuff
