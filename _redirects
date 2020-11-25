@@ -4,7 +4,7 @@
 
 /legal/*          https://tude.ga/legal/:splat/freestuff
 
-/about            https://freestuffbot.xyz/
+/about            https://freestuffbot.xyz/guide
 
 /login            https://idp.tude.ga/login
 /join             https://idp.tude.ga/join

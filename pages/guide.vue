@@ -6,20 +6,22 @@
       <div class="panels one">
         <div />
         <div class="panel">
-          <span component class="title">GETTING STARTED</span>
+          <div class="header">
+            <span component class="title">GETTING STARTED</span>
+          </div>
           <span component class="desc">First, <a href="https://freestuffbot.xyz/invite" target="_blank" rel="noreferrer">invite the bot to your server</a>. Once done, you only need to provide the bot with a channel to post free games to by typing:</span>
           <cmd command="@FreeStuff set channel #free-games" />
-          <span component class="desc">with #free-games being a channel of your choice, of course. And that's already it. You're done here. Free games will now come flying in! Still sceptical? You can test if everything works by typing:</span>
+          <span component class="desc">with #free-games being a channel of your choice. And that's already it. You're done here. Free games will now come flying in! Still sceptical? You can test if everything works by typing:</span>
           <cmd command="@FreeStuff test" />
         </div>
         <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="" draggable="false">
       </div>
-		</section>
-    <section>
       <div class="panels one">
         <div />
         <div class="panel">
-          <span component class="title">FREE GAMES LIST</span>
+          <div class="header">
+            <span component class="title">FREE GAMES LIST</span>
+          </div>
           <span component class="desc">If you don't want automated announcements and prefer to just check current free games here and there, you can always use this command to get a list:</span>
           <cmd command="@FreeStuff free" />
         </div>
@@ -175,7 +177,7 @@ export default Vue.extend({
   },
 	head() {
 		return {
-			title: 'About FreeStuff',
+			title: 'FreeStuff Bot Guide',
 			meta: [
 				{
 					hid: 'description',

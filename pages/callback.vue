@@ -4,34 +4,39 @@
     	<h1 class="center">Looking good!</h1>
       <h2 sub class="center">The&nbsp;bot should now appear on your&nbsp;server!</h2>
 
-      <div class="panels one">
+      <div class="panels one" v-if="permissionIssue">
         <div />
         <div class="panel">
-          <span component class="title">WARNING!</span>
-          <span component class="desc">Looks like you haven't given the bot all the permissions it needs! <b>Please make sure the bot can read and send messages.</b> Some themes also require external emojis.</span>
+          <div class="header">
+            <div class="icon exclamation">
+              <ExclamationIcon />
+            </div>
+            <span component class="title">WARNING!</span>
+          </div>
+          <span component class="desc">Looks like you haven't given the bot all the permissions it needs! <b>Please make sure the bot can at least read and send messages.</b> Some themes also require external emojis.</span>
         </div>
       </div>
-		</section>
-    <section>
       <div class="panels one">
         <div />
         <div class="panel">
-          <span component class="title">QUICK SETUP:</span>
+          <div class="header">
+            <span component class="title">QUICK SETUP:</span>
+          </div>
           <span component class="desc"><b>Step one:</b> Tell the bot which channel it should send the games to:</span>
           <cmd command="@FreeStuff set channel #free-games" />
-          <span component class="desc">with #free-games being a channel of your choice, of course.</span>
+          <span component class="desc">with #free-games being a channel of your choice.</span>
           <span component class="desc"><b>Step two:</b> Try it out! You can at any time try if everything works correctly by using this command:</span>
           <cmd command="@FreeStuff test" />
           <span component class="desc">If you get a message in the channel you've set up in step one, congratulations, your job here is done! You will from now on get news about new free games in that channel!</span>
         </div>
         <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="" draggable="false">
       </div>
-		</section>
-    <section>
       <div class="panels one">
         <div />
         <div class="panel">
-          <span component class="title">FREE GAMES LIST</span>
+          <div class="header">
+            <span component class="title">FREE GAMES LIST</span>
+          </div>
           <span component class="desc">If you don't want automated announcements and prefer to just check current free games here and there, you can always use this command to get a list:</span>
           <cmd command="@FreeStuff free" />
         </div>
@@ -165,6 +170,7 @@ const ReactIcon =  require('~/assets/icons/react.svg?inline')
 const AtsignIcon =  require('~/assets/icons/atsign.svg?inline')
 const BrushIcon =  require('~/assets/icons/brush.svg?inline')
 const SparkIcon =  require('~/assets/icons/spark.svg?inline')
+const ExclamationIcon =  require('~/assets/icons/exclamation.svg?inline')
 
 export default Vue.extend({
   components: {
@@ -179,6 +185,22 @@ export default Vue.extend({
     AtsignIcon,
     BrushIcon,
     SparkIcon,
+    ExclamationIcon,
+  },
+  data() {
+    return {
+      permissionIssue: false,
+      guildId: ''
+    }
+  },
+  mounted() {
+    const query = this.$route.query;
+    if (query['permissions'] && (parseInt(query['permissions'] as string) & 265280) != 265280) {
+      this.permissionIssue = true
+    }
+    if (query['guild_id']) {
+      this.guildId = query['guild_id'] + ''
+    }
   },
   transition: {
     afterEnter () {
@@ -187,12 +209,12 @@ export default Vue.extend({
   },
 	head() {
 		return {
-			title: 'About FreeStuff',
+			title: 'Welcome to FreeStuff!',
 			meta: [
 				{
 					hid: 'description',
 					name: 'description',
-					content: 'Who says no to free games? We sure don\'t! And for you to never miss out either, we created a discord bot to always keep you up to date!'
+					content: 'Thank you for choosing FreeStuff as your number one source of free games! Here is a small overview on how to get started.'
 				}
 			]
 		}
@@ -319,6 +341,10 @@ section {
       &.brush {
         background-color: #c7a55a60;
         svg { color: #f5c952; transform: rotate(0deg); }
+      }
+      &.exclamation {
+        background-color: #db4f4a60;
+        svg { color: #e68a73; transform: rotate(0deg); }
       }
 
       svg { width: 25px; }

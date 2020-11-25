@@ -15,10 +15,12 @@ X X Donating
 H H Faq
 H H Press
   * Some texts
+    • What it is
     • How it came to be
     • Statistics
     • Our team
   * Logo and example images + as zip download
+  * Link to other articles / videos featuring the bot
 X X Privacy Policy
 X X Terms of Service
 X X Licenses
@@ -56,3 +58,9 @@ Legal Mumbo Jumbo
   Privacy Policy
   Licenses
   Cookies
+
+
+---
+
+# Other todo:
+- google analytics

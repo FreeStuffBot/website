@@ -28,7 +28,7 @@
 		<span class="slim"><a href="/discord" rel="noreferrer" target="_blank">Contact</a></span>
 		<div class="divider dotted vertical"></div>
     <div class="donors">
-			<h2 class="center overflow-visible" v-html="`Donors:&nbsp;${twemoji('🧡')}`"></h2>
+			<h2 class="center overflow-visible" v-html="`Latest Donations &nbsp;${twemoji('🧡')}`"></h2>
 			<DonorCard v-for="donor of donors" :key="donor.name" :data="donor" />
 			<nuxt-link to="/team">View All</nuxt-link>
 		</div>
@@ -43,7 +43,7 @@ import twemoji from 'twemoji'
 export default Vue.extend({
 	data() {
 		return {
-      donors: [...this.$store.state.donors].sort(()=>Math.random()<.5?1:-1).splice(0, 5)
+      donors: [...this.$store.state.donors].reverse().splice(0, 5)
 		}
 	},
   methods: {

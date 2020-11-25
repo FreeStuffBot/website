@@ -6,7 +6,7 @@
 
 ## Please come back later!
 
-This document is currently not available. Please conact us on any way provided below if you have any concerns.
+This document is currently not available. Please conact us in any way provided below if you have any concerns.
 
 * E-Mail: [team@freestuffbot.xyz](mailto:team@freestuffbot.xyz)
 
