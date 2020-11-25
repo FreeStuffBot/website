@@ -58,7 +58,7 @@
             <div class="icon dollar">
               <DollarIcon />
             </div>
-            <span component class="title">MINIUM PRICE</span>
+            <span component class="title">MINIMUM PRICE</span>
           </div>
           <span component class="desc">We know that some of you are only behind the big fish in the world of free games. That's why we allow you to set a minimum price a game had to have before the discount in order to be announced on your server.</span>
           <cmd command="@FreeStuff set minimum price $3" copyoverride="@FreeStuff set minimum price " />
