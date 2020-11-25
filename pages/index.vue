@@ -359,6 +359,7 @@ export default Vue.extend({
   top: 53vh;
   width: 50vw;
   transform: translateZ(-5px) scale(1.5);
+  visibility: hidden;
   opacity: calc((1 - var(--scrollPos) * .8) * var(--anim, 0));
   animation: 1s gamelist-in cubic-bezier(0.33, 1, 0.68, 1) 2.5s;
   animation-fill-mode: forwards;
@@ -715,7 +716,7 @@ export default Vue.extend({
   100% { top: 0pt; opacity: .8; }
 }
 @keyframes decoarrow1el1-in {
-  0% { stroke-dashoffset: -1000; }
+  0% { stroke-dashoffset: -900; }
   100% { stroke-dashoffset: -1700; }
 }
 @keyframes decoarrow1el2-in {
@@ -723,7 +724,7 @@ export default Vue.extend({
   100% { stroke-dashoffset: -800; }
 }
 @keyframes decoarrow2el1-in {
-  0% { stroke-dashoffset: -100; }
+  0% { stroke-dashoffset: -80; }
   100% { stroke-dashoffset: -150; }
 }
 @keyframes decoarrow2el2-in {
@@ -736,7 +737,7 @@ export default Vue.extend({
   100% { top: 50%; opacity: 1; transform: translate3d(0, -50%, -2px) scale(1.2) rotateX(0); }
 }
 @keyframes gamelist-in {
-  0% { top: 56vh; right: -19vw; --anim: 0 }
+  0% { top: 56vh; right: -19vw; --anim: 0; visibility: visible; }
   10% { --anim: .1 }
   20% { --anim: .2 }
   30% { --anim: .3 }
@@ -746,7 +747,7 @@ export default Vue.extend({
   70% { --anim: .7 }
   80% { --anim: .8 }
   90% { --anim: .9 }
-  100% { top: 33vh; right: -14vw; --anim: 1 }
+  100% { top: 33vh; right: -14vw; --anim: 1; visibility: visible; }
 }
 </style>
 <style lang="scss">
