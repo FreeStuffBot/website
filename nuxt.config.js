@@ -54,11 +54,15 @@ export default {
   components: true,
   buildModules: [
     '@nuxt/typescript-build',
-    '@nuxtjs/svg'
+    '@nuxtjs/svg',
+    '@nuxtjs/google-analytics'
   ],
   modules: [
     '@nuxtjs/markdownit'
   ],
   build: {
+  },
+  googleAnalytics: {
+    id: 'UA-112300017-4'
   }
 }
