@@ -17,7 +17,7 @@
     <input
       :id="'chat-command-' + uuid"
       class="clipboard-hide"
-      v-model="command"
+      v-model="copytext"
       aria-hidden="true"
     >
   </div>
@@ -30,16 +30,24 @@ const r = () => 'abcdefghijklmnopqrstuvwxyz'.split('')[Math.floor(Math.random() 
 
 export default Vue.extend({
   props: {
-    command: String
+    command: String,
+    copyoverride: String
   },
   data() {
     return {
       uuid: '',
-      copied: false
+      copied: false,
+      copytext: ''
     }
   },
   created() {
     this.uuid = r() + r() + r() + r() + r()
+    this.copytext = this.copyoverride || this.command
+  },
+  watch: {
+    copytext() {
+      this.copytext = this.copyoverride || this.command
+    }
   },
   methods: {
     copy() {

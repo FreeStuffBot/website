@@ -131,19 +131,19 @@
             <img src="@/assets/img/landing-customize-filter.svg" alt="Customize Filter" draggable="false">
             <span component class="title">FILTER THE CONTENT</span>
             <span component class="desc">Don't want cheap games in your server? Only like certain stores? Tell the bot what you like and what you don't and it'll take care!</span>
-            <nuxt-link to="/themes">Learn More</nuxt-link>
+            <nuxt-link to="/guide">Learn More</nuxt-link>
           </div>
           <div class="panel">
             <img src="@/assets/img/landing-customize-pings.svg" alt="Customize Pings" draggable="false">
             <span component class="title">GET NOTIFIED</span>
             <span component class="desc">Would you like to get pinged on new free games? Just provide the bot with a role to ping and you'll never be too late!</span>
-            <nuxt-link to="/themes">Read How</nuxt-link>
+            <nuxt-link to="/guide">Read How</nuxt-link>
           </div>
           <div class="panel">
             <img src="@/assets/img/landing-customize-language.svg" alt="Customize Language" draggable="false">
             <span component class="title">LOCALISATION</span>
             <span component class="desc">English is not your primary language? No worries, we got a good amount of translations for you to choose from!</span>
-            <nuxt-link to="/themes">View Translations</nuxt-link>
+            <nuxt-link to="/guide">View Translations</nuxt-link>
           </div>
         </div>
       </div>
