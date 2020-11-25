@@ -105,7 +105,7 @@
           </div>
           <span component class="desc">English is not your primary language? Well by looking at the amount of typos on this website you could guess that it's not ours either. That's why translating the bot in as many languages as possible always had a huge priority for us. To get started using one of our many translations, type:</span>
           <cmd command="@FreeStuff set language" />
-          <span component class="desc">Your language is not yet supported? <a href="https://freestuffbot.xyz/o/translate" target="_blank" rel="noreferrer">Hit us up!</a></span>
+          <span component class="desc">Your language is not yet supported? <a href="https://freestuffbot.xyz/o/translating" target="_blank" rel="noreferrer">Hit us up!</a></span>
         </div>
       </div>
       <div class="panels three">
