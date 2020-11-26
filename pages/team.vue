@@ -219,6 +219,15 @@ export default Vue.extend({
           roles: [
             'Dutch Translation'
           ]
+        },
+        {
+          name: 'Lukeᴮᵀᵂ',
+          image: 'https://cdn.discordapp.com/attachments/748622589324165142/781485828508876830/947db4b0e6cd92d8e5ef7af5a50f2dbc.png',
+          url: 'https://lukedev.tk/',
+          color: 'linear-gradient(0deg, #a8105b 0%, #8710e6 100%)',
+          roles: [
+            'Italian Translation'
+          ]
         }
       ]).sort(()=>Math.random()-.5),
       donors: this.$store.state.donors
