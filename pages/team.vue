@@ -228,6 +228,15 @@ export default Vue.extend({
           roles: [
             'Italian Translation'
           ]
+        },
+        {
+          name: 'JADNAST',
+          image: 'https://cdn.discordapp.com/attachments/748622589324165142/781839076008919050/f24bf85c95433aaea48a3f39da80891f.png',
+          url: 'https://destkop.github.io/',
+          color: '#000000',
+          roles: [
+            'Russian Translation'
+          ]
         }
       ]).sort(()=>Math.random()-.5),
       donors: this.$store.state.donors
