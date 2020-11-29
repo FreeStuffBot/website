@@ -123,7 +123,7 @@
             </div>
             <span component class="title">AUTO REACTION</span>
           </div>
-          <span component class="desc">If you as a server owner would like to see more engagement from your server members, you can encourage reactions by letting the bot react with the :free: emoji to each of it's messages.</span>
+          <span component class="desc">If you as a server owner would like to see more engagement from your server members, you can encourage reactions by letting the bot react with the :free: emoji to each of it's announcement messages.</span>
           <cmd command="@FreeStuff set reaction on/off" copyoverride="@FreeStuff set reaction " />
           <span component class="desc">People are more likely to add their own reactions if they're not the first one to react.</span>
         </div>
