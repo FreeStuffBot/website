@@ -237,7 +237,16 @@ export default Vue.extend({
           roles: [
             'Russian Translation'
           ]
-        }
+        },
+        {
+          name: 'Erensi',
+          image: 'https://cdn.discordapp.com/attachments/748622589324165142/782905402802569266/e4313532e673aed27652bcb3ad078aeb.png',
+          url: 'https://erensi.xyz/',
+          color: '#cdaa18',
+          roles: [
+            'Turkish Translation'
+          ]
+        },
       ]).sort(()=>Math.random()-.5),
       donors: this.$store.state.donors
     }
