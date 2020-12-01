@@ -16,6 +16,19 @@
           <span component class="desc">Looks like you haven't given the bot all the permissions it needs! <b>Please make sure the bot can at least read and send messages.</b> Some themes also require external emojis.</span>
         </div>
       </div>
+      <div class="panels one" v-if="accessDenied">
+        <div />
+        <div class="panel">
+          <div class="header">
+            <div class="icon exclamation">
+              <ExclamationIcon />
+            </div>
+            <span component class="title">INVITE FAILED</span>
+          </div>
+          <span component class="desc">Looks like you clicked on the back button when asked to add the bot to a server. Instead, please select a server, click on <b>Continue</b> and then on <b>Authorize</b>!</span>
+          <a href="/invite" btn>Try again</a>
+        </div>
+      </div>
       <div class="panels one">
         <div />
         <div class="panel">
@@ -189,12 +202,16 @@ export default Vue.extend({
   },
   data() {
     return {
+      accessDenied: false,
       permissionIssue: false,
       guildId: ''
     }
   },
   mounted() {
     const query = this.$route.query;
+    if (query['error'] == 'access_denied') {
+      this.accessDenied = true
+    }
     if (query['permissions'] && (parseInt(query['permissions'] as string) & 265280) != 265280) {
       this.permissionIssue = true
     }
