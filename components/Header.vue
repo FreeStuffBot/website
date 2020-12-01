@@ -18,7 +18,7 @@
             :color="category.color"
           />
         </ul>
-        <nuxt-link :to="startUrl" class="headerButton">Get Started</nuxt-link>
+        <a :href="startUrl" class="headerButton">Get Started</a>
       </div>
     </div>
     <!-- <div class="header mobileHeader">

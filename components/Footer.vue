@@ -56,7 +56,7 @@
           <span class="name">FreeStuff</span>
         </nuxt-link>
         <span class="copyright">Copyright &copy; 2020 FreeStuff Services. All rights reserved. <a href="https://maanex.me/imprint" rel="noopener">Impressum</a></span>
-        <nuxt-link to="/start" class="footerButton">Get Started</nuxt-link>
+        <a href="/start" class="footerButton">Get Started</a>
       </div>
     </div>
   </footer>
