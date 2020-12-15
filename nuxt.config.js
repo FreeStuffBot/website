@@ -12,7 +12,7 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
       { 'http-equiv': 'X-UA-Compatible', content: 'IE: edge' },
       { name: 'description', hid: 'description', content: 'A highly customizeable discord bot that sends news about free games right into your server. Supports every major platform, many filter options and customizeable appearance!' },
-      { name: 'keywords', hid: 'keywords', content: 'discord, free, games, bot, customizeable, stuff, freestuff, freestuffbot' },
+      { name: 'keywords', hid: 'keywords', content: 'discord, free, games, bot, free stuff, free stuff bot, freestuff bot, customizable, stuff, freestuff, freestuffbot' },
       { name: 'theme-color', content: '#cd4fd1', id: 'metacolor' },
       { name: 'application-name', content: 'FreeStuff Bot', id: 'metaname' },
       { name: 'robots', content: 'index, follow' },
