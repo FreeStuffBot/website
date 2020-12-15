@@ -1,9 +1,4 @@
-
 User-agent: *
-Disallow: /legal
-Disallow: /callback
-Disallow: /testgame
 Disallow: /o/*
-Disallow: /half-life-alyx-free
 
 Sitemap: https://freestuffbot.xyz/sitemap.xml
