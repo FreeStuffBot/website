@@ -40,7 +40,7 @@
           <span component class="desc">with #free-games being a channel of your choice.</span>
           <span component class="desc"><b>Step two:</b> Try it out! You can at any time try if everything works correctly by using this command:</span>
           <cmd command="@FreeStuff test" />
-          <span component class="desc">If you get a message in the channel you've set up in step one, congratulations, your job here is done! You will from now on get news about new free games in that channel!</span>
+          <span component class="desc">If you get a message in the channel you've set up in step one, congratulations, your job here is done! From now on you will recieve news about new free games in that channel!</span>
         </div>
         <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="" draggable="false">
       </div>
