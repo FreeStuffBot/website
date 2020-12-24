@@ -23,9 +23,30 @@
 		<div class="divider dotted vertical"></div>
 		<h2 class="center overflow-visible" v-html="`Convinced?&nbsp;${twemoji('✨')}`"></h2>
 		<span class="slim">Even if it's just as little as $1 &mdash; every cent helps!</span>
-		<span class="slim"><a href="/o/patreon" rel="noreferrer" target="_blank">Donate via Patreon</a></span>
-		<span class="slim"><a href="/o/ko-fi" rel="noreferrer" target="_blank">Donate via Ko-fi</a></span>
-		<span class="slim"><a href="/discord" rel="noreferrer" target="_blank">Contact</a></span>
+		<span class="slim">
+			<a
+				href="/o/patreon"
+				rel="noreferrer"
+				target="_blank"
+				@click="$ga.event({ eventAction: 'navigate', eventCategory: 'donate', eventLabel: 'patreon' })"
+			>Donate via Patreon</a>
+		</span>
+		<span class="slim">
+			<a
+				href="/o/ko-fi"
+				rel="noreferrer"
+				target="_blank"
+				@click="$ga.event({ eventAction: 'navigate', eventCategory: 'donate', eventLabel: 'kofi' })"
+			>Donate via Ko-fi</a>
+		</span>
+		<span class="slim">
+			<a
+				href="/discord"
+				rel="noreferrer"
+				target="_blank"
+				@click="$ga.event({ eventAction: 'navigate', eventCategory: 'donate', eventLabel: 'discord' })"
+			>Contact</a>
+		</span>
 		<div class="divider dotted vertical"></div>
     <div class="donors">
 			<h2 class="center overflow-visible" v-html="`Latest Donations &nbsp;${twemoji('🧡')}`"></h2>

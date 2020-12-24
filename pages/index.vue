@@ -42,6 +42,7 @@
             v-text="audience.cta.text"
             content="yes. do it."
             v-tippy="{ delay: [2000, 0] }"
+            @click="$ga.event({ eventAction: 'start', eventCategory: 'landing', eventLabel: audience.platform })"
           />
           <nuxt-link
             id="about-button"
@@ -51,6 +52,7 @@
             d="1"
             content="wrong button mate.<br>click the left one."
             v-tippy="{ delay: [2000, 0] }"
+            @click="$ga.event({ eventAction: 'navigate', eventCategory: 'landing', eventLabel: 'about' })"
           >
             Guide
           </nuxt-link>
@@ -125,25 +127,37 @@
             <img src="@/assets/img/landing-customize-themes.svg" alt="Customize Themes" draggable="false">
             <span component class="title">CHOOSE A NICE THEME</span>
             <span component class="desc">Select one of 10 themes to match the look and feel of your server! Images or not, minimalistic or with extra info - we got it all!</span>
-            <nuxt-link to="/themes">Discover Themes</nuxt-link>
+            <nuxt-link
+              to="/themes"
+              @click="$ga.event({ eventAction: 'navigate', eventCategory: 'landing', eventLabel: 'themes' })"
+            >Discover Themes</nuxt-link>
           </div>
           <div class="panel">
             <img src="@/assets/img/landing-customize-filter.svg" alt="Customize Filter" draggable="false">
             <span component class="title">FILTER THE CONTENT</span>
             <span component class="desc">Don't want cheap games in your server? Only like certain stores? Tell the bot what you like and what you don't and it'll take care!</span>
-            <nuxt-link to="/guide">Learn More</nuxt-link>
+            <nuxt-link
+              to="/guide"
+              @click="$ga.event({ eventAction: 'navigate', eventCategory: 'landing', eventLabel: 'filter' })"
+            >Learn More</nuxt-link>
           </div>
           <div class="panel">
             <img src="@/assets/img/landing-customize-pings.svg" alt="Customize Pings" draggable="false">
             <span component class="title">GET NOTIFIED</span>
             <span component class="desc">Would you like to get pinged on new free games? Just provide the bot with a role to ping and you'll never be too late!</span>
-            <nuxt-link to="/guide">Read How</nuxt-link>
+            <nuxt-link
+              to="/guide"
+              @click="$ga.event({ eventAction: 'navigate', eventCategory: 'landing', eventLabel: 'notifications' })"
+            >Read How</nuxt-link>
           </div>
           <div class="panel">
             <img src="@/assets/img/landing-customize-language.svg" alt="Customize Language" draggable="false">
             <span component class="title">LOCALISATION</span>
             <span component class="desc">English is not your primary language? No worries, we got a good amount of translations for you to choose from!</span>
-            <nuxt-link to="/guide">View Translations</nuxt-link>
+            <nuxt-link
+              to="/guide"
+              @click="$ga.event({ eventAction: 'navigate', eventCategory: 'landing', eventLabel: 'localisation' })"
+            >View Translations</nuxt-link>
           </div>
         </div>
       </div>

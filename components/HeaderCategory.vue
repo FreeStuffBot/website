@@ -3,6 +3,7 @@
     <nuxt-link
       v-if="isInternal"
       :to="url"
+      @click="$ga.event({ eventAction: 'navigate', eventCategory: 'header', eventLabel: name.toLowerCase() })"
     >
       <span :style="color?`color:${color}`:''">
         {{ name }}

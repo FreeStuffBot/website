@@ -6,7 +6,10 @@
           <div class="content">
             <span>Featured Donor:</span>
             <no-ssr>
-              <nuxt-link to="/donate">
+              <nuxt-link
+                to="/donate"
+                @click="$ga.event({ eventAction: 'navigate', eventCategory: 'footer', eventLabel: 'home' })"
+              >
                 <DonorCard :data="featuredDonor" />
               </nuxt-link>
               <span class="subtext" v-text="genSubtext()"></span>
@@ -55,8 +58,14 @@
           <img src="@/assets/img/icon_round.png" alt="FreeStuff Logo">
           <span class="name">FreeStuff</span>
         </nuxt-link>
-        <span class="copyright">Copyright &copy; 2020 FreeStuff Services. All rights reserved. <a href="https://maanex.me/imprint" rel="noopener">Impressum</a></span>
-        <a href="/start" class="footerButton">Get Started</a>
+        <span class="copyright">Copyright &copy; 2020 FreeStuff Services. All rights reserved. <a href="https://maanex.me/imprint?utm_campain=project&utm_source=freestuff&utm_medium=footer" rel="noopener">Impressum</a></span>
+        <a
+          href="/start"
+          class="footerButton"
+          @click="$ga.event({ eventAction: 'start', eventCategory: 'footer', eventLabel: 'discord' })"
+        >
+          Get Started
+        </a>
       </div>
     </div>
   </footer>

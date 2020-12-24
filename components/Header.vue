@@ -3,7 +3,10 @@
     <div class="header desktopHeader">
       <div class="headerInner">
         <div class="headerLogo">
-          <nuxt-link to="/">
+          <nuxt-link
+            to="/"
+            @click="$ga.event({ eventAction: 'navigate', eventCategory: 'header', eventLabel: 'home' })"
+          >
             <img src="@/assets/img/icon_round.webp" alt="FreeStuff Logo">
             <span class="name">FreeStuff</span>
           </nuxt-link>
@@ -18,7 +21,13 @@
             :color="category.color"
           />
         </ul>
-        <a :href="startUrl" class="headerButton">Get Started</a>
+        <a
+          :href="startUrl"
+          class="headerButton"
+          @click="$ga.event({ eventAction: 'start', eventCategory: 'header', eventLabel: 'discord' })"
+        >
+          Get Started
+        </a>
       </div>
     </div>
     <!-- <div class="header mobileHeader">

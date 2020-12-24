@@ -57,6 +57,9 @@ export default Vue.extend({
       document.execCommand('copy');
       this.copied = true;
       setTimeout(() => Vue.nextTick(() => this.copied = false), 30);
+
+      // @ts-ignore
+      this.$ga.event({ eventAction: 'copy', eventCategory: 'command', eventLabel: this.copytext })
     }
   }
 })

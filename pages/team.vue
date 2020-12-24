@@ -23,6 +23,7 @@
           :class="{long:member.name.length>14}"
           :style="`--color: ${member.color}; --txtcolor: ${member['txtcolor']||''}`"
           target="_blank"
+          @click="$ga.event({ eventAction: 'navigate', eventCategory: 'team', eventLabel: 'member website ' + member.name.toLowerCase() })"
         />
         <span
           v-for="role of member.roles"
@@ -43,7 +44,15 @@
           <img :src="member.image" :alt="member.name">
           <img v-if="member['imageHover']" :src="member['imageHover']" :alt="member.name" class="hover">
         </div>
-        <a :href="member.url" rel="noreferrer noopener" v-html="member.name.split('<').join('<&ZeroWidthSpace;')" :class="{long:member.name.length>14}" :style="`--color: ${member.color}; --txtcolor: ${member.txtcolor||''}`" target="_blank"></a>
+        <a
+          :href="member.url"
+          rel="noreferrer noopener"
+          v-html="member.name.split('<').join('<&ZeroWidthSpace;')"
+          :class="{long:member.name.length>14}"
+          :style="`--color: ${member.color}; --txtcolor: ${member.txtcolor||''}`"
+          target="_blank"
+          @click="$ga.event({ eventAction: 'navigate', eventCategory: 'team', eventLabel: 'member website ' + member.name.toLowerCase() })"
+        ></a>
         <span class="role" v-for="role of member.roles" :key="role" v-text="role"></span>
       </div>
     </section>
@@ -56,17 +65,30 @@
       <h2>Want your name on this page?</h2>
       <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="" class="bgdeco" draggable="false" aria-hidden="true">
       <div class="gallery" items="3">
-        <a href="/o/translating" rel="noreferrer" target="_blank">
+        <a
+          href="/o/translating"
+          rel="noreferrer"
+          target="_blank"
+          @click="$ga.event({ eventAction: 'navigate', eventCategory: 'team', eventLabel: 'translating' })"
+        >
           <img src="@/assets/icons/translation.svg" alt="Translation">
           <span>Help with Translating!</span>
           <span>Even if your language is already supported, sometimes a second translator doesn't hurt!</span>
         </a>
-        <a href="/discord" rel="noreferrer" target="_blank">
+        <a
+          href="/discord"
+          rel="noreferrer"
+          target="_blank"
+          @click="$ga.event({ eventAction: 'navigate', eventCategory: 'team', eventLabel: 'discord' })"
+        >
           <img src="@/assets/icons/laptopcode.svg" alt="Laptop">
           <span>Help out elsewhere!</span>
           <span>Like programming, bug-finding, providing support and whatever else needs to be done!</span>
         </a>
-        <nuxt-link to="/donate">
+        <nuxt-link
+          to="/donate"
+          @click="$ga.event({ eventAction: 'navigate', eventCategory: 'team', eventLabel: 'donate' })"
+        >
           <img src="@/assets/icons/dollarring.svg" alt="Donation">
           <span>Donate.</span>
           <span>Even the smallest amount helps this project stay alive! Thanks for every cent!</span>

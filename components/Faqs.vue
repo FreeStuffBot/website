@@ -23,7 +23,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Vue from 'vue'
 
 export default Vue.extend({
@@ -31,6 +31,12 @@ export default Vue.extend({
     return {
       faqs: this.$store.state.faqs,
       activeFaq: -1
+    }
+  },
+  watch: {
+    activeFaq(val: number) {
+      // @ts-ignore
+      this.$ga.event({ eventAction: 'faq', eventCategory: 'open', eventLabel: this.faqs[this.activeFaq].title })
     }
   }
 });
