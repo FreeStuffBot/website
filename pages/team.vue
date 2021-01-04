@@ -136,6 +136,15 @@ export default Vue.extend({
             'Software Developer',
             'Arabic Translation'
           ]
+        },
+        {
+          name: 'Andreas',
+          image: 'https://cdn.discordapp.com/attachments/748622589324165142/795773173588295740/wtf.png',
+          url: 'https://media.tenor.co/videos/08958f3c7ef31590646de8e84943cedb/mp4',
+          color: '#004499',
+          roles: [
+            'Content Moderator'
+          ]
         }
       ]).sort(()=>Math.random()-.5),
       contributors: ([
