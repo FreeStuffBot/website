@@ -120,8 +120,9 @@ export default Vue.extend({
         {
           name: 'EasyThe',
           image: 'https://media.discordapp.net/attachments/748622589324165142/748622666432380958/6q2TRvY2_400x400.png?size=100',
-          url: 'https://twitter.com/EasyTheBg',
-          color: '#9535ce',
+          imageHover: 'https://i.imgur.com/0GAUvVo.gif',
+          url: 'https://twitter.com/EasyTheBG',
+          color: 'linear-gradient(to right, #AA076B 0%, #61045F  51%, #AA076B  100%)',
           roles: [
             'Content Moderator',
             'Bulgarian Translation'
