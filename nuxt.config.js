@@ -58,7 +58,8 @@ export default {
     '@nuxtjs/google-analytics'
   ],
   modules: [
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    '@nuxtjs/axios'
   ],
   build: {
   },

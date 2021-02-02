@@ -88,9 +88,10 @@
             </div>
             <span component class="title">LANGUAGE</span>
           </div>
-          <span component class="desc">English is not your primary language? Well by looking at the amount of typos on this website you could guess that it's not ours either. That's why translating the bot in as many languages as possible always had a huge priority for us. To get started using one of our many translations, type:</span>
-          <cmd command="@FreeStuff set language" />
-          <span component class="desc">Your language is not yet supported? <a href="https://freestuffbot.xyz/o/translating" target="_blank" rel="noreferrer">Hit us up!</a></span>
+          <span component class="desc"
+            v-html="`English is not your primary language? No worries, we got a good amount of translations to choose from. ${languageCta} Take a look below to get started:`" />
+          <div style="flex-grow: 1" />
+          <nuxt-link to="/languages" btn>View Translations</nuxt-link>
         </div>
       </div>
       <div class="panels three">
@@ -144,6 +145,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import axios from 'axios'
+import twemoji from 'twemoji'
 import cmd from '~/components/ChatCommand.vue'
 const BullhornIcon =  require('~/assets/icons/bullhorn.svg?inline')
 const ListIcon =  require('~/assets/icons/list.svg?inline')
@@ -170,6 +173,31 @@ export default Vue.extend({
     BrushIcon,
     SparkIcon,
   },
+  data() {
+    return {
+      languageCta: ''
+    }
+  },
+  async mounted() {
+    if (!process.client) return
+
+    try {
+      const navigator = window['navigator'] || null
+      if (!navigator || /^en\b/.test(navigator.language)) {
+        const { data } = await axios.get('https://ipapi.co/json/')
+        const langs = data.languages?.split(',') ?? [ data.country_code ]
+        for (const lang of langs) {
+          const text = await langDisplayText(lang, this.$store.state.data.flagEmojis)
+          if (!text) continue
+          this.languageCta = text
+          return
+        }
+      } else {
+        this.languageCta = await langDisplayText(navigator.language, this.$store.state.data.flagEmojis) || this.languageCta
+      }
+    } catch (err) {}
+  },
+  fetchOnServer: false,
   transition: {
     afterEnter () {
       document.getElementById('app')?.scrollTo({ top: 0, behavior: 'smooth' })
@@ -188,6 +216,62 @@ export default Vue.extend({
 		}
 	}
 })
+
+let languages = [] as any[]
+async function langs() {
+  if (languages.length)
+    return languages
+
+  const { data } = await axios.get('https://management.freestuffbot.xyz/pubdata/e02d7127-9804-4d72-91a5-d3a3ae1e23bd')
+  if (data)
+    languages = data
+  return languages
+}
+
+async function langDisplayText(langcode: string, flagEmojis: any): Promise<string> {
+  if (/^en\b/.test(langcode)) return ''
+  const lang = await getBestFit(langcode)
+  if (!lang) return ''
+  const name = lang.lang_name_en.toLowerCase()
+  const aORan = /^[aeiou]/.test(name) ? 'an' : 'a'
+  const nameCap = name.toUpperCase()[0] + name.substr(1)
+  const flag = twemoji.parse(flagEmojis[lang.lang_flag_emoji.split(':')[1]])
+  return `We even have ${aORan} ${nameCap} ${flag} one!`
+}
+
+async function getBestFit(langcode: string): Promise<any> {
+  const candidates = [] as any[]
+  await langs()
+
+  for (const c of languages) {
+    if (c._id.includes(langcode))
+      candidates.push(c)
+  }
+  if (candidates.length)
+    return getMostPopular(candidates)
+
+  for (const c of languages) {
+    if (c.lang_flag_emoji.includes(langcode.split('-')[0].split('_')[0]))
+      candidates.push(c)
+  }
+  if (candidates.length)
+    return getMostPopular(candidates)
+
+  for (const c of languages) {
+    if (c.lang_name_en.includes(langcode.split('-')[0].split('_')[0]))
+      candidates.push(c)
+  }
+  if (candidates.length)
+    return getMostPopular(candidates)
+
+  return null
+}
+
+function getMostPopular(langs: any[]): any {
+  return langs.length === 1
+    ? langs[0]
+    : langs.sort((a, b) => a._ranking - b._ranking)[0]
+}
 </script>
 
 <style scoped lang="scss">
