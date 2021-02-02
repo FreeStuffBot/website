@@ -13,6 +13,15 @@
                 <DonorCard :data="featuredDonor" />
               </nuxt-link>
               <span class="subtext" v-text="genSubtext()"></span>
+              <a
+                class="coffee"
+                href="/o/ko-fi"
+                target="_blank"
+                rel="noopener noreferrer"
+                @click="$ga.event({ eventAction: 'donate', eventCategory: 'footer', eventLabel: 'ko-fi' })"
+              >
+                <img src="~/assets/img/buy-me-a-ko-fi.png" alt="Buy me a Coffee">
+              </a>
             </no-ssr>
           </div>
           <div class="vertdiv"></div>
@@ -21,11 +30,11 @@
           <span>Platform</span>
           <nuxt-link to="/guide">Guide</nuxt-link>
           <nuxt-link to="/themes">Themes</nuxt-link>
-          <!-- <nuxt-link to="/">Discord Bot</nuxt-link> -->
-          <!-- <nuxt-link to="/telegram">Telegram Bot</nuxt-link>
-          <nuxt-link to="/twitter">Twitter Bot</nuxt-link>
-          <nuxt-link to="/rss">RSS Feed</nuxt-link>-->
-          <a href="https://docs.freestuffbot.xyz/" rel="noreferrer" target="_blank">API<span class="new-badge">NEW</span></a>
+          <nuxt-link to="/">Discord Bot</nuxt-link>
+          <nuxt-link to="/telegram">Telegram Bot <span class="new-badge">NEW</span></nuxt-link>
+          <!-- <nuxt-link to="/twitter">Twitter Bot</nuxt-link>
+          <nuxt-link to="/rss">RSS Feed</nuxt-link> -->
+          <a href="https://docs.freestuffbot.xyz/" rel="noreferrer" target="_blank">API</a>
         </div>
         <div>
           <span>Support</span>
@@ -172,6 +181,14 @@ footer {
           font-family: $font-minor;
           color: $color-minor;
           font-size: 11pt;
+        }
+
+        .coffee {
+          padding-top: 15pt;
+
+          img {
+            width: 190px;
+          }
         }
       }
 

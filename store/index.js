@@ -21,7 +21,7 @@ export const state = () => ({
       answer: `This can have a multitude of reasons. Let's run them through real quick:<br>&bull; We don't know about it yet. Go <a href="/discord" target="_blank">join our Discord Server</a> to let us know!<br>&bull; The game is always free, not 100% off. In that case we will not announce it.<br>&bull; The game got filtered out and didn't reach your server. If you've seen it announced on a different server but your's got left behind, please take a look at our <a href="/guide">filter options</a> and adjust them to your likings!`
     },
     {
-      title: "Why is language xyz not supported?",
+      title: "Why is language ... not supported?",
       answer: `That's because we haven't found a translator for that language yet! If you would like to translate it into your language, <a href="/o/translating" target="_blank">hit us up</a> and get your name on the team page :)`
     },
     {
