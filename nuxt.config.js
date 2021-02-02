@@ -38,12 +38,34 @@ export default {
       { name: 'mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-title', content: '@freestuff/website' },
     ],
+    metaInfo: {
+      script: [
+        {
+          type: 'application/ld+json',
+          json: {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "PAGE NAME HERE"
+            }]
+          }
+        },    
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "https://freestuffbot.xyz/",
+          "logo": "https://freestuffbot.xyz/assets/img/icon_round.png"
+        }
+      ]
+    },
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-      { rel: 'icon', type: 'image/png', href: '/icons/16.png', sizes: '16x16' },
-      { rel: 'icon', type: 'image/png', href: '/icons/32.png', sizes: '32x32' },
-      { rel: 'icon', type: 'image/png', href: '/icons/96.png', sizes: '96x96' },
-      { rel: 'icon', type: 'image/png', href: '/icons/180.png', sizes: '180x180' }
+      { rel: 'icon', type: 'image/png', href: '/assets/icons/16.png', sizes: '16x16' },
+      { rel: 'icon', type: 'image/png', href: '/assets/icons/32.png', sizes: '32x32' },
+      { rel: 'icon', type: 'image/png', href: '/assets/icons/96.png', sizes: '96x96' },
+      { rel: 'icon', type: 'image/png', href: '/assets/icons/180.png', sizes: '180x180' }
     ]
   },
   css: [
