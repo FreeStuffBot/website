@@ -161,9 +161,9 @@ export default Vue.extend({
           ]
         },
         {
-          name: 'Hadi Da King',
-          image: 'https://media.discordapp.net/attachments/748622589324165142/748623596099993681/Hadi_Logo.png',
-          url: 'http://getavirus.xyz/',
+          name: 'Pokimane',
+          image: 'https://media.discordapp.net/attachments/748622589324165142/822105259107024896/unknown.png',
+          url: '#',
           color: 'linear-gradient(20deg, #36d1dc, #5b86e5)',
           roles: [
             'Danish Translation'
