@@ -41,18 +41,6 @@ export default {
     metaInfo: {
       script: [
         {
-          type: 'application/ld+json',
-          json: {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-              "@type": "ListItem",
-              "position": 1,
-              "name": "PAGE NAME HERE"
-            }]
-          }
-        },    
-        {
           "@context": "https://schema.org",
           "@type": "Organization",
           "url": "https://freestuffbot.xyz/",

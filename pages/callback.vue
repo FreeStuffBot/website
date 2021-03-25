@@ -116,10 +116,11 @@
             </div>
             <span component class="title">LANGUAGE</span>
           </div>
-          <span component class="desc"
-            v-html="`English is not your primary language? No worries, we got a good amount of translations to choose from. ${languageCta} Take a look below to get started:`" />
-          <div style="flex-grow: 1" />
-          <nuxt-link to="/languages" btn>View Translations</nuxt-link>
+          <span component class="desc" v-html="`English is not your primary language? No worries, we got a good amount of translations to choose from. Run the command below to get started:`" />
+          <cmd command="@FreeStuff set language" />
+          <!-- <span component class="desc" v-html="`English is not your primary language? No worries, we got a good amount of translations to choose from. ${languageCta} Take a look below to get started:`" /> -->
+          <!-- <div style="flex-grow: 1" /> -->
+          <!-- <nuxt-link to="/languages" btn>View Translations</nuxt-link> -->
         </div>
       </div>
       <div class="panels three">
@@ -224,6 +225,7 @@ export default Vue.extend({
     }
 
     if (!process.client) return
+    if (true /* TODO remove for dynamic language upsell */) return
 
     try {
       const navigator = window['navigator'] || null
