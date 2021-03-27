@@ -1,20 +1,27 @@
 <template>
-  <div class="padfullscreen plaintext">
+  <div class="padfullscreen">
     <div class="cookies" @click.prevent="you_fool()" :hidden="cookiehidden">
-      <div class="dimmer"></div>
-      <div class="inner">
-        <span class="title">Before you continue...</span>
-        <div class="content" v-html="cookiecontent"></div>
-        <div class="buttons" :fakeloaddone="fakeloaddone">
-          <div class="primary">Accept all</div>
-          <div>Manage cookies</div>
+      <div class="background"></div>
+      <div class="popup">
+        <div class="inner">
+          <span class="title">Before you continue...</span>
+          <div class="content" v-html="cookiecontent"></div>
+          <div class="buttons" :fakeloaddone="fakeloaddone">
+            <div class="primary">Accept all</div>
+            <div class="secondary">Manage cookies</div>
+          </div>
         </div>
+        <svg viewport="0 0 20 20" width="15pt" height="15pt">
+          <g><path d="M0,0l20,20l0,-20l-20,0Z" fill="black" /></g>
+        </svg>
+        <div class="filler" />
       </div>
     </div>
 
     <div class="page" :nooverflow="!cookiehidden">
-      <div class="title">Minecraft 2 is not real...</div>
-      <div class="subtitle">But Rick Astley is! Happy april fools day!</div>
+      <div class="background"></div>
+      <div class="title">No cyberpunk for you!</div>
+      <div class="subtitle">Best we can do is Rick Astley. Happy april fools day!</div>
       <div class="vid-div">
         <div id="vid-blocker"></div>
         <iframe
@@ -26,16 +33,12 @@
           allowfullscreen
         ></iframe>
       </div>
+      put logo here.
+      maybe smth like, "much love from the freestuff team (heart)"
     </div>
 
-    TODO:
-    - freestuff branding somewhere on it
-    - make it all fit nicely n stuff right
-    - make it look good on mobile
-    - do not include any minecraft branding on the website, only gets you in trouble
-
-    <div class="footer">
-      © 2020-2021 FreeStuff. FreeStuff isn’t endorsed by Microsoft or Mojang Studios and doesn’t reflect the views or opinions of anyone officially involved in producing or managing Minecraft. Minecraft is a registered trademark of Mojang Studios or the Microsoft Corperation. We claim no rigths to any intellectual property presented, all content belongs to their respective owners. <a href="mailto:team@freestuffbot.xyz">Contact website administrator at team@freestuffbot.xyz</a>
+    <div v-if="!cookiehidden" class="footer">
+      © 2020-2021 FreeStuff. FreeStuff isn’t endorsed by CD Project Red and doesn’t reflect the views or opinions of anyone officially involved in producing or managing Cyberpunk. Cyberpunk is a registered trademark of CD Project Red or one of it's affiliates. We claim no rigths to any intellectual property presented, all content belongs to their respective owners. <a href="mailto:team@freestuffbot.xyz">Contact website administrator at team@freestuffbot.xyz</a>
     </div>
   </div>
 </template>
@@ -78,7 +81,7 @@ export default Vue.extend({
   },
   mounted() {
     setTimeout(v => {
-      v.cookiecontent = 'We are using cookies for advertising purposes as well as to enrich your experience on our websites. For more information about cookies and how we use cookies on our websites, please refer to the <a href="https://privacy.microsoft.com/en-us/privacystatement">Privacy Statement</a>.'
+      v.cookiecontent = 'We are using cookies for advertising purposes as well as to enrich your experience on our websites. For more information about cookies and how we use cookies on our websites, please refer to the <a href="https://regulations.cdprojektred.com/privacy_policy" class="cyberpunk--a">Privacy Policy</a>.'
     }, 130, this)
     setTimeout(v => {
       v.fakeloaddone = true
@@ -108,12 +111,12 @@ export default Vue.extend({
   fetchOnServer: false,
 	head() {
 		return {
-			title: 'Minecraft™ 2 launch deal: 100% off for 24h!',
+			title: 'Cyberpunk exclusive -100% off deal (24h)',
 			meta: [
 				{
 					hid: 'description',
 					name: 'description',
-					content: "The long anticipated sequel to the most popular video game ever is finally here! For the first 24 hours after launch you can claim a free copy of the game by connecting your Microsoft™ accou..."
+					content: "\"we figured since no-one is buying the game anymore, we might as well just give it away for free\", a spokesperson exclusively told the FreeStuff team last saturday."
 				}
 			]
 		}
@@ -133,14 +136,15 @@ export default Vue.extend({
 	height: 100vh;
 	padding: 0;
 	margin: 0;
-  background-image: url('https://www.minecraft.net/content/dam/minecraft/backgrounds/bg-wool-dark.png');
+  background: black;
+  overflow: hidden;
   z-index: 10;
   display: grid;
   place-items: center;
 
   &[hidden] { display: none }
 
-  .dimmer {
+  .background {
     position: absolute;
     top: 0;
     left: 0;
@@ -148,31 +152,52 @@ export default Vue.extend({
     height: 100vh;
     padding: 0;
     margin: 0;
-    background: black;
+    background-image: url('/assets/img/cyberpunk-backpage.png');
+    background-size: cover;
+    background-position: 50% 0;
+    filter: blur(10px);
+    transform: scale(1.05);
     opacity: .4;
     z-index: -1;
   }
 
-  .inner {
-    background: #e5e5ff;
-    padding: 30pt;
+  .popup {
     max-width: 30vw;
+    display: grid;
+    grid-template: auto 15pt / 15pt 1fr;
+    grid-template-areas: "inner inner" "svg filler";
+  }
+
+  svg {
+    grid-area: svg;
+    width: 15pt;
+    height: 15pt;
+  }
+
+  .filler {
+    grid-area: filler;
+    background: #000;
+  }
+
+  .inner {
+    background: #000;
+    padding: 40pt 40pt 25pt 40pt;
+    grid-area: inner;
+    box-shadow: -1pt 0 0 5pt inset #000
+              , -3pt 0 0 5pt inset #02d7f288;
   }
 
   .title {
-    font-family: $font-major;
-    color: black;
-    font-size: 16pt;
+    font-family: $font-header;
+    color: #fd0130;
+    font-size: 18pt;
+    text-transform: uppercase;
   }
 
   .content {
     font-family: $font-regular;
-    color: #000000ee;
+    color: #ffffffee;
     font-size: 12pt;
-
-    a {
-      color: blue
-    }
   }
 
   .buttons {
@@ -181,31 +206,50 @@ export default Vue.extend({
     margin-top: 15pt;
 
     &[fakeloaddone] * {
-      font-size: 11pt !important;
+      font-size: 12pt !important;
     }
 
     * {
-      background: #bbbbd0;
+      background: black;
       margin-right: 5pt;
-      color: black;
-      font-family: $font-major;
+      font-family: $font-header;
       font-size: 0pt;
-      padding: 7pt 18pt;
+      padding: 12pt 27pt;
       cursor: pointer;
-      transition: box-shadow .1s linear, filter .1s linear;
+      transition: background-color .1s ease-out
+                , color .1s ease-out;
+    }
+
+    .secondary {
+      box-shadow: 0 0 0 1px inset #ffffffbb;
+      color: #ffffffbb;
 
       &:hover {
-        box-shadow: 0 0 5px #00000033;
-        text-decoration: underline;
+        color: black;
+        background-color: #ffffffbb !important;
       }
     }
 
     .primary {
-      background-color: #397cd4;
-      color: #ffffff;
+      background-color: #fd0130;
+      color: black;
+      position: relative;
 
       &:hover {
-        filter: brightness(1.1);
+        background-color: #02d7f2 !important;
+        &::after { border-top: 12px solid #02d7f2; }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -13px;
+        left: 0;
+        width: 12px;
+        height: 12px;
+        border-left: 12px solid #000;
+        border-top: 12px solid #fd0130;
+        transition: all .1s ease-out;
       }
     }
   }
@@ -223,7 +267,7 @@ export default Vue.extend({
 .footer, .footer a {
   font-family: $font-sub;
   font-size: 10pt;
-  color: #ffffff33;
+  color: #ffffff55;
 }
 
 .page {
@@ -239,6 +283,18 @@ export default Vue.extend({
     overflow: hidden;
     width: 10vw;
     height: 10vh;
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: #000;
+    z-index: -1;
   }
 
   .title {
@@ -276,4 +332,9 @@ export default Vue.extend({
   }
 }
 
+</style>
+<style>
+a.cyberpunk--a {
+  color: lightskyblue !important;
+}
 </style>
