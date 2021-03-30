@@ -1,6 +1,22 @@
+<!--
+
+ YOYOYOYOO
+ If you found this before April 1st 2021, please keep your mouth shut!
+ You can DM a team member if you found it and feel like needing to proof it but please don't ruin it for anyone else, that would be highly appreciated.
+ Thanks :)
+
+-->
 <template>
-  <div class="padfullscreen">
-    <div class="cookies" @click.prevent="you_fool()" :hidden="cookiehidden">
+  <div class="">
+    <div
+      class="cookies"
+      @click.prevent="you_fool()"
+      @click.right.prevent="you_fool()"
+      @click.middle.prevent="you_fool()"
+      @keydown.enter.prevent="you_fool()"
+      @keydown.space.prevent="you_fool()"
+      :hidden="cookiehidden"
+    >
       <div class="background"></div>
       <div class="popup">
         <div class="inner">
@@ -19,9 +35,8 @@
     </div>
 
     <div class="page" :nooverflow="!cookiehidden">
-      <div class="background"></div>
       <div class="title">No cyberpunk for you!</div>
-      <div class="subtitle">Best we can do is Rick Astley. Happy april fools day!</div>
+      <div class="subtitle">Best we can do is Rick Astley. Happy april fools day &lt;3</div>
       <div class="vid-div">
         <div id="vid-blocker"></div>
         <iframe
@@ -33,8 +48,21 @@
           allowfullscreen
         ></iframe>
       </div>
-      put logo here.
-      maybe smth like, "much love from the freestuff team (heart)"
+      <nuxt-link to="/" class="footer-lite">
+        <div class="logo">
+          <img src="@/assets/img/icon_trans.png" alt="FreeStuff" draggable="false">
+          FreeStuff
+        </div>
+      </nuxt-link>
+      <div class="bot-links">
+        <nuxt-link to="/">About</nuxt-link>
+        &bull;
+        <a href="https://freestuffbot.xyz/invite">Invite</a>
+        &bull;
+        <a href="https://freestuffbot.xyz/discord">Discord</a>
+      </div>
+      <!-- 
+      also make sure to fix meta tags and favicon for this page only to look like a proper cyberpunk promo page -->
     </div>
 
     <div v-if="!cookiehidden" class="footer">
@@ -46,6 +74,8 @@
 <script lang="ts">
 import Vue from 'vue'
 import twemoji from 'twemoji'
+
+const metaDescription = "\"we figured since no-one is buying the game anymore, we might as well just give it away for free\", a spokesperson exclusively told the FreeStuff team last saturday."
 
 export default Vue.extend({
   data () {
@@ -116,7 +146,17 @@ export default Vue.extend({
 				{
 					hid: 'description',
 					name: 'description',
-					content: "\"we figured since no-one is buying the game anymore, we might as well just give it away for free\", a spokesperson exclusively told the FreeStuff team last saturday."
+					content: metaDescription
+				},
+				{
+					hid: 'og:description',
+					name: 'og:description',
+					content: metaDescription
+				},
+				{
+					hid: 'twitter:description',
+					name: 'twitter:description',
+					content: metaDescription
 				}
 			]
 		}
@@ -162,7 +202,7 @@ export default Vue.extend({
   }
 
   .popup {
-    max-width: 30vw;
+    max-width: 550px;
     display: grid;
     grid-template: auto 15pt / 15pt 1fr;
     grid-template-areas: "inner inner" "svg filler";
@@ -243,7 +283,7 @@ export default Vue.extend({
       &::after {
         content: "";
         position: absolute;
-        bottom: -13px;
+        bottom: -12px;
         left: 0;
         width: 12px;
         height: 12px;
@@ -272,30 +312,23 @@ export default Vue.extend({
 
 .page {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   max-width: 900px;
   margin: auto;
+  width: 90vw;
   height: fit-content;
-  min-height: 100%;
+  min-height: calc(100% - 60pt);
+  padding: 30pt 0;
 
   &[nooverflow] {
     overflow: hidden;
     width: 10vw;
     height: 10vh;
   }
-
-  .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    background-color: #000;
-    z-index: -1;
-  }
+  
+  & > * { flex-shrink: 0; }
 
   .title {
     font-family: $font-header;
@@ -315,7 +348,6 @@ export default Vue.extend({
     position: relative;
     width: 90vw;
     max-width: 900px;
-    height: 50vw;
   }
 
   #vid-blocker {
@@ -329,6 +361,88 @@ export default Vue.extend({
 
   #video-frame {
     width: 100%;
+  }
+}
+
+.footer-lite {
+  .logo {
+    display: flex;
+    align-items: center;
+    font-family: $font-header;
+    color: $color-sub !important;
+    font-size: 18pt;
+    text-decoration: none;
+    margin-top: 20pt;
+    margin-bottom: 10pt;
+    opacity: .8;
+
+    img {
+      width: 32pt;
+      height: 32pt;
+      border-radius: 99pt;
+      margin-right: 10pt;
+    }
+  }
+}
+
+.bot-links {
+  color: $color-minor;
+  font-family: $font-regular;
+  font-size: 12pt;
+  margin-bottom: 20pt;
+
+  a {
+    color: $color-sub;
+    padding: 5pt;
+
+    &:hover {
+      color: $color-regular;
+      text-decoration: underline;
+    }
+  }
+}
+
+.pageroot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: unset !important;
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar { visibility: hidden; }
+}
+
+@media screen and (max-width: 600px) {
+  .cookies .popup {
+    max-width: 90vw;
+    
+    .inner { box-shadow: none; }
+
+    .buttons {
+      flex-direction: column-reverse;
+
+      * { margin-top: 10pt; }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .cookies {
+    place-items: unset;
+
+    .popup { max-width: 100vw; }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .page {
+    .subtitle { flex-grow: 1; }
+    .vid-div { flex-grow: 1; }
   }
 }
 
