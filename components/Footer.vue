@@ -12,6 +12,15 @@
               >
                 <DonorCard :data="featuredDonor" />
               </nuxt-link>
+              <a
+                class="coffee"
+                href="/o/ko-fi"
+                target="_blank"
+                rel="noopener noreferrer"
+                @click="$ga.event({ eventAction: 'donate', eventCategory: 'footer', eventLabel: 'ko-fi' })"
+              >
+                <img src="~/assets/img/buy-me-a-ko-fi.png" alt="Buy me a Coffee">
+              </a>
               <span class="subtext" v-text="genSubtext()"></span>
             </no-ssr>
           </div>
@@ -21,17 +30,17 @@
           <span>Platform</span>
           <nuxt-link to="/guide">Guide</nuxt-link>
           <nuxt-link to="/themes">Themes</nuxt-link>
-          <!-- <nuxt-link to="/">Discord Bot</nuxt-link> -->
-          <!-- <nuxt-link to="/telegram">Telegram Bot</nuxt-link>
-          <nuxt-link to="/twitter">Twitter Bot</nuxt-link>
-          <nuxt-link to="/rss">RSS Feed</nuxt-link>-->
-          <a href="https://docs.freestuffbot.xyz/" rel="noreferrer" target="_blank">API<span class="new-badge">NEW</span></a>
+          <nuxt-link to="/">For Discord</nuxt-link>
+          <a href="/telegram" rel="noreferrer" target="_blank">For Telegram <span class="new-badge">NEW</span></a>
+          <!-- <nuxt-link to="/twitter">Twitter Bot</nuxt-link>
+          <nuxt-link to="/rss">RSS Feed</nuxt-link> -->
+          <a href="https://docs.freestuffbot.xyz/" rel="noreferrer" target="_blank">API</a>
         </div>
         <div>
           <span>Support</span>
-          <nuxt-link to="/support">Support Center</nuxt-link>
+          <!-- <nuxt-link to="/support">Support Center</nuxt-link> -->
           <nuxt-link to="/support/faq">FAQ</nuxt-link>
-          <nuxt-link to="/support/troubleshooting">Troubleshooting</nuxt-link>
+          <!-- <nuxt-link to="/support/troubleshooting">Troubleshooting</nuxt-link> -->
           <a href="/discord" rel="noreferrer">Support Server</a>
           <a href="mailto:team@freestuffbot.xyz" rel="noreferrer">Contact</a>
         </div>
@@ -40,10 +49,10 @@
           <nuxt-link to="/team">Team</nuxt-link>
           <!-- <nuxt-link to="/press">Press</nuxt-link> -->
           <a href="/o/source" rel="noreferrer" target="_blank">Open Source</a>
-          <a href="/o/trello" rel="noreferrer" target="_blank">Roadmap</a>
+          <!-- <a href="/o/trello" rel="noreferrer" target="_blank">Roadmap</a> -->
           <nuxt-link to="/donate">Donate</nuxt-link>
           <a href="/o/translating" rel="noreferrer" target="_blank">Help Translating</a>
-          <a href="https://freestuff.statuspage.io/" rel="noreferrer" target="_blank">Status</a>
+          <!-- <a href="https://freestuff.statuspage.io/" rel="noreferrer" target="_blank">Status</a> -->
         </div>
         <div>
           <span>Legal Mumbo Jumbo</span>
@@ -84,18 +93,25 @@ export default Vue.extend({
   },
   methods: {
     genSubtext () {
+      // const texts = [
+      //   'Thanks <3',
+      //   'Thank you',
+      //   'Thank you <3',
+      //   'Thank youuuu!!',
+      //   'Thank you!',
+      //   'You\'re the best!',
+      //   'Thanks a lot!',
+      //   'You are amazing!',
+      //   'Thanks!',
+      //   'Thx :)',
+      //   'thx thx thx <3',
+      //   '<3',
+      // ]
       const texts = [
         'Thanks <3',
         'Thank you',
         'Thank you <3',
-        'Thank youuuu!!',
         'Thank you!',
-        'You\'re the best!',
-        'Thanks a lot!',
-        'You are amazing!',
-        'Thanks!',
-        'Thx :)',
-        'thx thx thx <3',
         '<3',
       ]
       return texts[Math.floor(Math.random() * texts.length)]
@@ -157,7 +173,6 @@ footer {
             
             &:hover {
               box-shadow: 0 2px 10px #00000044;
-              transform: translateY(-1px);
             }
           }
         }
@@ -172,6 +187,14 @@ footer {
           font-family: $font-minor;
           color: $color-minor;
           font-size: 11pt;
+        }
+
+        .coffee {
+          padding-top: 5pt;
+
+          img {
+            width: 186px;
+          }
         }
       }
 
