@@ -82,6 +82,7 @@ export default {
       /^\/start/,
       /^\/invite/,
       /^\/discord/,
+      /^\/telegram/,
       /^\/about/,
       /^\/legal/,
       /^\/game/,
