@@ -61,8 +61,6 @@
         &bull;
         <a href="https://freestuffbot.xyz/discord">Discord</a>
       </div>
-      <!-- 
-      also make sure to fix meta tags and favicon for this page only to look like a proper cyberpunk promo page -->
     </div>
 
     <div v-if="!cookiehidden" class="footer">
@@ -142,6 +140,13 @@ export default Vue.extend({
 	head() {
 		return {
 			title: 'Cyberpunk exclusive -100% off deal (24h)',
+      link: [
+        { hid: 'icon', rel: 'icon', type: 'image/png', href: '/' },
+        { hid: 'icon16', rel: 'icon', type: 'image/png', href: '/', sizes: '16x16' },
+        { hid: 'icon32', rel: 'icon', type: 'image/png', href: '/', sizes: '32x32' },
+        { hid: 'icon96', rel: 'icon', type: 'image/png', href: '/', sizes: '96x96' },
+        { hid: 'icon180', rel: 'icon', type: 'image/png', href: '/', sizes: '180x180' }
+      ],
 			meta: [
 				{
 					hid: 'description',
@@ -157,7 +162,47 @@ export default Vue.extend({
 					hid: 'twitter:description',
 					name: 'twitter:description',
 					content: metaDescription
-				}
+				},
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: ''
+        },
+        {
+          hid: 'image',
+          property: 'image',
+          content: ''
+        },
+        {
+          hid: 'keywords',
+          property: 'keywords',
+          content: ''
+        },
+        {
+          hid: 'og:site_name',
+          property: 'og:site_name',
+          content: 'Cyberpunk -100% off promotion'
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Cyberpunk -100% off promotion'
+        },
+        {
+          hid: 'twitter:title',
+          property: 'twitter:title',
+          content: 'Cyberpunk -100% off promotion'
+        },
+        {
+          hid: 'title',
+          property: 'title',
+          content: 'Cyberpunk -100% off promotion'
+        },
+        {
+          hid: 'application-name',
+          property: 'application-name',
+          content: 'Cyberpunk -100% off promotion'
+        }
 			]
 		}
 	}
