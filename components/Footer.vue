@@ -31,7 +31,7 @@
           <nuxt-link to="/guide">Guide</nuxt-link>
           <nuxt-link to="/themes">Themes</nuxt-link>
           <nuxt-link to="/">For Discord</nuxt-link>
-          <nuxt-link to="/telegram">For Telegram <span class="new-badge">NEW</span></nuxt-link>
+          <a href="/telegram" rel="noreferrer" target="_blank">For Telegram <span class="new-badge">NEW</span></a>
           <!-- <nuxt-link to="/twitter">Twitter Bot</nuxt-link>
           <nuxt-link to="/rss">RSS Feed</nuxt-link> -->
           <a href="https://docs.freestuffbot.xyz/" rel="noreferrer" target="_blank">API</a>

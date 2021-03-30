@@ -6,6 +6,7 @@ export const state = () => ({
     { name: 'Andreas', emoji: '🦦' },
     { name: 'mand', emoji: '🐢' },
     { name: 'papernecklace', emoji: '🍍' },
+    { name: 'Asmodeus', emoji: '🖥️' },
   ],
   faqs: [
     {
