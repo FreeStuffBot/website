@@ -227,7 +227,7 @@ export default Vue.extend({
         {
           name: 'Bae',
           image: 'https://cdn.discordapp.com/attachments/748622589324165142/777629532294610954/afd52085e12763a6e9af2903304b1f8e.png',
-          url: 'https://github.com/baen/',
+          url: 'https://github.com/PlatinBae/',
           color: '#BAEBAE',
           txtcolor: '#111111',
           roles: [
@@ -277,6 +277,16 @@ export default Vue.extend({
           color: '#cdaa18',
           roles: [
             'Turkish Translation'
+          ]
+        },
+        {
+          name: 'Dark_Pizza',
+          image: 'https://media.discordapp.net/attachments/748622589324165142/826772260604870736/Pizza.png',
+          url: 'https://twitter.com/Dark_Pizza_XD/',
+          color: '#FFE79E',
+          txtcolor: '#111111',
+          roles: [
+            'Portuguese Translation'
           ]
         },
       ]).sort(()=>Math.random()-.5),
