@@ -533,6 +533,19 @@ img[draggable="false"] { user-select: none; }
 			border-radius: 4px;
 		}
 	}
+
+	blockquote {
+		margin: 10pt 0;
+		border-left: 3px solid $color-minor;
+		padding: 3pt 10pt 3pt 10pt;
+		
+		&, * {
+			font-size: 10pt;
+			
+			&:not(a) { color: $color-minor; }
+			&:last-child { margin-bottom: 0; }
+		}
+	}
 }
 
 /*

@@ -1,11 +1,3 @@
-<!--
-
- YOYOYOYOO
- If you found this before April 1st 2021, please keep your mouth shut!
- You can DM a team member if you found it and feel like needing to proof it but please don't ruin it for anyone else, that would be highly appreciated.
- Thanks :)
-
--->
 <template>
   <div class="">
     <div
@@ -35,8 +27,8 @@
     </div>
 
     <div class="page" :nooverflow="!cookiehidden">
-      <div class="title">No cyberpunk for you!</div>
-      <div class="subtitle">Best we can do is Rick Astley. Happy april fools day &lt;3</div>
+      <div class="title">You're too late!</div>
+      <div class="subtitle">This was an april fools joke, no cyberpunk for you ;)</div>
       <div class="vid-div">
         <div id="vid-blocker"></div>
         <iframe
