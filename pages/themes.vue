@@ -33,19 +33,10 @@
 						v-tippy
 					>
 					<img
-						src="@/assets/icons/emote.svg"
-						alt="Emote"
-						:on="theme.flags[1]"
-						:content="theme.flags[1]
-							? 'This theme will show<br>external emotes!<br><i style=&quot;font-size: .8em; opacity: .8&quot;>Make sure the bot has the required permissions</i>'
-							: 'This theme will not<br>show external emotes!'"
-						v-tippy
-					>
-					<img
 						src="@/assets/icons/discordembed.svg"
 						alt="Embed"
-						:on="theme.flags[2]"
-						:content="theme.flags[2]
+						:on="theme.flags[1]"
+						:content="theme.flags[1]
 							? 'This theme will use embeds!<br><i style=&quot;font-size: .8em; opacity: .8&quot;>Make sure the bot has the required permissions</i>'
 							: 'This theme will not use embeds!'"
 						v-tippy
@@ -68,62 +59,62 @@ const themes = [
 		id: 1,
 		img: '/assets/img/theme-1.webp',
 		name: 'Default Theme',
-		flags: [ true, true, true ]
+		flags: [ true, true ]
 	},
 	{
 		id: 2,
 		img: '/assets/img/theme-2.webp',
-		name: 'Button = bad',
-		flags: [ true, false, true ]
+		name: 'No photos please!',
+		flags: [ false, true ]
 	},
 	{
 		id: 3,
 		img: '/assets/img/theme-3.webp',
-		name: 'No photos please!',
-		flags: [ false, true, true ]
+		name: 'More info!',
+		flags: [ true, true ]
 	},
 	{
 		id: 4,
 		img: '/assets/img/theme-4.webp',
-		name: 'Keep it simple',
-		flags: [ false, false, true ]
+		name: 'More info less images!',
+		flags: [ false, true ]
 	},
 	{
 		id: 5,
 		img: '/assets/img/theme-5.webp',
 		name: 'Keep it very simple',
-		flags: [ false, false, true ]
+		flags: [ false, true ]
 	},
 	{
 		id: 6,
 		img: '/assets/img/theme-6.webp',
 		name: 'Images are cool!',
-		flags: [ true, false, true ]
+		flags: [ true, true ]
 	},
 	{
 		id: 7,
 		img: '/assets/img/theme-7.webp',
 		name: 'Minimalist with embeds',
-		flags: [ false, false, true ]
+		flags: [ false, true ]
 	},
 	{
 		id: 8,
 		img: '/assets/img/theme-8.webp',
 		name: 'Minimalist without embeds',
-		flags: [ false, false, false ]
+		flags: [ false, false ]
 	},
 	{
 		id: 9,
 		img: '/assets/img/theme-9.webp',
 		name: 'Text only!',
-		flags: [ false, false, false ]
+		flags: [ false, false ]
 	},
-	// {
-	// 	id: 10,
-	// 	img: '/assets/img/theme-10.webp',
-	// 	name: 'Advanced (for ArchiSteamFarm)',
-	// 	flags: [ false, false, true ]
-	// }
+	{
+		id: 10,
+		img: '/assets/img/theme-10.webp',
+		name: 'Advanced (for ArchiSteamFarm)',
+		flags: [ false, true ]
+	}
 ]
 
 export default Vue.extend({
