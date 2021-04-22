@@ -8,6 +8,7 @@ export const state = () => ({
     { name: 'papernecklace', emoji: '🍍' },
     { name: 'Asmodeus', emoji: '🖥️' },
     { name: 'ea8dbc5b07', emoji: '🦕' },
+    { name: 'SCDerox', emoji: '💻' },
   ],
   faqs: [
     {
