@@ -45,9 +45,9 @@ export default Vue.extend({
     this.copytext = this.copyoverride || this.command
   },
   watch: {
-    copytext() {
-      this.copytext = this.copyoverride || this.command
-    }
+    copytext() { this.copytext = this.copyoverride || this.command },
+    copyoverride() { this.copytext = this.copyoverride || this.command },
+    command() { this.copytext = this.copyoverride || this.command }
   },
   methods: {
     copy() {
