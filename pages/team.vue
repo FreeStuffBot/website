@@ -144,7 +144,8 @@ export default Vue.extend({
           url: 'https://media.tenor.co/videos/08958f3c7ef31590646de8e84943cedb/mp4',
           color: '#004499',
           roles: [
-            'Content Moderator'
+            'Content Moderator',
+            'Professional Rickroll Guy'
           ]
         }
       ]).sort(()=>Math.random()-.5),
