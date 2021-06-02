@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/test123"
+  to = "https://tude.ga/"
+  status = 200
+
+[[redirects]]
+  from = "/test12"
+  to = "/themes"
+  status = 200
