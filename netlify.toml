@@ -1,9 +1,13 @@
 [[redirects]]
-  from = "/test123"
-  to = "https://tude.ga/"
+  from = "/arc-sw.js"
+  to = "https://arc.io/arc-sw.js"
   status = 200
 
 [[redirects]]
   from = "/test12"
   to = "/themes"
   status = 200
+
+[[redirects]]
+  from = "/test1"
+  to = "/themes"
