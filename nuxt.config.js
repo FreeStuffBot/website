@@ -54,6 +54,13 @@ export default {
       { hid: 'icon32', rel: 'icon', type: 'image/png', href: '/assets/icons/32.png', sizes: '32x32' },
       { hid: 'icon96', rel: 'icon', type: 'image/png', href: '/assets/icons/96.png', sizes: '96x96' },
       { hid: 'icon180', rel: 'icon', type: 'image/png', href: '/assets/icons/180.png', sizes: '180x180' }
+    ],
+    script: [
+      {
+        type: 'text/javascript',
+        src: 'https://arc.io/widget.min.js#T93khXWx',
+        async: true
+      }
     ]
   },
   css: [
