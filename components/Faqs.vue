@@ -1,7 +1,7 @@
 <template>
   <div class="faqs">
     <div
-      v-for="(data, i) of faqs"
+      v-for="(data, i) of faqs.filter(f => !landingPage || f.landing)"
       :key="i"
       class="faq index--faq-element"
       :focused="i == activeFaq"
@@ -27,6 +27,12 @@
 import Vue from 'vue'
 
 export default Vue.extend({
+  props: {
+    landingPage: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {
       faqs: this.$store.state.faqs,

@@ -170,7 +170,7 @@
         <h4 center id="faq">
           <span component>Questions?</span>
         </h4>
-        <Faqs />
+        <Faqs :landingPage="true" />
       </div>
     </div>
   </div>
