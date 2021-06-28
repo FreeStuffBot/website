@@ -21,11 +21,11 @@ FreeStuff does not commit to hosting Activities on a regular basis. FreeStuff ke
 
 ## 2. Participation
 
-You may participate in all public FreeStuff Activities where no limitation on participating is announced. FreeStuff keeps the right to exclude you from any current or future giveaways for reasons including, but not limited to: Terms of Service, Giveaway, or server rule violations.
+You may participate in all public FreeStuff Activities where no limitation on participation is announced. FreeStuff keeps the right to exclude you from any current or future Activities for reasons including, but not limited to: Terms of Service, Activity, or server rule violations.
 
 ## 3. Winning
 
-The following paragraph is directed at Activities with a single winner. However this policy also applies to Activities with multiple winners in it's full entirety and without any differences.
+The following paragraph is directed at Activities with a single winner. However this policy also applies to Activities with multiple winners in it's entirety and without any differences.
 
 FreeStuff tries to fulfill the promised price in it's entirety and full scope, however outside factors might not allow so. For instance living in a US foreign trade regulated country might make you ineligible to win. In that case or similar scenarios FreeStuff is not required to deliver the price in it's full scope or even at all. Furthermore FreeStuff remains the right to cancel any Activity at any point in time, including after a winner was chosen, without providing a reason or justification, including cancelling the price in it's entirety or change the price to something other than originally announced. Additionally FreeStuff may at any point in time, after a winner was chosen, change the winner to someone else without providing any reason.
 
