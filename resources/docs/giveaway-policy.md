@@ -21,7 +21,7 @@ FreeStuff does not commit to hosting Activities on a regular basis. FreeStuff ke
 
 ## 2. Participation
 
-Your may participate in all public FreeStuff Activities where no limitation on participating is announced. FreeStuff keeps the right to exclude you from any current or future giveaways for reasons including, but not limited to: Terms of Service, Giveaway, or server rule violations.
+You may participate in all public FreeStuff Activities where no limitation on participating is announced. FreeStuff keeps the right to exclude you from any current or future giveaways for reasons including, but not limited to: Terms of Service, Giveaway, or server rule violations.
 
 ## 3. Winning
 
