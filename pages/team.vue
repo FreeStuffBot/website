@@ -152,7 +152,7 @@ export default Vue.extend({
       contributors: ([
         {
           name: 'Bartosz Król',
-          image: 'https://media.discordapp.net/attachments/748622589324165142/748622611935658014/bIcon-white.png?size=100',
+          image: 'https://media.discordapp.net/attachments/748622589324165142/860116334620311572/transparent.png?width=200&height=200',
           url: 'http://badosz.com/',
           color: '#ffffff',
           txtcolor: '#333333',
