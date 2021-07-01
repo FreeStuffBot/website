@@ -10,6 +10,7 @@ export const state = () => ({
     { name: 'ea8dbc5b07', emoji: '🦕' },
     { name: 'SCDerox', emoji: '💻' },
     { name: 'Pri', emoji: '🇮🇳' },
+    { name: 'Raeji', emoji: '🗡️' },
   ],
   faqs: [
     {

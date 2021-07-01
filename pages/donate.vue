@@ -19,7 +19,7 @@
 		<span class="slim">Uhhhh... not much. This is a donation nevertheless, not a purchase. We got some tiny rewards though, just as a little thank-you :)</span>
 		<span class="slim">&bull; Donator role with access to a secret channel on <a href="/discord" rel="noreferrer" target="_blank">our Discord server</a></span>
 		<span class="slim">&bull; Your name on the <nuxt-link to="/team">team page</nuxt-link></span>
-		<span class="slim">&bull; A chance to have your name there at the bottom. Scoll down a bit. See that name? You could be there too! We always select a random donator. It doesn't matter how much you donated or how long it was ago.</span>
+		<span class="slim">&bull; A chance to have your name there at the bottom. Scroll down a bit. See that name? You could be there too! We always select a random donator. It doesn't matter how much you donated or how long it was ago.</span>
 		<div class="divider dotted vertical"></div>
 		<h2 class="center overflow-visible" v-html="`Convinced?&nbsp;${twemoji('✨')}`"></h2>
 		<span class="slim">Even if it's just as little as $1 &mdash; every cent helps!</span>
