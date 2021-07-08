@@ -23,7 +23,7 @@
             <span component class="title">FREE GAMES LIST</span>
           </div>
           <span component class="desc">If you don't want automated announcements and prefer to just check current free games here and there, you can always use this command to get a list:</span>
-          <cmd command="@FreeStuff free" />
+          <cmd command="/free" />
         </div>
       </div>
 		</section>

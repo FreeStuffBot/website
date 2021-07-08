@@ -111,7 +111,7 @@
           </div>
           <span component class="title">LIST ALL CURRENT FREE GAMES</span>
           <span component class="desc">Getting paranoid that you missed a discount? The bot also has a very convenient and easy to use way of listing all current freebies. Try it out for yourself:</span>
-          <cmd command="@FreeStuff free" />
+          <cmd command="/free" />
         </div>
         <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="" draggable="false">
       </div>
