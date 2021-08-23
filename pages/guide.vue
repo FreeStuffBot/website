@@ -22,7 +22,7 @@
           <div class="header">
             <span component class="title">FREE GAMES LIST</span>
           </div>
-          <span component class="desc">If you don't want automated announcements and prefer to just check current free games here and there, you can always use this command to get a list:</span>
+          <span component class="desc">Regardless of whether or not you set the bot up like described above, you can always run this command to get a list of all games currently free:</span>
           <cmd command="/free" />
         </div>
       </div>
