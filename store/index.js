@@ -46,6 +46,11 @@ export const state = () => ({
       answer: `We do! You can check it out at <a href="https://docs.freestuffbot.xyz/" target="_blank">docs.freestuffbot.xyz</a>`
     },
     {
+      landing: false,
+      title: "How can I deactivate/control adult content?",
+      answer: `FreeStuff will never distribute adult content, nsfw or otherwise explicit content. This cannot be enabled or disabled, we just straight up don't publish those kinds of games. While it's still possible that games have an age requirement of 18 years, all content visible will be family friendly.`
+    },
+    {
       landing: true,
       title: "I have a question that's not answered above, where can I ask?",
       answer: `We have a Discord server for exactly that! (and much more) <a href="/discord" target="_blank">Click here to join!</a>`

@@ -1,6 +1,6 @@
 # Privacy Policy
 
-##### Last changed on October 8th, 2020.
+##### Last changed on August 23rd, 2021.
 
 ---
 
@@ -29,23 +29,23 @@ If you have any questions, please contact us via E-Mail: [team@freestuffbot.xyz]
 This section covers the FreeStuff Bot for Discord.
 
 Information we store about your Discord Server ("Server", "Guild") is limited to:
-* Your server id
+* Your Server id
 * The announcement channel id (if changed)
 * The role id to mention (if changed)
 * The settings you changed (for instance: price range, language or store filters)
 
-If your server is among the largest 1% of all clients (in terms of member count), we might also store the following data about your server:
-* Your server's name
-* Your server's member count
-* Your server's icon
-* Your server's features
+If your Server is among the largest 1% of all clients (in terms of member count), we might also store the following data about your Server:
+* Your Server's name
+* Your Server's member count
+* Your Server's icon
+* Your Server's features
 * Whether the bot is set up or not
 
-This last set of data is purely used for analytical purposes and will never be shared with any third parties or partners without your consent. If you would like to know if you fall under this category or would like to opt-out, please contact us with your server's id attached.
+This last set of data is purely used for analytical purposes and will never be shared with any third parties or partners without your consent. If you would like to know if you fall under this category or would like to opt-out, please contact us with your Server's id attached.
 
-We do not collect any data about your server that you do not explicitly provide or is not listed above.
+We do not collect any data about your Server that you do not explicitly provide or is not listed above.
 
-If you want to get your data removed, please remove the Bot from your server. Your data might stay on our servers for up to 24h after it's deleted forever.
+If you want to get your data removed, please remove the Bot from your Server. Your data might stay on our Servers for up to 24h after it's deleted forever.
 
 If you have any questions regarding your data, please contact us via E-Mail: [team@freestuffbot.xyz](mailto:team@freestuffbot.xyz).
 
@@ -54,7 +54,7 @@ If you have any questions regarding your data, please contact us via E-Mail: [te
 
 This section covers the FreeStuff Bot for Telegram.
 
-The FreeStuff Bot for Telegram is not yet ready for release. Until then, we keep the right to store as much information as we need about you in order to build and improve the Service. This will change once the final product is ready for public release. Please do not use the Bot yet, if you do not consent.
+The FreeStuff Bot for Telegram does not collect any personal data or data that can be linked back to an individual. The only data visible to FreeStuff due to platform restrains are the subscriber and view counts for each individual language. All data is completely anonymous.
 
 If you have any questions regarding your data, please contact us via E-Mail: [team@freestuffbot.xyz](mailto:team@freestuffbot.xyz).
 
@@ -164,6 +164,8 @@ We keep the right to store this data as long as we want, as well as to use and p
 * Analyzing the usage of our Platform in order to maintain and improve the Service
 * Making sure our User's data is properly secured and not accessible from unauthorized access
 * Providing support
+
+We do not sell or share your data with any third parties.
 
 ### User content
 
