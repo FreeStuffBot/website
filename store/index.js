@@ -13,6 +13,7 @@ export const state = () => ({
     { name: 'Raeji', emoji: '🗡️' },
     { name: 'EasyThe', emoji: Math.random() > .5 ? '🇧🇬' : '⚡' },
     { name: 'FTNL', emoji: '🐉' },
+    { name: 'afex', emoji: '🛡️' },
   ],
   faqs: [
     {
