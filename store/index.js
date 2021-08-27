@@ -14,6 +14,7 @@ export const state = () => ({
     { name: 'EasyThe', emoji: Math.random() > .5 ? '🇧🇬' : '⚡' },
     { name: 'FTNL', emoji: '🐉' },
     { name: 'afex', emoji: '🛡️' },
+    { name: 'Zaros', emoji: '😎' },
   ],
   faqs: [
     {
