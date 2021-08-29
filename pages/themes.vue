@@ -8,8 +8,9 @@
 				</div>
 				<div class="instructions">
 					<h3>And now?</h3>
-					<span>To make the bot use this theme, use the following command:</span>
-					<cmd :command="`@FreeStuff set theme ${selected}`" />
+					<span>To apply the theme use the following command to get to your server's display settings:</span>
+					<!-- <cmd :command="`@FreeStuff set theme ${selected}`" /> -->
+					<cmd command="/settings → Display Settings" copyoverride="/settings" />
 				</div>
 			</div>
 			<div class="controls">

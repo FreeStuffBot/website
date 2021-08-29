@@ -4,31 +4,6 @@
     	<h1 class="center">Looking good!</h1>
       <h2 sub class="center">The&nbsp;bot should now appear on your&nbsp;server!</h2>
 
-      <div class="panels one" v-if="permissionIssue">
-        <div />
-        <div class="panel">
-          <div class="header">
-            <div class="icon exclamation">
-              <ExclamationIcon />
-            </div>
-            <span component class="title">WARNING!</span>
-          </div>
-          <span component class="desc">Looks like you haven't given the bot all the permissions it needs! <b>Please make sure the bot can at least read and send messages.</b> Some themes also require external emojis.</span>
-        </div>
-      </div>
-      <div class="panels one" v-if="accessDenied">
-        <div />
-        <div class="panel">
-          <div class="header">
-            <div class="icon exclamation">
-              <ExclamationIcon />
-            </div>
-            <span component class="title">INVITE FAILED</span>
-          </div>
-          <span component class="desc">Looks like you clicked on the back button when asked to add the bot to a server. Instead, please select a server, click on <b>Continue</b> and then on <b>Authorize</b>!</span>
-          <a href="/invite" btn>Try again</a>
-        </div>
-      </div>
       <div class="panels one">
         <div />
         <div class="panel">
@@ -36,10 +11,10 @@
             <span component class="title">QUICK SETUP:</span>
           </div>
           <span component class="desc"><b>Step one:</b> Tell the bot which channel it should send the games to:</span>
-          <cmd command="@FreeStuff set channel #free-games" copyoverride="@FreeStuff set channel #" />
+          <cmd command="/settings → Change Channel" copyoverride="/settings" />
           <span component class="desc">with #free-games being a channel of your choice.</span>
           <span component class="desc"><b>Step two:</b> Try it out! You can at any time try if everything works correctly by using this command:</span>
-          <cmd command="@FreeStuff test" />
+          <cmd command="/settings → More" copyoverride="/settings" />
           <span component class="desc">If you get a message in the channel you've set up in step one, congratulations, your job here is done! From now on you will recieve news about new free games in that channel!</span>
         </div>
         <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="" draggable="false">
@@ -67,8 +42,8 @@
             <span component class="title">STORES</span>
           </div>
           <span component class="desc">While some people might wanna get every single freebie out there, there are others who only want to recieve free games from one specify store or would like to not get deals from that one platform. If you're one of them, get started using:</span>
-          <cmd command="@FreeStuff set stores" />
-          <span component class="desc">Default: all stores enabled</span>
+          <cmd command="/settings → Filter Settings" copyoverride="/settings" />
+          <span component class="desc">Default: most stores enabled</span>
         </div>
         <div class="panel">
           <div class="header">
@@ -78,7 +53,7 @@
             <span component class="title">BAD QUALITY</span>
           </div>
           <span component class="desc">Sometimes really cheap made games are getting a 100% discount for more exposure. We flag those games as "trashy" so you can filter them out easily. Use this command to toggle the filter:</span>
-          <cmd command="@FreeStuff set trash on/off" copyoverride="@FreeStuff set trash " />
+          <cmd command="/settings → Filter Settings" copyoverride="/settings" />
           <span component class="desc">Default: trash games are filtered out</span>
         </div>
         <div class="panel">
@@ -89,7 +64,7 @@
             <span component class="title">MINIMUM PRICE</span>
           </div>
           <span component class="desc">We know that some of you are only behind the big fish in the world of free games. That's why we allow you to set a minimum price a game had to have before the discount in order to be announced on your server.</span>
-          <cmd command="@FreeStuff set minimum price $3" copyoverride="@FreeStuff set minimum price" />
+          <cmd command="/settings → Filter Settings" copyoverride="/settings" />
           <span component class="desc">Default: €3/$3</span>
         </div>
       </div>
@@ -117,10 +92,7 @@
             <span component class="title">LANGUAGE</span>
           </div>
           <span component class="desc" v-html="`English is not your primary language? No worries, we got a good amount of translations to choose from. Run the command below to get started:`" />
-          <cmd command="@FreeStuff set language" />
-          <!-- <span component class="desc" v-html="`English is not your primary language? No worries, we got a good amount of translations to choose from. ${languageCta} Take a look below to get started:`" /> -->
-          <!-- <div style="flex-grow: 1" /> -->
-          <!-- <nuxt-link to="/languages" btn>View Translations</nuxt-link> -->
+          <cmd command="/settings → Language" copyoverride="/settings" />
         </div>
       </div>
       <div class="panels three">
@@ -132,8 +104,8 @@
             <span component class="title">ROLE MENTION</span>
           </div>
           <span component class="desc">While this setting doesn't directly impact the appearance of the annoucements it easily one of the most useful settings. To never miss out you can provide the bot with a role to ping for each freebie by typing:</span>
-          <cmd command="@FreeStuff set mention @rolename" copyoverride="@FreeStuff set mention @" />
-          <span component class="desc">Run the command without a role to disable mentions.</span>
+          <cmd command="/settings → Role Mention" copyoverride="/settings" />
+          <span component class="desc">The bot does not ping anyone by default.</span>
         </div>
         <div class="panel">
           <div class="header">
@@ -143,8 +115,8 @@
             <span component class="title">CURRENCY</span>
           </div>
           <span component class="desc">Euro? Dollar? Euro? Dollar? Euro? Dollar? When the bot announces a free game it will also show the original price the game had before it became free. To switch between USD and Euro use:</span>
-          <cmd command="@FreeStuff set currency euro/dollar" copyoverride="@FreeStuff set currency " />
-          <span component class="desc">The default currency is determined by your server's region.</span>
+          <cmd command="/settings → Display Settings" copyoverride="/settings" />
+          <span component class="desc">Some currencies might not be 100% accurate.</span>
         </div>
         <div class="panel">
           <div class="header">
@@ -154,8 +126,8 @@
             <span component class="title">AUTO REACTION</span>
           </div>
           <span component class="desc">If you as a server owner would like to see more engagement from your server members, you can encourage reactions by letting the bot react with the :free: emoji to each of it's announcement messages.</span>
-          <cmd command="@FreeStuff set reaction on/off" copyoverride="@FreeStuff set reaction" />
-          <span component class="desc">People are more likely to add their own reactions if they're not the first one to react.</span>
+          <cmd command="/settings → Display Settings" copyoverride="/settings" />
+          <span component class="desc">Encourage people to react and engage.</span>
         </div>
       </div>
 		</section>
@@ -163,7 +135,7 @@
       <div class="divider dotted vertical"></div>
     	<h2 h1>Ever feel lost?</h2>
       <div class="pre-footer">
-        <cmd command="@FreeStuff help" />
+        <cmd command="/help" />
         <SparkIcon />
         <SparkIcon />
         <SparkIcon />

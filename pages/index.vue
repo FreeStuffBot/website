@@ -103,7 +103,7 @@
           </div>
           <span component class="title">NEVER MISS A SINGLE FREEBIE</span>
           <span component class="desc">Provide the bot with a channel to use and it will send a message there each time a new game gets free. Yes, it really only takes one command to set it up!</span>
-          <cmd command="@FreeStuff set channel #free-games" copyoverride="@FreeStuff set channel #" />
+          <cmd command="/settings" />
         </div>
         <div class="panel">
           <div class="icon list">

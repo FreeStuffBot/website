@@ -31,16 +31,15 @@
           <nuxt-link to="/guide">Guide</nuxt-link>
           <nuxt-link to="/themes">Themes</nuxt-link>
           <nuxt-link to="/">For Discord</nuxt-link>
-          <a href="/telegram" rel="noreferrer" target="_blank">For Telegram <span class="new-badge">NEW</span></a>
-          <!-- <nuxt-link to="/twitter">Twitter Bot</nuxt-link>
-          <nuxt-link to="/rss">RSS Feed</nuxt-link> -->
+          <a href="/telegram" rel="noreferrer" target="_blank">For Telegram</a>
+          <!-- <nuxt-link to="/twitter">Twitter Bot <span class="new-badge">NEW</span></nuxt-link>
+          <nuxt-link to="/rss">RSS Feed <span class="new-badge">NEW</span></nuxt-link> -->
           <a href="https://docs.freestuffbot.xyz/" rel="noreferrer" target="_blank">API</a>
         </div>
         <div>
           <span>Support</span>
           <!-- <nuxt-link to="/support">Support Center</nuxt-link> -->
           <nuxt-link to="/support/faq">FAQ</nuxt-link>
-          <!-- <nuxt-link to="/support/troubleshooting">Troubleshooting</nuxt-link> -->
           <a href="/discord" rel="noreferrer">Support Server</a>
           <a href="mailto:team@freestuffbot.xyz" rel="noreferrer">Contact</a>
         </div>
@@ -50,8 +49,8 @@
           <!-- <nuxt-link to="/press">Press</nuxt-link> -->
           <a href="/o/source" rel="noreferrer" target="_blank">Open Source</a>
           <!-- <a href="/o/trello" rel="noreferrer" target="_blank">Roadmap</a> -->
-          <nuxt-link to="/donate">Donate</nuxt-link>
           <a href="/o/translating" rel="noreferrer" target="_blank">Help Translating</a>
+          <nuxt-link to="/donate">Donate ✨</nuxt-link>
           <!-- <a href="https://freestuff.statuspage.io/" rel="noreferrer" target="_blank">Status</a> -->
         </div>
         <div>
