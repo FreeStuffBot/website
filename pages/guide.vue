@@ -9,10 +9,10 @@
           <div class="header">
             <span component class="title">GETTING STARTED</span>
           </div>
-          <span component class="desc">First, <a href="https://freestuffbot.xyz/invite" target="_blank" rel="noreferrer">invite the bot to your server</a>. Once done, you only need to provide the bot with a channel to post free games to by typing:</span>
+          <span component class="desc">First, <a href="https://freestuffbot.xyz/invite" target="_blank" rel="noreferrer">invite the bot to your server</a>. Once done, you only need to provide the bot with a channel to post free games to by going to:</span>
           <cmd command="/settings → Change Channel" copyoverride="/settings" />
-          <span component class="desc">with #free-games being a channel of your choice. And that's already it. You're done here. Free games will now come flying in! Still sceptical? You can test if everything works by typing:</span>
-          <cmd command="/settings → More" copyoverride="/settings" />
+          <span component class="desc">And that's already it. You're done here. Free games will now come flying in! Still sceptical? You can test if everything works by going to:</span>
+          <cmd command="/settings → More → Send Test Message" copyoverride="/settings" />
         </div>
         <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="" draggable="false">
       </div>
