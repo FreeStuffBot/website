@@ -283,7 +283,7 @@ export default Vue.extend({
         {
           name: 'Dark_Pizza',
           image: 'https://media.discordapp.net/attachments/748622589324165142/826772260604870736/Pizza.png',
-          url: 'https://twitter.com/Dark_Pizza_XD/',
+          url: 'discord://click-me/users/561264957921034240',
           color: '#FFE79E',
           txtcolor: '#111111',
           roles: [
