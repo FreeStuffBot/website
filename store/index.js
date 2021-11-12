@@ -17,6 +17,7 @@ export const state = () => ({
     { name: 'Zaros', emoji: '😎' },
     { name: 'TheFrodoDE', emoji: '🐍' },
     { name: 'Alex15', emoji: '🤔' },
+    { name: 'safaa', emoji: '🤪' },
   ],
   faqs: [
     {
