@@ -1,7 +1,7 @@
 export const state = () => ({
   donors: [
     { name: 'Bartosz Król', emoji: '🤍' },
-    { name: 'Hadi', emoji: Math.random() > .5 ? '🍆' : '🍑' },
+    { name: 'Hadi', emoji: Math.random() < .5 ? '🍆' : '🍑' },
     { name: 'TacTwo', emoji: '🧙‍♂️' },
     { name: 'Andreas', emoji: '🦦' },
     { name: 'mand', emoji: '🐢' },
@@ -11,13 +11,14 @@ export const state = () => ({
     { name: 'SCDerox', emoji: '💻' },
     { name: 'Pri', emoji: '🇮🇳' },
     { name: 'Raeji', emoji: '🗡️' },
-    { name: 'EasyThe', emoji: Math.random() > .5 ? '🇧🇬' : '⚡' },
+    { name: 'EasyThe', emoji: Math.random() < .5 ? '🇧🇬' : '⚡' },
     { name: 'FTNL', emoji: '🐉' },
     { name: 'afex', emoji: '🛡️' },
     { name: 'Zaros', emoji: '😎' },
     { name: 'TheFrodoDE', emoji: '🐍' },
     { name: 'Alex15', emoji: '🤔' },
     { name: 'safaa', emoji: '🤪' },
+    { name: 'GreenFox07', emoji: '🦊' },
   ],
   faqs: [
     {
