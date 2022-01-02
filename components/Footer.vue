@@ -66,7 +66,7 @@
           <img src="@/assets/img/icon_round.png" alt="FreeStuff Logo">
           <span class="name">FreeStuff</span>
         </nuxt-link>
-        <span class="copyright">Copyright &copy; 2021 FreeStuff Services. All rights reserved. <a href="https://maanex.me/imprint?utm_campain=project&utm_source=freestuff&utm_medium=footer" rel="noopener">Impressum</a></span>
+        <span class="copyright">Copyright &copy; 2022 FreeStuff Services. All rights reserved. <a href="https://maanex.me/imprint?utm_campain=project&utm_source=freestuff&utm_medium=footer" rel="noopener">Impressum</a></span>
         <a
           href="/start"
           class="footerButton"
