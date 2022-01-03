@@ -25,12 +25,17 @@ export const state = () => ({
     {
       landing: true,
       title: 'Why does the bot not respond to my messages?',
-      answer: `Sounds like a permission issue! By default you should have given the bot all of the permissions it need when you added it to the server. Since the bot doesn't respond though, the channel you're trying to use it in may have overwritten those permissions. In simpler words: <b>try using the bot in a different channel</b>; if a normal user can type there, the bot should be able to do so too. If that doesn't solve it, you only got one option now: Go full out Discord-Admin-Mode. <b>Doublecheck every permission setting you can find</b>, both for the bot's roles and the channel. If you were not the one to set up the permissions in your server, maybe even consider asking them for help. Crazy idea, I know.`
+      answer: `Sounds like a permission issue! By default you should have given the bot all of the permissions it need when you added it to the server. Since the bot doesn't respond though, the channel you're trying to use it in may have overwritten those permissions. In simpler words: <b>try using the bot in a different channel</b>; if a normal user can type there, the bot should be able to do so too. If that doesn't solve it, you only got one option now: Go full out Discord-Admin-Mode. <b>Doublecheck every permission setting you can find</b>, both for the bot's roles and the channel. If you were not the one to set up the permissions in your server, maybe even consider asking them for help. Crazy idea, I know.<br><br>Cannot set the bot up because /settings doesn't work?<br>If your chat box looks like this<br><img src="https://cdn.discordapp.com/attachments/709144208535191612/927445400615542875/unknown.png"/><br>you need to enable the <b>Use slash commands and preview emojis, mentions and markdown syntax as you type</b> in your Discord client settings under the <b>Text & Images</b> submenu.<img width="100%" src="https://images-ext-1.discordapp.net/external/pCU-R1oRNoeOebQPXVVD0YUPkPjwl95Uevh-WsRZe-c/https/media.discordapp.net/attachments/543150321686413313/885834281874771978/unknown.png" />`
     },
     {
       landing: true,
       title: 'Why do the bots messages look different than on that other Discord server?',
       answer: `The bot has a large variety of customisation options available that change the appearance of the bot's messages. Make sure to check out the available <a href="/themes">Themes</a> and other <a href="/guide">Options</a>!`
+    },
+    {
+      landing: true,
+      title: 'The bot sends messages but they are empty?',
+      answer: `Do the messages from FreeStuff look similar to this?<br><img src="https://cdn.discordapp.com/attachments/709144208535191612/927443193820225576/unknown.png" /><br>This can be fixed by enabling <b>Show website preview info from links pasted into chat</b> setting in your Discord client settings under <b>Text & Images</b> submenu. <img width="100%" src="https://media.discordapp.net/attachments/709133787962802286/923335704593969202/unknown.png"/>`
     },
     {
       landing: true,

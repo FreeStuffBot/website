@@ -13,6 +13,8 @@
           <cmd command="/settings → Change Channel" copyoverride="/settings" />
           <span component class="desc">And that's already it. You're done here. Free games will now come flying in! Still sceptical? You can test if everything works by going to:</span>
           <cmd command="/settings → More → Send Test Message" copyoverride="/settings" />
+          <span component class="desc">Also in case you want the currently free games sent in the channel you've set it right now, the "Re-send Messages" button is for you!</span>
+          <cmd command="/settings → More → Re-send Messages" copyoverride="/settings" />
         </div>
         <img src="@/assets/img/dotgrid-5x5-gray.svg" alt="" draggable="false">
       </div>
@@ -101,7 +103,7 @@
             <span component class="title">ROLE MENTION</span>
           </div>
           <span component class="desc">While this setting doesn't directly impact the appearance of the annoucements it easily one of the most useful settings. To never miss out you can provide the bot with a role to ping for each freebie by typing:</span>
-          <cmd command="/settings → Role Mention" copyoverride="/settings" />
+          <cmd command="/settings → Mention a role" copyoverride="/settings" />
           <span component class="desc">The bot does not ping anyone by default.</span>
         </div>
         <div class="panel">
