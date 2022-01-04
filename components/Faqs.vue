@@ -67,7 +67,7 @@ export default Vue.extend({
 
     &:focus-visible { background-color: $bg-brighter; }
     &[focused] {
-      max-height: 100vh;
+      max-height: 130vh;
       transition: max-height .5s ease-in;
     }
 
@@ -96,6 +96,14 @@ export default Vue.extend({
         font-family: $font-regular;
         color: $color-sub;
         line-height: 15pt;
+      }
+
+      img {
+        margin: 10pt 0;
+        border-radius: 5pt;
+        border: 2px solid #00000044;
+
+        &:last-child { margin-bottom: 0; }
       }
     }
   }
