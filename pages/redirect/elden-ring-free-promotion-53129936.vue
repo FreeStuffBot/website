@@ -1,9 +1,9 @@
 <!---
   HEY!
-  If you're reading this before april 1st, congrats! But please, please keep this to yourself for now.
-  Don't ruin the surprise for other people.
+  If you're reading this before april 1st, congrats! But please keep this to yourself for now.
+  Don't ruin the surprise for other people! :)
   If you just can't help it and need to share it with someone feel free to DM me (Maanex) on Discord :p
-  But again, don't share this, don't talk about it until april 1st, much thanks, bye!
+  But again, don't share this, don't talk about it until april 1st, much thanks, bye! <3
 -->
 
 
