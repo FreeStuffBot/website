@@ -216,7 +216,7 @@ export default Vue.extend({
           ]
         },
         {
-          name: 'Flex Powerzanec',
+          name: 'powerzanec',
           image: 'https://media.discordapp.net/attachments/748622589324165142/755474538594304050/logo_r.png',
           url: 'https://www.instagram.com/povazzanec/',
           color: 'linear-gradient(35deg, #c13d27 0%, #ceb22b 100%)',
