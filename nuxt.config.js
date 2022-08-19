@@ -72,7 +72,7 @@ export default {
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/svg',
-    '@nuxtjs/google-analytics'
+    // '@nuxtjs/google-analytics'
   ],
   modules: [
     '@nuxtjs/markdownit',
