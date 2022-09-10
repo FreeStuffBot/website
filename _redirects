@@ -9,7 +9,7 @@
 /discord          https://discord.gg/WrnKKF8
 /invite           https://discord.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=537316416&scope=bot%20applications.commands&response_type=code
 /start            https://discord.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=537316416&scope=bot%20applications.commands&response_type=code
-/telegram         https://t.me/thefreestuff
+/telegram         https://t.me/freestuff_hub
 
 /o/source         https://github.com/FreeStuffBot/discord
 /o/trello         https://trello.com/b/Zhw6umTy/freestuff
