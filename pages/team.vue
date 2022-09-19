@@ -149,10 +149,20 @@ export default Vue.extend({
           ]
         },
         {
+          name: 'TheMagicalL',
+          image: 'https://media.discordapp.net/attachments/748622589324165142/750807887512600717/677c8152d471e830f6e561ff8a78be07.png',
+          url: 'https://twitter.com/TheMagicalL1',
+          color: '#7fb0d1',
+          roles: [
+            'Giveaways'
+          ]
+        },
+        {
           name: 'Yupr',
           image: 'https://media.discordapp.net/attachments/748622589324165142/1021386782257979492/unknown.png',
           url: 'https://linktr.ee/qaiszak',
           color: '#ffad73',
+          txtcolor: '#26211d',
           roles: [
             'Community Management'
           ]
@@ -204,15 +214,6 @@ export default Vue.extend({
           color: '#b3473e',
           roles: [
             'Portuguese Translation'
-          ]
-        },
-        {
-          name: 'TheMagicalL',
-          image: 'https://media.discordapp.net/attachments/748622589324165142/750807887512600717/677c8152d471e830f6e561ff8a78be07.png',
-          url: 'https://twitter.com/TheMagicalL1',
-          color: '#7fb0d1',
-          roles: [
-            'Helper here and there'
           ]
         },
         {
