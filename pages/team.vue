@@ -147,6 +147,15 @@ export default Vue.extend({
             'Content Moderator',
             'Professional Rickroll Guy'
           ]
+        },
+        {
+          name: 'Yupr',
+          image: 'https://media.discordapp.net/attachments/748622589324165142/1021386782257979492/unknown.png',
+          url: 'https://linktr.ee/qaiszak',
+          color: '#ffad73',
+          roles: [
+            'Community Management'
+          ]
         }
       ]).sort(()=>Math.random()-.5),
       contributors: ([
@@ -274,7 +283,7 @@ export default Vue.extend({
         {
           name: 'Erensi',
           image: 'https://cdn.discordapp.com/attachments/748622589324165142/782905402802569266/e4313532e673aed27652bcb3ad078aeb.png',
-          url: 'https://erensi.xyz/',
+          url: '#',
           color: '#cdaa18',
           roles: [
             'Turkish Translation'
