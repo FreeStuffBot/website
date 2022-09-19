@@ -113,8 +113,8 @@ export default Vue.extend({
           url: 'https://maanex.me/?utm_campain=project&utm_source=freestuff&utm_medium=teampage',
           color: 'linear-gradient(0deg, #54787d 0%, #86A98B 100%)',
           roles: [
-            'Lead Software Developer',
-            'German Translation'
+            'Project Lead',
+            'Software Development'
           ]
         },
         {
@@ -124,7 +124,7 @@ export default Vue.extend({
           url: 'https://twitter.com/EasyTheBG',
           color: 'linear-gradient(to right, #AA076B 0%, #61045F  51%, #AA076B  100%)',
           roles: [
-            'Content Moderator',
+            'Content Moderation',
             'Bulgarian Translation'
           ]
         },
@@ -134,7 +134,7 @@ export default Vue.extend({
           url: 'https://rami-sabbagh.github.io/',
           color: '#2ba0da',
           roles: [
-            'Software Developer',
+            'Software Development',
             'Arabic Translation'
           ]
         },
@@ -144,7 +144,7 @@ export default Vue.extend({
           url: 'https://media.tenor.co/videos/08958f3c7ef31590646de8e84943cedb/mp4',
           color: '#004499',
           roles: [
-            'Content Moderator',
+            'Content Moderation',
             'Professional Rickroll Guy'
           ]
         },
