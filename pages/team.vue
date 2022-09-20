@@ -166,6 +166,16 @@ export default Vue.extend({
           roles: [
             'Community Management'
           ]
+        },
+        {
+          name: 'Egirl_Emily',
+          image: 'https://media.discordapp.net/attachments/748622589324165142/1021891785137602561/unknown.png',
+          url: 'https://crdroid.net/donate',
+          color: '#08c3d1',
+          txtcolor: '#0e1414',
+          roles: [
+            'Community Management'
+          ]
         }
       ]).sort(()=>Math.random()-.5),
       contributors: ([
