@@ -23,7 +23,8 @@ export const state = () => ({
     { name: 'Starrlynn', emoji: '😺' },
     { name: 'Metasmiths', emoji: '💅' },
     { name: 'Yasser', emoji: '🧢'},
-    { name: 'Bananonz', emoji: '🍕'}
+    { name: 'Bananonz', emoji: '🍕'},
+    { name: 'Remco0o', emoji: '😏'}
   ],
   faqs: [
     {
