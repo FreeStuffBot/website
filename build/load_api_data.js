@@ -1,5 +1,4 @@
 
-const axios = require('axios')
 const fs = require('fs')
 const path = require('path')
 
@@ -8,8 +7,9 @@ const headers = { authorization: process.env.FSBCI_API_AUTH }
 const dest = path.join(__dirname, '..', 'static', 'test.json')
 
 async function run() {
-  const res = await axios.get(url, { headers })
+  const res = await fetch(url, { headers })
+    .then(res => res.json())
   if (res.status !== 200) return
-  fs.writeFileSync(dest, JSON.stringify(res.data))
+  fs.writeFileSync(dest, JSON.stringify(res))
 }
 run().then(() => process.exit())
