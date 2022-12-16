@@ -126,7 +126,7 @@
             <span component class="title">AUTO REACTION</span>
           </div>
           <span component class="desc">If you as a server owner would like to see more engagement from your server members, you can encourage reactions by letting the bot react with the :free: emoji to each of it's announcement messages.</span>
-          <cmd command="/settings → Display Settings" copyoverride="/settings" />
+          <cmd command="Currently disabled :(" copyoverride="never gonna give you up" />
           <span component class="desc">Encourage people to react and engage.</span>
         </div>
       </div>
