@@ -19,24 +19,26 @@
       :hidden="cookiehidden"
     >
       <div class="background"></div>
-      <div class="spacer"></div>
+      <div v-if="!fakepreload" class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
       <div class="wrapper" :data-preload="fakepreload">
-        <div class="inner">
-          <span class="title">Before you continue...</span>
-          <div class="content">
-            We are using cookies for advertising purposes as well as to enrich your experience on our websites. For more information about cookies and how we use cookies on our websites, please refer to the <a href="https://www.fromsoftware.jp/ww/policy_privacy.html">Privacy Policy</a>.
-          </div>
-          <div class="buttons" :fakeloaddone="fakeloaddone">
-            <div class="primary">Accept all</div>
-            <div class="secondary">Manage preferences</div>
-          </div>
+        <span class="title">Before you continue...</span>
+        <div class="content">
+          We, our <a href="https://www.warnermediaprivacy.com/policycenter/b2c/affiliateslist/">Affiliates</a> and partners access and store data on your device to personalise, measure, and deliver content and ads, analyse use, and improve your experience.<br>
+          <br>
+          Click “Accept” to allow this, “Reject” to reject, or “Manage Preferences” to make more choices. For more information, see our <a href="https://policies.warnerbros.com/privacy/">Privacy Policy</a>
+        </div>
+        <div class="buttons" :fakeloaddone="fakeloaddone">
+          <div class="btn">Manage Preferences</div>
+          <div class="space" />
+          <div class="btn">Reject</div>
+          <div class="btn">Accept</div>
         </div>
       </div>
     </div>
 
     <div class="page" :nooverflow="!cookiehidden">
-      <div class="title">You're too late!</div>
-      <div class="subtitle">This was an april fools joke, no Elden Ring for you ;)</div>
+      <div class="title">Happy April Fools Day!</div>
+      <div class="subtitle">No Hogwarts Legacy for you today, take this Rickroll instead!</div>
       <div class="vid-div">
         <div id="vid-blocker"></div>
         <iframe
@@ -62,19 +64,19 @@
         <a href="https://freestuffbot.xyz/discord">Join our Discord</a>
       </div>
       <div class="legal-links">
-        Find the official Elden Ring website at:<a href="https://www.eldenring.jp/">https://www.eldenring.jp/</a>
+        Find the official Hogwarts Legacy website at:<a href="https://www.hogwartslegacy.com/">https://www.hogwartslegacy.com/</a>
       </div>
       <div class="legal-links">
-        This website is made for entertainment purposes only and is not affiliated with Elden Ring or it's creators.
+        This website is made for entertainment purposes only and is not affiliated with Hogwarts Legacy or it's creators.
       </div>
       <div class="legal-links">
-        This is not an advertisement for Elden Ring. FreeStuff does not get paied for this. (Would be cool though...)
+        This is not an advertisement for Hogwarts Legacy. FreeStuff does not get paied for this. (Would be cool though...)
       </div>
     </div>
 
     <div v-if="!cookiehidden" class="footer">
-      © 2020-2022 FreeStuff. FreeStuff is not endorsed by BANDAI NAMCO Entertainment Inc. or FromSoftware, Inc. and doesn’t reflect the views or opinions of anyone officially involved in producing or managing Elden Ring. Elden Ring is a registered trademark of FromSoftware, Bandai Namco Entertainment or one of it's affiliates. We claim no rigths to any intellectual property presented, all content belongs to their respective owners.
-      <a href="https://www.eldenring.jp/">Visit the official Elden Ring website at https://www.eldenring.jp/</a>
+      © 2020-2023 FreeStuff. FreeStuff is not endorsed by Avalanche Software, WARNER BROS. GAMES, Wizarding World, Portkey Games or anyone else involved in producing or managing Hogwartss Legacy and doesn't reflect the views or opinions of the aforementioned. Hogwarts Legacy is a registered trademark of Warner Bros. Entertainment Inc. or one of it's affiliates. We claim no rigths to any intellectual property presented, all content belongs to their respective owners.
+      <a href="https://www.hogwartslegacy.com/">Visit the official Hogwarts Legacy website at https://www.hogwartslegacy.com/</a>
       <a href="mailto:team@freestuffbot.xyz">Contact website administrator at team@freestuffbot.xyz</a>
     </div>
   </div>
@@ -84,7 +86,7 @@
 import Vue from 'vue'
 import twemoji from 'twemoji'
 
-const metaDescription = "\"FreeStuff is paying absurd amounts of money to make this game free for a day, we just couldn't say no to an offer of this magnitude.\", a spokesperson exclusively told BBC last monday."
+const metaDescription = "\"When FreeStuff reached out to negotiate making Hogwarts Legacy completely free for a day we said no, like any sane person would do, but they did it anyway. [...] we have no idea how they did it.\", a spokesperson exclusively told BBC last tuesday."
 
 export default Vue.extend({
   data () {
@@ -127,7 +129,7 @@ export default Vue.extend({
     }, 310, this)
     setTimeout(v => {
       v.notloadTimeout = true
-    }, 2000, this)
+    }, 1000, this)
 
     let frame = document.querySelector('#video-frame')
     let firstScriptTag = document.querySelector('script')
@@ -235,9 +237,6 @@ export default Vue.extend({
   background: black;
   overflow: hidden;
   z-index: 10;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
 
   &[hidden] { display: none }
 
@@ -249,55 +248,55 @@ export default Vue.extend({
     height: 100vh;
     padding: 0;
     margin: 0;
-    background-image: url('/assets/img/eldenring-backpage.jpg');
+    background-image: url('/assets/img/hogwarts-backpage.webp');
     background-size: cover;
     background-position: center;
     z-index: -1;
   }
 
-  .wrapper, .spacer {
-    width: 450px;
-  }
-
   .wrapper {
-    background: #00000088;
-    backdrop-filter: blur(2px);
+    position: absolute;
+    top: 10vh;
+    left: 50vw;
+    background: #ffffff;
+    width: 100%;
+    max-width: 500pt;
+    padding: 15pt;
+    border-radius: 3px;
+    transform: translate(-50%, 0);
+    border: 1px solid black;
+    outline: 1px solid white;
     transition:
       opacity .5s ease-out,
       transform .5s ease-out;
 
     &:not([data-preload]) {
       opacity: 0;
-      transform: translateY(-20px);
+      transform: translate(-50%, -20px);
     }
   }
 
-  .inner {
-    padding: 50pt 40pt;
-    margin: -10pt 10pt;
-    border: 1px solid #e79f41;
-    border-bottom-width: 5pt;
-  }
-
   .title {
-    font-family: $font-header;
-    color: #e79f41;
-    font-size: 18pt;
+    font-family: $font-major;
+    color: #4168bd;
+    font-size: 13pt;
     text-transform: uppercase;
   }
 
   .content {
     font-family: $font-regular;
-    color: #ffffffee;
-    font-size: 12pt;
+    color: #444444;
+    font-size: 9pt;
 
-    a { color: lightskyblue !important; }
+    a {
+      color: #26538d !important;
+      text-decoration: underline !important;
+    }
   }
 
   .buttons {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin-top: 15pt;
     gap: 10pt;
 
@@ -306,46 +305,25 @@ export default Vue.extend({
     }
 
     * {
-      background: black;
-      font-family: $font-header;
-      font-size: 10pt;
+      font-family: $font-major;
+      font-size: 8pt;
       padding: 12pt 27pt;
+      color: #ffffff;
+      border-radius: 2px;
+      transition: background-color .1s ease-out;
+    }
+
+    .btn {
+      background: #26538d;
       cursor: pointer;
-      transition:
-        background-color .1s ease-out,
-        box-shadow .1s ease-out,
-        color .1s ease-out;
-    }
-
-    .secondary {
-      color: #ffffffbb;
-      background-color: #00000099;
-      box-shadow:
-        0 0 0 0px #00000099 inset,
-        0 0 0 0px #ffffff44 inset;
 
       &:hover {
-        background-color: #000000 !important;
-        box-shadow:
-          0 0 0 4px #000000 inset,
-          0 0 0 5px #ffffff44 inset;
+        background: #4d83cb;
       }
     }
 
-    .primary {
-      background-color: #e79f41;
-      color: black;
-      position: relative;
-      box-shadow:
-        0 0 0 0px #e79f41 inset,
-        0 0 0 0px black inset;
-
-      &:hover {
-        background-color: #b88036 !important;
-        box-shadow:
-          0 0 0 4px #b88036 inset,
-          0 0 0 5px black inset;
-      }
+    .space {
+      flex-grow: 1;
     }
   }
 }
@@ -536,5 +514,92 @@ export default Vue.extend({
 *::-webkit-scrollbar-track { background-color: transparent; }
 *::-webkit-scrollbar-thumb { background-color: transparent; border-radius: none; border: none; }
 *::-webkit-scrollbar-thumb:hover { background-color: transparent; }
+
+
+
+.lds-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: .5;
+  display: inline-block;
+  position: relative;
+  scale: .5;
+  width: 80px;
+  height: 80px;
+}
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: #fff;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 
 </style>

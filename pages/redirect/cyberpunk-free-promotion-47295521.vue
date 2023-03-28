@@ -28,7 +28,7 @@
 
     <div class="page" :nooverflow="!cookiehidden">
       <div class="title">You're too late!</div>
-      <div class="subtitle">This was an april fools joke, no cyberpunk for you ;)</div>
+      <div class="subtitle">This was an april fools joke, no Cyberpunk for you ;)</div>
       <div class="vid-div">
         <div id="vid-blocker"></div>
         <iframe
