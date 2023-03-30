@@ -161,6 +161,7 @@ export default Vue.extend({
         { hid: 'icon180', rel: 'icon', type: 'image/png', href: '/', sizes: '180x180' }
       ],
 			meta: [
+        { hid: 'theme-color', name: 'theme-color', content: '#000000', id: 'metacolor' },
 				{
 					hid: 'description',
 					name: 'description',
