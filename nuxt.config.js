@@ -60,6 +60,12 @@ export default {
         type: 'text/javascript',
         src: 'https://arc.io/widget.min.js#T93khXWx',
         async: true
+      },
+      {
+        src: 'https://wa.tude.club/umami.js',
+        async: true,
+        defer: true,
+        'data-website-id': '32afd66a-1eaa-4b08-8469-a68ceebc5c46'
       }
     ]
   },

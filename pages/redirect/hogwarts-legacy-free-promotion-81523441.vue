@@ -75,7 +75,7 @@
     </div>
 
     <div v-if="!cookiehidden" class="footer">
-      © 2020-2023 FreeStuff. FreeStuff is not endorsed by Avalanche Software, WARNER BROS. GAMES, Wizarding World, Portkey Games or anyone else involved in producing or managing Hogwartss Legacy and doesn't reflect the views or opinions of the aforementioned. Hogwarts Legacy is a registered trademark of Warner Bros. Entertainment Inc. or one of it's affiliates. We claim no rigths to any intellectual property presented, all content belongs to their respective owners.
+      © 2020-2023 FreeStuff. FreeStuff is not endorsed by Avalanche Software, WARNER BROS. GAMES, Wizarding World, Portkey Games or anyone else involved in producing or managing Hogwarts Legacy and doesn't reflect the views or opinions of the aforementioned. Hogwarts Legacy is a registered trademark of Warner Bros. Entertainment Inc. or one of it's affiliates. We claim no rigths to any intellectual property presented, all content belongs to their respective owners.
       <a href="https://www.hogwartslegacy.com/">Visit the official Hogwarts Legacy website at https://www.hogwartslegacy.com/</a>
       <a href="mailto:team@freestuffbot.xyz">Contact website administrator at team@freestuffbot.xyz</a>
     </div>
@@ -86,7 +86,7 @@
 import Vue from 'vue'
 import twemoji from 'twemoji'
 
-const metaDescription = "\"When FreeStuff reached out to negotiate making Hogwarts Legacy completely free for a day we said no, like any sane person would do, but they did it anyway. [...] we have no idea how they did it.\", a spokesperson exclusively told BBC last tuesday."
+const metaDescription = "\"When FreeStuff reached out to negotiate making Hogwarts Legacy completely free for a day we said no, like any sane person would do, but they did it anyway. [...] we have no idea how they pulled this off.\", a spokesperson exclusively told BBC last tuesday."
 
 export default Vue.extend({
   data () {
@@ -152,7 +152,7 @@ export default Vue.extend({
   fetchOnServer: false,
 	head() {
 		return {
-			title: 'Elden Ring exclusive -100% off deal (24h)',
+			title: 'Hogwarts Legacy exclusive -100% off deal (24h)',
       link: [
         { hid: 'icon', rel: 'icon', type: 'image/png', href: '/' },
         { hid: 'icon16', rel: 'icon', type: 'image/png', href: '/', sizes: '16x16' },
@@ -194,27 +194,27 @@ export default Vue.extend({
         {
           hid: 'og:site_name',
           property: 'og:site_name',
-          content: 'Elden Ring -100% off promotion'
+          content: 'Hogwarts Legacy -100% off promotion'
         },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: 'Elden Ring -100% off promotion'
+          content: 'Hogwarts Legacy -100% off promotion'
         },
         {
           hid: 'twitter:title',
           property: 'twitter:title',
-          content: 'Elden Ring -100% off promotion'
+          content: 'Hogwarts Legacy -100% off promotion'
         },
         {
           hid: 'title',
           property: 'title',
-          content: 'Elden Ring -100% off promotion'
+          content: 'Hogwarts Legacy -100% off promotion'
         },
         {
           hid: 'application-name',
           property: 'application-name',
-          content: 'Elden Ring -100% off promotion'
+          content: 'Hogwarts Legacy -100% off promotion'
         }
 			]
 		}
@@ -259,7 +259,7 @@ export default Vue.extend({
     top: 10vh;
     left: 50vw;
     background: #ffffff;
-    width: 100%;
+    width: 90%;
     max-width: 500pt;
     padding: 15pt;
     border-radius: 3px;
@@ -468,16 +468,8 @@ export default Vue.extend({
   &::-webkit-scrollbar { visibility: hidden; }
 }
 
-@media screen and (max-width: 900px) {
-  .cookies .background { filter: blur(9px); }
-  .cookies .wrapper .inner { backdrop-filter: none; }
-  .cookies .spacer { display: none; }
-}
-
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   .cookies { place-items: unset; }
-
-  .cookies .background { filter: blur(12px) brightness(.4); }
 
   .cookies .wrapper {
     margin-top: 5vw;
