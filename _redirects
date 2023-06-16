@@ -16,7 +16,3 @@
 /o/translating    https://dashboard.freestuffbot.xyz/translate/apply/
 /o/patreon        https://www.patreon.com/freestuffbot
 /o/ko-fi          https://ko-fi.com/freestuff
-
-#/ext/open-client/steam/*        steam://store/:splat
-/ext/open-client/epic/*         com.epicgames.launcher://store/p/:splat
-/ext/open-client/test           https://youtube.com

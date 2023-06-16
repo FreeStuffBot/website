@@ -9,3 +9,9 @@
   to = "steam://store/:splat"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/ext/open-client/epic/*"
+  to = "com.epicgames.launcher://store/p/:splat"
+  status = 301
+  force = true
