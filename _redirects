@@ -19,3 +19,4 @@
 
 /ext/open-client/steam/*        steam://store/:splat
 /ext/open-client/epic/*         com.epicgames.launcher://store/p/:splat
+/ext/open-client/test           https://google.com
