@@ -5,13 +5,13 @@
   status = 200
 
 [[redirects]]
-  from = "/ext/open-client/steam/*"
-  to = "steam://store/:splat"
+  from = "/ext/open-client/steam/:id"
+  to = "steam://store/:id"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/ext/open-client/epic/*"
-  to = "com.epicgames.launcher://store/p/:splat"
+  from = "/ext/open-client/epic/:id"
+  to = "com.epicgames.launcher://store/p/:id"
   status = 301
   force = true
