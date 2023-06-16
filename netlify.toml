@@ -3,3 +3,9 @@
   from = "/arc-sw.js"
   to = "https://arc.io/arc-sw.js"
   status = 200
+
+[[redirects]]
+  from = "/ext/open-client/steam/*"
+  to = "steam://store/:splat"
+  status = 301
+  force = true
